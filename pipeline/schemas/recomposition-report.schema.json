@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/recomposition-report.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "screenReviewId", "screenUnit", "status",
+    "approvedAssets", "outputs", "checks", "approval"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "screenReviewId": {
+      "type": "string",
+      "minLength": 1,
+      "not": { "const": "REQUIRED" }
+    },
+    "screenUnit": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "status": { "const": "passed" },
+    "approvedAssets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "profile", "sourceRevision", "sha256", "approvalStatus"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(?!.*-R[0-9]+$)[A-Z0-9-]+$"
+          },
+          "profile": {
+            "enum": ["complete-layer", "standalone-raster", "bundle-model"]
+          },
+          "sourceRevision": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "approvalStatus": { "const": "approved-by-user" }
+        }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fhd", "hd"],
+      "properties": {
+        "fhd": {
+          "allOf": [
+            { "$ref": "#/$defs/recompositionFile" },
+            {
+              "type": "object",
+              "properties": {
+                "width": { "const": 1920 },
+                "height": { "const": 1080 }
+              }
+            }
+          ]
+        },
+        "hd": {
+          "allOf": [
+            { "$ref": "#/$defs/recompositionFile" },
+            {
+              "type": "object",
+              "properties": {
+                "width": { "const": 1280 },
+                "height": { "const": 720 }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approvedAssetsOnly", "anchorOcclusion", "styleRegression", "cropSafety"],
+      "properties": {
+        "approvedAssetsOnly": { "const": "passed" },
+        "anchorOcclusion": { "const": "passed" },
+        "styleRegression": { "const": "passed" },
+        "cropSafety": { "const": "passed" }
+      }
+    },
+    "approval": { "$ref": "#/$defs/userApproval" }
+  },
+  "$defs": {
+    "recompositionFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "sha256", "width", "height"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "width": { "type": "integer" },
+        "height": { "type": "integer" }
+      }
+    },
+    "userApproval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "date", "basis"],
+      "properties": {
+        "status": { "const": "approved-by-user" },
+        "date": { "type": "string", "format": "date" },
+        "basis": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+      }
+    }
+  }
+}

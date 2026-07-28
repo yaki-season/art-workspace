@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/completion-report.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion", "profile", "sourceRevision", "screenUnit", "creationUnitCount", "id",
+    "pipelineContract", "sourceMasterId", "semanticOwner", "assetMeaning",
+    "approvalStatus", "runtimeRegistrationAllowed", "userApproval",
+    "approvedCutout", "spatialInference", "measurements", "outputs",
+    "rejectedIntermediate"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 6 },
+    "profile": { "const": "complete-layer" },
+    "sourceRevision": { "type": "integer", "minimum": 1 },
+    "screenUnit": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "creationUnitCount": { "const": 1 },
+    "id": {
+      "type": "string",
+      "pattern": "^(?!.*-R[0-9]+$)[A-Z0-9-]+$"
+    },
+    "pipelineContract": { "const": "art-workspace/pipeline/pipeline-contract.json" },
+    "sourceMasterId": { "type": "string", "pattern": "^CM-[A-Z0-9-]+-R[0-9]+$" },
+    "semanticOwner": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "assetMeaning": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "approvalStatus": { "const": "approved-by-user" },
+    "runtimeRegistrationAllowed": { "const": false },
+    "userApproval": {
+      "type": "object",
+      "required": ["status", "basis", "date"],
+      "properties": {
+        "status": { "enum": ["approved", "approved-by-user"] },
+        "basis": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "date": { "type": "string", "format": "date" }
+      }
+    },
+    "approvedCutout": {
+      "type": "object",
+      "required": ["status", "file", "sha256"],
+      "properties": {
+        "status": { "const": "approved-by-user" },
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "spatialInference": {
+      "type": "object",
+      "required": ["file", "sha256"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "required": [
+        "width", "height", "transparencyMode", "transparentPixels",
+        "opaquePixels", "partialAlphaPixels"
+      ],
+      "properties": {
+        "width": { "const": 1920 },
+        "height": { "const": 1080 },
+        "transparencyMode": { "enum": ["opaque-full-frame", "alpha-cutout"] },
+        "transparentPixels": { "type": "integer", "minimum": 0 },
+        "opaquePixels": { "type": "integer", "minimum": 0 },
+        "partialAlphaPixels": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": ["completed", "reviewBoard"],
+      "properties": {
+        "completed": { "$ref": "#/$defs/fileEvidence" },
+        "reviewBoard": { "$ref": "#/$defs/fileEvidence" }
+      }
+    },
+    "rejectedIntermediate": {
+      "type": "object",
+      "required": ["retained"],
+      "properties": { "retained": { "const": false } }
+    }
+  },
+  "$defs": {
+    "fileEvidence": {
+      "type": "object",
+      "required": ["file", "sha256"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

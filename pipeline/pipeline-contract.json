@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 7,
+  "id": "YS-ASSET-PIPELINE-v7",
+  "sourceStyleProfile": "YS-HANDCRAFTED-NIGHT-v1",
+  "profiles": {
+    "complete-layer": {
+      "description": "FHD scene-coordinate layer with visible-cutout, occluded-surface completion, isolated review, and FHD/720p recomposition.",
+      "creationBatchLimit": 1,
+      "requiredSchemas": [
+        "spatial-inference",
+        "visible-cutout",
+        "completion-report",
+        "provenance",
+        "recomposition-report",
+        "optimization-report",
+        "final-approval",
+        "runtime-entry-template",
+        "runtime-handoff"
+      ]
+    },
+    "standalone-raster": {
+      "description": "One independently sized PNG/WebP icon, UI skin, food, drink, prop, or other single raster asset.",
+      "creationBatchLimit": 1,
+      "requiredSchemas": [
+        "standalone-raster-report",
+        "provenance",
+        "recomposition-report",
+        "optimization-report",
+        "final-approval",
+        "runtime-entry-template",
+        "runtime-handoff"
+      ]
+    },
+    "bundle-model": {
+      "description": "An atomic multi-file atlas, GLB, texture, metadata, or companion bundle.",
+      "creationBatchLimit": 1,
+      "requiredSchemas": [
+        "bundle-model-report",
+        "provenance",
+        "recomposition-report",
+        "optimization-report",
+        "final-approval",
+        "runtime-entry-template",
+        "runtime-handoff"
+      ]
+    }
+  },
+  "gates": [
+    {
+      "order": 1,
+      "id": "meaning-and-topology",
+      "approval": "spec-and-user-confirmed-when-spatial",
+      "requiredEvidence": [
+        "profile",
+        "screenUnit",
+        "semanticOwner",
+        "assetMeaning",
+        "sourceEvidence",
+        "approvedTopologyWhenSpatial"
+      ]
+    },
+    {
+      "order": 2,
+      "id": "single-asset-creation-review",
+      "approval": "user",
+      "batchLimit": 1,
+      "requiredEvidence": [
+        "oneSemanticOwner",
+        "oneCandidateAsset",
+        "isolatedReview",
+        "sourceSha256",
+        "outputSha256",
+        "approvalStatus"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "consumer-screen-integration",
+      "approval": "user",
+      "requiredEvidence": [
+        "screenUnit",
+        "approvedAssetsOnly",
+        "fhdRecomposition",
+        "hdRecomposition",
+        "anchorOcclusionReview",
+        "styleRegressionReview"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "runtime-optimization",
+      "approval": "automated-and-user-visual-when-lossy",
+      "requiredEvidence": [
+        "sourceRevision",
+        "runtimeBuild",
+        "optimizedBundle",
+        "sourceSha256",
+        "outputSha256",
+        "lossPolicy",
+        "visualRegression",
+        "performanceBudget"
+      ]
+    },
+    {
+      "order": 5,
+      "id": "final-consumer-screen-handoff",
+      "approval": "user",
+      "requiredEvidence": [
+        "screenUnit",
+        "allAssetsApproved",
+        "recompositionPassed",
+        "optimizationPassed",
+        "userDecision"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "runtime-registration",
+      "approval": "automated-with-explicit-receipt",
+      "requiredEvidence": [
+        "allPriorGatesPassed",
+        "derivedRuntimeRegistrationAllowed",
+        "runtimeHandoff",
+        "promotionDryRunReceipt",
+        "explicitWrite",
+        "atomicBundleCommit",
+        "postPromotionValidation"
+      ]
+    }
+  ],
+  "schemaCatalog": {
+    "screen-topology-registry": "schemas/screen-topology-registry.schema.json",
+    "spatial-inference": "schemas/spatial-inference.schema.json",
+    "visible-cutout": "schemas/visible-cutout.schema.json",
+    "completion-report": "schemas/completion-report.schema.json",
+    "standalone-raster-report": "schemas/standalone-raster-report.schema.json",
+    "bundle-model-report": "schemas/bundle-model-report.schema.json",
+    "recomposition-report": "schemas/recomposition-report.schema.json",
+    "optimization-report": "schemas/optimization-report.schema.json",
+    "final-approval": "schemas/final-approval.schema.json",
+    "provenance": "schemas/provenance.schema.json",
+    "runtime-entry-template": "schemas/runtime-entry-template.schema.json",
+    "runtime-handoff": "schemas/runtime-handoff.schema.json"
+  },
+  "topologyRegistry": "topology-registry.json",
+  "approvalStatuses": [
+    "pending-user-review",
+    "approved-by-user",
+    "rejected-by-user",
+    "needs-revalidation"
+  ],
+  "referenceChangeRule": {
+    "hashMismatchAlwaysBlocks": true,
+    "impactAnalysisRequired": true,
+    "userReapprovalRequiredWhen": [
+      "meaning-changed",
+      "spatial-contract-changed",
+      "visual-contract-changed",
+      "runtime-behavior-changed"
+    ],
+    "recordRefreshAllowedWhen": [
+      "path-only",
+      "version-label-only",
+      "non-semantic-wording-only",
+      "repository-boundary-only"
+    ]
+  },
+  "versionRule": {
+    "sourceRevisionChangesWhen": "meaning, decoded visual, alpha edge, dimensions, pivot, anchor, clip, geometry, material, animation, or runtime behavior changes",
+    "runtimeBuildChangesWhen": "the approved source revision is re-encoded, repacked, or metadata-stripped without changing the approved visual and runtime contract",
+    "sha256AlwaysMatchesExactBytes": true,
+    "oneActiveRuntimeBuildPerAssetId": true
+  },
+  "lossPolicy": {
+    "losslessRequiredFor": [
+      "ui-icon",
+      "alpha-cutout",
+      "atlas",
+      "pixel-art",
+      "data-texture"
+    ],
+    "lossyAllowedFor": [
+      "opaque-background"
+    ],
+    "lossyRequiresAutomatedRegression": true,
+    "lossyRequiresUserVisualApproval": true
+  },
+  "runtimeRule": {
+    "sourceWorkspace": "art-workspace",
+    "runtimeRepository": "app",
+    "handoffCommand": "node art-workspace/pipeline/finalize-runtime-handoff.mjs",
+    "promotionCommand": "npm run assets:promote",
+    "validationCommand": "npm run assets:validate",
+    "runtimeRegistrationAllowedIsDerived": true,
+    "dryRunReceiptRequired": true,
+    "writeFlag": "--write",
+    "atomicBundleWithRollback": true,
+    "finalApprovalScope": "consumer-screen-unit"
+  },
+  "storageRule": {
+    "implementationRepository": "app",
+    "approvedArtRepository": "private-git-lfs",
+    "pendingBinariesRemoteAllowed": false,
+    "rejectedBinariesRemoteAllowed": false,
+    "rejectionLedger": "REJECTIONS.md",
+    "rewriteHistoryForLaterDeprecation": false
+  },
+  "transparencyModes": {
+    "opaque-full-frame": {
+      "transparentPixels": 0,
+      "partialAlphaPixels": 0
+    },
+    "alpha-cutout": {
+      "requiresTransparentPixels": true,
+      "requiresOpaquePixels": true,
+      "requiresTransparentCorners": true
+    }
+  },
+  "reviewCompositionModes": {
+    "isolated-alpha-checkerboard": {
+      "requiredForTransparencyMode": "alpha-cutout",
+      "subjectAssetOnly": true,
+      "forbiddenVisibleCategories": [
+        "other-customers",
+        "food-or-drink",
+        "state-ui",
+        "navigation-ui",
+        "counter",
+        "background-scene"
+      ],
+      "pixelRule": "transparent pixels equal checkerboard; opaque pixels equal source; partial-alpha pixels equal source composited over checkerboard"
+    }
+  }
+}

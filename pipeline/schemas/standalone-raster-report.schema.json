@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/standalone-raster-report.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "profile", "id", "sourceRevision", "screenUnit",
+    "semanticOwner", "assetMeaning", "sourceEvidence", "output", "reviewBoard",
+    "lossPolicy", "excludes", "approval", "runtimeRegistrationAllowed"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "profile": { "const": "standalone-raster" },
+    "id": { "type": "string", "pattern": "^(?!.*-R[0-9]+$)[A-Z0-9-]+$" },
+    "sourceRevision": { "type": "integer", "minimum": 1 },
+    "screenUnit": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "semanticOwner": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "assetMeaning": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "sourceEvidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/fileEvidence" }
+    },
+    "output": {
+      "allOf": [
+        { "$ref": "#/$defs/fileEvidence" },
+        {
+          "type": "object",
+          "required": ["bytes", "width", "height", "alpha", "greenSpillPixels"],
+          "properties": {
+            "bytes": { "type": "integer", "minimum": 1 },
+            "width": { "type": "integer", "minimum": 1 },
+            "height": { "type": "integer", "minimum": 1 },
+            "alpha": { "enum": ["none", "straight"] },
+            "greenSpillPixels": { "type": "integer", "minimum": 0, "maximum": 0 }
+          }
+        }
+      ]
+    },
+    "reviewBoard": {
+      "allOf": [
+        { "$ref": "#/$defs/fileEvidence" },
+        {
+          "type": "object",
+          "required": ["width", "height", "subjectAssetOnly"],
+          "properties": {
+            "width": { "const": 1920 },
+            "height": { "const": 1080 },
+            "subjectAssetOnly": { "const": true }
+          }
+        }
+      ]
+    },
+    "lossPolicy": { "const": "lossless-required" },
+    "excludes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+    },
+    "approval": { "$ref": "#/$defs/userApproval" },
+    "runtimeRegistrationAllowed": { "const": false }
+  },
+  "$defs": {
+    "fileEvidence": {
+      "type": "object",
+      "required": ["file", "sha256"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "userApproval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "date", "basis"],
+      "properties": {
+        "status": { "const": "approved-by-user" },
+        "date": { "type": "string", "format": "date" },
+        "basis": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+      }
+    }
+  }
+}

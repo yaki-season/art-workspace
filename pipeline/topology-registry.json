@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+      "screenUnits": ["SCR-STORY-PROLOGUE", "SCR-DAY-PREP"],
+      "approvalStatus": "pending-user-review",
+      "reason": "The master spans exterior-key, interior-check, note, ignite, and day-prep phases; each target phase needs a separate approved camera and adjacency contract before generation."
+    },
+    {
+      "sourceMasterId": "CM-PREOPEN-PLANNING-R1",
+      "screenUnits": ["SCR-DAY-BRIEFING"],
+      "approvalStatus": "pending-user-review",
+      "reason": "The planning folio, six-seat plan, cards, and start action need an approved foreground/background and interaction ordering."
+    },
+    {
+      "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+      "screenUnits": ["SCR-SVC-CUSTOMERS", "SCR-POST-CLOSING"],
+      "approvalStatus": "approved-by-user",
+      "approval": {
+        "date": "2026-07-26",
+        "basis": "User correction and approval: one centered main gate immediately behind the customer-side bar, with closed side walls."
+      },
+      "topology": {
+        "spatialOrder": [
+          "player-camera-inside-bar",
+          "single-bar-counter",
+          "customer-seats",
+          "main-entrance-immediately-behind-customer-side",
+          "night-alley"
+        ],
+        "relations": {
+          "mainEntranceRelation": "immediately-behind-customer-side-bar",
+          "entranceComposition": "single-centered-main-gate-with-closed-side-walls",
+          "sideWallsRelation": "closed-from-centered-gate-to-left-and-right-frame-edges"
+        },
+        "invariants": [
+          "one-single-bar-counter",
+          "one-centered-main-gate",
+          "night-alley-visible-only-through-centered-gate",
+          "closed-side-walls-to-frame-edges"
+        ],
+        "forbiddenSubstitutions": [
+          "sealed-rear-wood-wall",
+          "full-width-bottle-shelf-wall",
+          "deep-back-room",
+          "second-counter",
+          "off-center-main-entrance",
+          "open-side-entrance-bays"
+        ]
+      }
+    },
+    {
+      "sourceMasterId": "CM-ASSEMBLY-STATION-R1",
+      "screenUnits": ["SCR-SVC-ASSEMBLY", "SCR-SVC-INSTANT"],
+      "approvalStatus": "pending-user-review",
+      "reason": "Assembly and instant-service reuse one master but have different work surfaces and interaction sequences."
+    },
+    {
+      "sourceMasterId": "CM-GRILL-STATION-R1",
+      "screenUnits": ["SCR-SVC-GRILL"],
+      "approvalStatus": "pending-user-review",
+      "reason": "The six-slot grill, waiting/finished/discard trays, tools, receipts, and prepared dock need an approved draw and contact order."
+    },
+    {
+      "sourceMasterId": "CM-DRINK-STATION-R1",
+      "screenUnits": ["SCR-SVC-DRINK", "SCR-SVC-HIGHBALL"],
+      "approvalStatus": "pending-user-review",
+      "reason": "Draft beer and highball reuse the station shell but require separate vessel, nozzle, ingredient, and tray contracts."
+    },
+    {
+      "sourceMasterId": "CM-SETTLEMENT-R1",
+      "screenUnits": ["SCR-POST-CLOSING", "SCR-POST-SETTLEMENT"],
+      "approvalStatus": "pending-user-review",
+      "reason": "Closing and the five settlement reveal phases need separate state ownership and overlay ordering."
+    },
+    {
+      "sourceMasterId": "CM-GROWTH-PURCHASE-R1",
+      "screenUnits": ["SCR-META-PURCHASE", "SCR-POST-REVIEW"],
+      "approvalStatus": "pending-user-review",
+      "reason": "Purchase catalog and post-day review share art but are separate screens with different card and modal ownership."
+    },
+    {
+      "sourceMasterId": "CM-RECIPE-NOTE-R1",
+      "screenUnits": ["SCR-META-NOTE", "SCR-POST-NEXT-GOAL"],
+      "approvalStatus": "pending-user-review",
+      "reason": "Recipe note and next-goal card must be separated before their page, overlay, and navigation topology can be approved."
+    },
+    {
+      "sourceMasterId": "CM-PAUSE-SETTINGS-R1",
+      "screenUnits": ["OVR-PAUSE", "OVR-SETTINGS", "OVR-CONFIRM"],
+      "approvalStatus": "pending-user-review",
+      "reason": "Pause, settings, and confirmation are separate overlays and need an approved nesting, dim, focus, and dismissal contract."
+    }
+  ]
+}

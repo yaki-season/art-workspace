@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 4,
+  "profile": "complete-layer",
+  "screenUnit": "REQUIRED",
+  "sourceMasterId": "REQUIRED",
+  "topologyRegistryEntry": {
+    "sourceMasterId": "REQUIRED",
+    "approvalStatus": "approved-by-user",
+    "approvalDate": "REQUIRED"
+  },
+  "screen": {
+    "screenIds": [
+      "REQUIRED"
+    ],
+    "gameState": "REQUIRED",
+    "playerAction": "REQUIRED",
+    "semanticOwner": "REQUIRED",
+    "assetMeaning": "REQUIRED"
+  },
+  "settingSources": [
+    {
+      "file": "REQUIRED",
+      "sha256": "REQUIRED",
+      "evidence": "REQUIRED"
+    }
+  ],
+  "camera": {
+    "position": "REQUIRED",
+    "viewDirection": "REQUIRED",
+    "framing": "REQUIRED"
+  },
+  "spatialOrder": [
+    "REQUIRED"
+  ],
+  "topology": {
+    "counterRelation": "REQUIRED",
+    "customerSeatRelation": "REQUIRED",
+    "mainEntranceRelation": "REQUIRED",
+    "entranceComposition": "REQUIRED",
+    "sideWallsRelation": "REQUIRED",
+    "exteriorRelation": "REQUIRED"
+  },
+  "occludedContinuation": [
+    {
+      "occluder": "REQUIRED",
+      "hiddenSurfaceMustContinueAs": "REQUIRED"
+    }
+  ],
+  "invariants": [
+    "REQUIRED"
+  ],
+  "forbiddenSubstitutions": [
+    "REQUIRED"
+  ],
+  "inferenceSummary": "REQUIRED",
+  "unresolvedQuestions": [],
+  "approval": {
+    "status": "user-confirmed",
+    "basis": "REQUIRED",
+    "date": "REQUIRED"
+  },
+  "approvedForGeneration": false
+}

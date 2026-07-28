@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/runtime-entry-template.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "sourceRevision", "runtimeBuild", "status", "screenUnit",
+    "profile", "pack", "kind", "colorSpace", "alpha", "lossPolicy",
+    "pivot", "anchors", "clips", "mirrorSafe", "source", "provenance",
+    "license", "specRefs", "reviewedAt"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^(?!.*-R[0-9]+$)[A-Z0-9-]+$" },
+    "legacyId": { "type": "string", "pattern": "^[A-Z0-9-]+$" },
+    "groupId": { "type": "string", "pattern": "^[A-Z0-9-]+$" },
+    "sourceRevision": { "type": "integer", "minimum": 1 },
+    "runtimeBuild": { "type": "integer", "minimum": 1 },
+    "status": { "const": "approved" },
+    "screenUnit": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "profile": { "enum": ["complete-layer", "standalone-raster", "bundle-model"] },
+    "pack": { "enum": ["core", "campaign", "optional"] },
+    "kind": { "enum": ["image", "atlas", "model", "texture", "vfx"] },
+    "colorSpace": { "enum": ["sRGB", "linear", "not-applicable"] },
+    "alpha": { "enum": ["none", "straight", "not-applicable"] },
+    "lossPolicy": { "enum": ["lossless-required", "lossy-background-approved", "not-applicable"] },
+    "pivot": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "bounds": {
+      "type": "object",
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "$ref": "#/$defs/point" },
+        "max": { "$ref": "#/$defs/point" }
+      },
+      "additionalProperties": false
+    },
+    "anchors": { "type": "array" },
+    "clips": { "type": "array", "items": { "type": "string" } },
+    "mirrorSafe": { "type": "boolean" },
+    "source": { "type": "string", "pattern": "^ARTSRC:[A-Z0-9-]+:R[0-9]+$" },
+    "provenance": { "type": "string", "pattern": "^PROV:[A-Z0-9-]+:R[0-9]+$" },
+    "license": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "specRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+    },
+    "reviewedAt": { "type": "string", "format": "date" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "kind": { "const": "model" } },
+        "required": ["kind"]
+      },
+      "then": {
+        "properties": { "bounds": true },
+        "required": ["bounds"]
+      }
+    }
+  ],
+  "$defs": {
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      }
+    }
+  }
+}

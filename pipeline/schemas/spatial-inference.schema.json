@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/spatial-inference.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion", "profile", "screenUnit", "sourceMasterId",
+    "topologyRegistryEntry", "screen", "settingSources", "camera",
+    "spatialOrder", "topology", "occludedContinuation", "invariants",
+    "forbiddenSubstitutions", "inferenceSummary", "unresolvedQuestions",
+    "approval", "approvedForGeneration"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 3 },
+    "profile": { "const": "complete-layer" },
+    "screenUnit": {
+      "type": "string",
+      "minLength": 1,
+      "not": { "const": "REQUIRED" }
+    },
+    "sourceMasterId": { "type": "string", "pattern": "^CM-[A-Z0-9-]+-R[0-9]+$" },
+    "topologyRegistryEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceMasterId", "approvalStatus", "approvalDate"],
+      "properties": {
+        "sourceMasterId": {
+          "type": "string",
+          "pattern": "^CM-[A-Z0-9-]+-R[0-9]+$"
+        },
+        "approvalStatus": { "const": "approved-by-user" },
+        "approvalDate": { "type": "string", "format": "date" }
+      }
+    },
+    "screen": {
+      "type": "object",
+      "required": ["screenIds", "gameState", "playerAction", "semanticOwner", "assetMeaning"],
+      "properties": {
+        "screenIds": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+        },
+        "gameState": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "playerAction": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "semanticOwner": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "assetMeaning": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+      }
+    },
+    "settingSources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["file", "sha256", "evidence"],
+        "properties": {
+          "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "evidence": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "required": ["position", "viewDirection", "framing"],
+      "properties": {
+        "position": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "viewDirection": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "framing": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+      }
+    },
+    "spatialOrder": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+    },
+    "topology": { "type": "object", "minProperties": 1 },
+    "occludedContinuation": { "type": "array", "minItems": 1 },
+    "invariants": { "type": "array", "minItems": 1 },
+    "forbiddenSubstitutions": { "type": "array", "minItems": 1 },
+    "inferenceSummary": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "unresolvedQuestions": { "type": "array", "maxItems": 0 },
+    "approval": {
+      "type": "object",
+      "required": ["status", "basis", "date"],
+      "properties": {
+        "status": { "const": "user-confirmed" },
+        "basis": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "date": { "type": "string", "format": "date" }
+      }
+    },
+    "approvedForGeneration": { "const": true },
+    "referenceChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "file", "previousSha256", "currentSha256", "impact",
+          "userReapprovalRequired", "basis", "date"
+        ],
+        "properties": {
+          "file": { "type": "string", "minLength": 1 },
+          "previousSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "currentSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "impact": {
+            "enum": [
+              "path-only",
+              "version-label-only",
+              "non-semantic-wording-only",
+              "repository-boundary-only",
+              "meaning-changed",
+              "spatial-contract-changed",
+              "visual-contract-changed",
+              "runtime-behavior-changed"
+            ]
+          },
+          "userReapprovalRequired": { "type": "boolean" },
+          "basis": { "type": "string", "minLength": 1 },
+          "date": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+}

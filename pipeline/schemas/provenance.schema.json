@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/provenance.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion", "profile", "id", "sourceRevision", "screenUnit",
+    "semanticPurpose", "status", "sourceReferences", "generation", "output",
+    "runtimeRegistrationAllowed"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 2 },
+    "profile": { "enum": ["complete-layer", "standalone-raster", "bundle-model"] },
+    "id": { "type": "string", "pattern": "^(?!.*-R[0-9]+$)[A-Z0-9-]+$" },
+    "sourceRevision": { "type": "integer", "minimum": 1 },
+    "screenUnit": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "semanticPurpose": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "status": { "enum": ["pending-user-review", "approved-by-user", "rejected-by-user", "superseded"] },
+    "sourceReferences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["file", "sha256", "role"],
+        "properties": {
+          "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "role": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "required": [
+        "tool", "promptSummary", "rawChromaSource",
+        "rawChromaSourceSha256", "rawChromaSourceBytes", "postProcess"
+      ],
+      "properties": {
+        "tool": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "mode": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "promptSummary": {
+          "type": "string",
+          "minLength": 1,
+          "not": { "const": "REQUIRED" }
+        },
+        "rawChromaSource": {
+          "type": "string",
+          "minLength": 1,
+          "not": { "const": "REQUIRED" }
+        },
+        "rawChromaSourceSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "rawChromaSourceBytes": { "type": "integer", "minimum": 1 },
+        "postProcess": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "not": { "const": "REQUIRED" }
+          }
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["file", "sha256", "bytes"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "required": ["status", "date", "basis"],
+      "properties": {
+        "status": { "const": "approved-by-user" },
+        "date": { "type": "string", "format": "date" },
+        "basis": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+      }
+    },
+    "runtimeRegistrationAllowed": { "const": false }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "const": "approved-by-user" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": { "approval": {} },
+        "required": ["approval"]
+      }
+    }
+  ]
+}

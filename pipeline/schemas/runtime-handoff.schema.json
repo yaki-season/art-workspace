@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/runtime-handoff.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "pipelineContract", "profile", "id", "sourceRevision",
+    "runtimeBuild", "screenUnit", "allPriorGatesPassed",
+    "runtimeRegistrationAllowed", "evidence", "manifestEntry", "bundle",
+    "generatedAt"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "pipelineContract": { "const": "YS-ASSET-PIPELINE-v7" },
+    "profile": { "enum": ["complete-layer", "standalone-raster", "bundle-model"] },
+    "id": { "type": "string", "pattern": "^(?!.*-R[0-9]+$)[A-Z0-9-]+$" },
+    "sourceRevision": { "type": "integer", "minimum": 1 },
+    "runtimeBuild": { "type": "integer", "minimum": 1 },
+    "screenUnit": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "allPriorGatesPassed": { "const": true },
+    "runtimeRegistrationAllowed": { "const": true },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provenance", "profileApproval", "recomposition", "optimization", "finalApproval"
+      ],
+      "properties": {
+        "provenance": { "$ref": "#/$defs/fileEvidence" },
+        "profileApproval": { "$ref": "#/$defs/fileEvidence" },
+        "recomposition": { "$ref": "#/$defs/fileEvidence" },
+        "optimization": { "$ref": "#/$defs/fileEvidence" },
+        "finalApproval": { "$ref": "#/$defs/fileEvidence" }
+      }
+    },
+    "manifestEntry": { "$ref": "#/$defs/fileEvidence" },
+    "bundle": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "sourceFile", "url", "sha256", "bytes", "format"],
+        "properties": {
+          "role": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+          "sourceFile": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+          "url": { "type": "string", "pattern": "^/assets/[a-z0-9./-]+$" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "format": { "enum": ["jpeg", "png", "webp", "glb", "json"] },
+          "dimensions": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["width", "height"],
+            "properties": {
+              "width": { "type": "integer", "minimum": 1 },
+              "height": { "type": "integer", "minimum": 1 }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "format": { "enum": ["jpeg", "png", "webp"] }
+              },
+              "required": ["format"]
+            },
+            "then": {
+              "properties": { "dimensions": true },
+              "required": ["dimensions"]
+            }
+          }
+        ]
+      }
+    },
+    "generatedAt": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "fileEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "sha256"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

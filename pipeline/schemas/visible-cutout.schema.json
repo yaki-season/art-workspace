@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yaki-season.local/pipeline/visible-cutout.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "profile", "id", "screenUnit", "sourceMasterId",
+    "semanticOwner", "source", "output", "alphaReview", "approval"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "profile": { "const": "complete-layer" },
+    "id": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "screenUnit": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "sourceMasterId": { "type": "string", "pattern": "^CM-[A-Z0-9-]+-R[0-9]+$" },
+    "semanticOwner": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+    "source": { "$ref": "#/$defs/fileEvidence" },
+    "output": { "$ref": "#/$defs/fileEvidence" },
+    "alphaReview": {
+      "type": "object",
+      "required": ["result", "cornerAlpha"],
+      "properties": {
+        "result": { "const": "passed" },
+        "cornerAlpha": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "integer", "minimum": 0, "maximum": 255 }
+        }
+      }
+    },
+    "approval": { "$ref": "#/$defs/userApproval" }
+  },
+  "$defs": {
+    "fileEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "sha256"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "userApproval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "date", "basis"],
+      "properties": {
+        "status": { "const": "approved-by-user" },
+        "date": { "type": "string", "format": "date" },
+        "basis": { "type": "string", "minLength": 1, "not": { "const": "REQUIRED" } }
+      }
+    }
+  }
+}
