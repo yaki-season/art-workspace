@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-ICON-NEGIMA",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "2be7ae043342a6730f249bfcf33103274027e71da2895670f735db8886881edc"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "8c4e5e99067c778a4279faba241a0640c2889be70dab160eb37d06b2ae8ff1e4"
+    },
+    "recomposition": {
+      "file": "../../../../../../../artist-000/d1-customer-order/recomposition/all-waiting/r1/metadata/recomposition-report.json",
+      "sha256": "ef05af2fee3c88e3b6cd929954a9a46a90ab9888c77db94c4aec863c3a4e6289"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "7c41247e1fc97b29be2d5e17c7f5cff9985b4f8b7e82a3e8e5f4259ae92bda08"
+    },
+    "finalApproval": {
+      "file": "../../../../../../../artist-000/d1-customer-order/recomposition/metadata/final-approval-all-waiting.json",
+      "sha256": "2c8f06eaf7a15d0a4669e6debf7a02948360d93af071ac83eff935031768bb82"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "b3ee345c1d500d8f13d23bbf6aef1b24e6fede9b785224366fbe445131dafede"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/order-icon-negima-r1.png",
+      "url": "/assets/core/ui/order-icon-negima-r1-b1.png",
+      "sha256": "d51ad1c7e46a66208713eb55675b1718664b887c3d8d5a98b34a6f6ef117d37a",
+      "bytes": 17867,
+      "format": "png",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      }
+    }
+  ],
+  "generatedAt": "2026-07-28T13:30:20.506Z"
+}

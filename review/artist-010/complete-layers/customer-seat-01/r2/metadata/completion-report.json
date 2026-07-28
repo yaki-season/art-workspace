@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "creationUnitCount": 1,
+  "id": "ARTIST-010-CUSTOMER-SEAT-01-COMPLETE",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "semanticOwner": "customers.seat-01.character-seat",
+  "assetMeaning": "seat-01의 사용자 승인 중년 남성 손님과 그가 앉아 있는 단일 목재 바 좌석의 온전한 straight-alpha FHD 레이어",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved",
+    "date": "2026-07-26",
+    "basis": "사용자 응답: 승인"
+  },
+  "revisionReason": "R1 검수판에 승인 범위 밖 음식·상태 UI·전환 UI가 표시된 사용자 반려를 반영해 complete alpha는 유지하고 검수판만 subject-only로 교체",
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../../../../customer-layers/r2/layers/10-customers-seats.png",
+    "sha256": "2b2714d5ac5763f53dc86a902371bbfb02de038bffca675ba5e4f8b28f5874e8",
+    "derivedReference": {
+      "file": "../../preflight/refs/seat-01-visible-cutout.png",
+      "sha256": "172bb7361d64e3bca3f613dc10b4c968b5ea0f872773efc6362e954ce286cb5e",
+      "method": "승인 parent cutout에서 x=120, y=210, width=310, height=370을 픽셀 변경 없이 추출"
+    }
+  },
+  "spatialInference": {
+    "file": "../../preflight/seat-01-spatial-inference.json",
+    "sha256": "5ec3dfca5d8a82fdb43f74d00efe6a9114347870d8b58bf6c4045d047bf7e1b2"
+  },
+  "generation": {
+    "method": "R2에는 이미지 생성 호출 없음. R1의 OpenAI built-in imagegen identity-preserve complete alpha를 바이트 단위로 유지",
+    "generationUnit": "seat-01 손님+좌석 한 묶음",
+    "batchSize": 1,
+    "prompt": {
+      "file": "PROMPT.md",
+      "sha256": "a54ff2471f3b84ef27f1be97b184b5626d5e7401182e822d385f8cf25fc038ad"
+    },
+    "sourceModelOutput": {
+      "file": "../source/model-chroma.png",
+      "sha256": "8346b2b1859097f421dacf3921eedc03bdb43463cb2c9e348ab3db19e2a14a45",
+      "width": 974,
+      "height": 1614,
+      "background": "flat sampled magenta #fa02f8"
+    },
+    "alphaSource": {
+      "file": "../source/model-alpha.png",
+      "sha256": "2dc3cd2e43ab40c5a1e467b3c088a1f49219d85e7d275788d51494afe348c320",
+      "method": "imagegen skill remove_chroma_key.py, border auto-key, soft matte, transparent threshold 12, opaque threshold 220, despill"
+    },
+    "deterministicCompletion": {
+      "generatedSubjectPlacement": {
+        "trimmedThenNearestWidth": 310,
+        "left": 127,
+        "top": 220
+      },
+      "generatedHiddenSurfaceClip": {
+        "includeFromCanvasY": 500,
+        "reason": "모델 생성 픽셀은 단일 카운터가 가릴 하체·좌석 영역에만 사용"
+      },
+      "approvedVisibleOverlay": {
+        "left": 120,
+        "top": 210,
+        "width": 310,
+        "height": 370,
+        "referenceVisiblePixels": 49542,
+        "differentVisiblePixels": 0
+      },
+      "customerAnchor": [
+        282,
+        526
+      ]
+    },
+    "r2ReviewOnlyCorrection": {
+      "completeShaUnchanged": true,
+      "method": "fixed checkerboard plus completed output only",
+      "script": {
+        "file": "compose-isolated-review.mjs",
+        "sha256": "35ab9a444b798d83854e89ee16eec5e0ea81a1207e06479a88a49c30b14ae2c4"
+      }
+    }
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "alpha-cutout",
+    "transparentPixels": 1945191,
+    "opaquePixels": 126405,
+    "partialAlphaPixels": 2004,
+    "hasAlpha": true,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "reviewComposition": {
+    "mode": "isolated-alpha-checkerboard",
+    "subjectAssetOnly": true,
+    "cellSize": 32,
+    "colors": [
+      "#18120f",
+      "#2a211c"
+    ],
+    "isolationDifferentPixels": 0,
+    "included": [
+      "fixed-checkerboard",
+      "customer-seat-01-complete-fhd-r2"
+    ],
+    "absent": [
+      "other-customers",
+      "food-or-drink",
+      "state-ui",
+      "navigation-ui",
+      "counter",
+      "background-scene"
+    ]
+  },
+  "topologyReview": {
+    "result": "passed-for-user-review",
+    "observations": [
+      "seat-01 손님 한 명과 좌석 하나만 포함한다",
+      "승인 상체는 customerAnchor [282,526]와 원래 크기를 유지한다",
+      "R2 complete alpha는 사용자가 나머지 항목에 문제가 없다고 확인한 R1과 동일하다"
+    ]
+  },
+  "categoryContaminationReview": {
+    "result": "passed",
+    "included": [
+      "seat-01 approved visible customer pixels",
+      "seat-01 hidden lower body",
+      "one wooden bar seat"
+    ],
+    "absent": [
+      "other-customers",
+      "extra-seat",
+      "background",
+      "bar-counter-or-table",
+      "food-or-drink",
+      "held-prop",
+      "state-ui",
+      "navigation-ui",
+      "text",
+      "cast-shadow-or-floor-plane",
+      "magenta-background"
+    ]
+  },
+  "styleReview": {
+    "result": "accepted-in-r1-user-review",
+    "observations": [
+      "사용자가 오염 항목 외 나머지 항목은 문제없다고 확인했다",
+      "complete alpha의 SHA-256은 R1과 R2가 동일하다"
+    ]
+  },
+  "outputs": {
+    "completed": {
+      "file": "customer-seat-01-complete-fhd-r2.png",
+      "sha256": "bfe372708fecaa4a97e66afa6ff9d1216c1ddf341bed8ceecd9bf36486193d22"
+    },
+    "reviewBoard": {
+      "file": "customer-seat-01-review-fhd-r2.png",
+      "sha256": "d31a609db99cb91215dea166e44a20dff94c7c7f37782784178634de0b1acaa3",
+      "note": "고정 checkerboard와 seat-01 complete alpha만 합성했다. 배경·카운터·음식·상태 UI·전환 UI는 포함하지 않았다."
+    }
+  },
+  "rejectedIntermediate": {
+    "retained": false
+  },
+  "nextAction": "seat-02는 별도 공간 추론·단일 생성·단일 승인 단위로만 진행하며 사용자 다음 작업 지시 전에는 생성하지 않는다"
+}

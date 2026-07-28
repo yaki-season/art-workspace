@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "complete-layer",
+  "id": "ARTIST-010-BACKGROUND-COMPLETE",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "b5a5ba6a9597cae8b9ae0c08cdbe56b604387b31879f053c40702230b39ea21d"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "99504a7bf7317bfbf5d14651bd8bbc0264a10a7dae1c99d90f02669b27c77c7c"
+    },
+    "recomposition": {
+      "file": "../../../../../artist-000/d1-customer-order/recomposition/all-waiting/r1/metadata/recomposition-report.json",
+      "sha256": "ef05af2fee3c88e3b6cd929954a9a46a90ab9888c77db94c4aec863c3a4e6289"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "0ca1f8a299d72c5eb7e9dfa0029abbc09cac2a9d7a3958e25a571a46e1ea73c8"
+    },
+    "finalApproval": {
+      "file": "../../../../../artist-000/d1-customer-order/recomposition/metadata/final-approval-all-waiting.json",
+      "sha256": "2c8f06eaf7a15d0a4669e6debf7a02948360d93af071ac83eff935031768bb82"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "55d870e47e177e5951145e86fb7ae34b3a80bb70f162f2ca44fcf07f16419351"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../background-complete-fhd-r3.png",
+      "url": "/assets/core/customer/background-complete-r3-b1.png",
+      "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+      "bytes": 3476052,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-07-28T13:29:33.036Z"
+}

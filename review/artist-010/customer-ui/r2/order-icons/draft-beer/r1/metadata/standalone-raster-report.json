@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-ICON-DRAFT-BEER",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticOwner": "customer-order-item",
+  "assetMeaning": "손님 주문 대기 패널에서 미수령 생맥주 주문 한 종류를 나타내는 아이콘",
+  "sourceEvidence": [
+    {
+      "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "bytes": 2726762,
+      "role": "approved-style-reference"
+    },
+    {
+      "file": "../../../negima/r1/assets/order-icon-negima-r1.png",
+      "sha256": "d51ad1c7e46a66208713eb55675b1718664b887c3d8d5a98b34a6f6ef117d37a",
+      "bytes": 17867,
+      "role": "approved-order-icon-reference"
+    },
+    {
+      "file": "../../../../wait-timer/r3/assets/customer-order-wait-panel-skin-r3.png",
+      "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+      "bytes": 50683,
+      "role": "approved-slot-contrast-reference"
+    },
+    {
+      "file": "../source/draft-beer-chroma-source.png",
+      "sha256": "9ac094656450fa342c231a7fff41a46670c676a11ff144e348bd54045e481794",
+      "bytes": 1410757,
+      "role": "generation-source"
+    }
+  ],
+  "output": {
+    "file": "../assets/order-icon-draft-beer-r1.png",
+    "sha256": "bcc841ae39a16dd67bfc7f8dcc16d43f2d66de7ab8701b93a80ffbeb12b2435d",
+    "bytes": 42974,
+    "width": 192,
+    "height": 192,
+    "alpha": "straight",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../review-draft-beer-fhd-r1.png",
+    "sha256": "6cd7343676b9b5f4bba2fa14aa9cff7f9569c6ef135dd2a51907d451559dc4d7",
+    "bytes": 71042,
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "quantity or completion check",
+    "panel, speech bubble, timer, label, or price",
+    "coaster, tray, hand, customer, or background scene",
+    "other food or drink"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-27",
+    "basis": "사용자가 생맥주 잔, 황금 맥주, 크림 거품, 손잡이 실루엣과 픽셀 질감을 승인했다."
+  },
+  "runtimeRegistrationAllowed": false
+}

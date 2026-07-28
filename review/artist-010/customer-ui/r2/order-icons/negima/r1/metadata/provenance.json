@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-ICON-NEGIMA",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-27",
+    "basis": "사용자가 네기마 구성, 픽셀 질감, 색 관계와 온전한 단일 투명 실루엣을 승인했다."
+  },
+  "runtimeRegistrationAllowed": false,
+  "semanticPurpose": "손님 주문 대기 패널에서 아직 수령하지 않은 네기마 꼬치 주문 한 종류를 나타낸다.",
+  "sourceReferences": [
+    {
+      "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "approved food treatment, warm palette, pixel density, and skewer silhouette reference"
+    },
+    {
+      "file": "../../../../wait-timer/r3/assets/customer-order-wait-panel-skin-r3.png",
+      "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+      "role": "approved customer order panel scale and dark-indigo contrast reference"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "generate",
+    "promptSummary": "One complete diagonal negima yakitori skewer: alternating glossy grilled chicken and muted green charred leek, whole bamboo stick, warm hand-crafted pixel art, no panel or text, on chroma background for alpha removal.",
+    "rawChromaSource": "../source/negima-chroma-source.png",
+    "rawChromaSourceSha256": "52d8dfe821b41e0294a0ca736600780313299fd8b06a4c04a4b30c4ab79095af",
+    "rawChromaSourceBytes": 1215579,
+    "postProcess": [
+      "auto-key chroma removal with soft matte and despill",
+      "transparent subject crop",
+      "nearest-neighbor fit inside a 192x192 transparent canvas"
+    ]
+  },
+  "output": {
+    "file": "../assets/order-icon-negima-r1.png",
+    "bytes": 17867,
+    "width": 192,
+    "height": 192,
+    "sha256": "d51ad1c7e46a66208713eb55675b1718664b887c3d8d5a98b34a6f6ef117d37a",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 5229,
+      "greenSpillPixels": 0
+    }
+  },
+  "runtimeComposition": {
+    "slot": "customer-order-wait-panel R3 unreceived item icon slot",
+    "quantity": "DOM xN rendered beside this image",
+    "completedState": "this image is replaced by the approved circular-check DOM state; quantity remains DOM",
+    "recommendedCss": "width: 28px; height: 28px; object-fit: contain; image-rendering: pixelated"
+  },
+  "reviewBoard": {
+    "file": "../review-negima-fhd-r1.png",
+    "html": "../review-negima-fhd-r1.html",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "a75ee43ed769b5a91056a8abc03e0d671ef2c1a4da158666bac34009f0c06487",
+    "contains": [
+      "one negima icon enlarged with nearest-neighbor scaling",
+      "neutral checkerboard only"
+    ]
+  },
+  "excludes": [
+    "quantity, check, timer, label, price, or seat number",
+    "panel, speech bubble, UI frame, plate, tray, hand, customer, counter, table, or shop background",
+    "other food, drink, skewer, shadow, reflection, watermark, or chroma-key color"
+  ],
+  "approvalQuestion": "네기마의 닭고기·파 교차 구성, 따뜻한 픽셀 질감·색 관계, 온전한 꼬치 실루엣과 단일 투명 에셋 격리만 검토한다. 수량과 완료 체크는 이 자산의 범위가 아니다."
+}

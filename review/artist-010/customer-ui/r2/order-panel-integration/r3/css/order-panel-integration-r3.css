@@ -1,0 +1,2 @@
+/* R3 intentionally reuses the approved R2 layout; only the DOM state changes. */
+@import url('../../r2/css/order-panel-integration-r2.css');

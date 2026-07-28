@@ -1,0 +1,36 @@
+{
+  "id": "ARTIST-010-BACKGROUND-COMPLETE",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "complete-layer",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "none",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:ARTIST-010-BACKGROUND-COMPLETE:R3",
+  "provenance": "PROV:ARTIST-010-BACKGROUND-COMPLETE:R3",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.0.0",
+    "ART-002 v3.6.1"
+  ],
+  "reviewedAt": "2026-07-28",
+  "url": "/assets/core/customer/background-complete-r3-b1.png",
+  "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+  "bytes": 3476052,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

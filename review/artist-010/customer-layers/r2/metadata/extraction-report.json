@@ -1,0 +1,127 @@
+{
+  "approvalStatus": "approved-by-user",
+  "approvedAt": "2026-07-26",
+  "approvalScope": "five-visible-cutout-layers-and-r2-recomposition",
+  "source": {
+    "file": "../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+    "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+    "width": 1920,
+    "height": 1080
+  },
+  "method": "deterministic-visible-pixel-partition",
+  "generatedPixels": 0,
+  "modelInpaintedPixels": 0,
+  "localTextureReplacement": {
+    "method": "deterministic-local-texture-reconstruction",
+    "removedSeatPlateIconCount": 6,
+    "changedPixels": 59901,
+    "outsideChangedPixels": 0,
+    "rectangles": [
+      {
+        "x": 180,
+        "y": 550,
+        "w": 98,
+        "h": 100,
+        "matSourceX": 290
+      },
+      {
+        "x": 448,
+        "y": 550,
+        "w": 119,
+        "h": 100,
+        "matSourceX": 580
+      },
+      {
+        "x": 727,
+        "y": 550,
+        "w": 112,
+        "h": 100,
+        "matSourceX": 850
+      },
+      {
+        "x": 1078,
+        "y": 550,
+        "w": 132,
+        "h": 100,
+        "matSourceX": 1200
+      },
+      {
+        "x": 1370,
+        "y": 550,
+        "w": 118,
+        "h": 100,
+        "matSourceX": 1300
+      },
+      {
+        "x": 1630,
+        "y": 550,
+        "w": 119,
+        "h": 100,
+        "matSourceX": 1760
+      }
+    ]
+  },
+  "hiddenSurfacePolicy": "non-icon-hidden-surfaces-remain-transparent-no-model-inpainting",
+  "masks": {
+    "customers": {
+      "file": "masks/customers-foreground-mask.png",
+      "sha256": "4ebee784fade27d44595141ca36681b0997c55d53370253c791ccda8020095e8",
+      "method": "Apple Vision foreground instance mask"
+    },
+    "food": {
+      "file": "masks/table-food-foreground-mask.png",
+      "sha256": "994e4f8a3e5479c034469318e1fa46d306b6c32245f804679120129bf38f6521",
+      "method": "Apple Vision foreground instance masks from seat contact crops"
+    }
+  },
+  "drawOrder": [
+    "background",
+    "customers",
+    "counter",
+    "food",
+    "ui"
+  ],
+  "outputs": {
+    "background": {
+      "file": "layers/00-background.png",
+      "sha256": "6523dc49b2b34d52366bf23f046eb0e0fa32473b1255d036b4197a6294713e17",
+      "opaquePixelCount": 659128
+    },
+    "customers": {
+      "file": "layers/10-customers-seats.png",
+      "sha256": "2b2714d5ac5763f53dc86a902371bbfb02de038bffca675ba5e4f8b28f5874e8",
+      "opaquePixelCount": 257581
+    },
+    "counter": {
+      "file": "layers/20-single-counter.png",
+      "sha256": "2a5275582e6705841ed713154c789f80a90639f6b687a777df53d582b47c7b4e",
+      "opaquePixelCount": 225473
+    },
+    "food": {
+      "file": "layers/30-table-food-drink.png",
+      "sha256": "7472be77ad4a5d2a42945171bfe30f5a4927c1509341b3eee834a51657f1622e",
+      "opaquePixelCount": 47165
+    },
+    "ui": {
+      "file": "layers/40-foreground-ui.png",
+      "sha256": "a120b77ae17c113b8055d8af991ac3b4f67cd5ba3ad55315ba0f056fe526d892",
+      "opaquePixelCount": 884253
+    },
+    "recomposite": {
+      "file": "customer-service-recomposite-fhd-r2.png",
+      "sha256": "9d801bc25e12fb7b6b35ca540a5a0fd7d8ae1a75e3bfb34956168dca5a908070",
+      "opaquePixelCount": 2073600
+    },
+    "reviewBoard": {
+      "file": "layer-review-board-fhd-r2.png",
+      "sha256": "3455b31c87528cb78eff21465c5ee15f9ddd1d6f9b910bda7be03902bae1e164",
+      "opaquePixelCount": 2073600
+    }
+  },
+  "comparison": {
+    "target": "corrected-source-to-recomposition",
+    "pixelCount": 2073600,
+    "differentPixels": 0,
+    "maxChannelDelta": 0
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-SERVICE-WAIT-PANEL",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "superseded",
+  "supersededBy": "UI-CUSTOMER-ORDER-WAIT-PANEL:R3",
+  "semanticPurpose": "손님이 꼬치와 맥주 주문을 접수한 뒤, 음식·음료가 제공될 때까지 남은 서빙 대기 시간을 표시한다.",
+  "runtimeRegistrationAllowed": false,
+  "sourceReferences": [
+    {
+      "file": "../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "approved pixel density, palette, material, and UI language reference"
+    },
+    {
+      "file": "../../../considering/r1/assets/customer-state-considering-r1.png",
+      "sha256": "c2c6400be384a8d5303bb51201ee9c4d65e01196aa42a23180659bce45057bca",
+      "role": "approved UI outline and scale reference"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "promptSummary": "One orthographic front-facing service-wait panel: left order ticket with skewer and beer pictograms; right five-segment track, sample 3 of 5 amber segments; no text, value, or scene elements; chroma background for removal.",
+    "rawChromaSource": "../source/service-wait-panel-chroma-source.png",
+    "rawChromaSourceSha256": "053194d66ae597658b804bfd44e7efb2395fbe75634e788ff14b43bcc80b524b",
+    "rawChromaSourceBytes": 1266435,
+    "postProcess": [
+      "auto-key chroma removal with despill",
+      "transparent subject crop",
+      "nearest-neighbor fit to 320x144 transparent canvas"
+    ]
+  },
+  "output": {
+    "file": "../assets/customer-service-wait-panel-r2.png",
+    "bytes": 49788,
+    "width": 320,
+    "height": 144,
+    "sha256": "b257fe4ac8542c4714a3712d5586813e8603cd7fbefb0213bcbfe484b7187a07",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 24911,
+      "greenSpillPixels": 0
+    }
+  },
+  "timerBehavior": {
+    "shownSample": "3 of 5 segments amber; 2 of 5 segments empty",
+    "meaning": "이 주문의 꼬치·맥주 제공까지 남은 서빙 대기 시간",
+    "startState": "five amber segments",
+    "decrementDirection": "right-to-left",
+    "endState": "five empty dark segments",
+    "runtimeImplementation": "DOM/CSS 또는 동등 UI overlay가 5개 cell의 amber fill을 한 칸씩 제거한다. 래스터 panel은 frame·order pictogram·cell divider의 기준 art로 사용한다."
+  },
+  "reviewBoard": {
+    "file": "../review-service-wait-panel-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "8d03cf59a7f35855e3f7a16c80aa32f054c4b45219a04e14095e7b688ed5ed0c",
+    "contains": [
+      "this one service-wait panel in the 3-of-5 sample state",
+      "neutral dark checkerboard only"
+    ]
+  },
+  "bakedArt": [
+    "front-facing dark wood and ink panel",
+    "order ticket pictograms for skewer and beer",
+    "five-cell horizontal timer track and dividers"
+  ],
+  "domOrEquivalentUi": [
+    "live 5-cell fill state",
+    "exact remaining seconds",
+    "accessibility status text"
+  ],
+  "excludes": [
+    "customer, hand, counter, table, or shop background",
+    "letters, digits, readable menu text, or price",
+    "perspective, tilt, depth, top face, bottom face, or floating badge",
+    "other status panels, cast shadow, reflection, watermark, or chroma-key color"
+  ],
+  "approvalQuestion": "정면성, 주문서가 가리키는 대기 대상, 5칸이 오른쪽부터 줄어드는 방식, 기존 UI의 크림·호박·짙은 목재 색 관계만 검토한다."
+}

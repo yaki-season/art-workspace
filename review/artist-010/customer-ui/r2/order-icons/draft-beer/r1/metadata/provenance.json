@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-ICON-DRAFT-BEER",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-27",
+    "basis": "사용자가 생맥주 잔, 황금 맥주, 크림 거품, 손잡이 실루엣과 픽셀 질감을 승인했다."
+  },
+  "runtimeRegistrationAllowed": false,
+  "semanticPurpose": "손님 주문 대기 패널에서 아직 수령하지 않은 생맥주 한 잔 주문 한 종류를 나타낸다.",
+  "sourceReferences": [
+    {
+      "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "approved warm pixel palette and material-density reference"
+    },
+    {
+      "file": "../../../negima/r1/assets/order-icon-negima-r1.png",
+      "sha256": "d51ad1c7e46a66208713eb55675b1718664b887c3d8d5a98b34a6f6ef117d37a",
+      "role": "approved 192px order-icon scale, transparent-edge, and handcrafted pixel-treatment reference"
+    },
+    {
+      "file": "../../../../wait-timer/r3/assets/customer-order-wait-panel-skin-r3.png",
+      "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+      "role": "approved customer order panel contrast and slot-use reference"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "generate",
+    "promptSummary": "One complete handled beer mug only: golden amber draft beer and creamy foam, warm handcrafted pixel art with dark ink outlines; no UI, text, shadow, other objects, or background scene; uniform #00ff00 chroma background for alpha removal.",
+    "rawChromaSource": "../source/draft-beer-chroma-source.png",
+    "rawChromaSourceSha256": "9ac094656450fa342c231a7fff41a46670c676a11ff144e348bd54045e481794",
+    "rawChromaSourceBytes": 1410757,
+    "postProcess": [
+      "auto-key chroma removal with soft matte and despill",
+      "transparent subject crop",
+      "nearest-neighbor fit inside a 192x192 transparent canvas"
+    ]
+  },
+  "output": {
+    "file": "../assets/order-icon-draft-beer-r1.png",
+    "bytes": 42974,
+    "width": 192,
+    "height": 192,
+    "sha256": "bcc841ae39a16dd67bfc7f8dcc16d43f2d66de7ab8701b93a80ffbeb12b2435d",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 15904,
+      "partialAlphaPixels": 74,
+      "greenSpillPixels": 0
+    }
+  },
+  "runtimeComposition": {
+    "slot": "customer-order-wait-panel R3 unreceived item icon slot",
+    "quantity": "DOM xN rendered beside this image",
+    "completedState": "this image is replaced by the approved circular-check DOM state; quantity remains DOM",
+    "recommendedCss": "width: 28px; height: 28px; object-fit: contain; image-rendering: pixelated"
+  },
+  "reviewBoard": {
+    "file": "../review-draft-beer-fhd-r1.png",
+    "html": "../review-draft-beer-fhd-r1.html",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "6cd7343676b9b5f4bba2fa14aa9cff7f9569c6ef135dd2a51907d451559dc4d7",
+    "contains": [
+      "one draft-beer mug icon enlarged with nearest-neighbor scaling",
+      "neutral checkerboard only"
+    ]
+  },
+  "excludes": [
+    "quantity, check, timer, label, price, or seat number",
+    "panel, speech bubble, UI frame, plate, tray, hand, customer, counter, table, or shop background",
+    "other food, drink, skewer, shadow, reflection, watermark, or chroma-key color"
+  ],
+  "approvalQuestion": "생맥주 잔 하나의 황금 맥주·크림 거품·손잡이 실루엣, 따뜻한 픽셀 질감과 단일 투명 에셋 격리만 검토한다. 수량과 완료 체크는 이 자산의 범위가 아니다."
+}

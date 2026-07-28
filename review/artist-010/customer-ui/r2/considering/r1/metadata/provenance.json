@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-CONSIDERING",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-26",
+    "basis": "사용자가 완결형 말풍선 실루엣, 3점 가독성, 색 관계를 승인했다."
+  },
+  "semanticPurpose": "착석한 손님이 메뉴를 고르는 동안 표시하는 말줄임표 상태",
+  "runtimeRegistrationAllowed": false,
+  "sourceReferences": [
+    {
+      "file": "../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "approved style, palette, and pixel-density reference"
+    },
+    {
+      "file": "../../../../r1/assets/customer-state-considering-visible.png",
+      "sha256": "fec74f1f1e74c253ee7e08399b99fb1c324abbe4e2ee27db23f9b904b32a0429",
+      "role": "previous incomplete silhouette and color cue only; not a production source"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "promptSummary": "One complete, larger cream-paper ellipsis speech bubble with a fully visible lower-left tail; warm handcrafted yakitori pixel art; ink-dark outline and worn brown/amber edge; no scene objects or text; flat #00ff00 chroma background for removal.",
+    "rawChromaSource": "../source/considering-chroma-source.png",
+    "rawChromaSourceSha256": "74e6afe4f6d2c3e14cad6a893b6008ea7bbbe3999a6a162a9063a76e5033b1bc",
+    "rawChromaSourceBytes": 1125616,
+    "postProcess": [
+      "auto-key chroma removal with despill",
+      "nearest-neighbor resize to 192x144",
+      "warm palette calibration toward the approved cream-paper / aged amber relationship"
+    ]
+  },
+  "output": {
+    "file": "../assets/customer-state-considering-r1.png",
+    "bytes": 13234,
+    "width": 192,
+    "height": 144,
+    "sha256": "c2c6400be384a8d5303bb51201ee9c4d65e01196aa42a23180659bce45057bca",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 6411,
+      "greenSpillPixels": 0
+    }
+  },
+  "reviewBoard": {
+    "file": "../review-considering-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "3480fbde96987ec45d7bc82be8dcd286141ceafcdc8d1ee091ad7f7756f109e9",
+    "contains": [
+      "this one speech-bubble asset",
+      "neutral dark checkerboard only"
+    ]
+  },
+  "excludes": [
+    "customer or hand",
+    "food or drink",
+    "counter or shop background",
+    "timer, order, badge, text, number, gauge, or frame",
+    "cast shadow and chroma-key color"
+  ],
+  "approvalQuestion": "말풍선의 전체 실루엣, 3점 가독성, 기존 화면과의 크림·호박·짙은 목재 색 관계만 검토한다. 다음 아이콘은 이 한 자산의 승인 뒤 제작한다."
+}

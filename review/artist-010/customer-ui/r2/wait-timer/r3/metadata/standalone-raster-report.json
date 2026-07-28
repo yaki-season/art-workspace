@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-WAIT-PANEL",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticOwner": "customer-order-wait-panel",
+  "assetMeaning": "손님 머리 위 주문 정보와 연속 대기 게이지를 담는 투명 말풍선 외피",
+  "sourceEvidence": [
+    {
+      "file": "../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "bytes": 2726762,
+      "role": "approved-style-and-placement-reference"
+    },
+    {
+      "file": "../../../considering/r1/assets/customer-state-considering-r1.png",
+      "sha256": "c2c6400be384a8d5303bb51201ee9c4d65e01196aa42a23180659bce45057bca",
+      "bytes": 13234,
+      "role": "approved-head-state-reference"
+    },
+    {
+      "file": "../source/order-wait-panel-chroma-source.png",
+      "sha256": "27cf85642b74ded80c7d7dd7a683e8b1173eb77db115010d8a7b9756ae942015",
+      "bytes": 1010123,
+      "role": "generation-source"
+    }
+  ],
+  "output": {
+    "file": "../assets/customer-order-wait-panel-skin-r3.png",
+    "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+    "bytes": 50683,
+    "width": 232,
+    "height": 174,
+    "alpha": "straight",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../review-order-wait-panel-isolated-fhd-r3.png",
+    "sha256": "d4db664a96f3a4fa2c6713bead3ee389c088725d25c65a6c672a24bed31bf16d",
+    "bytes": 83914,
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "food icon, quantity, completion check, or timer number",
+    "customer, counter, table, or background scene",
+    "segmented gauge logic",
+    "other UI panels"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-27",
+    "basis": "기존 사용자 승인 외피를 변경하지 않고 격리 검수판만 재현 가능한 checkerboard 증거로 이관했다."
+  },
+  "runtimeRegistrationAllowed": false
+}

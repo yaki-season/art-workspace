@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "approvalStatus": "approved-by-user",
+  "approvedAt": "2026-07-26",
+  "approvalScope": "five-visible-cutout-layers-and-r2-recomposition",
+  "sourceTask": "Artist-009-v1.2.2",
+  "sourceFile": "../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+  "sourceSha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "coordinateOrigin": "top-left"
+  },
+  "extraction": {
+    "policy": "visible-source-pixels-only",
+    "generatedPixels": 0,
+    "modelInpaintedPixels": 0,
+    "hiddenSurfacePolicy": "non-icon-hidden-surfaces-remain-transparent-no-model-inpainting",
+    "modelGenerationUsed": false,
+    "promptUsed": false,
+    "localTextureReplacement": {
+      "method": "deterministic-local-texture-reconstruction",
+      "removedPersistentSeatPlateIcons": 6,
+      "changedPixels": 59901,
+      "outsideEditRectChangedPixels": 0
+    }
+  },
+  "seatPlateUi": {
+    "persistentIcons": false,
+    "cleanupIconPolicy": "conditional-only-when-seat-needs-cleanup",
+    "cleanupInteraction": "empty-dishes-plus-cleanup-icon-plus-3-second-hold-gauge"
+  },
+  "drawOrder": [
+    {
+      "order": 0,
+      "id": "customer-background",
+      "file": "../layers/00-background.png"
+    },
+    {
+      "order": 1,
+      "id": "customers-seats",
+      "file": "../layers/10-customers-seats.png"
+    },
+    {
+      "order": 2,
+      "id": "single-counter",
+      "file": "../layers/20-single-counter.png"
+    },
+    {
+      "order": 3,
+      "id": "table-food-drink",
+      "file": "../layers/30-table-food-drink.png"
+    },
+    {
+      "order": 4,
+      "id": "foreground-ui",
+      "file": "../layers/40-foreground-ui.png"
+    }
+  ],
+  "counter": {
+    "layerCount": 1,
+    "foregroundUiTransitionY": 650,
+    "visibleTopEdge": [
+      [0, 468],
+      [140, 468],
+      [160, 490],
+      [350, 500],
+      [420, 510],
+      [650, 505],
+      [900, 510],
+      [1150, 508],
+      [1400, 510],
+      [1550, 505],
+      [1920, 505]
+    ]
+  },
+  "seats": [
+    {
+      "id": "seat-01",
+      "customerAnchor": [282, 526],
+      "foodContactAnchors": {
+        "plate": [266, 545],
+        "drink": [186, 514]
+      }
+    },
+    {
+      "id": "seat-02",
+      "customerAnchor": [544, 528],
+      "foodContactAnchors": {
+        "plate": [478, 546],
+        "drink": [585, 516]
+      }
+    },
+    {
+      "id": "seat-03",
+      "customerAnchor": [806, 530],
+      "foodContactAnchors": {
+        "plate": [771, 545],
+        "bowl": [884, 521],
+        "drink": [951, 518]
+      }
+    },
+    {
+      "id": "seat-04",
+      "customerAnchor": [1114, 533],
+      "foodContactAnchors": {
+        "plate": [1102, 543]
+      }
+    },
+    {
+      "id": "seat-05",
+      "customerAnchor": [1410, 530],
+      "foodContactAnchors": {
+        "plate": [1386, 551]
+      }
+    },
+    {
+      "id": "seat-06",
+      "customerAnchor": [1692, 516],
+      "emptySeat": true,
+      "foodContactAnchors": {
+        "plate": [1624, 551],
+        "drink": [1719, 522]
+      }
+    }
+  ],
+  "occlusion": {
+    "customerLowerBody": "hidden-by-single-counter",
+    "hiddenCustomerPixelsReconstructed": false,
+    "foodAndDrink": "visible-surface-cutouts-on-counter",
+    "layersAreMutuallyExclusive": true
+  },
+  "recomposition": {
+    "file": "../customer-service-recomposite-fhd-r2.png",
+    "sha256": "9d801bc25e12fb7b6b35ca540a5a0fd7d8ae1a75e3bfb34956168dca5a908070",
+    "differentPixels": 0,
+    "maxChannelDelta": 0
+  },
+  "reviewBoard": {
+    "file": "../layer-review-board-fhd-r2.png",
+    "sha256": "3455b31c87528cb78eff21465c5ee15f9ddd1d6f9b910bda7be03902bae1e164",
+    "approvalCriteria": [
+      "no-persistent-icons-under-six-seat-plates",
+      "cleanup-icon-is-conditional-only",
+      "semantic-layer-boundaries-have-no-cross-category-fragments",
+      "final-recomposition-retains-approved-scene-and-station-navigation"
+    ]
+  }
+}

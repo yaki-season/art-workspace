@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-WAIT-PANEL",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "835a56052d861a9d334a03c27ebb716583ab18d75da6876d067a3058652d577f"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "f412e52df9481db4337c3597b72f419703ea683828ff207ef996e395e0088833"
+    },
+    "recomposition": {
+      "file": "../../../../../../artist-000/d1-customer-order/recomposition/all-waiting/r1/metadata/recomposition-report.json",
+      "sha256": "ef05af2fee3c88e3b6cd929954a9a46a90ab9888c77db94c4aec863c3a4e6289"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "987f6b01b3dba06c8c704ed60dec69759203d43b3aa00b628f07a4942b57325b"
+    },
+    "finalApproval": {
+      "file": "../../../../../../artist-000/d1-customer-order/recomposition/metadata/final-approval-all-waiting.json",
+      "sha256": "2c8f06eaf7a15d0a4669e6debf7a02948360d93af071ac83eff935031768bb82"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "5e69996e032ebd2c658b3c2bdf64a59f460a8ffdb2b8ea9773b1c1f492266592"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/customer-order-wait-panel-skin-r3.png",
+      "url": "/assets/core/ui/customer-order-wait-panel-skin-r3-b1.png",
+      "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+      "bytes": 50683,
+      "format": "png",
+      "dimensions": {
+        "width": 232,
+        "height": 174
+      }
+    }
+  ],
+  "generatedAt": "2026-07-28T13:30:20.567Z"
+}

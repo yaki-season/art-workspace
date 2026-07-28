@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "ARTIST-010-BACKGROUND-COMPLETE",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "손님 서비스 화면의 인물·테이블·UI 없는 단일 대문과 밤 골목 배경 complete layer",
+  "status": "approved-by-user",
+  "sourceReferences": [
+    {
+      "file": "../source/model-complete-r3.png",
+      "sha256": "a8fdb45009016208501b89fd727d4b7872ad379ca77a45af42953d8470b140c0",
+      "role": "R3 imagegen source model output"
+    }
+  ],
+  "generation": {
+    "tool": "OpenAI built-in imagegen precise-object-edit",
+    "mode": "background complete layer R3",
+    "promptSummary": "중앙 단일 대문과 그 너머 밤 골목, 막힌 좌우 목재벽만 남긴 손님 서비스 배경",
+    "rawChromaSource": "../source/model-complete-r3.png",
+    "rawChromaSourceSha256": "a8fdb45009016208501b89fd727d4b7872ad379ca77a45af42953d8470b140c0",
+    "rawChromaSourceBytes": 2287578,
+    "postProcess": [
+      "sharp-cli resize 1920x1080 fit-fill nearest",
+      "opaque FHD output integrity verification"
+    ]
+  },
+  "output": {
+    "file": "../background-complete-fhd-r3.png",
+    "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+    "bytes": 3476052,
+    "width": 1920,
+    "height": 1080
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-26",
+    "basis": "completion-report R3의 사용자 승인 근거를 finalizer용 formal provenance로 이관"
+  },
+  "runtimeRegistrationAllowed": false
+}

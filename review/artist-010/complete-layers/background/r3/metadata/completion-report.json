@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "creationUnitCount": 1,
+  "id": "ARTIST-010-BACKGROUND-COMPLETE",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "semanticOwner": "customers.scene.background",
+  "assetMeaning": "손님측 단일 바 바로 뒤, 화면 중앙의 단일 대문과 그 개구부 너머 밤 골목 및 화면 끝까지 막힌 좌우 측면 목재벽을 인물과 전경 없이 온전하게 복원한 배경 레이어",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "basis": "사용자 지시: 승인한다. 다음 작업을 수행하라",
+    "date": "2026-07-26"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../../../../customer-layers/r2/layers/00-background.png",
+    "sha256": "6523dc49b2b34d52366bf23f046eb0e0fa32473b1255d036b4197a6294713e17"
+  },
+  "spatialInference": {
+    "file": "../../../../preflight/background-spatial-inference.json",
+    "sha256": "dec42f31c6bc1d8254501c9cdc4209fee2f497f6f42f0bc4a7b7bd0e2f7d3918"
+  },
+  "generation": {
+    "method": "OpenAI built-in imagegen precise-object-edit",
+    "generationUnit": "background complete 한 장",
+    "editTarget": {
+      "revision": "R2",
+      "sha256": "4bada62b06522d5d2f8518d461c9ab4799210d060ab0cc4c9d3573d65e362978",
+      "retained": false,
+      "changedRegion": "후면의 복수 개방 bay를 중앙 단일 대문과 막힌 좌우 측면 벽으로 교정"
+    },
+    "prompt": {
+      "file": "PROMPT.md",
+      "sha256": "64f908b2b3492cbeb56f26147b8ee42a0744ac03d9a075674ee34b67c3b605f6"
+    },
+    "sourceModelOutput": {
+      "file": "../source/model-complete-r3.png",
+      "sha256": "a8fdb45009016208501b89fd727d4b7872ad379ca77a45af42953d8470b140c0",
+      "width": 1672,
+      "height": 941
+    },
+    "normalization": {
+      "tool": "sharp-cli",
+      "operation": "resize 1920 1080 --fit fill --kernel nearest",
+      "reason": "수정된 수작업 픽셀 군집을 흐리지 않고 정확한 FHD 납품 규격으로 맞춤"
+    }
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0,
+    "hasAlpha": false
+  },
+  "topologyReview": {
+    "result": "passed-for-user-review",
+    "spatialOrder": [
+      "player-camera-inside-bar",
+      "single-bar-counter",
+      "customer-seats",
+      "main-entrance-immediately-behind-customer-side",
+      "night-alley"
+    ],
+    "entranceComposition": "single-centered-main-gate-with-closed-side-walls",
+    "sideWallsRelation": "closed-from-centered-gate-to-left-and-right-frame-edges",
+    "observations": [
+      "외부로 열린 개구부는 화면 수평 중앙의 단일 대문 하나뿐이다",
+      "밤 골목은 중앙 대문 개구부 안에서만 보인다",
+      "대문 왼쪽과 오른쪽은 각각 화면 끝까지 연속된 막힌 목재벽이다",
+      "중앙 대문의 문틀·두 문짝·문턱이 하나의 출입 구조로 연결된다"
+    ],
+    "forbiddenSubstitutionsAbsent": [
+      "sealed-rear-wood-wall",
+      "full-width-bottle-shelf-wall",
+      "deep-back-room",
+      "second-counter",
+      "off-center-main-entrance",
+      "open-side-entrance-bays"
+    ]
+  },
+  "categoryContaminationReview": {
+    "result": "passed",
+    "absent": [
+      "people-or-body-parts",
+      "chairs-or-stools",
+      "bar-counter-or-table",
+      "food-or-drink",
+      "gameplay-props",
+      "ui-or-text",
+      "transparent-silhouette-holes"
+    ]
+  },
+  "styleReview": {
+    "result": "passed-for-user-review",
+    "observations": [
+      "R2의 호박색 실내광·인디고 밤 골목·고정 정면 원근을 유지한다",
+      "목재·석재에 수작업 질감과 형태를 설명하는 따뜻한 픽셀 군집이 남아 있다",
+      "광택 3D·매끈한 벡터·무작위 픽셀 노이즈로 치환되지 않았다"
+    ]
+  },
+  "outputs": {
+    "completed": {
+      "file": "background-complete-fhd-r3.png",
+      "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49"
+    },
+    "reviewBoard": {
+      "file": "background-complete-fhd-r3.png",
+      "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+      "note": "한 번에 한 자산만 검토하는 규칙에 따라 별도 합성판 없이 동일한 단일 원본을 승인 대상으로 제출한다"
+    }
+  },
+  "rejectedIntermediate": {
+    "revisions": [
+      "R1",
+      "R2"
+    ],
+    "retained": false,
+    "evidence": "../../REJECTIONS.md"
+  },
+  "nextAction": "배경 R3 승인 완료. 손님·좌석을 좌석별 묶음으로 분할하고 seat-01 손님+좌석 한 자산만 제작·승인받는다"
+}

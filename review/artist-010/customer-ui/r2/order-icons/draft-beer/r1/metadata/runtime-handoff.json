@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-ICON-DRAFT-BEER",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "070175e33e9e681dbaa2a75a2feb7fbb91164d7b58e32f7cb6ed715ae9a89c2e"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "ff2a6c88ae5c1498623e72cbe55a701184d3df9331ef51d4a531e2b8276d1307"
+    },
+    "recomposition": {
+      "file": "../../../../../../../artist-000/d1-customer-order/recomposition/all-waiting/r1/metadata/recomposition-report.json",
+      "sha256": "ef05af2fee3c88e3b6cd929954a9a46a90ab9888c77db94c4aec863c3a4e6289"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "6d18e898e3fee43542664ee4308270bbc20a6317460bbf1c5f7f64978952908f"
+    },
+    "finalApproval": {
+      "file": "../../../../../../../artist-000/d1-customer-order/recomposition/metadata/final-approval-all-waiting.json",
+      "sha256": "2c8f06eaf7a15d0a4669e6debf7a02948360d93af071ac83eff935031768bb82"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "05070310fd7463a96a8ede10793282e1f4f68ea3c1321673ec5db7f3a1e6ff39"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/order-icon-draft-beer-r1.png",
+      "url": "/assets/core/ui/order-icon-draft-beer-r1-b1.png",
+      "sha256": "bcc841ae39a16dd67bfc7f8dcc16d43f2d66de7ab8701b93a80ffbeb12b2435d",
+      "bytes": 42974,
+      "format": "png",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      }
+    }
+  ],
+  "generatedAt": "2026-07-28T13:30:20.565Z"
+}

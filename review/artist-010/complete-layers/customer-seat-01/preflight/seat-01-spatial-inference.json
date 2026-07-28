@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 4,
+  "profile": "complete-layer",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "topologyRegistryEntry": {
+    "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+    "approvalStatus": "approved-by-user",
+    "approvalDate": "2026-07-26"
+  },
+  "screen": {
+    "screenIds": [
+      "SCR-SVC-CUSTOMERS"
+    ],
+    "gameState": "영업 중 seat-01에 첫 번째 손님이 착석해 주문 대기·식사·반응 상태를 표시하는 손님 서비스 화면",
+    "playerAction": "바 안쪽에서 seat-01 손님의 상태와 음식·빈 식기를 확인하고 단일 바를 사이에 두고 서빙·정리한다",
+    "semanticOwner": "customers.seat-01.character-seat",
+    "assetMeaning": "seat-01의 사용자 승인 중년 남성 손님과 그가 실제로 앉아 있는 단일 목재 바 좌석의 온전한 alpha 레이어"
+  },
+  "generationUnit": {
+    "id": "customer-seat-01",
+    "batchLimit": 1,
+    "included": [
+      "seat-01 customer",
+      "seat-01 wooden bar seat",
+      "counter 뒤에 가려지는 같은 손님의 하체와 좌석 연속면"
+    ],
+    "excluded": [
+      "seat-02 through seat-06",
+      "background",
+      "bar counter",
+      "food and drink",
+      "held props",
+      "UI"
+    ]
+  },
+  "settingSources": [
+    {
+      "file": "docs/spec/art/ART-002_전체_게임_비주얼_캐릭터_에셋.md",
+      "sha256": "14c533eff2905d68737550c01364380c7bf1255f11a89272241dce98c838acc8",
+      "evidence": "따뜻한 수작업 픽셀 화풍, 손님측 좌석·카운터 가림과 중앙 대문 공간 규칙을 확정한다"
+    },
+    {
+      "file": "docs/spec/art/ART-003_런타임_아트_에셋_목록과_제작_계약.md",
+      "sha256": "9aaa42ef872cfb0d5348cc8b158cde9a91cfedfe9176b71ba14aa0a0ce2c4ed4",
+      "evidence": "BG-SEATING-6·CH-*-SERVICE와 단일 카운터의 draw order, alpha·anchor·complete layer 계약을 확정한다"
+    },
+    {
+      "file": "docs/spec/ui/UI-003_전체_게임_상세_화면_설계.md",
+      "sha256": "f907c84e2a7b4d8b7985f93c62486360d5db59760a458e06377bce36e6c3c466",
+      "evidence": "SCR-SVC-CUSTOMERS의 손님 상태·좌석별 상호작용과 화면 전환 의미를 정의한다"
+    },
+    {
+      "file": "art-workspace/review/artist-010/customer-layers/r2/metadata/layer-contract.json",
+      "sha256": "9d57583b8650cd3dece0101639150869d9e8def73fc3f5b2744634f5e15ac9ff",
+      "evidence": "seat-01 customerAnchor [282,526], 단일 카운터에 의한 하체 가림과 승인 visible cutout 범위를 고정한다"
+    },
+    {
+      "file": "art-workspace/review/artist-010/customer-layers/r2/layers/10-customers-seats.png",
+      "sha256": "2b2714d5ac5763f53dc86a902371bbfb02de038bffca675ba5e4f8b28f5874e8",
+      "evidence": "사용자가 승인한 손님·좌석 visible 픽셀의 얼굴·의상·자세·크기·조명 기준이다"
+    },
+    {
+      "file": "art-workspace/review/artist-010/complete-layers/customer-seat-01/preflight/refs/seat-01-visible-cutout.png",
+      "sha256": "172bb7361d64e3bca3f613dc10b4c968b5ea0f872773efc6362e954ce286cb5e",
+      "evidence": "승인 손님 layer에서 seat-01 영역만 픽셀 변경 없이 잘라낸 단일 인물 reference다"
+    },
+    {
+      "file": "art-workspace/review/artist-010/complete-layers/background/r3/background-complete-fhd-r3.png",
+      "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+      "evidence": "사용자 승인 배경의 고정 카메라, 중앙 대문과 좌우 벽, 호박색 조명 방향을 제공한다"
+    }
+  ],
+  "camera": {
+    "position": "가게 안쪽 바 작업자 위치의 고정 1인칭 카메라",
+    "viewDirection": "단일 바 테이블을 가로질러 seat-01 손님과 좌석을 정면으로 본다",
+    "framing": "16:9 FHD. seat-01 customerAnchor는 [282,526]이고 손님 하체와 좌석 대부분은 이후 단일 카운터에 가려진다"
+  },
+  "spatialOrder": [
+    "player-camera-inside-bar",
+    "single-bar-counter",
+    "customer-seats",
+    "main-entrance-immediately-behind-customer-side",
+    "night-alley"
+  ],
+  "topology": {
+    "counterRelation": "seat-01 손님의 상체와 팔은 단일 바 뒤에 있고 허리 아래 하체와 좌석은 카운터에 가려진다",
+    "customerSeatRelation": "seat-01에는 손님 한 명과 그 손님이 앉는 목재 바 좌석 하나만 존재한다",
+    "mainEntranceRelation": "immediately-behind-customer-side-bar",
+    "entranceComposition": "single-centered-main-gate-with-closed-side-walls",
+    "sideWallsRelation": "closed-from-centered-gate-to-left-and-right-frame-edges",
+    "exteriorRelation": "배경 R3의 밤 골목은 중앙 대문 개구부를 통해서만 보이며 이 alpha 자산에는 포함하지 않는다"
+  },
+  "occludedContinuation": [
+    {
+      "occluder": "single bar counter",
+      "hiddenSurfaceMustContinueAs": "승인 상체와 같은 중년 남성의 허리·앉은 하체·다리와 몸을 지지하는 단일 목재 바 좌석"
+    },
+    {
+      "occluder": "approved visible torso and arms",
+      "hiddenSurfaceMustContinueAs": "같은 남성의 체형·남색 정장·흰 셔츠·느슨한 넥타이가 자연스럽게 이어지는 하체"
+    }
+  ],
+  "invariants": [
+    "seat-01 손님 한 명과 좌석 하나만 만든다",
+    "승인 visible 픽셀은 최종 complete alpha에 그대로 덮어써 얼굴·머리·의상·팔·자세를 변경하지 않는다",
+    "손님은 헝클어진 검은 머리, 피곤한 처진 눈, 중년 얼굴, 남색 정장, 흰 셔츠, 느슨한 어두운 넥타이를 유지한다",
+    "화면 왼쪽 손으로 뺨을 괸 피곤한 자세와 반대쪽 팔의 카운터 접촉 위치를 유지한다",
+    "customerAnchor [282,526]과 승인 상체 크기를 유지한다",
+    "하체와 좌석은 단일 카운터 뒤에서 가려질 전제로 자연스럽게 완성한다",
+    "완성 자산은 straight-alpha FHD cutout이며 네 모서리가 투명하다",
+    "배경·카운터·음식·음료·접시·잔·꼬치·UI·문자·그림자를 포함하지 않는다",
+    "따뜻한 연필·잉크·과슈·형태를 설명하는 픽셀 군집을 유지한다"
+  ],
+  "forbiddenSubstitutions": [
+    "sealed-rear-wood-wall",
+    "full-width-bottle-shelf-wall",
+    "deep-back-room",
+    "second-counter",
+    "off-center-main-entrance",
+    "open-side-entrance-bays",
+    "multiple-customers",
+    "extra-seat",
+    "background-fragment",
+    "counter-fragment",
+    "food-or-drink",
+    "held-prop",
+    "ui-or-text",
+    "standing-pose",
+    "redesigned-face-or-outfit",
+    "plastic-3d-surface"
+  ],
+  "inferenceSummary": "다음 제작 단위는 손님·좌석 전체가 아니라 seat-01의 승인 중년 남성 손님과 단일 좌석 한 묶음이다. 승인 상체 픽셀은 그대로 보존하고 카운터에 가려지는 하체와 좌석만 생성 결과로 보완한다.",
+  "unresolvedQuestions": [],
+  "referenceChanges": [
+    {
+      "file": "docs/spec/art/ART-002_전체_게임_비주얼_캐릭터_에셋.md",
+      "previousSha256": "03920874c00e525cb65866f84bad475fa456d358358567fe2363ada821bf89f7",
+      "currentSha256": "14c533eff2905d68737550c01364380c7bf1255f11a89272241dce98c838acc8",
+      "impact": "repository-boundary-only",
+      "userReapprovalRequired": false,
+      "basis": "2026-07-28 사용자 승인 파이프라인 정리로 저장소 경계·증거 규칙만 바뀌었고 seat-01의 공간·시각 의미는 바뀌지 않았다.",
+      "date": "2026-07-28"
+    },
+    {
+      "file": "docs/spec/art/ART-003_런타임_아트_에셋_목록과_제작_계약.md",
+      "previousSha256": "42d9b3f8ae3c7587bb19a47c3aef483dd0b874c61ebb4ae85478026fdfd2ed19",
+      "currentSha256": "9aaa42ef872cfb0d5348cc8b158cde9a91cfedfe9176b71ba14aa0a0ce2c4ed4",
+      "impact": "non-semantic-wording-only",
+      "userReapprovalRequired": false,
+      "basis": "v5는 승인·승격 증거와 저장 파이프라인을 강화했으며 seat-01의 승인 픽셀·anchor·가림·topology는 변경하지 않았다.",
+      "date": "2026-07-28"
+    }
+  ],
+  "approval": {
+    "status": "user-confirmed",
+    "basis": "사용자 지시: 배경 R3 승인 후 다음 작업 수행",
+    "date": "2026-07-26"
+  },
+  "approvedForGeneration": true
+}

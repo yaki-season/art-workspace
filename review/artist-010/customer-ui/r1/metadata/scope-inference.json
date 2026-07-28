@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "ARTIST-010-CUSTOMER-UI-VISIBLE-R1",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "screenIds": [
+    "SCR-SVC-CUSTOMERS"
+  ],
+  "userRequest": "손님의 상태 아이콘, 주문 내용 정보 UI 에셋 분리",
+  "source": {
+    "file": "../../../customer-layers/r2/layers/40-foreground-ui.png",
+    "sha256": "a120b77ae17c113b8055d8af991ac3b4f67cd5ba3ad55315ba0f056fe526d892",
+    "approvalStatus": "approved-by-user"
+  },
+  "specMeaning": {
+    "componentOwner": "customers.order[n]",
+    "requiredLogicalStates": [
+      "considering: 메뉴 고민 ...",
+      "order-ready: 클릭 가능한 주문서",
+      "waiting: 주문 접수 뒤 감소하는 남은 시간 게이지"
+    ],
+    "orderInformationRule": "메뉴 icon과 frame은 ui-art, 주문 문자·좌석 번호·수량·실시간 게이지는 DOM 또는 동등한 UI 계층",
+    "drawOrder": "손님과 음식 위에 표시하되 얼굴·음식을 가리지 않는다"
+  },
+  "extractionScope": {
+    "method": "approved alpha layer connected-component extraction",
+    "generatedPixels": 0,
+    "modelCalls": 0,
+    "included": [
+      "승인 화면 상단의 손님 머리 위 위젯 네 개"
+    ],
+    "excluded": [
+      "다른 손님",
+      "음식과 음료",
+      "카운터와 배경",
+      "상단 새로고침·일시정지",
+      "하단 공용 완성품 dock",
+      "좌우 전환",
+      "하단 station navigation",
+      "새 문자·수치·게이지"
+    ]
+  },
+  "visibleWidgetIds": [
+    "customer-state-considering-visible",
+    "customer-state-wait-timer-visible",
+    "customer-order-items-visible",
+    "customer-state-time-mood-visible"
+  ],
+  "semanticCaution": "네 visible widget의 시각 픽셀은 승인됐지만 두 복합 dark panel의 내부 icon을 최종 runtime 상태 ID로 확정하는 것은 별도 UI complete 승인 대상이다. 이번 단계는 보이는 위젯의 무변경 분리다.",
+  "approvedForDeterministicExtraction": true
+}

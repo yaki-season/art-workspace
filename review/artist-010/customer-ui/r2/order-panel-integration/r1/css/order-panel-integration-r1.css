@@ -1,0 +1,128 @@
+:root {
+  --panel-width: 232px;
+  --panel-height: 174px;
+  --panel-order-top: 22px;
+  --panel-order-height: 82px;
+  --panel-gauge-left: 24px;
+  --panel-gauge-right: 24px;
+  --panel-gauge-bottom: 30px;
+  --wait-progress: 62%;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #120f0d;
+}
+
+.review-canvas {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: #120f0d url('../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png') center / cover no-repeat;
+  image-rendering: pixelated;
+}
+
+/* Runtime anchor: the customer world position supplies --customer-x and --customer-y. */
+.customer-order-anchor {
+  position: absolute;
+  left: var(--customer-x);
+  top: var(--customer-y);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.customer-order-wait-panel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: var(--panel-width);
+  height: var(--panel-height);
+  transform: translate(-50%, -12px);
+  isolation: isolate;
+  pointer-events: auto;
+}
+
+.customer-order-wait-panel__skin {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.91;
+  image-rendering: pixelated;
+}
+
+/* Both order groups use approved raster icons; quantity remains DOM text. */
+.order-items {
+  position: absolute;
+  top: var(--panel-order-top);
+  left: 27px;
+  right: 27px;
+  height: var(--panel-order-height);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 24px;
+}
+
+.order-item {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+  color: #f1d3a0;
+  font: 700 14px/1 monospace;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 0 #24160f;
+}
+
+.order-item b { transform: translateY(-2px); }
+
+.order-item__icon {
+  display: block;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+/* The R3 gauge stays a single continuous runtime-controlled meter. */
+.wait-gauge {
+  position: absolute;
+  left: var(--panel-gauge-left);
+  right: var(--panel-gauge-right);
+  bottom: var(--panel-gauge-bottom);
+  height: 13px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(24, 22, 23, 0.82);
+}
+
+.wait-gauge__fill {
+  display: block;
+  width: var(--wait-progress);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #c56f27 0%, #ecb24f 76%, #f4d47d 100%);
+  box-shadow: inset 0 2px rgba(255, 240, 191, 0.35), inset 0 -2px rgba(95, 41, 21, 0.5);
+  transition: width 240ms linear;
+}
+
+.wait-gauge__a11y {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 4,
+  "profile": "complete-layer",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "topologyRegistryEntry": {
+    "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+    "approvalStatus": "approved-by-user",
+    "approvalDate": "2026-07-26"
+  },
+  "screen": {
+    "screenIds": [
+      "SCR-SVC-CUSTOMERS",
+      "SCR-POST-CLOSING"
+    ],
+    "gameState": "영업 중 손님 정보·서빙·정리와 영업 종료 뒤 빈 카운터 상태가 공유하는 가게 내부 배경",
+    "playerAction": "바 안쪽에서 손님 상태와 좌석별 음식·빈 식기를 확인하고, 단일 바를 사이에 두고 서빙·정리하며 하단 버튼으로 조립·그릴·드링크 화면을 전환한다",
+    "semanticOwner": "customers.scene.background",
+    "assetMeaning": "손님과 좌석 뒤, 화면 수평 중앙에 실제로 존재하는 단일 가게 대문·문틀·문짝·문턱, 중앙 개구부 너머 밤 골목과 화면 끝까지 막힌 좌우 측면 목재벽의 온전한 배경 레이어"
+  },
+  "settingSources": [
+    {
+      "file": "docs/spec/art/ART-002_전체_게임_비주얼_캐릭터_에셋.md",
+      "sha256": "14c533eff2905d68737550c01364380c7bf1255f11a89272241dce98c838acc8",
+      "evidence": "손님 서비스 화면의 카메라→단일 바→손님 좌석→바로 뒤 중앙 단일 대문→밤 골목 순서, 화면 끝까지 막힌 좌우 측면 벽과 금지 치환을 확정한다"
+    },
+    {
+      "file": "docs/spec/art/ART-003_런타임_아트_에셋_목록과_제작_계약.md",
+      "sha256": "9aaa42ef872cfb0d5348cc8b158cde9a91cfedfe9176b71ba14aa0a0ce2c4ed4",
+      "evidence": "BG-INTERIOR-BASE의 중앙 단일 대문·중앙 개구부 너머 골목·막힌 좌우 측면 벽 의미와 complete layer의 공간 추론·topology 검증 계약을 확정한다"
+    },
+    {
+      "file": "docs/spec/ui/UI-003_전체_게임_상세_화면_설계.md",
+      "sha256": "f907c84e2a7b4d8b7985f93c62486360d5db59760a458e06377bce36e6c3c466",
+      "evidence": "SCR-SVC-CUSTOMERS와 SCR-POST-CLOSING의 게임 상태·입력·customers.scene 재사용 의미를 정의한다"
+    },
+    {
+      "file": "art-workspace/concept-masters/2026-07-26/03_customer-service-master.png",
+      "sha256": "150e5c98d72c7a00ee88fa2c678c3b60fcbf7297ebacdf00a2af0a46d8fa1e5f",
+      "evidence": "손님 사이와 뒤로 열린 가게 대문과 밤 골목이 읽히는 전체 화면 공간 단서를 제공한다"
+    },
+    {
+      "file": "art-workspace/review/artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "evidence": "사용자 승인 손님 화면의 단일 바·좌석·하단 스테이션 전환·따뜻한 픽셀 화풍과 대문 개구부 위치를 제공한다"
+    }
+  ],
+  "camera": {
+    "position": "가게 안쪽 바 작업자 위치의 고정 1인칭 카메라",
+    "viewDirection": "단일 바 테이블을 가로질러 손님 좌석과 그 바로 뒤, 화면 수평 중앙의 단일 대문·밤 골목을 정면으로 본다",
+    "framing": "16:9 FHD. 중앙 단일 대문과 그 좌우의 막힌 측면 벽, 손님 머리·좌석별 테이블 음식·하단 스테이션 전환 버튼이 함께 읽히고 플레이어 몸과 플레이어측 조리 설비는 보이지 않는다"
+  },
+  "spatialOrder": [
+    "player-camera-inside-bar",
+    "single-bar-counter",
+    "customer-seats",
+    "main-entrance-immediately-behind-customer-side",
+    "night-alley"
+  ],
+  "topology": {
+    "counterRelation": "카메라와 손님 사이에는 단 하나의 바 테이블만 존재한다",
+    "customerSeatRelation": "손님 좌석은 단일 바의 맞은편이며 손님 하체는 바 상판에 가려진다",
+    "mainEntranceRelation": "immediately-behind-customer-side-bar",
+    "entranceComposition": "single-centered-main-gate-with-closed-side-walls",
+    "sideWallsRelation": "closed-from-centered-gate-to-left-and-right-frame-edges",
+    "exteriorRelation": "가게 대문 바로 너머가 좁은 인디고 밤 골목으로 이어진다"
+  },
+  "occludedContinuation": [
+    {
+      "occluder": "손님과 좌석",
+      "hiddenSurfaceMustContinueAs": "화면 중앙 단일 대문의 문틀·문짝·문턱과 중앙 개구부 너머 밤 골목, 대문 양쪽의 막힌 측면 목재벽"
+    },
+    {
+      "occluder": "단일 바 상판과 테이블 음식",
+      "hiddenSurfaceMustContinueAs": "같은 단일 바의 손님측 전면과 좌석 접지 영역"
+    }
+  ],
+  "invariants": [
+    "바 테이블은 하나뿐이다",
+    "손님 좌석 바로 뒤, 화면 수평 중앙에 단일 가게 대문이 있다",
+    "대문 좌우는 화면 끝까지 막힌 측면 목재벽이다",
+    "영업 중에는 손님 사이·뒤의 중앙 대문 개구부를 통해서만 밤 골목의 단서가 읽힌다",
+    "가려진 complete 배경도 중앙 대문틀·문짝·문턱·골목과 막힌 좌우 측면 벽으로 이어진다",
+    "플레이어 몸과 플레이어측 조리 설비는 손님 화면에 나타나지 않는다",
+    "하단에는 손님·조립·그릴·드링크 스테이션 전환 구조가 남는다",
+    "승인된 따뜻한 연필·잉크·과슈·픽셀 군집과 호박색·인디고 색 관계를 유지한다"
+  ],
+  "forbiddenSubstitutions": [
+    "sealed-rear-wood-wall",
+    "full-width-bottle-shelf-wall",
+    "deep-back-room",
+    "second-counter",
+    "off-center-main-entrance",
+    "open-side-entrance-bays"
+  ],
+  "inferenceSummary": "이 complete background는 화면 중앙의 단일 대문과 그 개구부 너머 밤 골목, 화면 끝까지 막힌 좌우 측면 목재벽을 손님 없이 온전하게 복원하는 레이어다. 측면은 외부로 열리지 않는다.",
+  "unresolvedQuestions": [],
+  "referenceChanges": [
+    {
+      "file": "docs/spec/art/ART-002_전체_게임_비주얼_캐릭터_에셋.md",
+      "previousSha256": "03920874c00e525cb65866f84bad475fa456d358358567fe2363ada821bf89f7",
+      "currentSha256": "14c533eff2905d68737550c01364380c7bf1255f11a89272241dce98c838acc8",
+      "impact": "repository-boundary-only",
+      "userReapprovalRequired": false,
+      "basis": "2026-07-28 사용자 승인 파이프라인 정리로 저장소 경계·증거 규칙만 바뀌었고 이 자산의 공간·시각 의미는 바뀌지 않았다.",
+      "date": "2026-07-28"
+    },
+    {
+      "file": "docs/spec/art/ART-003_런타임_아트_에셋_목록과_제작_계약.md",
+      "previousSha256": "42d9b3f8ae3c7587bb19a47c3aef483dd0b874c61ebb4ae85478026fdfd2ed19",
+      "currentSha256": "9aaa42ef872cfb0d5348cc8b158cde9a91cfedfe9176b71ba14aa0a0ce2c4ed4",
+      "impact": "non-semantic-wording-only",
+      "userReapprovalRequired": false,
+      "basis": "v5는 승인·승격 증거와 저장 파이프라인을 강화했으며 이 배경의 중앙 대문·막힌 측면 벽 topology와 승인 픽셀은 변경하지 않았다.",
+      "date": "2026-07-28"
+    }
+  ],
+  "approval": {
+    "status": "user-confirmed",
+    "basis": "사용자 직접 교정: 문을 가운데로 두고 옆 벽은 막는다",
+    "date": "2026-07-26"
+  },
+  "approvedForGeneration": true
+}

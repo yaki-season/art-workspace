@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-ICON-NEGIMA",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticOwner": "customer-order-item",
+  "assetMeaning": "손님 주문 대기 패널에서 미수령 네기마 주문 한 종류를 나타내는 아이콘",
+  "sourceEvidence": [
+    {
+      "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "bytes": 2726762,
+      "role": "approved-style-reference"
+    },
+    {
+      "file": "../../../../wait-timer/r3/assets/customer-order-wait-panel-skin-r3.png",
+      "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+      "bytes": 50683,
+      "role": "approved-slot-contrast-reference"
+    },
+    {
+      "file": "../source/negima-chroma-source.png",
+      "sha256": "52d8dfe821b41e0294a0ca736600780313299fd8b06a4c04a4b30c4ab79095af",
+      "bytes": 1215579,
+      "role": "generation-source"
+    }
+  ],
+  "output": {
+    "file": "../assets/order-icon-negima-r1.png",
+    "sha256": "d51ad1c7e46a66208713eb55675b1718664b887c3d8d5a98b34a6f6ef117d37a",
+    "bytes": 17867,
+    "width": 192,
+    "height": 192,
+    "alpha": "straight",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../review-negima-fhd-r1.png",
+    "sha256": "a75ee43ed769b5a91056a8abc03e0d671ef2c1a4da158666bac34009f0c06487",
+    "bytes": 35669,
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "quantity or completion check",
+    "panel, speech bubble, timer, label, or price",
+    "plate, tray, hand, customer, or background scene",
+    "other food or drink"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-27",
+    "basis": "사용자가 네기마 구성, 픽셀 질감, 색 관계와 온전한 단일 투명 실루엣을 승인했다."
+  },
+  "runtimeRegistrationAllowed": false
+}

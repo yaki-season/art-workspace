@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer order-wait panel R3 review</title>
+    <link rel="stylesheet" href="css/customer-order-wait-panel-r3.css">
+  </head>
+  <body>
+    <main class="review-canvas" aria-label="손님 주문 대기 패널 R3, 원본 게임 화면 위 런타임 배치 검토">
+      <div class="customer-order-anchor" style="--customer-x: 784px; --customer-y: 258px;">
+        <section class="customer-order-wait-panel" aria-label="손님 주문 대기 상태" style="--wait-progress: 62%;">
+          <img class="customer-order-wait-panel__skin" src="assets/customer-order-wait-panel-skin-r3.png" alt="">
+          <div class="order-items" aria-label="주문 항목">
+            <span class="order-item" aria-label="미완료 꼬치 1개"><i class="order-item__visual order-item__visual--skewer"></i><b>x1</b></span>
+            <span class="order-item" aria-label="미완료 맥주 1잔"><i class="order-item__visual order-item__visual--beer"></i><b>x1</b></span>
+            <span class="order-item" aria-label="완료된 주문 1개"><i class="order-item__visual order-item__visual--complete"></i><b>x1</b></span>
+          </div>
+          <div class="wait-gauge" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
+            <span class="wait-gauge__fill"></span>
+            <span class="wait-gauge__a11y">서빙 대기 시간 62퍼센트 남음</span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

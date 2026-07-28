@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "ARTIST-010-CUSTOMER-UI-VISIBLE-R1",
+  "status": "pending-user-review",
+  "runtimeRegistrationAllowed": false,
+  "screenIds": [
+    "SCR-SVC-CUSTOMERS"
+  ],
+  "source": {
+    "file": "../../../customer-layers/r2/layers/40-foreground-ui.png",
+    "sha256": "a120b77ae17c113b8055d8af991ac3b4f67cd5ba3ad55315ba0f056fe526d892",
+    "approvalStatus": "approved-by-user"
+  },
+  "extraction": {
+    "method": "deterministic connected-component discovery followed by binary hand-fitted UI silhouette masks",
+    "imageGenerationModelCalls": 0,
+    "generatedPixels": 0,
+    "preservedPixelRule": "Every non-transparent output pixel must equal the approved source RGBA pixel at the recorded source coordinate.",
+    "newTextOrNumbers": false
+  },
+  "assets": [
+    {
+      "id": "customer-state-considering-visible",
+      "semanticGroup": "customer-state-icon",
+      "visibleMeaning": "메뉴 고민 중 말줄임표",
+      "file": "../assets/customer-state-considering-visible.png",
+      "width": 92,
+      "height": 78,
+      "sourceBounds": {
+        "x": 259,
+        "y": 165,
+        "width": 92,
+        "height": 78
+      },
+      "nonTransparentPixels": 2600,
+      "sha256": "fec74f1f1e74c253ee7e08399b99fb1c324abbe4e2ee27db23f9b904b32a0429"
+    },
+    {
+      "id": "customer-state-wait-timer-visible",
+      "semanticGroup": "customer-state-icon",
+      "visibleMeaning": "대기 시간 상태",
+      "file": "../assets/customer-state-wait-timer-visible.png",
+      "width": 125,
+      "height": 121,
+      "sourceBounds": {
+        "x": 764,
+        "y": 142,
+        "width": 125,
+        "height": 121
+      },
+      "nonTransparentPixels": 5742,
+      "sha256": "3695fa650abc7a28ff1c3daefe7076ea4ad490cf9824b84731b733d0b25249b6"
+    },
+    {
+      "id": "customer-order-items-visible",
+      "semanticGroup": "customer-order-information-ui",
+      "visibleMeaning": "주문 항목 두 칸 요약 패널",
+      "file": "../assets/customer-order-items-visible.png",
+      "width": 144,
+      "height": 86,
+      "sourceBounds": {
+        "x": 1077,
+        "y": 155,
+        "width": 144,
+        "height": 86
+      },
+      "nonTransparentPixels": 5125,
+      "sha256": "7ed691fc24e74eddf140ff39c7943014501017943cc72e5f255edd55d8ad1158"
+    },
+    {
+      "id": "customer-state-time-mood-visible",
+      "semanticGroup": "customer-state-icon",
+      "visibleMeaning": "남은 시간과 기분 상태",
+      "file": "../assets/customer-state-time-mood-visible.png",
+      "width": 159,
+      "height": 86,
+      "sourceBounds": {
+        "x": 1382,
+        "y": 169,
+        "width": 159,
+        "height": 86
+      },
+      "nonTransparentPixels": 6555,
+      "sha256": "e25446849919f3adf0078d1e04f09514bc9837a7ff0ebeb7173d4047420a3d03"
+    }
+  ],
+  "reviewBoard": {
+    "file": "../customer-ui-visible-review-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "displayScale": 3,
+    "sha256": "28e906a9a75e577ae955006b3d8535836d8105b3b0f89637d84de5254aee4e58"
+  },
+  "isolation": {
+    "otherCustomers": false,
+    "counterOrBackground": false,
+    "foodOrDrink": false,
+    "topGlobalControls": false,
+    "bottomCompletedItemDock": false,
+    "stationNavigation": false
+  },
+  "runtimeCompositionRule": {
+    "bakedIntoArt": [
+      "상태 pictogram",
+      "주문 항목 slot silhouette",
+      "paper-or-dark-panel frame"
+    ],
+    "renderedByDomOrEquivalentUi": [
+      "주문 문자",
+      "좌석 번호",
+      "수량",
+      "가격",
+      "실시간 감소 수치와 게이지"
+    ]
+  },
+  "approvalScope": "승인 화면에 보이는 상태·주문 정보 위젯 네 개의 분리 품질만 승인한다. 누락 상태의 신규 디자인과 최종 runtime 상태 매핑은 포함하지 않는다."
+}

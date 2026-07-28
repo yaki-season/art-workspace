@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "UI-CUSTOMER-ORDER-WAIT-PANEL",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-27",
+    "basis": "사용자가 말풍선 외피, 비율, 주문 묶음 간격과 DOM/CSS 연속 게이지 계약을 승인했다."
+  },
+  "runtimeRegistrationAllowed": false,
+  "semanticPurpose": "손님 머리 위에서 미수령 주문·수량·완료 주문과 남은 서빙 대기 진행도를 표시하는 유동 웹 UI다.",
+  "sourceReferences": [
+    {
+      "file": "../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "approved palette, warm pixel density, material, shoulder-width placement reference"
+    },
+    {
+      "file": "../../../considering/r1/assets/customer-state-considering-r1.png",
+      "sha256": "c2c6400be384a8d5303bb51201ee9c4d65e01196aa42a23180659bce45057bca",
+      "role": "approved head-status speech-bubble silhouette and scale reference"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit",
+    "promptSummary": "Compact straight-on customer-head speech bubble skin; thin muted brass rim, deep indigo charcoal semi-transparent runtime surface, centered tail, open upper order space and one unsegmented lower gauge trough; no food, check, quantity, timer, cells, or scene.",
+    "rawChromaSource": "../source/order-wait-panel-chroma-source.png",
+    "rawChromaSourceSha256": "27cf85642b74ded80c7d7dd7a683e8b1173eb77db115010d8a7b9756ae942015",
+    "rawChromaSourceBytes": 1010123,
+    "postProcess": [
+      "auto-key chroma removal with soft matte and despill",
+      "transparent subject crop",
+      "nearest-neighbor fit to 232x174 transparent canvas"
+    ]
+  },
+  "output": {
+    "file": "../assets/customer-order-wait-panel-skin-r3.png",
+    "bytes": 50683,
+    "width": 232,
+    "height": 174,
+    "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 37183,
+      "greenSpillPixels": 0
+    }
+  },
+  "cssComposition": {
+    "file": "../css/customer-order-wait-panel-r3.css",
+    "anchor": "--customer-x and --customer-y place the panel from the tracked customer's head anchor",
+    "orderArea": "upper ~60%; each unreceived food icon and xN quantity is DOM; completed item replaces its food icon with a circular check while retaining xN",
+    "gauge": "one unsegmented horizontal track; --wait-progress controls .wait-gauge__fill width continuously from 100% to 0%",
+    "translucency": "the isolated skin is composited at CSS opacity 0.91 so dynamic DOM content remains fully readable",
+    "temporaryReviewPictograms": "CSS-only skewer and beer shapes demonstrate slots; they are not approved food icon assets"
+  },
+  "reviewBoard": {
+    "file": "../review-order-wait-panel-r3.png",
+    "html": "../review-order-wait-panel-r3.html",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "61d22bfc2d95649a593c1529f6c7b034fc263ab0d68651d0d1fa25756ff72ee4",
+    "contains": [
+      "the approved customer-screen R3 only as placement context",
+      "one R3 panel above the center customer's head",
+      "two unreceived DOM food examples with x1, one completed DOM circular-check example with x1",
+      "one 62% continuous horizontal wait gauge"
+    ]
+  },
+  "excludes": [
+    "five-cell or discrete timer logic",
+    "baked food icons, quantities, check state, time number, label, price, or seat number",
+    "wooden signboard frame, corner hardware, perspective, raised top face, or cast shadow",
+    "other customer, counter, food, table, shop background, watermark, or chroma-key color in the isolated asset"
+  ],
+  "approvalQuestion": "손님 어깨폭과 머리 위 말풍선 배치, 반투명 인디고·얇은 황동 톤, 상단 주문/완료 정보와 하단 단일 연속 게이지의 비율, 그리고 DOM/CSS 유동 배치 계약을 검토한다. 음식 아이콘 자체의 최종 화풍 승인은 별도 단일 에셋 승인에서 다룬다."
+}
