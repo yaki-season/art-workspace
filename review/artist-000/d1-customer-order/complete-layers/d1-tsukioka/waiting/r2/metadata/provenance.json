@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "D1 REGULAR_TSUKIOKA가 네기마와 생맥주를 아직 수령하지 않은 대기 상태의 손님+좌석 complete layer다. 의자는 정면 카메라를 똑바로 향한다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "user-designated approved full-screen source for Tsukioka identity, seat position, camera, palette, and pixel treatment"
+    },
+    {
+      "file": "../../../preflight/tsukioka-waiting-spatial-inference.json",
+      "sha256": "dc1619d93b9ec17b6503f0875e48ce63015d7dc44392299cd98ec5838426de02",
+      "role": "user-authorized identity, waiting-state, topology, occlusion, exclusion, and front-facing-chair contract"
+    },
+    {
+      "file": "../../r1/source/tsukioka-waiting-chroma-source-r1.png",
+      "sha256": "c6aa12095d9a64780a983f01f9c936868375cf1454641aec051ab9e7cb92c1e8",
+      "role": "R1 edit target; only its side-facing chair was corrected"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit with reference",
+    "promptFile": "PROMPT.md",
+    "promptSummary": "Change only R1's side-facing chair to a directly front-facing symmetric dark wooden chair; preserve the green-cardigan elderly Tsukioka and empty-handed waiting state.",
+    "rawChromaSource": "../source/tsukioka-waiting-chroma-source-r2.png",
+    "rawChromaSourceSha256": "ba6d07f7af22468fa858d92a2a8838762395ae332976a3aac82bfae06f3209c4",
+    "rawChromaSourceBytes": 1434709,
+    "postProcess": [
+      "auto-key border chroma removal using sampled #f708f6 with soft matte and despill",
+      "alpha bounding-box crop",
+      "nearest-neighbor normalization to 283×690",
+      "placement at x=944, y=215 in a transparent 1920×1080 canvas",
+      "native-scale isolated checkerboard review render"
+    ]
+  },
+  "output": {
+    "file": "../assets/d1-tsukioka-waiting-complete-fhd-r2.png",
+    "bytes": 340027,
+    "width": 1920,
+    "height": 1080,
+    "sha256": "0d825865988fab624c9153f4a1f453b12cea218809832bf3b0c10aec88669bc1",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 133029,
+      "partialAlphaPixels": 2642,
+      "greenSpillPixels": 0,
+      "magentaSpillPixels": 0
+    }
+  },
+  "reviewBoard": {
+    "file": "../review-d1-tsukioka-waiting-isolated-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "ce7f2fcb1fd4a61a44d87afa6b37fa190a2944acd2aaf6bc4605c13a0ccb853a",
+    "contains": [
+      "one D1 Tsukioka waiting complete layer at native FHD scale",
+      "neutral checkerboard only"
+    ]
+  },
+  "excludes": [
+    "beer mug, negima, food, drink, plate, tray, coaster, utensil, order mat, or table",
+    "other customer, extra chair, wall, shelf, alley, door, lantern, or scene background",
+    "text, quantity, check, gauge, panel, button, badge, or any UI",
+    "chroma-key background, cast shadow, or reflection"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "D1 츠키오카의 대기 상태 한 장만 검토한다: 녹색 가디건·회색 머리·안경의 노인으로 명확한지, 음식·음료 없는 미수령 상태인지, 의자가 정면을 향하는지, 투명 경계와 크기가 적절한지 확인한다. 수령(식사)은 이 후보 승인 뒤 별도 제작한다."
+}

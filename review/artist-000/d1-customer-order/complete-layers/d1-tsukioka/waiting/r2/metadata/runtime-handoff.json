@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "complete-layer",
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "60dc33024b1b99b61e492ffa03fdb8ff7ce0ef1ffcf48aeb663951fd8b504a75"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "b6d1def8203295c3f781008d9876046dec4f45b963055a2af2e9ac94af124b83"
+    },
+    "recomposition": {
+      "file": "../../../../../recomposition/all-waiting/r1/metadata/recomposition-report.json",
+      "sha256": "ef05af2fee3c88e3b6cd929954a9a46a90ab9888c77db94c4aec863c3a4e6289"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "264858d99df0f733b956b149f5c58503a90102e01b389631a2408cf274b55634"
+    },
+    "finalApproval": {
+      "file": "../../../../../recomposition/metadata/final-approval-all-waiting.json",
+      "sha256": "2c8f06eaf7a15d0a4669e6debf7a02948360d93af071ac83eff935031768bb82"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "2122da8d6bca398f73ae0846c23e67c14ba5bb95a53e36143aa1479668b6b44a"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/d1-tsukioka-waiting-complete-fhd-r2.png",
+      "url": "/assets/core/customer/d1-tsukioka-waiting-r2-b1.png",
+      "sha256": "0d825865988fab624c9153f4a1f453b12cea218809832bf3b0c10aec88669bc1",
+      "bytes": 340027,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-07-28T13:30:20.511Z"
+}

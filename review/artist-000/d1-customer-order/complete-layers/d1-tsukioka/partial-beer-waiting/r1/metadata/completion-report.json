@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "creationUnitCount": 1,
+  "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "semanticOwner": "customers.d1.tsukioka.partial-beer-waiting",
+  "assetMeaning": "D1 생맥주만 부분 수령하고 네기마 3개는 미제공인 츠키오카의 정면 의자 complete layer",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {"status":"approved","date":"2026-07-28","basis":"사용자 응답: 승인하라"},
+  "approvedCutout": {"status":"approved-by-user","file":"../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png","sha256":"cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f"},
+  "spatialInference": {"file":"../../preflight/tsukioka-partial-beer-waiting-spatial-inference.json","sha256":"794673eee4ab88b46529b2134c5c91f6b335100127c2b7b62de851b12c211c29"},
+  "generation": {
+    "method":"OpenAI built-in imagegen precise-object-edit 한 번; 승인 대기 R2에 생맥주 한 잔만 추가하고 정면 의자·인물·네기마 미제공 대기 의미를 유지",
+    "generationUnit":"생맥주 부분 수령 대기 complete layer 하나",
+    "batchSize":1,
+    "prompt":{"file":"PROMPT.md"},
+    "sourceModelOutput":{"file":"../source/tsukioka-partial-beer-waiting-chroma-source-r1.png","sha256":"d6fb06180d652e8bb6f9b8ecae35efda1624bb0b07dbbd75c2ebb93254eb1937","width":941,"height":1672,"background":"uniform #ff00ff chroma"},
+    "alphaSource":{"file":"../source/tsukioka-partial-beer-waiting-alpha-r1.png","method":"imagegen skill remove_chroma_key.py, sampled magenta key, soft matte, transparent threshold 12, opaque threshold 220, despill"},
+    "deterministicCompletion":{"method":"alpha bounding-box crop, nearest-neighbor normalization to 282×690, FHD placement x=944/y=215"}
+  },
+  "measurements":{"width":1920,"height":1080,"transparencyMode":"alpha-cutout","transparentPixels":1940783,"opaquePixels":130174,"partialAlphaPixels":2643,"hasAlpha":true,"cornerAlpha":[0,0,0,0],"greenSpillPixels":0,"magentaSpillPixels":0},
+  "reviewComposition":{"mode":"isolated-alpha-checkerboard","subjectAssetOnly":true,"cellSize":32,"colors":["#24242c","#34343e"],"isolationDifferentPixels":0,"included":["d1-tsukioka-partial-beer-waiting-complete-fhd-r1","neutral checkerboard"],"absent":["other-customers","counter","food-or-drink","table","background-scene","state-ui","navigation-ui","text"]},
+  "categoryContaminationReview":{"result":"passed","included":["one green-cardigan elderly Tsukioka","one upright draft beer mug","one directly front-facing dark wooden chair"],"absent":["negima", "other food", "extra drink", "table", "background", "UI", "text", "chroma background"]},
+  "outputs":{"completed":{"file":"assets/d1-tsukioka-partial-beer-waiting-complete-fhd-r1.png","sha256":"5fa4f5e257d54838aa22fe1403426808b71cd7bd9526730e666ea811ad5b1501"},"reviewBoard":{"file":"review-d1-tsukioka-partial-beer-waiting-isolated-fhd-r1.png","sha256":"e8c9f77391597a0ddac448dbb3cb1fe45aff87014c19c343682df7a55f8e99c7","note":"checkerboard와 부분 수령 대기 complete layer 하나만 포함한다."}},
+  "rejectedIntermediate":{"retained":false},
+  "nextAction":"승인된 전체 대기·부분 수령·전량 수령 식사·음주 자산은 소비 화면 재조립 승인 전까지 runtime에 등록하지 않는다."
+}

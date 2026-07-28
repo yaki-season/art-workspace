@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "creationUnitCount": 1,
+  "id": "BG-SERVICE-TABLE-ARTIST009",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "semanticOwner": "customers.scene.service-table",
+  "assetMeaning": "Artist 009 승인 손님 화면의 긴 목재 서비스 테이블 상판·모서리·전면 패널만 담은 straight-alpha FHD complete layer",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 아까 테이블 분리된 에셋을 사용하겠다."
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+    "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f"
+  },
+  "spatialInference": {
+    "file": "../../preflight/table-spatial-inference.json",
+    "sha256": "46da530f01d4c1761b289b76b6e2399a7529ee223ba2c422405aa903e2b6355f"
+  },
+  "generation": {
+    "method": "OpenAI built-in imagegen background-extraction edit 한 번; 승인 화면에서 손님·동적 주문 물체에 가려진 목재 부분만 같은 원근과 화풍으로 복원",
+    "generationUnit": "빈 긴 서비스 테이블 한 complete layer",
+    "batchSize": 1,
+    "prompt": {
+      "file": "PROMPT.md"
+    },
+    "sourceModelOutput": {
+      "file": "../source/table-chroma-source-r1.png",
+      "sha256": "c3c30e641795b744b71bd5f9349aa61ce2b75c635decf2dc0a23d3df6e85838a",
+      "width": 1672,
+      "height": 941,
+      "background": "uniform #00ff00 chroma"
+    },
+    "alphaSource": {
+      "file": "../source/table-alpha-r1.png",
+      "method": "imagegen skill remove_chroma_key.py, exact #00ff00 key, soft matte, transparent threshold 12, opaque threshold 220, despill"
+    },
+    "deterministicCompletion": {
+      "method": "alpha bounding-box crop, nearest-neighbor normalization to 1920px width, source table coordinate placement at y=495, low-alpha fringe cleanup below alpha 12"
+    }
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "alpha-cutout",
+    "transparentPixels": 1125119,
+    "opaquePixels": 946560,
+    "partialAlphaPixels": 1921,
+    "hasAlpha": true,
+    "cornerAlpha": [0, 0, 0, 0],
+    "greenSpillPixels": 0
+  },
+  "reviewComposition": {
+    "mode": "isolated-alpha-checkerboard",
+    "subjectAssetOnly": true,
+    "cellSize": 32,
+    "colors": ["#24242c", "#34343e"],
+    "isolationDifferentPixels": 0,
+    "included": ["service-table-complete-fhd-r1", "neutral checkerboard"],
+    "absent": ["customer", "other-customers", "food-or-drink", "table-mat-or-utensil", "background-scene", "state-ui", "navigation-ui", "counter", "text"]
+  },
+  "categoryContaminationReview": {
+    "result": "passed",
+    "included": ["one full-width wooden service table"],
+    "absent": ["customer", "chair", "food", "drink", "glass", "plate", "tray", "mat", "background", "UI", "text", "green chroma"]
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/service-table-complete-fhd-r1.png",
+      "sha256": "64ed1bb62a5d25100d2a64c040872f172476ea34833170f811c9bfe3aad2ed7c"
+    },
+    "reviewBoard": {
+      "file": "review-service-table-isolated-fhd-r1.png",
+      "sha256": "c947caf1a1048cc70728130f55d688564cd82f2abb9e4fc8c1d5a03672c53361",
+      "note": "checkerboard와 서비스 테이블 complete layer 하나만 포함한다."
+    }
+  },
+  "rejectedIntermediate": {
+    "retained": false
+  },
+  "nextAction": "다음 단일 자산은 사용자 지시 뒤에만 진행한다. 테이블 승인 자체는 재조립·최적화·runtime 등록을 의미하지 않는다."
+}

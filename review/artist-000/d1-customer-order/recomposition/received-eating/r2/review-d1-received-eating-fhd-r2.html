@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1920, initial-scale=1">
+    <title>D1 received eating recomposition R2</title>
+    <link rel="stylesheet" href="review-d1-received-eating-fhd-r2.css">
+  </head>
+  <body>
+    <main class="screen" aria-label="D1 전량 수령 후 식사와 음주">
+      <img class="background" src="../../../../../artist-010/complete-layers/background/r3/background-complete-fhd-r3.png" alt="">
+      <img id="customer-frame" class="customer" src="../../../complete-layers/d1-tsukioka/received-eating/r1/frames/d1-tsukioka-eating-negima-complete-fhd-r1.png" alt="전량 수령 후 식사 중인 츠키오카">
+      <img class="service-table" src="../../../complete-layers/table/r1/assets/service-table-complete-fhd-r1.png" alt="">
+
+      <div class="order-anchor" style="--customer-x:1085px; --customer-y:210px;">
+        <section class="order-panel" style="--wait-progress:0%" aria-label="D1-ORDER-001 전량 완료">
+          <img class="panel-skin" src="../../../../../artist-010/customer-ui/r2/wait-timer/r3/assets/customer-order-wait-panel-skin-r3.png" alt="">
+          <div class="order-completions" aria-label="주문 종류 두 개 모두 완료">
+            <span class="completion-item" aria-label="완료된 네기마 주문"><i class="complete-check" aria-hidden="true"></i></span>
+            <span class="completion-item" aria-label="완료된 생맥주 주문"><i class="complete-check" aria-hidden="true"></i></span>
+          </div>
+          <div class="wait-gauge" role="progressbar" aria-label="완료된 서빙 대기 시간" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+        </section>
+      </div>
+
+      <div class="station-nav-clip" aria-label="공통 스테이션 전환 UI"><iframe src="../../../../../artist-009/customer-screen/r3/composite.html" title="승인된 스테이션 전환 UI"></iframe></div>
+    </main>
+    <script>
+      const frame = new URLSearchParams(window.location.search).get('frame');
+      if (frame === 'drink-beer') {
+        const customer = document.querySelector('#customer-frame');
+        customer.src = '../../../complete-layers/d1-tsukioka/received-eating/r1/frames/d1-tsukioka-drinking-beer-complete-fhd-r1.png';
+        customer.alt = '전량 수령 후 생맥주를 마시는 츠키오카';
+      }
+    </script>
+  </body>
+</html>

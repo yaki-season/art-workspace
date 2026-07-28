@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "profile": "bundle-model",
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "D1-ORDER-001의 전량 정상 수령 뒤 15초 동안 네기마 식사와 생맥주 음주를 번갈아 표시하는 츠키오카 식사·음주 2프레임 bundle이다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "user-designated approved full-screen source for Tsukioka identity, camera, palette, and pixel treatment"
+    },
+    {
+      "file": "../../../waiting/r2/metadata/provenance.json",
+      "sha256": "60dc33024b1b99b61e492ffa03fdb8ff7ce0ef1ffcf48aeb663951fd8b504a75",
+      "role": "approved waiting R2 identity, directly front-facing chair, FHD coordinate, and alpha-boundary anchor"
+    },
+    {
+      "file": "../../preflight/tsukioka-received-eating-spatial-inference.json",
+      "sha256": "ec4ce1c952b3095ac69e87c44a76eaf4b6fad2cb8ac1bb963acc38c2938982ac",
+      "role": "user-authorized post-receipt two-frame eating/drinking state, topology, and exclusion contract"
+    },
+    {
+      "file": "../source/tsukioka-drinking-beer-chroma-source-r1.png",
+      "sha256": "d5a8453d4291d538be8fa23f18c57fa09f561a6b01a91f2f141a0da9d9623ecd",
+      "role": "frame B built-in imagegen source"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "two precise-object-edit generations bundled as one user-authorized animation state",
+    "promptFile": "PROMPT.md",
+    "promptSummary": "From approved waiting R2, generate one negima-eating frame without beer and one draft-beer-drinking frame without negima; preserve Tsukioka identity and directly front-facing chair.",
+    "rawChromaSource": "../source/tsukioka-eating-negima-chroma-source-r1.png",
+    "rawChromaSourceSha256": "cb6a0cc8d7315c58282366a0075bef4bd7e593f0035d01e3db2e042b402d62ac",
+    "rawChromaSourceBytes": 1452275,
+    "postProcess": [
+      "two auto-key border chroma removals with sampled magenta, soft matte, and despill",
+      "per-frame alpha bounding-box crop",
+      "nearest-neighbor normalization to 291×690 for eat-negima and 300×690 for drink-draft-beer",
+      "same FHD anchor center x=1085 and top y=215 for both frames",
+      "isolated checkerboard APNG review, looping the two frames every 1200 ms"
+    ]
+  },
+  "output": {
+    "file": "frame-manifest.json",
+    "bytes": 697,
+    "sha256": "218cf1a01a1d15795b48319f508596092e83e0b58f1660517482aac433418fa5"
+  },
+  "reviewBoard": {
+    "file": "../review-d1-tsukioka-received-eating-isolated-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "b7cdd1e088a46a45e6866a7a9f7208cc024d59c8b2110e9c0aeb1bf3bb1a7f41",
+    "contains": [
+      "one D1 Tsukioka received/eating bundle",
+      "two alternating frames: eat-negima then drink-draft-beer",
+      "neutral checkerboard only"
+    ]
+  },
+  "excludes": [
+    "table, plate, tray, coaster, order mat, any background scene, other customer, or extra chair",
+    "text, quantity, check, gauge, panel, button, badge, or any UI",
+    "both food and drink in a single frame",
+    "chroma-key background, cast shadow, or reflection"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "D1 츠키오카의 전량 수령 뒤 식사·음주 bundle 하나를 검토한다. 두 프레임이 정면 의자·정체성·FHD 배치를 유지하는지, 네기마 먹기와 생맥주 마시기가 서로 다른 프레임으로 명확한지, 투명 경계가 적절한지 확인한다. 승인 전 재조립·runtime 애니메이션 연결은 하지 않는다."
+}

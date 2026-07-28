@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "complete-layer",
+  "id": "BG-SERVICE-TABLE-ARTIST009",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "56e7e995e63e50c161ac1987f6726034a915f4d58f7b3aa7dcb3b6772887de15"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "feffb05248d77ee253db2b23a37232effb27b53d298c655ee8a2fa799ad1b299"
+    },
+    "recomposition": {
+      "file": "../../../../recomposition/all-waiting/r1/metadata/recomposition-report.json",
+      "sha256": "ef05af2fee3c88e3b6cd929954a9a46a90ab9888c77db94c4aec863c3a4e6289"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "3783c4b4da29bb70c1813c04de3595ea903b76ed213b18e8c7cf19f1c9eccc6d"
+    },
+    "finalApproval": {
+      "file": "../../../../recomposition/metadata/final-approval-all-waiting.json",
+      "sha256": "2c8f06eaf7a15d0a4669e6debf7a02948360d93af071ac83eff935031768bb82"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "bd1854e47d06e677cdfd8536494ab4c144b1fdc77e34e73526e79d3a037712f1"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/service-table-complete-fhd-r1.png",
+      "url": "/assets/core/customer/service-table-complete-r1-b1.png",
+      "sha256": "64ed1bb62a5d25100d2a64c040872f172476ea34833170f811c9bfe3aad2ed7c",
+      "bytes": 1425229,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-07-28T13:30:20.532Z"
+}

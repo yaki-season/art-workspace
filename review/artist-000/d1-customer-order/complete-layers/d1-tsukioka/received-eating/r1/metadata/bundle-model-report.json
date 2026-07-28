@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "profile": "bundle-model",
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticOwner": "customers.d1.tsukioka.received-eating",
+  "assetMeaning": "D1-ORDER-001 전량 정상 수령 뒤 15초 동안 네기마 식사와 생맥주 음주를 1200ms마다 번갈아 표시하는 하나의 2프레임 츠키오카 식사·음주 bundle",
+  "artifacts": [
+    {
+      "role": "frame-eat-negima",
+      "file": "../frames/d1-tsukioka-eating-negima-complete-fhd-r1.png",
+      "sha256": "597c90993f8167421b7df90e604d5e46c302ae3230d7827bcaf6cecf45ef7a75",
+      "bytes": 350440,
+      "format": "png",
+      "dimensions": { "width": 1920, "height": 1080 }
+    },
+    {
+      "role": "frame-drink-draft-beer",
+      "file": "../frames/d1-tsukioka-drinking-beer-complete-fhd-r1.png",
+      "sha256": "568d4e64d51335b215de8a0d938deaf493598304ee951dac84e2867e76faeaf9",
+      "bytes": 349220,
+      "format": "png",
+      "dimensions": { "width": 1920, "height": 1080 }
+    },
+    {
+      "role": "loop-manifest",
+      "file": "frame-manifest.json",
+      "sha256": "218cf1a01a1d15795b48319f508596092e83e0b58f1660517482aac433418fa5",
+      "bytes": 697,
+      "format": "json"
+    }
+  ],
+  "technicalReview": {
+    "result": "passed",
+    "checks": [
+      "both full-FHD frames are straight alpha with all four corners alpha 0",
+      "both frames have zero green and magenta spill pixels",
+      "frame A contains one negima and no beer; frame B contains one beer mug and no negima",
+      "both frames preserve one directly front-facing chair and the approved Tsukioka FHD anchor",
+      "isolated APNG review alternates only these two bundle frames on the neutral checkerboard"
+    ]
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  },
+  "runtimeRegistrationAllowed": false
+}

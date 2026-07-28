@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "profile": "screen-source",
+  "id": "D1-ASSEMBLY-STATION-R1",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticPurpose": "D1-ORDER-001에서 생맥주 부분 제공 뒤 네기마 첫 번째를 조립하기 직전의 독립 조리 화면 전체 장면이다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "../../../../../concept-masters/2026-07-26/04_assembly-station-master.png",
+      "sha256": "b660f188f7ff99430a6a7e65a9bea172e55a85a0b2fed06f0e28a5ecc989d3b3",
+      "role": "approved camera, assembly-workstation arrangement, material, and pixel-density reference only; its multiple orders and embedded UI are excluded"
+    },
+    {
+      "file": "../../../../../review/artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "approved warm night izakaya palette, old wood, dark ink outline, and pixel-treatment reference"
+    },
+    {
+      "file": "spatial-inference.json",
+      "role": "D1 semantic, safe-area, topology, and exclusion contract"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "new full-screen scene generation with style references",
+    "promptSummary": "D1-only empty-start negima assembly workstation with raw chicken, leek, unused skewers, a five-slot jig, empty transfer tray, and top/bottom DOM safety areas; no text or UI raster.",
+    "rawSource": "../source/assembly-station-source-r1.png",
+    "rawSourceSha256": "6286c9d47b48f11b498f8449830e46a241de5974340e1b4f649add6afc838a18",
+    "postProcess": [
+      "nearest-neighbor normalization from 1672x941 to 1920x1080",
+      "no pixel-content edits after generated-source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assembly-station-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa"
+  },
+  "reviewBoard": {
+    "file": "../review-assembly-station-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+    "contains": [
+      "one D1 assembly full-screen candidate only",
+      "no DOM overlay and no adjacent screen state"
+    ]
+  },
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "D1 조립 화면 한 장만 검토한다: 독립 조리 화면으로 읽히는지, 닭·대파·빈 꼬치·5칸 jig·빈 전달 tray가 명확한지, 상단 주문 rail과 하단 준비 목록의 DOM 안전 영역이 충분한지, 손님/그릴/완성품/문자/UI가 섞이지 않았는지 확인한다. 승인 전 그릴 화면 또는 분리 에셋은 진행하지 않는다.",
+  "nextGate": "승인 전체 화면에서 BG-WORKSPACE-ASSEMBLY부터 한 자산씩 분리·격리 검수한다."
+}

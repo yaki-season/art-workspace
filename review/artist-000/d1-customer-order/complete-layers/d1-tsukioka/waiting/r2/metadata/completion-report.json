@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "creationUnitCount": 1,
+  "id": "D1-TSUKIOKA-WAITING",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "semanticOwner": "customers.d1.tsukioka.waiting",
+  "assetMeaning": "D1 츠키오카가 네기마·생맥주를 아직 수령하지 않은 음식·음료 없는 대기 상태의 정면 의자 complete layer",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+    "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f"
+  },
+  "spatialInference": {
+    "file": "../../../preflight/tsukioka-waiting-spatial-inference.json",
+    "sha256": "dc1619d93b9ec17b6503f0875e48ce63015d7dc44392299cd98ec5838426de02"
+  },
+  "generation": {
+    "method": "OpenAI built-in imagegen precise-object-edit 한 번; R1의 옆을 향한 의자만 정면 대칭 목재 의자로 교정",
+    "generationUnit": "음식·음료 없는 정면 의자 츠키오카 대기 complete layer 하나",
+    "batchSize": 1,
+    "prompt": { "file": "PROMPT.md" },
+    "sourceModelOutput": {
+      "file": "../source/tsukioka-waiting-chroma-source-r2.png",
+      "sha256": "ba6d07f7af22468fa858d92a2a8838762395ae332976a3aac82bfae06f3209c4",
+      "width": 941,
+      "height": 1672,
+      "background": "uniform #ff00ff chroma"
+    },
+    "alphaSource": {
+      "file": "../source/tsukioka-waiting-alpha-r2.png",
+      "method": "imagegen skill remove_chroma_key.py, sampled magenta key, soft matte, transparent threshold 12, opaque threshold 220, despill"
+    },
+    "deterministicCompletion": {
+      "method": "alpha bounding-box crop, nearest-neighbor normalization to 283×690, FHD placement x=944/y=215"
+    }
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "alpha-cutout",
+    "transparentPixels": 1940571,
+    "opaquePixels": 130387,
+    "partialAlphaPixels": 2642,
+    "hasAlpha": true,
+    "cornerAlpha": [0, 0, 0, 0],
+    "greenSpillPixels": 0,
+    "magentaSpillPixels": 0
+  },
+  "reviewComposition": {
+    "mode": "isolated-alpha-checkerboard",
+    "subjectAssetOnly": true,
+    "cellSize": 32,
+    "colors": ["#24242c", "#34343e"],
+    "isolationDifferentPixels": 0,
+    "included": ["d1-tsukioka-waiting-complete-fhd-r2", "neutral checkerboard"],
+    "absent": ["other-customers", "counter", "food-or-drink", "table", "background-scene", "state-ui", "navigation-ui", "text"]
+  },
+  "categoryContaminationReview": {
+    "result": "passed",
+    "included": ["one green-cardigan elderly Tsukioka", "one directly front-facing dark wooden chair"],
+    "absent": ["food", "drink", "table", "background", "UI", "text", "chroma background"]
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/d1-tsukioka-waiting-complete-fhd-r2.png",
+      "sha256": "0d825865988fab624c9153f4a1f453b12cea218809832bf3b0c10aec88669bc1"
+    },
+    "reviewBoard": {
+      "file": "review-d1-tsukioka-waiting-isolated-fhd-r2.png",
+      "sha256": "ce7f2fcb1fd4a61a44d87afa6b37fa190a2944acd2aaf6bc4605c13a0ccb853a",
+      "note": "checkerboard와 D1 츠키오카 대기 complete layer 하나만 포함한다."
+    }
+  },
+  "rejectedIntermediate": { "retained": false },
+  "nextAction": "전량 수령 뒤 식사·음주 상태 complete layer는 표상할 음식·음료의 손 위치를 확정한 뒤 한 자산으로 제작한다. 승인 자체는 재조립·runtime 등록을 뜻하지 않는다."
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "ST-ASSEMBLY-TIER-1",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticPurpose": "D1 네기마 조립 화면의 고정 플레이어측 구조물(빈 재료 통 3개, 빈 5칸 꼬치 jig, 빈 전달 tray)만 제공한다.",
+  "status": "pending-user-review",
+  "sourceReferences": [
+    {
+      "file": "../../r1/assembly-station-fhd-r1.png",
+      "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+      "role": "user-approved D1 assembly full-screen source; station composition, scale, lighting, and camera reference"
+    },
+    {
+      "file": "../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+      "role": "approved fixed workspace background; alpha composite target"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "background-extraction",
+    "promptSummary": "Create only the approved assembly scene's empty fixed station: three adjacent shallow ingredient bins, an empty five-slot wooden jig, and an empty dark transfer tray; no food, skewer, UI, or scene; uniform #00ff00 chroma background.",
+    "rawSource": "../source/st-assembly-tier-1-chroma-source-r1.png",
+    "rawSourceSha256": "d5b035f726ce14754fec12172c771510fca7620f72a4b703309cadc087988f1a",
+    "postProcess": [
+      "nearest-neighbor normalization from 1672x941 to 1920x1080",
+      "remove_chroma_key.py with border auto-key, soft matte, and despill",
+      "no pixel-content edits after generated-source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/st-assembly-tier-1-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "77f1cbbbee1be02e61db68adab1209777c242cc6f85eb035bb20d8b1c007fa36",
+    "alpha": "straight RGBA; four corner alpha values are 0"
+  },
+  "validation": {
+    "fourCornerAlpha": [0, 0, 0, 0],
+    "greenDominantVisiblePixels": 0,
+    "dynamicFoodOrSkewerIncluded": false
+  },
+  "reviewBoard": {
+    "file": "../review-st-assembly-tier-1-isolated-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "c0454bb8872b9beb6b3c7dd02962480c85918474c22f942e2b7d3be3cf6c5dc6",
+    "contains": [
+      "one ST-ASSEMBLY-TIER-1 transparent layer on a checkerboard",
+      "no background scene, customer, food, skewer, text, or UI"
+    ]
+  },
+  "excludes": [
+    "chicken, leek, bamboo skewer, completed skewer, food, plate, grill, drink equipment, people, customer scene, seating, and background",
+    "text, quantity, timer, order rail, prepared dock, panel, button, icon, cursor, checkmark, logo, watermark, VFX, or shadow"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "D1 조립대의 고정 구조물 한 장만 검토한다: 빈 재료 통 3개·빈 5칸 jig·빈 전달 tray의 실루엣과 비율이 승인 전체 화면에 맞는지, 모든 재료·꼬치·UI·배경이 빠졌는지, 투명 경계가 깨끗한지 확인한다. 승인 전 동적 조립 자산·그릴 화면·runtime 등록은 진행하지 않는다.",
+  "nextGate": "사용자 승인 후 D1 조립 동적 자산을 의미별로 한 단위씩 분리·격리 검수한다."
+}

@@ -1,0 +1,59 @@
+{
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "bundle-model",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [
+    "eat-negima",
+    "drink-draft-beer"
+  ],
+  "mirrorSafe": false,
+  "source": "ARTSRC:D1-TSUKIOKA-RECEIVED-EATING:R1",
+  "provenance": "PROV:D1-TSUKIOKA-RECEIVED-EATING:R1",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.0.0",
+    "GPL-003 v4.11.0"
+  ],
+  "reviewedAt": "2026-07-28",
+  "url": "/assets/core/customer/d1-tsukioka-received-eating-negima-r1-b1.png",
+  "sha256": "597c90993f8167421b7df90e604d5e46c302ae3230d7827bcaf6cecf45ef7a75",
+  "bytes": 350440,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png",
+  "companions": [
+    {
+      "role": "drink-frame",
+      "url": "/assets/core/customer/d1-tsukioka-received-eating-beer-r1-b1.png",
+      "sha256": "568d4e64d51335b215de8a0d938deaf493598304ee951dac84e2867e76faeaf9",
+      "bytes": 349220,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "role": "frame-manifest",
+      "url": "/assets/core/customer/d1-tsukioka-received-eating-r1-b1.json",
+      "sha256": "218cf1a01a1d15795b48319f508596092e83e0b58f1660517482aac433418fa5",
+      "bytes": 697,
+      "format": "json"
+    }
+  ]
+}

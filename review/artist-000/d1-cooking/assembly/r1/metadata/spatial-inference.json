@@ -1,0 +1,29 @@
+{
+  "screenId": "SCR-SVC-ASSEMBLY",
+  "gameState": "D1-ORDER-001 after draft-beer partial service; first negima assembly begins",
+  "semanticOwner": "assembly station scene shell",
+  "camera": "player-side, slightly front-facing top-down work-counter view",
+  "mustContain": [
+    "raw chicken thigh bin",
+    "thick-cut leek bin",
+    "unused bamboo skewer tray",
+    "one empty five-slot skewer jig",
+    "one empty completed-skewer transfer tray"
+  ],
+  "domSafeAreas": {
+    "top": "upper 23 percent for receipt rail and current D1 order state",
+    "bottom": "lower 18 percent for shared prepared-food dock and station navigation"
+  },
+  "mustNotContain": [
+    "customer screen, customer, seating, or service table",
+    "grill, beer tower, plate, completed food, cooked negima, or serving state",
+    "text, quantities, recipe steps, timers, UI panels, buttons, cursor, arrows, checkmarks, logos, or watermarks"
+  ],
+  "approvedForGeneration": true,
+  "basis": [
+    "UI-003 SCR-SVC-ASSEMBLY component contract",
+    "UI-002 independent cooking-screen layout and D1 sequence",
+    "GPL-004 D1 negima assembly order and three-skewer flow",
+    "ART-002 YS-HANDCRAFTED-NIGHT-v1 style and cooking-screen rules"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 4,
+  "profile": "complete-layer",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "topologyRegistryEntry": {
+    "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+    "approvalStatus": "approved-by-user",
+    "approvalDate": "2026-07-26"
+  },
+  "screen": {
+    "screenIds": ["SCR-SVC-CUSTOMERS"],
+    "gameState": "Artist 009 승인 손님 화면의 다인 손님 서비스 기준 장면",
+    "playerAction": "바 안쪽에서 손님석 전면의 긴 테이블 너머로 주문·제공 상태를 본다",
+    "semanticOwner": "customers.scene.service-table",
+    "assetMeaning": "카메라와 손님 사이 하단을 화면 전체 폭으로 가로지르는 단일 목재 서비스 테이블 complete layer"
+  },
+  "settingSources": [
+    {
+      "file": "art-workspace/review/artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "evidence": "사용자가 이후 작업의 기준 전체 화면으로 직접 지정했다. 긴 테이블의 폭, 원근, 상판/전면 경계, 목재 질감과 황동 조명을 고정한다"
+    }
+  ],
+  "camera": {
+    "position": "가게 안쪽 바 작업자 위치의 고정 정면 카메라",
+    "viewDirection": "긴 서비스 테이블을 가로질러 손님석과 중앙 대문/밤 골목을 본다",
+    "framing": "16:9 FHD. 테이블 상판은 화면 중하단에서 좌우 끝까지 이어지고 전면은 하단 경계까지 내려온다"
+  },
+  "spatialOrder": [
+    "player-camera-inside-bar",
+    "single-bar-counter",
+    "customer-seats",
+    "main-entrance-immediately-behind-customer-side",
+    "night-alley"
+  ],
+  "topology": {
+    "mainEntranceRelation": "immediately-behind-customer-side-bar",
+    "entranceComposition": "single-centered-main-gate-with-closed-side-walls",
+    "sideWallsRelation": "closed-from-centered-gate-to-left-and-right-frame-edges",
+    "tableRelation": "카메라와 손님 사이에는 이 레이어가 나타내는 하나의 연속 긴 서비스 테이블만 존재한다",
+    "customerOcclusion": "테이블 상판과 전면은 손님 하체·의자·발을 가리되 손님 상체·손·상태 UI는 테이블 뒤 별도 레이어로 남긴다",
+    "backgroundRelation": "테이블은 중앙 대문·밤 골목과 벽·선반을 포함하거나 가리지 않는다"
+  },
+  "occludedContinuation": [
+    {
+      "occluder": "single-full-width-service-table",
+      "hiddenSurfaceMustContinueAs": "손님 하체와 좌석이 테이블 뒤에서 자연스럽게 계속된다"
+    }
+  ],
+  "invariants": [
+    "하단 화면 전체 폭의 단 하나의 긴 목재 테이블만 남긴다",
+    "승인 화면의 상판 원근, 전면 패널, 따뜻한 호박색 목재와 짙은 잉크 외곽을 유지한다",
+    "음식·음료·접시·매트·카메라·메모·성냥·컵 등 주문과 함께 변하는 물체는 포함하지 않는다",
+    "손님·손·의자·배경·대문·골목·램프·UI·문자·게이지·체크는 포함하지 않는다",
+    "테이블은 transparent FHD complete-layer 좌표에서 하단에 고정한다"
+  ],
+  "forbiddenSubstitutions": [
+    "multiple-tables",
+    "counter-with-black-seat-holes",
+    "sealed-rear-wood-wall",
+    "full-width-bottle-shelf-wall",
+    "deep-back-room",
+    "second-counter",
+    "off-center-main-entrance",
+    "open-side-entrance-bays",
+    "food-drink-plate-or-order-mat-baked-into-table",
+    "customer-or-chair-in-table-layer",
+    "ui-text-or-numbers",
+    "entrance-alley-wall-or-lamp-in-table-layer"
+  ],
+  "inferenceSummary": "사용자 지정 Artist 009 승인 전체 화면의 실제 긴 테이블을 기준으로, 동적 주문 물체와 인물을 제외한 환경 complete layer 하나를 만든다. 새 전체 장면을 생성하지 않는다.",
+  "unresolvedQuestions": [],
+  "approval": {
+    "status": "user-confirmed",
+    "basis": "사용자가 Artist 009 승인 손님 화면 R3을 이후 작업 기준으로 지정하고 테이블 분리를 직접 지시했다",
+    "date": "2026-07-28"
+  },
+  "approvedForGeneration": true
+}

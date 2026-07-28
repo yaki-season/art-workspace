@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Artist 000 service table with station navigation R1</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: #24242c; }
+    .review {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background-color: #24242c;
+      background-image:
+        linear-gradient(45deg, #34343e 25%, transparent 25%),
+        linear-gradient(-45deg, #34343e 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #34343e 75%),
+        linear-gradient(-45deg, transparent 75%, #34343e 75%);
+      background-position: 0 0, 0 16px, 16px -16px, -16px 0;
+      background-size: 32px 32px;
+    }
+    .table {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      image-rendering: pixelated;
+    }
+    .station-nav-clip {
+      position: absolute;
+      left: 0;
+      top: 920px;
+      width: 1920px;
+      height: 160px;
+      overflow: hidden;
+    }
+    .station-nav-source {
+      position: absolute;
+      left: 0;
+      top: -920px;
+      width: 1920px;
+      height: 1080px;
+      border: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="review" aria-label="서비스 테이블과 공통 스테이션 전환 UI 재조립 검토">
+    <img class="table" src="assets/service-table-complete-fhd-r1.png" alt="">
+    <div class="station-nav-clip" aria-label="공통 스테이션 전환 UI 영역">
+      <iframe class="station-nav-source" src="../../../../../artist-009/customer-screen/r3/composite.html" title="승인된 공통 스테이션 전환 UI DOM/CSS"></iframe>
+    </div>
+  </main>
+</body>
+</html>

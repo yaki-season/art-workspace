@@ -1,0 +1,36 @@
+{
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "complete-layer",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:D1-TSUKIOKA-WAITING:R2",
+  "provenance": "PROV:D1-TSUKIOKA-WAITING:R2",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.0.0",
+    "GPL-003 v4.11.0"
+  ],
+  "reviewedAt": "2026-07-28",
+  "url": "/assets/core/customer/d1-tsukioka-waiting-r2-b1.png",
+  "sha256": "0d825865988fab624c9153f4a1f453b12cea218809832bf3b0c10aec88669bc1",
+  "bytes": 340027,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "D1-ORDER-001에서 생맥주만 먼저 수령하고 네기마 3개는 미제공인 츠키오카의 부분 수령 대기 complete layer다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인하라"
+  },
+  "sourceReferences": [
+    {"file":"../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png","sha256":"cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f","role":"user-designated approved full-screen source for Tsukioka identity, camera, palette, and pixel treatment"},
+    {"file":"../../../waiting/r2/metadata/provenance.json","sha256":"60dc33024b1b99b61e492ffa03fdb8ff7ce0ef1ffcf48aeb663951fd8b504a75","role":"approved waiting R2 identity, directly front-facing chair, FHD coordinate, and alpha-boundary anchor"},
+    {"file":"../../preflight/tsukioka-partial-beer-waiting-spatial-inference.json","sha256":"794673eee4ab88b46529b2134c5c91f6b335100127c2b7b62de851b12c211c29","role":"user-authorized partial-receipt state, topology, and exclusion contract"}
+  ],
+  "generation": {
+    "tool":"built-in imagegen",
+    "mode":"precise-object-edit with reference",
+    "promptFile":"PROMPT.md",
+    "promptSummary":"From approved waiting R2, add one upright draft beer at chest height only; preserve the green-cardigan elderly Tsukioka and directly front-facing chair while keeping all negima unserved and absent.",
+    "rawChromaSource":"../source/tsukioka-partial-beer-waiting-chroma-source-r1.png",
+    "rawChromaSourceSha256":"d6fb06180d652e8bb6f9b8ecae35efda1624bb0b07dbbd75c2ebb93254eb1937",
+    "rawChromaSourceBytes":1437088,
+    "postProcess":["auto-key border chroma removal using sampled #f40cea with soft matte and despill","alpha bounding-box crop","nearest-neighbor normalization to 282×690","placement at x=944, y=215 in a transparent 1920×1080 canvas","native-scale isolated checkerboard review render"]
+  },
+  "output": {
+    "file":"../assets/d1-tsukioka-partial-beer-waiting-complete-fhd-r1.png",
+    "bytes":341658,
+    "width":1920,
+    "height":1080,
+    "sha256":"5fa4f5e257d54838aa22fe1403426808b71cd7bd9526730e666ea811ad5b1501",
+    "alpha":{"cornerAlpha":[0,0,0,0],"opaqueOrPartialPixels":132817,"partialAlphaPixels":2643,"greenSpillPixels":0,"magentaSpillPixels":0}
+  },
+  "reviewBoard": {
+    "file":"../review-d1-tsukioka-partial-beer-waiting-isolated-fhd-r1.png",
+    "width":1920,
+    "height":1080,
+    "sha256":"e8c9f77391597a0ddac448dbb3cb1fe45aff87014c19c343682df7a55f8e99c7",
+    "contains":["one D1 Tsukioka partial beer waiting complete layer at native FHD scale","neutral checkerboard only"]
+  },
+  "excludes":["negima, any food, extra drink, plate, tray, coaster, utensil, order mat, or table","other customer, extra chair, wall, shelf, alley, door, lantern, or scene background","text, quantity, check, gauge, panel, button, badge, or any UI","chroma-key background, cast shadow, or reflection"],
+  "runtimeRegistrationAllowed":false,
+  "approvalQuestion":"D1 츠키오카의 부분 수령 상태 한 장만 검토한다: 생맥주 한 잔만 받은 채 마시지 않고 들고 있는지, 네기마가 없는 미완료 대기인지, 정면 의자·정체성·투명 경계·크기가 적절한지 확인한다. 승인 전 재조립·runtime 등록은 하지 않는다."
+}

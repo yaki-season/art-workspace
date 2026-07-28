@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "D1-ORDER-001-PARTIAL-BEER-WAITING-RECOMPOSITION-R1",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "ARTIST-010-BACKGROUND-COMPLETE",
+      "profile": "complete-layer",
+      "sourceRevision": 3,
+      "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "BG-SERVICE-TABLE-ARTIST009",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "64ed1bb62a5d25100d2a64c040872f172476ea34833170f811c9bfe3aad2ed7c",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "5fa4f5e257d54838aa22fe1403426808b71cd7bd9526730e666ea811ad5b1501",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "UI-CUSTOMER-ORDER-WAIT-PANEL",
+      "profile": "standalone-raster",
+      "sourceRevision": 3,
+      "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "UI-CUSTOMER-ORDER-ICON-NEGIMA",
+      "profile": "standalone-raster",
+      "sourceRevision": 1,
+      "sha256": "d51ad1c7e46a66208713eb55675b1718664b887c3d8d5a98b34a6f6ef117d37a",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../review-d1-partial-beer-waiting-fhd-r1.png",
+      "sha256": "5800a514588a7c930998c5ca5c50079ebf9d456c682e9eb2b79799dd17f60d46",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../review-d1-partial-beer-waiting-hd-r1.png",
+      "sha256": "ddbd8c0e6f62db9feb629a547a7c40a752609c6a5d5cea855d101350a88825ab",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  }
+}

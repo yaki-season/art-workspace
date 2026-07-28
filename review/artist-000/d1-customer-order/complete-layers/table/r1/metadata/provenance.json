@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "BG-SERVICE-TABLE-ARTIST009",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "Artist 009 승인 손님 화면에서 카메라와 손님 사이를 가로지르는 단일 긴 목재 서비스 테이블 complete layer다. 손님과 동적 주문 물체는 별도 레이어로 남긴다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 아까 테이블 분리된 에셋을 사용하겠다."
+  },
+  "sourceReferences": [
+    {
+      "file": "../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "user-designated approved full-screen source for table camera, span, perspective, material, and lighting"
+    },
+    {
+      "file": "../../preflight/table-spatial-inference.json",
+      "sha256": "46da530f01d4c1761b289b76b6e2399a7529ee223ba2c422405aa903e2b6355f",
+      "role": "user-authorized spatial inference and exclusion contract"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "background-extraction edit",
+    "promptSummary": "Extract only the approved Artist 009 long wooden service table with original perspective and pixel-art treatment; reconstruct occluded wood but exclude all people, dynamic food/drink/table objects, background, and UI on uniform #00ff00 chroma.",
+    "rawChromaSource": "../source/table-chroma-source-r1.png",
+    "rawChromaSourceSha256": "c3c30e641795b744b71bd5f9349aa61ce2b75c635decf2dc0a23d3df6e85838a",
+    "rawChromaSourceBytes": 1605041,
+    "postProcess": [
+      "exact #00ff00 chroma removal with soft matte and despill",
+      "alpha bounding-box crop",
+      "nearest-neighbor normalization to 1920px width",
+      "placement at source table coordinate y=495 in an FHD transparent canvas",
+      "low-alpha fringe cleanup below alpha 12",
+      "isolated checkerboard review render"
+    ]
+  },
+  "output": {
+    "file": "../assets/service-table-complete-fhd-r1.png",
+    "bytes": 1425229,
+    "width": 1920,
+    "height": 1080,
+    "sha256": "64ed1bb62a5d25100d2a64c040872f172476ea34833170f811c9bfe3aad2ed7c",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 948481,
+      "partialAlphaPixels": 1921,
+      "greenSpillPixels": 0
+    }
+  },
+  "reviewBoard": {
+    "file": "../review-service-table-isolated-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "c947caf1a1048cc70728130f55d688564cd82f2abb9e4fc8c1d5a03672c53361",
+    "contains": [
+      "one service-table complete layer at native FHD scale",
+      "neutral checkerboard only"
+    ]
+  },
+  "excludes": [
+    "customer, hand, chair, seat, character, food, drink, glass, plate, tray, utensil, mat, camera, note, or match",
+    "door, alley, wall, shelf, lantern, shop background, or other scene layer",
+    "text, quantity, check, gauge, panel, button, badge, or other UI",
+    "green chroma-key background"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "Artist 009 승인 화면 기준의 빈 긴 서비스 테이블 하나만 검토한다. 손님·음식·주문 상태·UI는 별도 자산 범위이며 runtime 등록은 승인 뒤에도 재조립 게이트 전까지 금지한다."
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "D1 REGULAR_TSUKIOKA가 네기마와 생맥주를 아직 수령하지 않은 대기 상태의 손님+좌석 complete layer다.",
+  "status": "superseded",
+  "supersession": {
+    "by": "../r2/metadata/provenance.json",
+    "reason": "The chair is turned to the side. The user reiterated the fixed rule that customer chairs must face directly forward."
+  },
+  "sourceReferences": [
+    {
+      "file": "../../../../../../../artist-009/customer-screen/r3/customer-service-fhd-r3.png",
+      "sha256": "cd7dff413b532dbbd4e96d28b2ec4c6746c995057f1830fe825787bb1c04263f",
+      "role": "user-designated approved full-screen source for Tsukioka identity, seat position, camera, palette, and pixel treatment"
+    },
+    {
+      "file": "../../../preflight/tsukioka-waiting-spatial-inference.json",
+      "sha256": "dc1619d93b9ec17b6503f0875e48ce63015d7dc44392299cd98ec5838426de02",
+      "role": "user-authorized identity, waiting-state, topology, occlusion, and exclusion contract"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "background-extraction generation with reference",
+    "promptFile": "PROMPT.md",
+    "promptSummary": "Reconstruct only the green-cardigan, gray-haired, wire-glasses elderly Tsukioka from the Artist 009 approved reference as a seated empty-handed waiting state; no food, drink, UI, or scene on uniform #ff00ff chroma.",
+    "rawChromaSource": "../source/tsukioka-waiting-chroma-source-r1.png",
+    "rawChromaSourceSha256": "c6aa12095d9a64780a983f01f9c936868375cf1454641aec051ab9e7cb92c1e8",
+    "rawChromaSourceBytes": 1461315,
+    "postProcess": [
+      "auto-key border chroma removal using sampled #fc03fa with soft matte and despill",
+      "alpha bounding-box crop",
+      "nearest-neighbor normalization to 331×690",
+      "placement at x=920, y=215 in a transparent 1920×1080 canvas",
+      "native-scale isolated checkerboard review render"
+    ]
+  },
+  "output": {
+    "file": "../assets/d1-tsukioka-waiting-complete-fhd-r1.png",
+    "bytes": 345945,
+    "width": 1920,
+    "height": 1080,
+    "sha256": "e656d6fdde92bd381092abf8c9f7246b2caca077e2cc39187dd85c5e8d6d4c10",
+    "alpha": {
+      "cornerAlpha": [0, 0, 0, 0],
+      "opaqueOrPartialPixels": 140695,
+      "partialAlphaPixels": 2472,
+      "greenSpillPixels": 0,
+      "magentaSpillPixels": 0
+    }
+  },
+  "reviewBoard": {
+    "file": "../review-d1-tsukioka-waiting-isolated-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "776c9f109394426f08ccf52c8524eea0e5b2db66476aa5d445eccf15c3a6b2ae",
+    "contains": [
+      "one D1 Tsukioka waiting complete layer at native FHD scale",
+      "neutral checkerboard only"
+    ]
+  },
+  "excludes": [
+    "beer mug, negima, food, drink, plate, tray, coaster, utensil, order mat, or table",
+    "other customer, extra chair, wall, shelf, alley, door, lantern, or scene background",
+    "text, quantity, check, gauge, panel, button, badge, or any UI",
+    "chroma-key background, cast shadow, or reflection"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "Superseded by R2; do not review or approve this candidate."
+}

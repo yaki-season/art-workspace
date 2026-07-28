@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "D1-ORDER-001-RECEIVED-EATING-RECOMPOSITION-R2",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "ARTIST-010-BACKGROUND-COMPLETE",
+      "profile": "complete-layer",
+      "sourceRevision": 3,
+      "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "BG-SERVICE-TABLE-ARTIST009",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "64ed1bb62a5d25100d2a64c040872f172476ea34833170f811c9bfe3aad2ed7c",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "D1-TSUKIOKA-RECEIVED-EATING",
+      "profile": "bundle-model",
+      "sourceRevision": 1,
+      "sha256": "218cf1a01a1d15795b48319f508596092e83e0b58f1660517482aac433418fa5",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "UI-CUSTOMER-ORDER-WAIT-PANEL",
+      "profile": "standalone-raster",
+      "sourceRevision": 3,
+      "sha256": "3be12bd990151327e41070734ea6b78a8c8c0942d0bd44e65a12be4c75bf5e47",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../review-d1-received-eating-fhd-r2.png",
+      "sha256": "058d19b840d99f0f3c67d7831667963e0c6476d4019a1c2b30aaad485d1ed960",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../review-d1-received-eating-hd-r2.png",
+      "sha256": "80d76a5722dbab184d769cda10bdc0d3c6a9adf275e3b1d5222985b27a32ce13",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  }
+}

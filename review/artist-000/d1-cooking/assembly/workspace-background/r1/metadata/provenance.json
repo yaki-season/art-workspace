@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "BG-WORKSPACE-ASSEMBLY",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticPurpose": "D1 조립 화면의 고정 후면 공간과 빈 플레이어측 목재 작업면을 제공하는 불투명 complete background layer다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-28",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "../../r1/assembly-station-fhd-r1.png",
+      "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+      "role": "user-approved D1 assembly full-screen source; camera, safe areas, lighting, and work-surface continuity preserved"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit",
+    "promptSummary": "Remove only chicken, leek, bamboo skewer, jig, and transfer tray from the approved assembly scene; preserve all fixed architecture, camera, lighting, and empty work surface.",
+    "rawSource": "../source/workspace-background-source-r1.png",
+    "rawSourceSha256": "a9faf06e7ee53a025d772ab7978b3c86d015c67e70b526a6d8adee08394817d8",
+    "postProcess": [
+      "nearest-neighbor normalization from 1672x941 to 1920x1080",
+      "no pixel-content edits after generated-source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/bg-workspace-assembly-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+    "alpha": "opaque RGB background"
+  },
+  "reviewBoard": {
+    "file": "../review-workspace-background-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+    "contains": [
+      "one empty assembly workspace background layer",
+      "no dynamic assembly item, state, UI, or other station"
+    ]
+  },
+  "excludes": [
+    "chicken, leek, bamboo skewer, jig, transfer tray, food, plate, grill, drink equipment, people, customer scene, and seating",
+    "text, quantity, timer, order rail, prepared dock, panel, button, icon, cursor, checkmark, logo, or watermark"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "D1 조립 작업 배경 한 장만 검토한다: 승인 조립 화면의 카메라·후면 공간·목재 작업면·상하 DOM 안전 영역이 유지되는지, 모든 동적 재료·꼬치·jig·전달 tray가 제거됐는지, 그릴/손님/UI가 섞이지 않았는지 확인한다. 승인 전 다음 조립 자산과 그릴 화면은 진행하지 않는다.",
+  "nextGate": "승인 전체 화면에서 ST-ASSEMBLY-TIER-1 구조물 하나를 투명 standalone raster로 분리·격리 검수한다."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "complete-layer",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:D1-TSUKIOKA-PARTIAL-BEER-WAITING:R1",
+  "provenance": "PROV:D1-TSUKIOKA-PARTIAL-BEER-WAITING:R1",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.0.0",
+    "GPL-003 v4.11.0"
+  ],
+  "reviewedAt": "2026-07-28",
+  "url": "/assets/core/customer/d1-tsukioka-partial-beer-waiting-r1-b1.png",
+  "sha256": "5fa4f5e257d54838aa22fe1403426808b71cd7bd9526730e666ea811ad5b1501",
+  "bytes": 341658,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}
