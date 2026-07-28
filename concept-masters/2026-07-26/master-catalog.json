@@ -1,0 +1,286 @@
+{
+  "catalogVersion": 3,
+  "status": "concept-source-only",
+  "styleProfile": "YS-HANDCRAFTED-NIGHT-v1",
+  "canvas": {
+    "width": 1672,
+    "height": 941,
+    "aspectClass": "16:9"
+  },
+  "specVersions": {
+    "ART-002": "v3.5.0",
+    "ART-003": "v3.8.0",
+    "UI-002": "v5.24.0",
+    "UI-003": "v1.0.0",
+    "SYS-002": "v3.0.0"
+  },
+  "runtimePolicy": {
+    "registerMastersInRuntimeManifest": false,
+    "treatMasterCountAsRuntimeScreenCount": false,
+    "screenTopologySource": "UI-003 v1.0.0",
+    "measureBoundsFromMaster": true,
+    "requireSourceMasterIdOnDerivedAssets": true,
+    "requireFhdAnd720pRecomposition": true,
+    "requireApprovedSpatialInferenceBeforeGeneration": true
+  },
+  "masters": [
+    {
+      "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+      "viewId": "prologue",
+      "screenIds": [
+        "SCR-STORY-PROLOGUE",
+        "SCR-DAY-PREP"
+      ],
+      "file": "01_prologue-inheritance-master.png",
+      "sha256": "6ad2a283572e3d48922dec1fd23f242a1f1342a7280309b3cac73b7997232f51",
+      "componentGroups": [
+        "background",
+        "sign-and-lantern-decal-surfaces",
+        "folded-noren",
+        "foreground-ledge",
+        "key",
+        "recipe-note",
+        "matchbox",
+        "brazier-and-charcoal",
+        "ignition-vfx",
+        "ui-art"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-PREOPEN-PLANNING-R1",
+      "viewId": "preopen",
+      "screenIds": [
+        "SCR-DAY-BRIEFING"
+      ],
+      "file": "02_preopen-planning-master.png",
+      "sha256": "99d50b2fc2f66784f671e8b234421b8b4e683494d81b2f61fed4a85d3d302455",
+      "componentGroups": [
+        "background-empty-seats",
+        "planning-folio",
+        "date-card",
+        "menu-cards",
+        "reservation-seat-tokens",
+        "goal-card",
+        "staff-cards",
+        "readiness-tokens",
+        "start-seal",
+        "ui-art"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+      "viewId": "customers",
+      "screenIds": [
+        "SCR-SVC-CUSTOMERS",
+        "SCR-POST-CLOSING"
+      ],
+      "file": "03_customer-service-master.png",
+      "sha256": "150e5c98d72c7a00ee88fa2c678c3b60fcbf7297ebacdf00a2af0a46d8fa1e5f",
+      "spatialTopology": {
+        "order": [
+          "player-camera-inside-bar",
+          "single-bar-counter",
+          "customer-seats",
+          "main-entrance-immediately-behind-customer-side",
+          "night-alley"
+        ],
+        "mainEntranceRelation": "immediately-behind-customer-side-bar",
+        "occludedContinuation": [
+          "entrance-frame",
+          "door-leaves",
+          "threshold",
+          "night-alley"
+        ],
+        "forbiddenSubstitutions": [
+          "sealed-rear-wood-wall",
+          "full-width-bottle-shelf-wall",
+          "deep-back-room",
+          "second-counter"
+        ]
+      },
+      "componentGroups": [
+        "background",
+        "seat-anchors",
+        "customers",
+        "bar-counter",
+        "seat-mats",
+        "table-food-and-drinks",
+        "empty-dishes",
+        "customer-state-overlays",
+        "cleanup-overlay",
+        "shared-prepared-item-band",
+        "ui-art"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-ASSEMBLY-STATION-R1",
+      "viewId": "assembly",
+      "screenIds": [
+        "SCR-SVC-ASSEMBLY",
+        "SCR-SVC-INSTANT"
+      ],
+      "file": "04_assembly-station-master.png",
+      "sha256": "f85acb103558f3dd39d92753d26a63803899cbd022c00f41fc61be0600b84711",
+      "componentGroups": [
+        "workspace-background",
+        "ingredient-bins",
+        "chicken-pieces",
+        "green-onion-pieces",
+        "empty-skewers",
+        "assembly-jig",
+        "assembly-state-skewers",
+        "transfer-tray",
+        "receipt-frame",
+        "shared-prepared-item-band",
+        "ui-art"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-GRILL-STATION-R1",
+      "viewId": "grill",
+      "screenIds": [
+        "SCR-SVC-GRILL"
+      ],
+      "file": "05_grill-station-master.png",
+      "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5",
+      "componentGroups": [
+        "workspace-background",
+        "grill-body",
+        "charcoal-layers",
+        "locked-slots",
+        "skewer-states",
+        "waiting-tray",
+        "finished-tray",
+        "discard-tray",
+        "tongs",
+        "tare-brush-and-pot",
+        "fan",
+        "grill-vfx",
+        "warning-overlays",
+        "receipt-frame",
+        "shared-prepared-item-band",
+        "ui-art"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-DRINK-STATION-R1",
+      "viewId": "drink",
+      "screenIds": [
+        "SCR-SVC-DRINK",
+        "SCR-SVC-HIGHBALL"
+      ],
+      "file": "06_drink-station-master.png",
+      "sha256": "667e8f704c74f6515e1a401fc4e2e0981545226fb42ce3f6916e9624fa183ee2",
+      "componentGroups": [
+        "workspace-background",
+        "beer-tower",
+        "single-lever-and-nozzle",
+        "drip-tray",
+        "empty-glass-rack",
+        "glass-states",
+        "beer-and-foam-layers",
+        "finished-tray",
+        "overflow-choice-frame",
+        "staff-auto-production-overlay",
+        "shared-auto-progress-ring",
+        "receipt-frame",
+        "shared-prepared-item-band",
+        "ui-art"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-SETTLEMENT-R1",
+      "viewId": "settlement",
+      "screenIds": [
+        "SCR-POST-CLOSING",
+        "SCR-POST-SETTLEMENT"
+      ],
+      "file": "07_settlement-master.png",
+      "sha256": "6643a256cea5147e6bd66afa0a9565a3f01e9550cfa69bceec9589764d22ea02",
+      "componentGroups": [
+        "closing-background",
+        "last-ember-vfx",
+        "ledger",
+        "orders-module",
+        "quality-module",
+        "waiting-module",
+        "income-and-tip-module",
+        "reputation-module",
+        "failure-strip",
+        "receipts-and-coins",
+        "reward-tokens",
+        "confirm-and-skip-seals"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-GROWTH-PURCHASE-R1",
+      "viewId": "growth",
+      "screenIds": [
+        "SCR-META-PURCHASE",
+        "SCR-POST-REVIEW"
+      ],
+      "file": "08_growth-purchase-master.png",
+      "sha256": "cc195cebbc4d6f0c748dad58c893f9d60e869818bff08f1670c399a87b5cd958",
+      "componentGroups": [
+        "background",
+        "catalog",
+        "category-tabs",
+        "item-cards",
+        "state-badges",
+        "selected-detail",
+        "comparison-illustration",
+        "currency-tokens",
+        "purchase-seal",
+        "ui-art"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-RECIPE-NOTE-R1",
+      "viewId": "recipe-note",
+      "screenIds": [
+        "SCR-META-NOTE",
+        "SCR-POST-NEXT-GOAL"
+      ],
+      "file": "09_recipe-note-master.png",
+      "sha256": "b3d4a6bd8caf770868f5dd4c80d6ec87d34a38d1d3be58eaec082fbcae0d833d",
+      "componentGroups": [
+        "background",
+        "notebook-cover-and-pages",
+        "stain-and-tear-overlays",
+        "recipe-illustrations",
+        "locked-pages",
+        "restoration-track",
+        "preference-markers",
+        "memento-pockets",
+        "record-area",
+        "next-goal-card",
+        "page-and-navigation-controls"
+      ]
+    },
+    {
+      "sourceMasterId": "CM-PAUSE-SETTINGS-R1",
+      "viewId": "pause-settings",
+      "screenIds": [
+        "OVR-PAUSE",
+        "OVR-SETTINGS",
+        "OVR-CONFIRM"
+      ],
+      "file": "10_pause-settings-master.png",
+      "sha256": "b8b9e02275627ff9a64c4f0bc788b2962c5569bbfea449f918073e5c88dfdb5c",
+      "componentGroups": [
+        "paused-background",
+        "dim-veil",
+        "board-frame",
+        "paper-panel",
+        "setting-icons",
+        "sliders",
+        "toggles",
+        "shape-and-color-preview",
+        "resume-button",
+        "end-button",
+        "help-reset-button",
+        "confirmation-overlay"
+      ]
+    }
+  ]
+}

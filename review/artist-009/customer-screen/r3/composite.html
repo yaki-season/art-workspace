@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ko" class="warm-pixel">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Artist 009 customer service r3</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 1920px;
+      height: 1080px;
+      margin: 0;
+      overflow: hidden;
+      background: #0b0c0c;
+    }
+
+    .frame {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: #0b0c0c;
+    }
+
+    .source-slice {
+      position: absolute;
+      left: 0;
+      width: 1920px;
+      background-image: url("customer-service-master-fhd.png");
+      background-repeat: no-repeat;
+      background-size: 1920px 1080px;
+    }
+
+    .scene {
+      top: 0;
+      height: 650px;
+      background-position: 0 0;
+    }
+
+    .service-dock {
+      top: 650px;
+      height: 270px;
+      background-position: 0 -810px;
+    }
+
+    .station-nav {
+      position: absolute;
+      left: 0;
+      top: 920px;
+      width: 1920px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 12px 92px 20px;
+      border-top: 7px solid #241a12;
+      background:
+        linear-gradient(180deg, rgba(9, 11, 11, 0.96), rgba(13, 12, 10, 0.98)),
+        repeating-linear-gradient(
+          90deg,
+          rgba(121, 75, 32, 0.12) 0,
+          rgba(121, 75, 32, 0.12) 3px,
+          transparent 3px,
+          transparent 17px
+        );
+      box-shadow:
+        inset 0 5px 0 #090807,
+        inset 0 10px 0 #3a2717,
+        0 -12px 24px rgba(0, 0, 0, 0.65);
+    }
+
+    .station-button {
+      position: relative;
+      width: 360px;
+      height: 112px;
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      align-items: center;
+      padding: 0 28px;
+      border: 6px solid #4e4436;
+      border-radius: 14px;
+      color: #dfd1b4;
+      background:
+        linear-gradient(180deg, rgba(45, 46, 42, 0.96), rgba(22, 24, 23, 0.98));
+      box-shadow:
+        inset 0 0 0 3px #151616,
+        inset 0 10px 16px rgba(255, 219, 152, 0.04),
+        0 7px 0 #080909,
+        0 11px 18px rgba(0, 0, 0, 0.7);
+      font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    }
+
+    .station-button.active {
+      border-color: #d19a40;
+      color: #ffe1a2;
+      background:
+        linear-gradient(180deg, rgba(91, 61, 27, 0.97), rgba(43, 31, 19, 0.99));
+      box-shadow:
+        inset 0 0 0 3px #231810,
+        inset 0 10px 18px rgba(255, 200, 92, 0.14),
+        0 7px 0 #100b08,
+        0 0 20px rgba(224, 148, 43, 0.2);
+    }
+
+    .station-icon {
+      position: relative;
+      width: 68px;
+      height: 68px;
+      border: 4px solid currentColor;
+      border-radius: 50%;
+      opacity: 0.9;
+    }
+
+    .station-icon::before,
+    .station-icon::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background: currentColor;
+    }
+
+    .customers .station-icon::before {
+      left: 12px;
+      top: 12px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      box-shadow: 24px 0 0 currentColor;
+    }
+
+    .customers .station-icon::after {
+      left: 9px;
+      bottom: 11px;
+      width: 43px;
+      height: 17px;
+      border-radius: 18px 18px 7px 7px;
+    }
+
+    .assembly .station-icon::before {
+      left: 10px;
+      top: 30px;
+      width: 43px;
+      height: 7px;
+      transform: rotate(-28deg);
+      border-radius: 4px;
+    }
+
+    .assembly .station-icon::after {
+      left: 23px;
+      top: 18px;
+      width: 18px;
+      height: 18px;
+      border-radius: 7px;
+      box-shadow: 15px 9px 0 currentColor;
+      transform: rotate(-28deg);
+    }
+
+    .grill .station-icon::before {
+      left: 15px;
+      bottom: 13px;
+      width: 34px;
+      height: 12px;
+      border-radius: 50% 50% 35% 35%;
+      box-shadow: 0 -12px 0 -3px currentColor;
+    }
+
+    .grill .station-icon::after {
+      left: 23px;
+      top: 11px;
+      width: 19px;
+      height: 28px;
+      border-radius: 70% 30% 65% 35%;
+      transform: rotate(8deg);
+    }
+
+    .drink .station-icon::before {
+      left: 16px;
+      top: 13px;
+      width: 28px;
+      height: 38px;
+      border: 5px solid currentColor;
+      border-top-width: 3px;
+      background: transparent;
+      border-radius: 3px 3px 8px 8px;
+    }
+
+    .drink .station-icon::after {
+      right: 7px;
+      top: 22px;
+      width: 15px;
+      height: 22px;
+      border: 5px solid currentColor;
+      border-left: 0;
+      background: transparent;
+      border-radius: 0 11px 11px 0;
+    }
+
+    .station-label {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .station-name {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.03em;
+      text-shadow: 0 3px 0 #090909;
+    }
+
+    .station-state {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      color: #9f9787;
+      letter-spacing: 0.08em;
+    }
+
+    .active .station-state {
+      color: #e3b96f;
+    }
+
+    .warm-pixel .station-nav {
+      border-top: 6px solid #8c5928;
+      background:
+        linear-gradient(90deg, rgba(117, 69, 27, 0.08) 25%, transparent 25%) 0 0 / 8px 8px,
+        linear-gradient(90deg, transparent 75%, rgba(224, 151, 58, 0.06) 75%) 0 0 / 8px 8px,
+        repeating-linear-gradient(
+          0deg,
+          #120c08 0,
+          #120c08 4px,
+          #1a110b 4px,
+          #1a110b 8px
+        );
+      box-shadow:
+        inset 0 4px 0 #2c1a0c,
+        inset 0 8px 0 #070504,
+        0 -8px 0 rgba(10, 6, 3, 0.9);
+    }
+
+    .warm-pixel .station-button {
+      --accent: #9a6833;
+      isolation: isolate;
+      overflow: hidden;
+      border: 4px solid var(--accent);
+      border-radius: 0;
+      clip-path: polygon(
+        12px 0,
+        calc(100% - 12px) 0,
+        calc(100% - 12px) 4px,
+        calc(100% - 4px) 4px,
+        calc(100% - 4px) 12px,
+        100% 12px,
+        100% calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 4px),
+        calc(100% - 12px) calc(100% - 4px),
+        calc(100% - 12px) 100%,
+        12px 100%,
+        12px calc(100% - 4px),
+        4px calc(100% - 4px),
+        4px calc(100% - 12px),
+        0 calc(100% - 12px),
+        0 12px,
+        4px 12px,
+        4px 4px,
+        12px 4px
+      );
+      color: #ead1a0;
+      background:
+        linear-gradient(90deg, rgba(235, 172, 76, 0.07) 50%, transparent 50%) 0 0 / 8px 8px,
+        linear-gradient(0deg, #2a1a10 0 50%, #21150d 50% 100%);
+      box-shadow:
+        inset 0 0 0 4px #100b08,
+        inset 0 6px 0 rgba(255, 213, 134, 0.08),
+        0 6px 0 #070504;
+      font-family: "Galmuri11", "DungGeunMo", "Apple SD Gothic Neo", monospace;
+      -webkit-font-smoothing: none;
+    }
+
+    .warm-pixel .station-button::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      z-index: -1;
+      pointer-events: none;
+      border: 2px solid rgba(235, 192, 123, 0.12);
+      background:
+        linear-gradient(45deg, rgba(255, 213, 137, 0.04) 25%, transparent 25%) 0 0 / 6px 6px,
+        linear-gradient(-45deg, rgba(118, 63, 23, 0.08) 25%, transparent 25%) 0 0 / 6px 6px;
+    }
+
+    .warm-pixel .station-button.customers {
+      --accent: #d19a48;
+    }
+
+    .warm-pixel .station-button.assembly {
+      --accent: #85813b;
+    }
+
+    .warm-pixel .station-button.grill {
+      --accent: #bf702c;
+    }
+
+    .warm-pixel .station-button.drink {
+      --accent: #944533;
+    }
+
+    .warm-pixel .station-button.active {
+      border-color: #e3ab56;
+      color: #ffe2a4;
+      background:
+        linear-gradient(90deg, rgba(255, 193, 92, 0.11) 50%, transparent 50%) 0 0 / 8px 8px,
+        linear-gradient(0deg, #55341a 0 50%, #422713 50% 100%);
+      box-shadow:
+        inset 0 0 0 4px #1a1009,
+        inset 0 6px 0 rgba(255, 218, 143, 0.13),
+        0 6px 0 #090604;
+    }
+
+    .warm-pixel .station-icon {
+      width: 68px;
+      height: 68px;
+      color: var(--accent);
+      border: 4px solid currentColor;
+      border-radius: 0;
+      clip-path: polygon(
+        12px 0,
+        calc(100% - 12px) 0,
+        calc(100% - 12px) 4px,
+        calc(100% - 4px) 4px,
+        calc(100% - 4px) 12px,
+        100% 12px,
+        100% calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 4px),
+        calc(100% - 12px) calc(100% - 4px),
+        calc(100% - 12px) 100%,
+        12px 100%,
+        12px calc(100% - 4px),
+        4px calc(100% - 4px),
+        4px calc(100% - 12px),
+        0 calc(100% - 12px),
+        0 12px,
+        4px 12px,
+        4px 4px,
+        12px 4px
+      );
+      image-rendering: pixelated;
+    }
+
+    .warm-pixel .station-name {
+      color: #f0d29c;
+      text-shadow: 3px 3px 0 #0b0704;
+    }
+
+    .warm-pixel .station-button.active .station-name {
+      color: #ffe0a0;
+    }
+
+    .warm-pixel .station-state {
+      color: #bca77f;
+      text-shadow: 2px 2px 0 #090604;
+    }
+
+    .warm-pixel .station-button.active .station-state {
+      color: #e6b96d;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame" aria-label="손님 서비스 화면">
+    <div class="source-slice scene"></div>
+    <div class="source-slice service-dock"></div>
+    <nav class="station-nav" aria-label="스테이션 전환">
+      <div class="station-button customers active">
+        <span class="station-icon"></span>
+        <span class="station-label">
+          <span class="station-name">손님</span>
+          <span class="station-state">현재 화면</span>
+        </span>
+      </div>
+      <div class="station-button assembly">
+        <span class="station-icon"></span>
+        <span class="station-label">
+          <span class="station-name">조립</span>
+          <span class="station-state">네기마 준비</span>
+        </span>
+      </div>
+      <div class="station-button grill">
+        <span class="station-icon"></span>
+        <span class="station-label">
+          <span class="station-name">그릴</span>
+          <span class="station-state">숯불 굽기</span>
+        </span>
+      </div>
+      <div class="station-button drink">
+        <span class="station-icon"></span>
+        <span class="station-label">
+          <span class="station-name">드링크</span>
+          <span class="station-state">생맥주</span>
+        </span>
+      </div>
+    </nav>
+  </main>
+</body>
+</html>
