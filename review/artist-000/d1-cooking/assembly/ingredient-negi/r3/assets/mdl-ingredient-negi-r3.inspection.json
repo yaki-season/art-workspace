@@ -1,0 +1,27 @@
+{
+  "id": "MDL-INGREDIENT-NEGI",
+  "format": "glb + external pixel albedo",
+  "coordinateSystem": "meters, Y-up, +Z front",
+  "origin": "skewerSocket",
+  "skewerAxis": "local +Y; crosses the negi tube laterally",
+  "bodyLongAxis": "local X; perpendicular to skewer axis",
+  "assemblyPose": "MDL-SKEWER-BASE parent rotation Z=-90° makes the local X long axis screen-vertical",
+  "requiredNodes": [
+    "skewerSocket"
+  ],
+  "materialBinding": {
+    "targetNode": "pixel-material-plane",
+    "albedo": "tex-ingredient-negi-albedo-r3.png",
+    "sampling": "nearest",
+    "colorSpace": "sRGB"
+  },
+  "cutFaceUV": "pixel-material-plane normalized UV [0,1]×[0,1]",
+  "boundsMeters": {
+    "width": 0.255,
+    "height": 0.22,
+    "depth": 0.156
+  },
+  "triangles": 42,
+  "triangleBudget": 800,
+  "status": "within-budget"
+}

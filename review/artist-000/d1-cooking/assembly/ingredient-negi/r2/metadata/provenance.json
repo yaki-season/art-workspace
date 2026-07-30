@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "profile": "bundle-model",
+  "id": "MDL-INGREDIENT-NEGI",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.ingredient.negi",
+  "semanticPurpose": "D1 네기마 조립의 큼직한 대파 토막 한 조각이다. 런타임은 MDL-SKEWER-BASE의 slot anchor에 skewerSocket을 결합해 닭→파→닭→파→닭 순서를 구성한다.",
+  "status": "superseded",
+  "supersededReason": "사용자 승인 뒤 실제 MDL-SKEWER-BASE 부모 회전(-90°)으로 node 결합을 검증했을 때 pixel-material-plane의 64° 보정이 중복돼 대파가 수평으로 보였다. R3는 같은 재질을 보존하고 decal 회전을 assembly pose에 맞춰 교정한다.",
+  "approval": {
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [{
+    "file": "art-workspace/review/artist-000/d1-cooking/assembly/r1/assembly-station-fhd-r1.png",
+    "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+    "role": "user-approved D1 assembly full-screen source; direct visual reference for chunky negi segment, layered cut end, green palette, and pixel contour"
+  }],
+  "generation": {
+    "modelTool": "deterministic Three.js GLTFExporter",
+    "textureTool": "built-in imagegen",
+    "textureMode": "single large raw Japanese green-onion segment derived from the user-approved D1 source; R1 material is reused unchanged",
+    "promptSummary": "exactly one large thick Japanese negi segment with ribbed dark green exterior and one pale layered cut end; no chicken, skewer, scene, UI, or shadow; uniform #ff00ff chroma-key background",
+    "rawChromaSource": "../source/ingredient-negi-chroma-source-r2.png",
+    "rawChromaSourceSha256": "97835f260dd0bd30ba19d85c2ee844c645abe2ef4e8c9c7c359a6a8a44d493c0",
+    "rawChromaSourceBytes": 1110566,
+    "postProcess": ["remove_chroma_key.py with border auto-key, soft matte, threshold 12/220, and despill", "alpha bounding-box crop with 3px padding", "nearest-neighbor normalization to 256×192 RGBA pixel albedo", "R1 visual material is reused unchanged; only model coordinates are corrected", "GLB body long axis local X; skewerSocket local +Y crosses that body laterally", "GLB front material plane bound to the albedo; depth mesh constrained entirely within the front alpha silhouette", "actual GLB plus albedo rendered alone on neutral checkerboard"]
+  },
+  "output": {
+    "model": {"file":"../assets/mdl-ingredient-negi-r2.glb","bytes":5112,"sha256":"90bd53499951c20f35c56351ab7fac06b5353962d4b1001325991e0aea72f9ca","format":"glb"},
+    "albedo": {"file":"../assets/tex-ingredient-negi-albedo-r2.png","bytes":55025,"sha256":"8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95","dimensions":[256,192],"colorSpace":"sRGB","sampling":"nearest"}
+  },
+  "inspection": {"file":"../assets/mdl-ingredient-negi-r2.inspection.json","bytes":655,"sha256":"ab54ba77fec9532feda01d59373265236f3eea54f951dab0489b014b250b1490","coordinateSystem":"meters, Y-up, +Z front","origin":"skewerSocket","skewerAxis":"local +Y; crosses negi tube laterally","bodyLongAxis":"local X; perpendicular to skewer axis","requiredNodes":["skewerSocket"],"albedoTargetNode":"pixel-material-plane","layeredCutFaceUV":"pixel-material-plane normalized UV [0,1]×[0,1]","triangles":42,"triangleBudget":800},
+  "validation": {"albedoFourCornerAlpha":[0,0,0,0],"albedoVisibleMagentaDominantPixels":0,"glbParse":"root origin [0,0,0]; skewerSocket and pixel-material-plane present; 42 triangles"},
+  "reviewBoard": {"file":"../review/review-mdl-ingredient-negi-r2.png","width":1920,"height":1080,"sha256":"259ff06fa5332fa527922c737c222e6138407daea2994dc0537a8a429a0f3e82","contains":["one MDL-INGREDIENT-NEGI GLB with its pixel albedo","neutral checkerboard only"]},
+  "excludes": ["chicken, bamboo skewer, cooked green onion, a second negi piece, jig, transfer tray, ingredient bin, background scene, character, UI, text, quantity, checkmark, shadow, or VFX", "state-specific raster frames or a baked completed skewer"],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "R2 대파 토막 모델 bundle 한 개만 검토한다. 대파는 화면상 수직이고, 런타임의 수평 꼬치(local +Y)가 그 옆면 중심을 관통한다. 승인 D1 원본의 굵은 초록 원통·층상 절단면·픽셀 윤곽과 어울리는지와 투명 경계를 확인한다. 꼬치·닭·완성 꼬치는 이 후보에 포함하지 않는다.",
+  "nextGate": "승인된 빈 꼬치·닭·대파의 결합 동작을 실제 D1 조립 jig에서 한 화면으로 검수한다."
+}

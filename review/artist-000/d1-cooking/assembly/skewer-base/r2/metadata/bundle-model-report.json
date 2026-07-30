@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "profile": "bundle-model",
+  "id": "MDL-SKEWER-BASE",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.base",
+  "assetMeaning": "D1 조립 jig 위의 빈 대나무 꼬치. 같은 꼬치의 다섯 anchor에 닭·대파 모델을 순서대로 결합하는 3D runtime base다.",
+  "artifacts": [
+    {
+      "role": "runtime-model",
+      "file": "../assets/mdl-skewer-base-r2.glb",
+      "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "bytes": 15996,
+      "format": "glb"
+    },
+    {
+      "role": "pixel-albedo",
+      "file": "../assets/tex-skewer-base-albedo-r2.png",
+      "sha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+      "bytes": 51293,
+      "format": "png",
+      "dimensions": { "width": 1024, "height": 64 }
+    },
+    {
+      "role": "model-inspection",
+      "file": "../assets/mdl-skewer-base-r2.inspection.json",
+      "sha256": "9ddd6b97774c8044eafd8f3baedea2486d5849da4d5b8525d3edd5d6ee9c1db3",
+      "bytes": 634,
+      "format": "json"
+    },
+    {
+      "role": "isolated-review-board",
+      "file": "../review/review-mdl-skewer-base-r2.png",
+      "sha256": "89c7f1e3248cbf585407b8dc90e4837b457d8aabb14a3efb27e260e61524193e",
+      "bytes": 167641,
+      "format": "png",
+      "dimensions": { "width": 1920, "height": 1080 }
+    }
+  ],
+  "technicalReview": {
+    "result": "passed",
+    "checks": [
+      "GLTFLoader parse: root origin [0,0,0]",
+      "required nodes handle, tip, slot-01 through slot-05 and pixel-material-plane present",
+      "146 triangles is within the 500-triangle budget",
+      "pixel albedo is 1024×64 RGBA; four corner alpha values are 0",
+      "visible green-dominant pixels after chroma removal: 0",
+      "actual GLB plus nearest-sampled albedo rendered alone on a neutral checkerboard"
+    ]
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인"
+  },
+  "runtimeRegistrationAllowed": false
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "profile": "bundle-model",
+  "id": "MDL-INGREDIENT-NEGI",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.ingredient.negi",
+  "assetMeaning": "D1 네기마 조립에서 빈 꼬치의 지정 slot에 skewerSocket으로 결합되는 큼직한 대파 토막 한 조각이다. 대파 긴 축은 local X이고, 꼬치 축 local +Y가 그 옆면을 직교 관통한다.",
+  "artifacts": [
+    { "role": "runtime-model", "file": "../assets/mdl-ingredient-negi-r2.glb", "sha256": "90bd53499951c20f35c56351ab7fac06b5353962d4b1001325991e0aea72f9ca", "bytes": 5112, "format": "glb" },
+    { "role": "pixel-albedo", "file": "../assets/tex-ingredient-negi-albedo-r2.png", "sha256": "8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95", "bytes": 55025, "format": "png", "dimensions": { "width": 256, "height": 192 } },
+    { "role": "model-inspection", "file": "../assets/mdl-ingredient-negi-r2.inspection.json", "sha256": "ab54ba77fec9532feda01d59373265236f3eea54f951dab0489b014b250b1490", "bytes": 655, "format": "json" },
+    { "role": "isolated-review-board", "file": "../review/review-mdl-ingredient-negi-r2.png", "sha256": "259ff06fa5332fa527922c737c222e6138407daea2994dc0537a8a429a0f3e82", "bytes": 364207, "format": "png", "dimensions": { "width": 1920, "height": 1080 } }
+  ],
+  "technicalReview": {
+    "result": "passed",
+    "checks": [
+      "GLTFLoader parse: root origin [0,0,0] and skewerSocket plus pixel-material-plane present",
+      "42 triangles is within the 800-triangle budget",
+      "coordinate contract: body long axis local X; skewer local +Y crosses the body laterally",
+      "pixel albedo is 256×192 RGBA; four corner alpha values are 0",
+      "visible magenta-dominant pixels after chroma removal: 0",
+      "actual GLB plus nearest-sampled albedo rendered alone on a neutral checkerboard"
+    ]
+  },
+  "approval": { "status": "approved-by-user", "date": "2026-07-29", "basis": "사용자 응답: 승인" },
+  "runtimeRegistrationAllowed": false
+}

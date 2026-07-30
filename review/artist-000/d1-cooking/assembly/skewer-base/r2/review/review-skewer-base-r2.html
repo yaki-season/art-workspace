@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>MDL-SKEWER-BASE R2 isolated review</title>
+<style>html,body{margin:0;width:100%;height:100%;background:#252525;overflow:hidden}canvas{display:block;width:1920px;height:1080px;image-rendering:pixelated}</style>
+<canvas id="review" width="1920" height="1080"></canvas>
+<script type="importmap">{ "imports": { "three": "/app/node_modules/three/build/three.module.js" } }</script>
+<script type="module">
+  import * as THREE from '/app/node_modules/three/build/three.module.js';
+  import { GLTFLoader } from '/app/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+
+  const canvas = document.querySelector('#review');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true, preserveDrawingBuffer: true });
+  renderer.setSize(1920, 1080, false);
+  renderer.setClearColor(0x242424, 1);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(26, 16 / 9, 0.1, 100);
+  camera.position.set(0, 0, 4.2); camera.lookAt(0, 0, 0);
+  const checker = new THREE.Mesh(new THREE.PlaneGeometry(4.2, 2.4), new THREE.ShaderMaterial({
+    depthWrite:false,
+    vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+    fragmentShader:'varying vec2 vUv;void main(){vec2 c=floor(vUv*40.);float o=mod(c.x+c.y,2.);gl_FragColor=vec4(mix(vec3(.15),vec3(.24),o),1.);}'
+  }));
+  checker.position.z = -0.2; scene.add(checker);
+  const texture = new THREE.TextureLoader().load('../assets/tex-skewer-base-albedo-r2.png', () => {
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.magFilter = THREE.NearestFilter; texture.minFilter = THREE.NearestFilter;
+    new GLTFLoader().load('../assets/mdl-skewer-base-r2.glb', (gltf) => {
+      const model = gltf.scene;
+      const decal = model.getObjectByName('pixel-material-plane');
+      decal.material.map = texture; decal.material.needsUpdate = true;
+      model.rotation.z = -Math.PI / 2; model.scale.setScalar(2.05);
+      scene.add(model); renderer.render(scene, camera); document.body.dataset.ready = 'true';
+    }, undefined, error => { document.body.dataset.error = String(error); });
+  });
+</script>

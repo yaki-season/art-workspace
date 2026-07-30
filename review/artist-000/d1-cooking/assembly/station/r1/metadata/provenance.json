@@ -5,7 +5,7 @@
   "sourceRevision": 1,
   "screenUnit": "SCR-SVC-ASSEMBLY",
   "semanticPurpose": "D1 네기마 조립 화면의 고정 플레이어측 구조물(빈 재료 통 3개, 빈 5칸 꼬치 jig, 빈 전달 tray)만 제공한다.",
-  "status": "pending-user-review",
+  "status": "superseded-by-r2",
   "sourceReferences": [
     {
       "file": "../../r1/assembly-station-fhd-r1.png",
@@ -57,6 +57,11 @@
     "text, quantity, timer, order rail, prepared dock, panel, button, icon, cursor, checkmark, logo, watermark, VFX, or shadow"
   ],
   "runtimeRegistrationAllowed": false,
+  "superseded": {
+    "date": "2026-07-28",
+    "reason": "사용자 지시: 고정 조립대의 세 재료 통은 비우지 않고 재료를 채운다.",
+    "replacement": "../../r2/assets/st-assembly-tier-1-fhd-r2.png"
+  },
   "approvalQuestion": "D1 조립대의 고정 구조물 한 장만 검토한다: 빈 재료 통 3개·빈 5칸 jig·빈 전달 tray의 실루엣과 비율이 승인 전체 화면에 맞는지, 모든 재료·꼬치·UI·배경이 빠졌는지, 투명 경계가 깨끗한지 확인한다. 승인 전 동적 조립 자산·그릴 화면·runtime 등록은 진행하지 않는다.",
   "nextGate": "사용자 승인 후 D1 조립 동적 자산을 의미별로 한 단위씩 분리·격리 검수한다."
 }

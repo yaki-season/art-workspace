@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-model-integration",
+  "id": "D1-JIG-FULL-RAW-NEGIMA",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.raw-negima",
+  "assetMeaning": "승인된 빈 꼬치와 닭·대파 GLB를 D1 조립 jig의 다섯 slot에 실제 node 결합한 생 네기마 한 꼬치의 조립 상태다. 독립 runtime 에셋이나 구워진 결과물은 아니다.",
+  "integrationContract": {"file":"integration-contract.json","sha256":"cd7e1c7e8d0b5ca194b3ce0f2fdf768f919749a75b2fae955e82572e2b38bdc3","bytes":2697},
+  "approvedInputs": [
+    {"id":"ST-ASSEMBLY-TIER-1","profile":"standalone-raster","sourceRevision":3,"sha256":"b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca","approvalStatus":"approved-by-user"},
+    {"id":"MDL-SKEWER-BASE","profile":"bundle-model","sourceRevision":2,"sha256":"fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5","approvalStatus":"approved-by-user"},
+    {"id":"MDL-INGREDIENT-CHICKEN","profile":"bundle-model","sourceRevision":1,"sha256":"740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc","approvalStatus":"approved-by-user"},
+    {"id":"MDL-INGREDIENT-NEGI","profile":"bundle-model","sourceRevision":3,"sha256":"065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3","approvalStatus":"approved-by-user"}
+  ],
+  "assembly": {"slotSequence":["chicken","green-onion","chicken","green-onion","chicken"],"slotCount":5,"componentScaleRelativeToBase":1.4,"basePlacement":"horizontal on the approved central jig","negiAssemblyPose":"screen-vertical; horizontal skewer crosses each side face"},
+  "reviewBoard": {"file":"../review-d1-jig-full-raw-negima-fhd-r1.png","sha256":"0143f6737b2511d2f82f57518c4a0cdfceb3c7deadbe3aa37a7467c80366f8ba","bytes":902012,"width":1920,"height":1080,"format":"png"},
+  "technicalReview": {"result":"passed","checks":["four approved inputs only","actual GLB nodes attached to slot-01 through slot-05","sequence is chicken → green onion → chicken → green onion → chicken","component scale is 1.40 relative to the approved base while slot centers, skewer, and jig remain unchanged","green onion long axis is screen-vertical and the horizontal skewer crosses its side face","FHD checkerboard review board is 1920×1080","no new raster, grill, cooking result, transfer, serving state, UI, text, runtime asset, manifest, or registration"]},
+  "approval": {"status":"approved-by-user","date":"2026-07-29","basis":"사용자 응답: 승인"},
+  "runtimeRegistrationAllowed": false,
+  "nextGate": "새 그림을 만들기 전에 기존 그릴 화면 source를 확인하고, 재사용 가능 여부와 다음 단일 화면/자산의 의미를 사용자에게 제시한다."
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "profile": "bundle-model",
+  "id": "MDL-INGREDIENT-CHICKEN",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.ingredient.chicken",
+  "assetMeaning": "D1 네기마 조립에서 빈 꼬치의 지정 slot에 skewerSocket으로 결합되는 생 닭다리살 한 조각이다.",
+  "artifacts": [
+    { "role": "runtime-model", "file": "../assets/mdl-ingredient-chicken-r1.glb", "sha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc", "bytes": 5168, "format": "glb" },
+    { "role": "pixel-albedo", "file": "../assets/tex-ingredient-chicken-albedo-r1.png", "sha256": "4baa5ca99f5f190053930461251f0497219731048a7d3caddf5ae2e03cfefb47", "bytes": 43760, "format": "png", "dimensions": { "width": 192, "height": 192 } },
+    { "role": "model-inspection", "file": "../assets/mdl-ingredient-chicken-r1.inspection.json", "sha256": "b47d7529dce5e658ffb7dced322b1b15d0bbb1d620b8508dc838e0cf573e24f1", "bytes": 601, "format": "json" },
+    { "role": "isolated-review-board", "file": "../review/review-mdl-ingredient-chicken-r1.png", "sha256": "3f9f95580d5bfb87b7e246cd8fa3632b6cbd1df6204886b58687bdba0f768e42", "bytes": 137898, "format": "png", "dimensions": { "width": 1920, "height": 1080 } }
+  ],
+  "technicalReview": {
+    "result": "passed",
+    "checks": [
+      "GLTFLoader parse: root origin [0,0,0] and skewerSocket plus pixel-material-plane present",
+      "82 triangles is within the 800-triangle budget",
+      "pixel albedo is 192×192 RGBA; four corner alpha values are 0",
+      "visible green-dominant pixels after chroma removal: 0",
+      "actual GLB plus nearest-sampled albedo rendered alone on a neutral checkerboard"
+    ]
+  },
+  "approval": { "status": "approved-by-user", "date": "2026-07-29", "basis": "사용자 응답: 승인" },
+  "runtimeRegistrationAllowed": false
+}

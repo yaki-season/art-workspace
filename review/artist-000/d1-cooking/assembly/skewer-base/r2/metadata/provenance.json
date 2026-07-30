@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "profile": "bundle-model",
+  "id": "MDL-SKEWER-BASE",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.base",
+  "semanticPurpose": "D1 네기마 조립 jig 위에 놓이는 빈 대나무 꼬치다. 런타임은 다섯 slot anchor에 닭·대파 모델을 닭→파→닭→파→닭 순서로 결합한다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "art-workspace/review/artist-000/d1-cooking/assembly/r1/assembly-station-fhd-r1.png",
+      "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+      "role": "user-approved D1 assembly full-screen source; direct visual reference for the bamboo's pixel contour, grain, warm palette, and jig-scale"
+    },
+    {
+      "file": "art-workspace/review/artist-000/d1-cooking/assembly/station/r3/metadata/provenance.json",
+      "sha256": "37bcc3c496b94a29c617df678e2ae63fd2e13503a821e686a7ae3f2f2a58e9bc",
+      "role": "approved empty jig and dynamic-composition contract"
+    }
+  ],
+  "generation": {
+    "modelTool": "deterministic Three.js GLTFExporter",
+    "textureTool": "built-in imagegen",
+    "textureMode": "source-faithful pixel-art bamboo-skewer extraction from the user-approved D1 screen",
+    "promptSummary": "one empty horizontal bamboo skewer only; preserve the reference's dark pixel contour, amber grain, knots, warm highlights, and tapered tip; no food, UI, jig, table, or shadow; uniform #00ff00 chroma-key background",
+    "rawChromaSource": "../source/skewer-base-chroma-source-r2.png",
+    "rawChromaSourceSha256": "0cb61af3389b0bb81281175ea41e8f1fdf29adc5fa9aa158fc1e12384af4288e",
+    "rawChromaSourceBytes": 922751,
+    "postProcess": [
+      "remove_chroma_key.py with border auto-key, soft matte, threshold 12/220, and despill",
+      "alpha bounding-box crop with 3px padding",
+      "nearest-neighbor normalization to 1024×64 RGBA pixel albedo",
+      "GLB front material plane bound to the albedo while low-poly bamboo body supplies non-front-facing depth",
+      "actual GLB plus albedo rendered alone on neutral checkerboard"
+    ]
+  },
+  "output": {
+    "model": {
+      "file": "../assets/mdl-skewer-base-r2.glb",
+      "bytes": 15996,
+      "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "format": "glb"
+    },
+    "albedo": {
+      "file": "../assets/tex-skewer-base-albedo-r2.png",
+      "bytes": 51293,
+      "sha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+      "dimensions": [1024, 64],
+      "colorSpace": "sRGB",
+      "sampling": "nearest"
+    }
+  },
+  "inspection": {
+    "file": "../assets/mdl-skewer-base-r2.inspection.json",
+    "bytes": 634,
+    "sha256": "9ddd6b97774c8044eafd8f3baedea2486d5849da4d5b8525d3edd5d6ee9c1db3",
+    "coordinateSystem": "meters, Y-up, +Z front",
+    "origin": "length-axis center",
+    "requiredNodes": ["handle", "tip"],
+    "assemblyAnchors": ["slot-01", "slot-02", "slot-03", "slot-04", "slot-05"],
+    "albedoTargetNode": "pixel-material-plane",
+    "triangles": 146,
+    "triangleBudget": 500
+  },
+  "validation": {
+    "albedoFourCornerAlpha": [0, 0, 0, 0],
+    "albedoVisibleGreenDominantPixels": 0,
+    "glbParse": "root origin [0,0,0]; required nodes and all five slot anchors present"
+  },
+  "reviewBoard": {
+    "file": "../review/review-mdl-skewer-base-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "89c7f1e3248cbf585407b8dc90e4837b457d8aabb14a3efb27e260e61524193e",
+    "contains": ["one MDL-SKEWER-BASE GLB with its pixel albedo", "neutral checkerboard only"]
+  },
+  "excludes": [
+    "chicken, green onion, cooked skewer, jig, transfer tray, ingredient bins, background scene, character, UI, text, quantity, checkmark, shadow, or VFX",
+    "state-specific raster frames or a baked completed skewer"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "빈 대나무 꼬치 모델 bundle 하나만 검토한다. 승인 D1 원본과 동일한 픽셀 윤곽·나뭇결·황갈색 명암으로 읽히는지, 빈 꼬치로 명확한지, 끝과 손잡이가 온전한지 확인한다. 닭·파와 누적 완료 모습은 이 후보에 포함하지 않는다.",
+  "nextGate": "MDL-INGREDIENT-CHICKEN 한 모델을 같은 방식으로 별도 격리 검수한다."
+}

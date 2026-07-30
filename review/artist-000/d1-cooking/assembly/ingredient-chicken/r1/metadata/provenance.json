@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "profile": "bundle-model",
+  "id": "MDL-INGREDIENT-CHICKEN",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.ingredient.chicken",
+  "semanticPurpose": "D1 네기마 조립의 생 닭다리살 한 조각이다. 런타임은 MDL-SKEWER-BASE의 slot anchor에 skewerSocket을 결합해 닭→파→닭→파→닭 순서를 구성한다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "art-workspace/review/artist-000/d1-cooking/assembly/r1/assembly-station-fhd-r1.png",
+      "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+      "role": "user-approved D1 assembly full-screen source; direct visual reference for raw chicken form, palette, dark pixel contour, and material density"
+    },
+    {
+      "file": "docs/spec/art/ART-003_런타임_아트_에셋_목록과_제작_계약.md",
+      "role": "MDL-INGREDIENT-CHICKEN model contract: skewerSocket, cut-face UV, and 800-triangle limit"
+    }
+  ],
+  "generation": {
+    "modelTool": "deterministic Three.js GLTFExporter",
+    "textureTool": "built-in imagegen",
+    "textureMode": "single raw chicken-thigh pixel-art material derived from the user-approved D1 source",
+    "promptSummary": "exactly one coherent bite-sized raw chicken-thigh piece; retain source palette, marbling, cream-fat highlights, and dark pixel contour; no skewers, other food, UI, scene, or shadow; uniform #00ff00 chroma-key background",
+    "rawChromaSource": "../source/ingredient-chicken-chroma-source-r1.png",
+    "rawChromaSourceSha256": "4977627c49dadac6846108772804049c54bf1034cef992c2488de7c6a4be73df",
+    "rawChromaSourceBytes": 1081725,
+    "postProcess": [
+      "remove_chroma_key.py with border auto-key, soft matte, threshold 12/220, and despill",
+      "alpha bounding-box crop with 3px padding",
+      "nearest-neighbor normalization to 192×192 RGBA pixel albedo",
+      "GLB front material plane bound to the albedo while a low-poly body supplies depth",
+      "actual GLB plus albedo rendered alone on a neutral checkerboard"
+    ]
+  },
+  "output": {
+    "model": {
+      "file": "../assets/mdl-ingredient-chicken-r1.glb",
+      "bytes": 5168,
+      "sha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
+      "format": "glb"
+    },
+    "albedo": {
+      "file": "../assets/tex-ingredient-chicken-albedo-r1.png",
+      "bytes": 43760,
+      "sha256": "4baa5ca99f5f190053930461251f0497219731048a7d3caddf5ae2e03cfefb47",
+      "dimensions": [192, 192],
+      "colorSpace": "sRGB",
+      "sampling": "nearest"
+    }
+  },
+  "inspection": {
+    "file": "../assets/mdl-ingredient-chicken-r1.inspection.json",
+    "bytes": 601,
+    "sha256": "b47d7529dce5e658ffb7dced322b1b15d0bbb1d620b8508dc838e0cf573e24f1",
+    "coordinateSystem": "meters, Y-up, +Z front",
+    "origin": "skewerSocket",
+    "requiredNodes": ["skewerSocket"],
+    "albedoTargetNode": "pixel-material-plane",
+    "cutFaceUV": "pixel-material-plane normalized UV [0,1]×[0,1]",
+    "triangles": 82,
+    "triangleBudget": 800
+  },
+  "validation": {
+    "albedoFourCornerAlpha": [0, 0, 0, 0],
+    "albedoVisibleGreenDominantPixels": 0,
+    "glbParse": "root origin [0,0,0]; skewerSocket and pixel-material-plane present"
+  },
+  "reviewBoard": {
+    "file": "../review/review-mdl-ingredient-chicken-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "3f9f95580d5bfb87b7e246cd8fa3632b6cbd1df6204886b58687bdba0f768e42",
+    "contains": ["one MDL-INGREDIENT-CHICKEN GLB with its pixel albedo", "neutral checkerboard only"]
+  },
+  "excludes": [
+    "green onion, bamboo skewer, cooked chicken, a pile of separate ingredients, jig, transfer tray, ingredient bin, background scene, character, UI, text, quantity, checkmark, shadow, or VFX",
+    "state-specific raster frames or a baked completed skewer"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "생 닭다리살 모델 bundle 한 개만 검토한다. 승인 D1 원본의 생 닭 질감·픽셀 윤곽·색 밀도와 어울리는지, 한 조각으로 명확히 읽히는지, 투명 경계가 깨끗한지 확인한다. 꼬치·대파·완성 꼬치는 이 후보에 포함하지 않는다.",
+  "nextGate": "MDL-INGREDIENT-NEGI 한 모델을 같은 방식으로 별도 격리 검수한다."
+}

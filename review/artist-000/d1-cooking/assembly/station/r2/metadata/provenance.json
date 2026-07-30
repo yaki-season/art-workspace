@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "ST-ASSEMBLY-TIER-1",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticPurpose": "D1 네기마 조립 화면의 플레이어측 조립대: 닭고기·대파·대나무 꼬치가 채워진 세 재료 통, 빈 5칸 꼬치 jig, 빈 전달 tray를 제공한다.",
+  "status": "superseded-by-r3",
+  "sourceReferences": [
+    {
+      "file": "../../r1/assembly-station-fhd-r1.png",
+      "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+      "role": "user-approved D1 assembly full-screen source; station composition, scale, lighting, and camera reference"
+    },
+    {
+      "file": "../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+      "role": "approved fixed workspace background; alpha composite target"
+    },
+    {
+      "file": "../../station/r1/assets/st-assembly-tier-1-fhd-r1.png",
+      "sha256": "77f1cbbbee1be02e61db68adab1209777c242cc6f85eb035bb20d8b1c007fa36",
+      "role": "superseded R1 structure edit target; geometry and placement preserved"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit",
+    "promptSummary": "Change only the three bin contents: raw chicken thigh cubes, chopped Japanese green onion, and unused bamboo skewers. Preserve all fixed station geometry; keep jig and tray empty on uniform #00ff00 chroma.",
+    "rawSource": "../source/st-assembly-tier-1-filled-chroma-source-r2.png",
+    "rawSourceSha256": "d72b127bcee1d3814abb8971d094a165deac4e05a9505ccff780d044bb28d674",
+    "postProcess": [
+      "nearest-neighbor normalization from 1672x941 to 1920x1080",
+      "remove_chroma_key.py with border auto-key, soft matte, and despill",
+      "no pixel-content edits after generated-source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/st-assembly-tier-1-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "fa4714716861f8c8a2dc9489c3afe3a2fc27ee88555987a1acd390145b82286a",
+    "alpha": "straight RGBA; four corner alpha values are 0"
+  },
+  "validation": {
+    "fourCornerAlpha": [0, 0, 0, 0],
+    "greenDominantVisiblePixels": 0,
+    "ingredientBins": ["raw chicken thigh cubes", "chopped Japanese green onion", "unused bamboo skewers"],
+    "jigAndTransferTrayEmpty": true
+  },
+  "reviewBoard": {
+    "file": "../review-st-assembly-tier-1-isolated-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "cbd1a5e6797d0ca2b20b633ef8d051a16d682269172b816c8b3bc78aad8235b3",
+    "contains": ["one ST-ASSEMBLY-TIER-1 transparent layer on a checkerboard", "no background scene, customer, food outside the three ingredient bins, text, or UI"]
+  },
+  "excludes": [
+    "assembled or completed skewer, cooked food, plate, grill, drink equipment, people, customer scene, seating, and background",
+    "text, quantity, timer, order rail, prepared dock, panel, button, icon, cursor, checkmark, logo, watermark, VFX, or shadow"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "superseded": {
+    "date": "2026-07-29",
+    "reason": "사용자 지시: 대파는 승인 원본의 큼직한 네기마용 토막을 가져오고, 전체 화면 직접 시각 원본 기반으로 분리한다.",
+    "replacement": "../../r3/assets/st-assembly-tier-1-fhd-r3.png"
+  },
+  "approvalQuestion": "D1 조립대 한 장만 검토한다: 왼쪽부터 생 닭고기·대파·대나무 꼬치가 채워진 세 재료 통, 빈 5칸 jig, 빈 전달 tray가 승인 전체 화면의 비율과 카메라에 맞는지, 조립 완료물·UI·배경이 섞이지 않았는지, 투명 경계가 깨끗한지 확인한다.",
+  "nextGate": "사용자 승인 후 D1 조립 동적 자산을 의미별로 한 단위씩 분리·격리 검수한다."
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>D1 jig full raw negima integration R1</title>
+<style>
+html,body{margin:0;width:100%;height:100%;background:#252525;overflow:hidden}
+#review{position:relative;width:1920px;height:1080px;overflow:hidden;background:#252525}
+#checker,#station,#models{position:absolute;inset:0;width:1920px;height:1080px;image-rendering:pixelated}#station{object-fit:contain;pointer-events:none}
+</style>
+<div id="review"><canvas id="checker" width="1920" height="1080"></canvas><img id="station" src="../../../station/r3/assets/st-assembly-tier-1-fhd-r3.png" alt=""><canvas id="models" width="1920" height="1080"></canvas></div>
+<script type="importmap">{"imports":{"three":"/app/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from '/app/node_modules/three/build/three.module.js';import {GLTFLoader} from '/app/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+const checker=document.querySelector('#checker').getContext('2d');for(let y=0;y<1080;y+=48)for(let x=0;x<1920;x+=48){checker.fillStyle=((x/48+y/48)%2===0)?'#242424':'#3c3c3c';checker.fillRect(x,y,48,48)}
+const renderer=new THREE.WebGLRenderer({canvas:document.querySelector('#models'),alpha:true,antialias:false,preserveDrawingBuffer:true});renderer.setSize(1920,1080,false);renderer.setClearColor(0x000000,0);renderer.outputColorSpace=THREE.SRGBColorSpace;
+const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(0,1920,1080,0,.1,100),loader=new GLTFLoader();camera.position.z=50;
+const texture=url=>new Promise((ok,no)=>new THREE.TextureLoader().load(url,value=>{value.colorSpace=THREE.SRGBColorSpace;value.magFilter=THREE.NearestFilter;value.minFilter=THREE.NearestFilter;ok(value)},undefined,no));
+const model=url=>new Promise((ok,no)=>loader.load(url,ok,undefined,no));
+function bind(gltf,albedo){const root=gltf.scene,plane=root.getObjectByName('pixel-material-plane');plane.material=plane.material.clone();plane.material.map=albedo;plane.material.needsUpdate=true;root.traverse(node=>{if(node.isMesh)node.frustumCulled=false});return root}
+await document.querySelector('#station').decode();
+const [baseTexture,chickenTexture,negiTexture,baseFile,chickenFile,negiFile]=await Promise.all([
+texture('../../../skewer-base/r2/assets/tex-skewer-base-albedo-r2.png'),texture('../../../ingredient-chicken/r1/assets/tex-ingredient-chicken-albedo-r1.png'),texture('../../../ingredient-negi/r3/assets/tex-ingredient-negi-albedo-r3.png'),model('../../../skewer-base/r2/assets/mdl-skewer-base-r2.glb'),model('../../../ingredient-chicken/r1/assets/mdl-ingredient-chicken-r1.glb'),model('../../../ingredient-negi/r3/assets/mdl-ingredient-negi-r3.glb')]);
+const base=bind(baseFile,baseTexture);base.rotation.z=-Math.PI/2;base.scale.setScalar(256);base.position.set(1042,565,0);scene.add(base);
+const chicken=bind(chickenFile,chickenTexture),negi=bind(negiFile,negiTexture),sequence=[chicken,negi,chicken,negi,chicken],ingredientScale=1.40;
+for(const [index,source] of sequence.entries()){const component=source.clone(true);component.scale.setScalar(ingredientScale);base.getObjectByName(`slot-${String(index+1).padStart(2,'0')}`).add(component);}
+scene.updateMatrixWorld(true);renderer.render(scene,camera);document.body.dataset.ready='true';
+</script>

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-model-integration-review",
+  "id": "D1-JIG-FULL-RAW-NEGIMA",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "approved-by-user",
+  "approval":{"date":"2026-07-29","basis":"사용자 응답: 승인"},
+  "purpose": "승인된 고정 조립대와 승인된 GLB 세 종류를 실제 runtime 결합 방식으로 조립해, 생 네기마 한 꼬치가 D1 jig에 올바르게 놓이는지 확인한다.",
+  "approvedInputs": [
+    {"id":"ST-ASSEMBLY-TIER-1","profile":"standalone-raster","sourceRevision":3,"sha256":"b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca","role":"empty five-slot jig and filled ingredient bins"},
+    {"id":"MDL-SKEWER-BASE","profile":"bundle-model","sourceRevision":2,"sha256":"fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5","role":"base with slot-01 through slot-05"},
+    {"id":"MDL-INGREDIENT-CHICKEN","profile":"bundle-model","sourceRevision":1,"sha256":"740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc","role":"slot-01, slot-03, slot-05"},
+    {"id":"MDL-INGREDIENT-NEGI","profile":"bundle-model","sourceRevision":3,"sha256":"065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3","role":"slot-02, slot-04; actual assembly-pose-corrected model"}
+  ],
+  "assembly":{"basePlacement":"approved empty jig center, horizontal skewer orientation","binding":"each component skewerSocket is attached to the matching MDL-SKEWER-BASE slot node","componentScaleRelativeToBase":1.40,"sequence":["chicken","green-onion","chicken","green-onion","chicken"],"state":"all five raw ingredients assembled; not cooked, transferred, plated, served, or a new runtime asset"},
+  "output":{"file":"../review-d1-jig-full-raw-negima-fhd-r1.png","width":1920,"height":1080,"sha256":"0143f6737b2511d2f82f57518c4a0cdfceb3c7deadbe3aa37a7467c80366f8ba","bytes":902012},
+  "excludes":["background scene","customer or service screen","grill","drink equipment","cooked food","transfer or serving state","text","quantity","timer","button","cursor","checkmark","VFX","new raster art"],
+  "runtimeRegistrationAllowed":false,
+  "approvalQuestion":"승인된 조립대와 GLB 세 종류만으로 D1 jig 위에 생 네기마 한 꼬치가 제대로 조립되었는지 확인한다. 순서는 닭→파→닭→파→닭이며, 대파 두 토막은 수평 꼬치에 직교해 옆면 관통으로 읽혀야 한다. 이 후보는 조리·전달·서빙 또는 새 래스터 에셋이 아니다.",
+  "nextGate":"이 결합 상태의 formal integration report를 기록한 뒤, 그릴 화면의 기존 승인 source를 확인해 다음 단일 화면/자산 범위를 결정한다."
+}

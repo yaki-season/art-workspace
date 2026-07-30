@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "profile": "bundle-model",
+  "id": "MDL-INGREDIENT-NEGI",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "assembly.skewer.ingredient.negi",
+  "semanticPurpose": "D1 네기마 조립의 큼직한 대파 토막 한 조각이다. 런타임은 MDL-SKEWER-BASE의 slot anchor에 skewerSocket을 결합해 닭→파→닭→파→닭 순서를 구성한다.",
+  "status": "approved-by-user",
+  "approval": {"date":"2026-07-29","basis":"사용자 응답: 승인"},
+  "sourceReferences": [{
+    "file": "art-workspace/review/artist-000/d1-cooking/assembly/r1/assembly-station-fhd-r1.png",
+    "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+    "role": "user-approved D1 assembly full-screen source; direct visual reference for chunky negi segment, layered cut end, green palette, and pixel contour"
+  }],
+  "generation": {
+    "modelTool": "deterministic Three.js GLTFExporter",
+    "textureTool": "built-in imagegen",
+    "textureMode": "R2-approved raw Japanese green-onion material reused unchanged; only assembly-pose plane rotation is corrected",
+    "promptSummary": "exactly one large thick Japanese negi segment with ribbed dark green exterior and one pale layered cut end; no chicken, skewer, scene, UI, or shadow; uniform #ff00ff chroma-key background",
+    "rawChromaSource": "../source/ingredient-negi-chroma-source-r3.png",
+    "rawChromaSourceSha256": "97835f260dd0bd30ba19d85c2ee844c645abe2ef4e8c9c7c359a6a8a44d493c0",
+    "rawChromaSourceBytes": 1110566,
+    "postProcess": ["R2 source alpha and nearest 256×192 pixel albedo are reused unchanged", "R2 actual jig integration found the 64° decal correction doubled under the base parent Z=-90° rotation", "R3 changes only the pixel-material-plane rotation to -26° so its long silhouette is screen-vertical in the real horizontal-skewer assembly pose", "body long axis remains local X; skewerSocket local +Y crosses the body laterally", "actual R3 GLB plus albedo rendered alone on neutral checkerboard in the same assembly pose"]
+  },
+  "output": {
+    "model": {"file":"../assets/mdl-ingredient-negi-r3.glb","bytes":5112,"sha256":"065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3","format":"glb"},
+    "albedo": {"file":"../assets/tex-ingredient-negi-albedo-r3.png","bytes":55025,"sha256":"8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95","dimensions":[256,192],"colorSpace":"sRGB","sampling":"nearest"}
+  },
+  "inspection": {"file":"../assets/mdl-ingredient-negi-r3.inspection.json","bytes":819,"sha256":"9df8670ccc5a62f1f63d3ba734cd57b7550196d2b8ba9fc9b38d1e4405309269","coordinateSystem":"meters, Y-up, +Z front","origin":"skewerSocket","skewerAxis":"local +Y; crosses negi tube laterally","bodyLongAxis":"local X; perpendicular to skewer axis","assemblyPose":"base parent Z=-90° makes the long axis screen-vertical","requiredNodes":["skewerSocket"],"albedoTargetNode":"pixel-material-plane","layeredCutFaceUV":"pixel-material-plane normalized UV [0,1]×[0,1]","triangles":42,"triangleBudget":800},
+  "validation": {"albedoFourCornerAlpha":[0,0,0,0],"albedoVisibleMagentaDominantPixels":0,"glbParse":"root origin [0,0,0]; skewerSocket and pixel-material-plane present; 42 triangles"},
+  "reviewBoard": {"file":"../review/review-mdl-ingredient-negi-r3.png","width":1920,"height":1080,"sha256":"40359f8201f69e7627b1aec429fceab6432d75e89432e8c49d05cf700a622e23","contains":["one MDL-INGREDIENT-NEGI GLB with its pixel albedo in actual base assembly pose","neutral checkerboard only"]},
+  "excludes": ["chicken, bamboo skewer, cooked green onion, a second negi piece, jig, transfer tray, ingredient bin, background scene, character, UI, text, quantity, checkmark, shadow, or VFX", "state-specific raster frames or a baked completed skewer"],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "R3 대파 토막 모델 bundle 한 개만 검토한다. 이 검수판은 실제 수평 꼬치 부모와 같은 Z=-90° assembly pose를 적용했다. 대파가 화면상 수직이고, 런타임의 수평 꼬치(local +Y)가 옆면 중심을 관통하는지, 승인 D1 원본의 굵은 초록 원통·층상 절단면·픽셀 윤곽과 어울리는지, 투명 경계가 깨끗한지 확인한다. 꼬치·닭·jig는 포함하지 않는다.",
+  "nextGate": "승인 후 빈 꼬치·닭·R3 대파의 결합 동작을 실제 D1 조립 jig에서 한 화면으로 검수한다."
+}

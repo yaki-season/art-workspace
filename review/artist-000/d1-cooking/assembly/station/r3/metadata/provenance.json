@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "ST-ASSEMBLY-TIER-1",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticPurpose": "D1 네기마 조립 화면의 고정 조립대다. 원본 장면의 생 닭고기·큼직한 대파 토막·대나무 꼬치가 채워진 세 재료 통, 빈 5칸 jig, 빈 전달 tray를 제공한다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인한다"
+  },
+  "sourceReferences": [
+    {
+      "file": "../../r1/assembly-station-fhd-r1.png",
+      "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
+      "role": "user-approved D1 assembly full-screen source; direct visual source for all station geometry and ingredient forms"
+    },
+    {
+      "file": "../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+      "role": "approved fixed workspace background; alpha composite target"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "background-extraction",
+    "promptSummary": "Use the approved assembly full screen as the direct visual source; isolate its station with chicken, large cylindrical negima green-onion segments, bamboo skewers, empty jig, and empty transfer tray. Remove only the one jig skewer because it is dynamic.",
+    "rawSource": "../source/st-assembly-tier-1-original-derived-chroma-source-r3.png",
+    "rawSourceSha256": "bbec00371d097c3f2c398f6819ae28b3022c00b178af2a443f0796ca8f522be5",
+    "postProcess": [
+      "nearest-neighbor normalization from 1672x941 to 1920x1080",
+      "remove_chroma_key.py with border auto-key, soft matte, and despill",
+      "no pixel-content edits after generated-source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/st-assembly-tier-1-fhd-r3.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+    "alpha": "straight RGBA; four corner alpha values are 0"
+  },
+  "validation": {
+    "fourCornerAlpha": [0, 0, 0, 0],
+    "greenDominantVisiblePixels": 0,
+    "ingredientBins": ["raw chicken from approved source", "large cylindrical Japanese green-onion segments from approved source", "unused bamboo skewers from approved source"],
+    "jigAndTransferTrayEmpty": true
+  },
+  "dynamicCompositionContract": {
+    "base": "empty five-slot jig",
+    "dynamicSkewer": "one bamboo skewer is rendered as a separate dynamic layer, not baked into this asset",
+    "incrementalSequence": ["chicken", "green-onion", "chicken", "green-onion", "chicken"],
+    "rule": "Each accepted assembly input adds exactly one visible component to the same dynamic skewer in order."
+  },
+  "reviewBoard": {
+    "file": "../review-st-assembly-tier-1-isolated-fhd-r3.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "53b9716dca19e0796d6cce329b4f22a55ec17cbb7e21b3ff275205ca503b071f",
+    "contains": ["one ST-ASSEMBLY-TIER-1 transparent layer on a checkerboard", "no background scene, customer, completed skewer, text, or UI"]
+  },
+  "excludes": [
+    "the dynamic bamboo skewer on the jig, its five incremental component states, completed skewer, cooked food, plate, grill, drink equipment, people, customer scene, seating, and background",
+    "text, quantity, timer, order rail, prepared dock, panel, button, icon, cursor, checkmark, logo, watermark, VFX, or shadow"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "D1 고정 조립대 한 장만 검토한다: 승인 원본의 생 닭고기·큼직한 네기마용 대파 토막·대나무 꼬치가 그대로 보존됐는지, jig와 전달 tray가 비어 있는지, 투명 경계가 깨끗한지 확인한다. jig 위 꼬치와 닭–파–닭–파–닭 누적 조립은 별도 동적 자산이다.",
+  "nextGate": "빈 꼬치와 닭–파–닭–파–닭의 누적 동적 조립 상태를 하나의 명시적 state bundle로 격리 검수한다."
+}
