@@ -8,8 +8,8 @@
       "file": "../review-mdl-negima-grill-cooking-second-face-station-fhd-r2.png",
       "width": 1920,
       "height": 1080,
-      "bytes": 2575289,
-      "sha256": "9d11262669484fd2c426b1a77ead0a4194d21411227d57097a655b2d8eefa5c9",
+      "bytes": 2573100,
+      "sha256": "c076bba28264cb49766efdc26550356b5553c81fa741bdf595671cf15d1f83e3",
       "state": {
         "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
         "sourceRevision": 2,
@@ -79,8 +79,8 @@
       "file": "../review-mdl-negima-grill-cooking-second-face-station-720-r2.png",
       "width": 1280,
       "height": 720,
-      "bytes": 1344188,
-      "sha256": "56a538b74ff19c10711600e1dc5196b7a7043f84e6f38079b3288480b1a636d2",
+      "bytes": 1343288,
+      "sha256": "cb982263c32865cb9006ad2c10682658dd646569f8b23496d68de7724a470bc2",
       "state": {
         "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
         "sourceRevision": 2,
@@ -151,8 +151,8 @@
     "file": "../review-mdl-negima-grill-cooking-face-compare-fhd-r2.png",
     "width": 1920,
     "height": 1080,
-    "bytes": 1402552,
-    "sha256": "2ac9cb7a0ce22eb5bb5f74dcd061ea97f2fc4d87c38167a9c565ead0311c12a3",
+    "bytes": 1400659,
+    "sha256": "956e98925552e41afc578a6d694576241ee1bc2139ecd8a697daf082367a68ee",
     "left": "approved cooking-first-face station R1",
     "right": "cooking-second-face R2",
     "crop": {
@@ -174,9 +174,9 @@
           "width": 165,
           "height": 530
         },
-        "signalPixels": 15721,
-        "amberOrCaramelSignalPixels": 12204,
-        "maxChannelDelta": 112,
+        "signalPixels": 12905,
+        "amberOrCaramelSignalPixels": 9914,
+        "maxChannelDelta": 108,
         "minimumSignalPixels": 500,
         "result": "pass"
       },
@@ -188,8 +188,8 @@
           "width": 110,
           "height": 353
         },
-        "signalPixels": 6950,
-        "amberOrCaramelSignalPixels": 5401,
+        "signalPixels": 5729,
+        "amberOrCaramelSignalPixels": 4391,
         "maxChannelDelta": 108,
         "minimumSignalPixels": 175,
         "result": "pass"

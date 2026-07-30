@@ -14,7 +14,7 @@
   "materialState": {
     "sourceAlbedoPolicy": "reuse the three approved nearest-sampled sRGB albedos byte-identically without copying, resizing, recolouring, or baking",
     "face1Signal": {
-      "method":"face-1-only procedural coarse UV cells in the cloned fragment shader",
+      "method":"the R2 second-face-only PI endpoint module applies procedural coarse UV cells directly to its exposed reverse decal in the cloned fragment shader",
       "chicken":"two asymmetric caramel/amber sear clusters plus one restrained third cluster",
       "greenOnion":"two constrained olive/caramel char bands",
       "heatMeaning":"face1HeatProgress remains 0.52; the signal changes distribution legibility only, not elapsed time or cook-stage semantics"

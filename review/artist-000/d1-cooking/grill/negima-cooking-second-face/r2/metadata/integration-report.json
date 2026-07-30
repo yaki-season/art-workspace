@@ -5,11 +5,11 @@
   "status": "pending-user-review",
   "runtimeModule": {
     "file": "../runtime/compose-mdl-negima-grill-cooking-second-face.mjs",
-    "sha256": "7389b077cb5d95384c92bd9992a4429ed3ea566276e1e77855df2802f216514b"
+    "sha256": "439b04edb3f8b854725cbb0d114df1095a6a3e7f0c0f7e081322f82e5f6e1001"
   },
   "stateFile": {
     "file": "../assets/mdl-negima-grill-cooking-second-face-r2.state.json",
-    "sha256": "7895965471abae0da8a1b2dd396a3d09e2880511592f50de1d9b925c16b2cb03"
+    "sha256": "fd8d603f676c5bf21912f2707177bb83022775b9e83d314ef93755a221e6fbff"
   },
   "approvedSourceSha256": {
     "skewerGlb": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",

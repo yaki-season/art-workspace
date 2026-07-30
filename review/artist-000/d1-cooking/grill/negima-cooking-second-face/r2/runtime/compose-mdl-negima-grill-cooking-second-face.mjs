@@ -33,10 +33,10 @@ uniform float uNegimaIngredientKind;`,
     shader.fragmentShader = shader.fragmentShader.replace(
       "#include <map_fragment>",
       `#include <map_fragment>
-// R2 keeps the approved nearest albedo as its only sampled image. The flipped, visible face gets
-// a few coarse UV-locked marks so a 720 station view reads it as a distinct cooking face.
-float negimaVisibleFace = gl_FrontFacing ? 0.0 : 1.0;
-float negimaHeat = mix(uNegimaFace0Heat, uNegimaFace1Heat, negimaVisibleFace);
+// R2 is instantiated only at the approved PI endpoint, where the reverse decal is the exposed
+// second face. Apply the marks to that decal directly: gl_FrontFacing is a winding signal after
+// the root transform, not the gameplay face identity.
+float negimaHeat = uNegimaFace1Heat;
 vec2 negimaFaceUv = floor(vec2(1.0 - vMapUv.x, vMapUv.y) * vec2(16.0, 18.0)) / vec2(16.0, 18.0);
 float negimaChickenClusterA = 1.0 - smoothstep(0.095, 0.180, length(negimaFaceUv - vec2(0.30, 0.29)));
 float negimaChickenClusterB = 1.0 - smoothstep(0.085, 0.165, length(negimaFaceUv - vec2(0.66, 0.58)));
@@ -45,7 +45,7 @@ float negimaChickenMarks = max(max(negimaChickenClusterA, negimaChickenClusterB)
 float negimaOnionBandA = (1.0 - smoothstep(0.040, 0.085, abs(negimaFaceUv.y - 0.31))) * smoothstep(0.14, 0.27, negimaFaceUv.x) * (1.0 - smoothstep(0.73, 0.86, negimaFaceUv.x));
 float negimaOnionBandB = (1.0 - smoothstep(0.035, 0.075, abs(negimaFaceUv.y - 0.67))) * smoothstep(0.26, 0.39, negimaFaceUv.x) * (1.0 - smoothstep(0.63, 0.76, negimaFaceUv.x));
 float negimaOnionMarks = max(negimaOnionBandA, negimaOnionBandB * 0.82);
-float negimaFace1Marks = mix(negimaChickenMarks, negimaOnionMarks, uNegimaIngredientKind) * step(0.5, negimaVisibleFace);
+float negimaFace1Marks = mix(negimaChickenMarks, negimaOnionMarks, uNegimaIngredientKind);
 float negimaSharedWarmth = negimaHeat * (0.11 + 0.12 * negimaFace1Marks);
 float negimaSignal = negimaFace1Marks * uNegimaFace1Heat;
 diffuseColor.rgb = mix(diffuseColor.rgb, uNegimaSearTint, negimaSharedWarmth * 0.42);
