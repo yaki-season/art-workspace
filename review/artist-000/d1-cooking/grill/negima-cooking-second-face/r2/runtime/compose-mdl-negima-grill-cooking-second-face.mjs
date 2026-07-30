@@ -38,20 +38,21 @@ uniform float uNegimaIngredientKind;`,
 // the root transform, not the gameplay face identity.
 float negimaHeat = uNegimaFace1Heat;
 vec2 negimaFaceUv = floor(vec2(1.0 - vMapUv.x, vMapUv.y) * vec2(16.0, 18.0)) / vec2(16.0, 18.0);
-float negimaChickenClusterA = 1.0 - smoothstep(0.095, 0.180, length(negimaFaceUv - vec2(0.30, 0.29)));
-float negimaChickenClusterB = 1.0 - smoothstep(0.085, 0.165, length(negimaFaceUv - vec2(0.66, 0.58)));
-float negimaChickenClusterC = 1.0 - smoothstep(0.060, 0.125, length(negimaFaceUv - vec2(0.43, 0.76)));
+float negimaChickenClusterA = 1.0 - smoothstep(0.120, 0.245, length(negimaFaceUv - vec2(0.34, 0.34)));
+float negimaChickenClusterB = 1.0 - smoothstep(0.105, 0.220, length(negimaFaceUv - vec2(0.66, 0.56)));
+float negimaChickenClusterC = 1.0 - smoothstep(0.075, 0.155, length(negimaFaceUv - vec2(0.45, 0.73)));
 float negimaChickenMarks = max(max(negimaChickenClusterA, negimaChickenClusterB), negimaChickenClusterC * 0.62);
-float negimaOnionBandA = (1.0 - smoothstep(0.040, 0.085, abs(negimaFaceUv.y - 0.31))) * smoothstep(0.14, 0.27, negimaFaceUv.x) * (1.0 - smoothstep(0.73, 0.86, negimaFaceUv.x));
-float negimaOnionBandB = (1.0 - smoothstep(0.035, 0.075, abs(negimaFaceUv.y - 0.67))) * smoothstep(0.26, 0.39, negimaFaceUv.x) * (1.0 - smoothstep(0.63, 0.76, negimaFaceUv.x));
+float negimaOnionBandA = (1.0 - smoothstep(0.055, 0.115, abs(negimaFaceUv.y - 0.34))) * smoothstep(0.10, 0.23, negimaFaceUv.x) * (1.0 - smoothstep(0.72, 0.85, negimaFaceUv.x));
+float negimaOnionBandB = (1.0 - smoothstep(0.050, 0.105, abs(negimaFaceUv.y - 0.67))) * smoothstep(0.20, 0.33, negimaFaceUv.x) * (1.0 - smoothstep(0.68, 0.81, negimaFaceUv.x));
 float negimaOnionMarks = max(negimaOnionBandA, negimaOnionBandB * 0.82);
 float negimaFace1Marks = mix(negimaChickenMarks, negimaOnionMarks, uNegimaIngredientKind);
-float negimaSharedWarmth = negimaHeat * (0.11 + 0.12 * negimaFace1Marks);
+float negimaSharedWarmth = negimaHeat * 0.08;
 float negimaSignal = negimaFace1Marks * uNegimaFace1Heat;
 diffuseColor.rgb = mix(diffuseColor.rgb, uNegimaSearTint, negimaSharedWarmth * 0.42);
-diffuseColor.rgb = mix(diffuseColor.rgb, uNegimaSearTint, negimaSignal * 0.78);
-diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.93, 0.54, 0.18), negimaSignal * (1.0 - uNegimaIngredientKind) * 0.18);
-diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.47, 0.33, 0.10), negimaSignal * uNegimaIngredientKind * 0.16);`,
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.29, 0.105, 0.030), negimaSignal * (1.0 - uNegimaIngredientKind) * 0.90);
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.82, 0.37, 0.085), negimaSignal * (1.0 - uNegimaIngredientKind) * 0.30);
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.36, 0.235, 0.045), negimaSignal * uNegimaIngredientKind * 0.84);
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.72, 0.48, 0.09), negimaSignal * uNegimaIngredientKind * 0.18);`,
     );
     material.userData.negimaCookingUniforms = shader.uniforms;
   };
