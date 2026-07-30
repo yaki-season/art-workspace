@@ -28,7 +28,18 @@ function createSecondFaceMaterial(source, ingredient, { face0HeatProgress, face1
 uniform float uNegimaFace0Heat;
 uniform float uNegimaFace1Heat;
 uniform vec3 uNegimaSearTint;
-uniform float uNegimaIngredientKind;`,
+uniform float uNegimaIngredientKind;
+varying vec2 vNegimaFaceUv;`,
+    );
+    shader.vertexShader = shader.vertexShader.replace(
+      "#include <common>",
+      `#include <common>
+varying vec2 vNegimaFaceUv;`,
+    );
+    shader.vertexShader = shader.vertexShader.replace(
+      "#include <uv_vertex>",
+      `#include <uv_vertex>
+vNegimaFaceUv = uv;`,
     );
     shader.fragmentShader = shader.fragmentShader.replace(
       "#include <map_fragment>",
@@ -37,22 +48,24 @@ uniform float uNegimaIngredientKind;`,
 // second face. Apply the marks to that decal directly: gl_FrontFacing is a winding signal after
 // the root transform, not the gameplay face identity.
 float negimaHeat = uNegimaFace1Heat;
-vec2 negimaFaceUv = floor(vec2(1.0 - vMapUv.x, vMapUv.y) * vec2(16.0, 18.0)) / vec2(16.0, 18.0);
-float negimaChickenClusterA = 1.0 - smoothstep(0.120, 0.245, length(negimaFaceUv - vec2(0.34, 0.34)));
-float negimaChickenClusterB = 1.0 - smoothstep(0.105, 0.220, length(negimaFaceUv - vec2(0.66, 0.56)));
-float negimaChickenClusterC = 1.0 - smoothstep(0.075, 0.155, length(negimaFaceUv - vec2(0.45, 0.73)));
-float negimaChickenMarks = max(max(negimaChickenClusterA, negimaChickenClusterB), negimaChickenClusterC * 0.62);
-float negimaOnionBandA = (1.0 - smoothstep(0.055, 0.115, abs(negimaFaceUv.y - 0.34))) * smoothstep(0.10, 0.23, negimaFaceUv.x) * (1.0 - smoothstep(0.72, 0.85, negimaFaceUv.x));
-float negimaOnionBandB = (1.0 - smoothstep(0.050, 0.105, abs(negimaFaceUv.y - 0.67))) * smoothstep(0.20, 0.33, negimaFaceUv.x) * (1.0 - smoothstep(0.68, 0.81, negimaFaceUv.x));
-float negimaOnionMarks = max(negimaOnionBandA, negimaOnionBandB * 0.82);
+// Use the decal's actual 0–1 plane UV, not its texture-transform UV. These coarse marks stay
+// attached to the food while it flips or moves, and remain legible in the 720 station view.
+vec2 negimaFaceUv = floor(vec2(1.0 - vNegimaFaceUv.x, vNegimaFaceUv.y) * vec2(16.0, 16.0)) / vec2(16.0, 16.0);
+float negimaChickenA = 1.0 - smoothstep(0.08, 0.17, length(negimaFaceUv - vec2(0.29, 0.32)));
+float negimaChickenB = 1.0 - smoothstep(0.07, 0.16, length(negimaFaceUv - vec2(0.65, 0.49)));
+float negimaChickenC = 1.0 - smoothstep(0.055, 0.125, length(negimaFaceUv - vec2(0.43, 0.71)));
+float negimaChickenMarks = max(max(negimaChickenA, negimaChickenB), negimaChickenC * 0.76);
+float negimaOnionA = smoothstep(0.18, 0.27, negimaFaceUv.x) * (1.0 - smoothstep(0.31, 0.40, negimaFaceUv.x)) * smoothstep(0.18, 0.30, negimaFaceUv.y) * (1.0 - smoothstep(0.70, 0.82, negimaFaceUv.y));
+float negimaOnionB = smoothstep(0.61, 0.70, negimaFaceUv.x) * (1.0 - smoothstep(0.74, 0.83, negimaFaceUv.x)) * smoothstep(0.22, 0.34, negimaFaceUv.y) * (1.0 - smoothstep(0.66, 0.78, negimaFaceUv.y));
+float negimaOnionMarks = max(negimaOnionA, negimaOnionB * 0.84);
 float negimaFace1Marks = mix(negimaChickenMarks, negimaOnionMarks, uNegimaIngredientKind);
 float negimaSharedWarmth = negimaHeat * 0.08;
 float negimaSignal = negimaFace1Marks * uNegimaFace1Heat;
 diffuseColor.rgb = mix(diffuseColor.rgb, uNegimaSearTint, negimaSharedWarmth * 0.42);
-diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.29, 0.105, 0.030), negimaSignal * (1.0 - uNegimaIngredientKind) * 0.90);
-diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.82, 0.37, 0.085), negimaSignal * (1.0 - uNegimaIngredientKind) * 0.30);
-diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.36, 0.235, 0.045), negimaSignal * uNegimaIngredientKind * 0.84);
-diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.72, 0.48, 0.09), negimaSignal * uNegimaIngredientKind * 0.18);`,
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.36, 0.17, 0.055), negimaSignal * (1.0 - uNegimaIngredientKind) * 0.76);
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.70, 0.33, 0.08), negimaSignal * (1.0 - uNegimaIngredientKind) * 0.14);
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.30, 0.23, 0.055), negimaSignal * uNegimaIngredientKind * 0.68);
+diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.54, 0.37, 0.07), negimaSignal * uNegimaIngredientKind * 0.10);`,
     );
     material.userData.negimaCookingUniforms = shader.uniforms;
   };
@@ -128,7 +141,7 @@ export async function composeMdlNegimaGrillCookingSecondFace({
     face1ElapsedSeconds,
     face0HeatProgress,
     face1HeatProgress,
-    face1Signal: { chickenClusters: 3, greenOnionBands: 2, coarseUvCells: [16, 18], signalOnlyOnVisibleFace: true },
+    face1Signal: { chickenClusters: 3, greenOnionBands: 2, coarseUvCells: [16, 16], signalOnlyOnVisibleFace: true },
     boundComponents,
     materialBindingCount,
   };

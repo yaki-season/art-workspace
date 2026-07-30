@@ -8,8 +8,8 @@
       "file": "../review-mdl-negima-grill-cooking-second-face-station-fhd-r2.png",
       "width": 1920,
       "height": 1080,
-      "bytes": 2570549,
-      "sha256": "9d9dd1afb337d70097506b52c8a3ad87233c7532af3ae5caf7f79426e9a3a806",
+      "bytes": 2573404,
+      "sha256": "ac86c8e03f8c9bf8a91558ad4fd6b4e9fe7bcb166799588baa3400251cc3a8f7",
       "state": {
         "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
         "sourceRevision": 2,
@@ -54,7 +54,7 @@
             "greenOnionBands": 2,
             "coarseUvCells": [
               16,
-              18
+              16
             ],
             "signalOnlyOnVisibleFace": true
           },
@@ -79,8 +79,8 @@
       "file": "../review-mdl-negima-grill-cooking-second-face-station-720-r2.png",
       "width": 1280,
       "height": 720,
-      "bytes": 1342314,
-      "sha256": "cbdab9bb65d57ac2f60c6f0a45cb03bcda7c350b342fcc001465b3fd64cb976e",
+      "bytes": 1343460,
+      "sha256": "06df8021609eaccf9d8084d1a7cbcf5fe027f8f69b292d38e5b83fbac2cf3609",
       "state": {
         "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
         "sourceRevision": 2,
@@ -125,7 +125,7 @@
             "greenOnionBands": 2,
             "coarseUvCells": [
               16,
-              18
+              16
             ],
             "signalOnlyOnVisibleFace": true
           },
@@ -151,8 +151,8 @@
     "file": "../review-mdl-negima-grill-cooking-face-compare-fhd-r2.png",
     "width": 1920,
     "height": 1080,
-    "bytes": 1398464,
-    "sha256": "a5a6c2fb54725a040f8fab860bdbcd95570059afcb700c900b87243913dfdd88",
+    "bytes": 1401063,
+    "sha256": "f06b1cd77fbe5b2f01965919373ad8a17c427eb5f2691be77930bdfecb287ae8",
     "left": "approved cooking-first-face station R1",
     "right": "cooking-second-face R2",
     "crop": {
@@ -174,9 +174,9 @@
           "width": 165,
           "height": 530
         },
-        "signalPixels": 14079,
-        "amberOrCaramelSignalPixels": 11616,
-        "maxChannelDelta": 111,
+        "signalPixels": 14891,
+        "amberOrCaramelSignalPixels": 11506,
+        "maxChannelDelta": 116,
         "minimumSignalPixels": 500,
         "result": "pass"
       },
@@ -188,8 +188,8 @@
           "width": 110,
           "height": 353
         },
-        "signalPixels": 6297,
-        "amberOrCaramelSignalPixels": 5196,
+        "signalPixels": 6609,
+        "amberOrCaramelSignalPixels": 5120,
         "maxChannelDelta": 111,
         "minimumSignalPixels": 175,
         "result": "pass"

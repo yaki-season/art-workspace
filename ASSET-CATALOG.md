@@ -53,7 +53,7 @@ R3은 손님 어깨폭의 둥근 반투명 말풍선 외피이며, 상단 약 60
 | 담당 | 태스크·namespace | 독점 semantic 범위 | 현재 순서 | 읽기 전용 공유 입력 |
 |---|---|---|---|---|
 | Artist 1 | `epic/artist/000`, `review/artist-000/` | D1 조립·고정 6칸 그릴, 꼬치·재료·네기마 model/shader, 대기·완료 tray와 해당 finalizer | 승인 empty base → 음식 없는 완료 tray R2 원근 검수 → 음식 station 소비 검수 → finalizer | 기존 승인 D1 손님 runtime 8개 |
-| Artist 2 | `epic/artist/023`, `review/artist-023/` | S0 외관·대문·열쇠·숯 상태, 아사노 아키 이야기 초상과 S0 finalizer | `S0-STATE-KEY` topology → `PR-SHOP-KEY` 놓임 → 대문 → 숯 → 이야기 | 개발자 2 작업 004의 state ID와 작업 007의 component/bounds/layer |
+| Artist 2 | `epic/artist/023`, `review/artist-023/` | S0 외관·대문·열쇠, 아사노 아키 이야기 초상과 S0 finalizer | `S0-STATE-KEY` topology → `PR-SHOP-KEY` 놓임 → 대문 → 이야기 | S0 KEY/GATE binding과 Developer 2 작업 012의 초상 계약; 숯 점화는 대사 처리 |
 | Artist 3 | `epic/artist/025`, `review/artist-025/` | D1 드링크·서빙·좌석 정리·이름 없는 엑스트라·정산과 해당 finalizer. `BG-WORKSPACE-DRINK R2`는 좌우 실내 연속면·외부 개구부 없음 | `BG-WORKSPACE-DRINK R2` finalizer handoff → Developer 2 promotion 결과 대기 → 작업대 → 레버 → 잔/액체/VFX → 서빙 → 정리 → 엑스트라 → 정산 | Artist 1 음식 stable ID, Artist 2 아키 초상 ID, 기존 runtime 8개, 개발자 2 작업 007 inventory |
 
 - `sourceMasterId`, stable asset ID, semantic state, finalizer bundle마다 owner는 한 명뿐이다.

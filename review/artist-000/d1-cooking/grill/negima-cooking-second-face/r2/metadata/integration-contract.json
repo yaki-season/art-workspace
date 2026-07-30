@@ -20,7 +20,7 @@
     "greenOnionAlbedo":"8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95"
   },
   "gameplaySnapshot": {"completedFlips":1,"rotationY":3.141592653589793,"orientationFaceDown":"back","contactFace":"back","frontElapsedSec":4,"backElapsedSec":4,"face1HeatProgress":0.52,"triangleCount":476,"stage":"cooking"},
-  "shaderCorrection": {"scope":"second-face-only PI endpoint module; apply directly to the exposed reverse decal rather than infer gameplay face from gl_FrontFacing","chickenSignals":"two full caramel/amber clusters plus one restrained cluster","greenOnionSignals":"two constrained olive/caramel char bands","coarseUvCells":[16,18],"doesNotChange":"elapsed time, heat progress, quality, flip input, geometry, GLB or albedo"},
+  "shaderCorrection": {"scope":"second-face-only PI endpoint module; apply directly to the exposed reverse decal rather than infer gameplay face from gl_FrontFacing","coordinateSystem":"the imported decal's own local 0–1 plane UV varying, so marks remain attached through transforms","chickenSignals":"three asymmetric caramel/brown clusters","greenOnionSignals":"two constrained olive/caramel char bands","coarseUvCells":[16,16],"doesNotChange":"elapsed time, heat progress, quality, flip input, geometry, GLB or albedo"},
   "forbidden": ["new raster","new GLB","new texture","atlas","bake","UI","text","timer","quality badge","hand","tongs","VFX","optimization","finalizer","runtime handoff","manifest registration"],
   "runtimeRegistrationAllowed": false,
   "approvalQuestion": "R2의 반대면 sear cluster/band가 same-cook-stage로 읽히면서 720 station에서 first-face와 충분히 구별되는지 승인해 주세요."

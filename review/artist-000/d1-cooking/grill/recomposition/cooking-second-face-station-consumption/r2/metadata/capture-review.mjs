@@ -99,7 +99,7 @@ try {
     const expectedGameplay = { status: "back", completedFlips: 1, orientationFaceDown: "back", contactFace: "back", frontElapsedSec: 4, backElapsedSec: 4, stage: "cooking" };
     if (JSON.stringify(state.gameplay) !== JSON.stringify(expectedGameplay)) throw new Error(`${item.name}: gameplay snapshot mismatch`);
     const signal = state.shader.face1Signal;
-    if (state.shader.face1HeatProgress !== 0.52 || signal.chickenClusters !== 3 || signal.greenOnionBands !== 2 || JSON.stringify(signal.coarseUvCells) !== JSON.stringify([16, 18]) || !signal.signalOnlyOnVisibleFace || state.shader.materialBindingCount !== 5 || !state.shader.reverseDecalPreserved || !state.shader.nearestAlbedosReused || state.shader.newRaster || state.shader.newGlb || state.shader.newTexture || state.shader.newAtlas || state.shader.newBake) throw new Error(`${item.name}: R2 shader or source policy mismatch`);
+    if (state.shader.face1HeatProgress !== 0.52 || signal.chickenClusters !== 3 || signal.greenOnionBands !== 2 || JSON.stringify(signal.coarseUvCells) !== JSON.stringify([16, 16]) || !signal.signalOnlyOnVisibleFace || state.shader.materialBindingCount !== 5 || !state.shader.reverseDecalPreserved || !state.shader.nearestAlbedosReused || state.shader.newRaster || state.shader.newGlb || state.shader.newTexture || state.shader.newAtlas || state.shader.newBake) throw new Error(`${item.name}: R2 shader or source policy mismatch`);
     const output = path.join(root, `review-mdl-negima-grill-cooking-second-face-station-${item.name}-r2.png`);
     await page.screenshot({ path: output, clip: { x: 0, y: 0, width: item.width, height: item.height } });
     const signalCheck = await measureR2Signal(page, item);
