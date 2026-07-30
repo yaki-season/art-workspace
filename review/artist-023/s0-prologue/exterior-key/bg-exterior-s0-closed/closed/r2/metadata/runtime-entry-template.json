@@ -1,0 +1,22 @@
+{
+  "id": "BG-EXTERIOR-S0-CLOSED",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "profile": "complete-layer",
+  "pack": "campaign",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "none",
+  "lossPolicy": "lossless-required",
+  "pivot": { "x": 0, "y": 0 },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:BG-EXTERIOR-S0-CLOSED:R2",
+  "provenance": "PROV:BG-EXTERIOR-S0-CLOSED:R2",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": ["ART-002 v3.6.1", "ART-003 v5.0.0", "UI-003 v1.2.0", "Developer 2 exterior contract v2.0.0"],
+  "reviewedAt": "2026-07-30"
+}

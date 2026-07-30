@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-EXTERIOR-S0-CLOSED",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "status": "approved-by-user",
+  "assets": ["BG-EXTERIOR-S0-CLOSED"],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "6504625f20c46fb6217bba3355001a11396b5f3432ce72c181917cdf5ab62d49"
+  },
+  "optimizations": [
+    {
+      "file": "optimization-report.json",
+      "sha256": "f742c41a03393995417fdd60fd4af245b33550eedf72c189c8d15770b0296a4f"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-07-30",
+    "basis": "사용자가 BG-EXTERIOR-S0-CLOSED R2 원본과 KEY FHD/720 소비 재조립을 승인했다. 최적화는 동일 SHA의 lossless passthrough다."
+  }
+}

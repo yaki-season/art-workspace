@@ -1,0 +1,22 @@
+{
+  "id": "PR-SHOP-KEY",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "profile": "standalone-raster",
+  "pack": "campaign",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": { "x": 0, "y": 0 },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:PR-SHOP-KEY:R1",
+  "provenance": "PROV:PR-SHOP-KEY:R1",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": ["ART-002 v3.6.1", "ART-003 v5.0.0", "UI-003 v1.2.0", "Developer 2 S0 art binding contract v1.0.0"],
+  "reviewedAt": "2026-07-30"
+}

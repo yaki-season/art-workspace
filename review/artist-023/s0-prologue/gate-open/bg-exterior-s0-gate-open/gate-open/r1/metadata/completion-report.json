@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-GATE",
+  "creationUnitCount": 1,
+  "id": "BG-EXTERIOR-S0-GATE-OPEN",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "assetMeaning": "S0-STATE-GATE의 열린 양개문·열린 개구부·빈 실내가 이미 포함된 1920x1080 opaque exterior complete layer다. PR-SHOP-GATE-S0 R6는 runtime layer가 아니다.",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "basis": "사용자가 pixel gate-open R1과 GATE FHD/720 계약 재조립을 승인했다.",
+    "date": "2026-07-30"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../assets/bg-exterior-s0-gate-open-r1-pixel-fhd.png",
+    "sha256": "c97f4c435a2d5ab78e8603879dfbad79a5a4569963d939b9ae354aefb42d6f6a"
+  },
+  "spatialInference": {
+    "file": "spatial-inference.json",
+    "sha256": "06bbbf61e184a251fb29089e87922debb3b049353e9bd4c4e1e3c349d029d817"
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/bg-exterior-s0-gate-open-r1-pixel-fhd.png",
+      "sha256": "c97f4c435a2d5ab78e8603879dfbad79a5a4569963d939b9ae354aefb42d6f6a"
+    },
+    "reviewBoard": {
+      "file": "recomposition/recomposition-bg-exterior-s0-gate-open-fhd-r1.png",
+      "sha256": "1f3d1a5a973a5eb9b675e517c93b441b2d085c86e40d74d6eca5b4ac3e2c7ed6"
+    }
+  },
+  "rejectedIntermediate": {
+    "retained": false
+  }
+}

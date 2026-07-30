@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "S0-KEY-CLOSED-CONSUMPTION-R1",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "BG-EXTERIOR-S0-CLOSED",
+      "profile": "complete-layer",
+      "sourceRevision": 2,
+      "sha256": "504bc88e874a53e6a69e7dcfaad11cc949b654166d17815cae15a9948e67be21",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "PR-SHOP-KEY",
+      "profile": "standalone-raster",
+      "sourceRevision": 1,
+      "sha256": "a8a22c3beaa6a4ffa1b45dad6eb4438eda729d325740ad9bcb265d3363229eeb",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../consumption/closed-key/r1/key-consumption-closed-fhd-r1.png",
+      "sha256": "33d62caebc38c80cddc48431b227aadbb6785b27d699597e2e0a7f71ca7efa99",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../../../../consumption/closed-key/r1/key-consumption-closed-hd-r1.png",
+      "sha256": "e7cccf69c8208805d08a00ea51634d5963c6bc9a8319f94bd6f60c345c7f54e5",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 BG-EXTERIOR-S0-CLOSED R2와 PR-SHOP-KEY R1의 실제 FHD/720 소비 화면을 승인했다."
+  }
+}

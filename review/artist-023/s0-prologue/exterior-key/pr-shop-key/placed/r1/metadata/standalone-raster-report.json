@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "PR-SHOP-KEY",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "assetMeaning": "CM-PROLOGUE-INHERITANCE-R1 분위기 참조 아래 S0-STATE-KEY의 하단 왼쪽 ledge에 z40으로 배치되는 단일 transparent key raster다. closed exterior와 DOM action UI는 별도 소비 레이어다.",
+  "sourceEvidence": [
+    {
+      "file": "../source/pr-shop-key-placed-r1-chroma.png",
+      "sha256": "fc210dc5f9ac04fa90bc53743abc41d0b5b43288b582732f098a5e9bb0cc5a2b"
+    }
+  ],
+  "output": {
+    "file": "../assets/pr-shop-key-placed-r1.png",
+    "sha256": "a8a22c3beaa6a4ffa1b45dad6eb4438eda729d325740ad9bcb265d3363229eeb",
+    "bytes": 268103,
+    "width": 1254,
+    "height": 1254,
+    "alpha": "straight",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../review/review-pr-shop-key-placed-isolated-fhd-r1.png",
+    "sha256": "ebbe82f0e9a8c57911bbb2960909a20eb4a741b27513c1414a2609991f89e77f",
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "ledge, closed gate, alley, lock, note, matchbox, brazier, charcoal, Aki, person, hand, arm, full body",
+    "raster UI, text, button, progress, cursor, gauge, skip marker",
+    "BG-EXTERIOR-S0-GATE-OPEN and PR-SHOP-GATE-S0"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 PR-SHOP-KEY R1 단품·계약 재조립과 BG-EXTERIOR-S0-CLOSED R2 위 실제 KEY 소비 화면 FHD/720을 승인했다."
+  },
+  "runtimeRegistrationAllowed": false
+}

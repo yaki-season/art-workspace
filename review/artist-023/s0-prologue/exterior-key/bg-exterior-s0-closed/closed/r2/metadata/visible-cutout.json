@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "profile": "complete-layer",
+  "id": "BG-EXTERIOR-S0-CLOSED",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "source": {
+    "file": "../source/bg-exterior-s0-closed-r2-pixel-source.png",
+    "sha256": "8f900f768ce4c6c7fc3c41815a75577b8ddf06e013a619fd947d485706c40856"
+  },
+  "output": {
+    "file": "../assets/bg-exterior-s0-closed-r2-pixel-fhd.png",
+    "sha256": "504bc88e874a53e6a69e7dcfaad11cc949b654166d17815cae15a9948e67be21"
+  },
+  "alphaReview": {
+    "result": "passed",
+    "cornerAlpha": [255, 255, 255, 255]
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 승인 closed R2 원본. complete-layer는 checkerboard가 아닌 opaque full-frame background다."
+  }
+}

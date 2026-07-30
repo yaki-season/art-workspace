@@ -1,0 +1,38 @@
+{
+  "id": "BG-EXTERIOR-S0-GATE-OPEN",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-GATE",
+  "profile": "complete-layer",
+  "pack": "campaign",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "none",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:BG-EXTERIOR-S0-GATE-OPEN:R1",
+  "provenance": "PROV:BG-EXTERIOR-S0-GATE-OPEN:R1",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-002 v3.6.1",
+    "ART-003 v5.0.0",
+    "UI-003 v1.2.0",
+    "Developer 2 exterior contract v2.0.0"
+  ],
+  "reviewedAt": "2026-07-30",
+  "url": "/assets/core/s0/prologue/bg-exterior-s0-gate-open-r1-b1.png",
+  "sha256": "c97f4c435a2d5ab78e8603879dfbad79a5a4569963d939b9ae354aefb42d6f6a",
+  "bytes": 2774152,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 4,
+  "profile": "complete-layer",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-GATE",
+  "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+  "topologyRegistryEntry": {
+    "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+    "approvalStatus": "approved-by-user",
+    "approvalDate": "2026-07-30"
+  },
+  "screen": {
+    "screenIds": ["SCR-STORY-PROLOGUE", "S0-STATE-GATE", "gate-open", "S0-GATE-OPEN"],
+    "gameState": "S0-STATE-GATE / gate-open / S0-GATE-OPEN",
+    "playerAction": "열린 중앙 대문과 빈 실내를 한 번 선택한다.",
+    "semanticOwner": "artist-2.s0-prologue-story",
+    "assetMeaning": "동일한 젖은 밤 골목·목조 파사드에서 중앙 양개문과 개구부가 이미 열린 full-frame exterior background다."
+  },
+  "settingSources": [
+    {
+      "file": "art-workspace/review/artist-023/s0-prologue/exterior-key/preflight/topology-contract.md",
+      "sha256": "d1b103947ed6b634573ee1af2a39fe7dde3edb4db69aaa562f8ea1a64ec49323",
+      "evidence": "사용자 승인 topology R2: KEY와 GATE가 같은 camera·수평선·점포 폭·골목 원근·문틀 anchor를 유지한다."
+    },
+    {
+      "file": "art-workspace/review/artist-023/s0-prologue/gate-open/pr-shop-gate-s0/open/r6/assets/pr-shop-gate-s0-open-r6.png",
+      "sha256": "db0bb8dde213b28f4cfccad9f6153a699174d06f7ede4e2082ab69a013f6b82f",
+      "evidence": "승인 PR-SHOP-GATE-S0/open R6는 open-background 제작 provenance와 열린 대문 기하 증거로만 사용한다; runtime visual layer가 아니다."
+    }
+  ],
+  "camera": {
+    "position": "점포 맞은편 젖은 골목의 고정 외관 카메라 S0-EXTERIOR-FIXED-V1",
+    "viewDirection": "작은 목조 점포의 열린 중앙 개구부와 좌우 문짝을 정면으로 본다.",
+    "framing": "fixed 16:9 contain, 1920x1080 full-frame; DOM safe 하단 128,936,1664,104는 래스터에 표시하지 않는다."
+  },
+  "spatialOrder": [
+    "street-facing-fixed-exterior-camera",
+    "wet-alley-foreground-and-lower-left-key-ledge",
+    "small-wooden-shop-facade",
+    "single-centered-open-double-leaf-gate",
+    "empty-cold-interior-visible-through-open-aperture"
+  ],
+  "topology": {
+    "mainEntranceRelation": "single-centered-main-gate-in-small-wooden-shop-facade",
+    "entranceComposition": "open-double-leaf-gate-with-empty-interior-visible-through-full-aperture",
+    "sideWallsRelation": "wet-alley-and-closed-adjacent-shop-continuity-to-both-frame-edges",
+    "gateGeometryRelation": "approved R6 open double-leaf geometry is embodied once in this background",
+    "backgroundLayer": "full-frame background z0 with null interactionBounds"
+  },
+  "occludedContinuation": [
+    {
+      "occluder": "open-double-leaf-gate-at-left-and-right-jambs",
+      "hiddenSurfaceMustContinueAs": "문턱부터 lintel까지의 중앙 개구부는 빈 차가운 실내로 이어지며 닫힌 문 픽셀이 남지 않는다."
+    }
+  ],
+  "invariants": [
+    "S0-EXTERIOR-FIXED-V1 카메라, 수평선, 점포 폭, 골목 원근, 문틀과 문턱 anchor를 closed 상태와 공유한다.",
+    "열린 양개문과 열린 개구부는 이 BG-EXTERIOR-S0-GATE-OPEN R1에 한 번만 포함한다.",
+    "BG-EXTERIOR-S0-CLOSED의 닫힌 문 픽셀은 남지 않는다.",
+    "layer는 background z0, interactionBounds는 null, bodyPartCount는 0이다.",
+    "열쇠·숯·화로·아키·노트·손·팔·전신과 UI·문자·버튼·커서는 background에 포함하지 않는다."
+  ],
+  "forbiddenSubstitutions": [
+    "BG-EXTERIOR-S0-CLOSED-pixels-or-closed-door-residue",
+    "second-PR-SHOP-GATE-S0-runtime-overlay",
+    "key-or-other-interactable-baked-into-background",
+    "charcoal-brazier-note-or-aki-portrait",
+    "player-hand-arm-or-full-body",
+    "raster-ui-text-button-gauge-cursor-or-skip",
+    "camera-or-crop-change"
+  ],
+  "inferenceSummary": "사용자 승인 GATE-OPEN R1은 R6 기하를 제작 입력으로 한 이미 완성된 단일 full-frame open exterior다. R6는 provenance 증거일 뿐 이 배경 위 runtime 레이어로 다시 합성하지 않는다.",
+  "unresolvedQuestions": [],
+  "approval": {
+    "status": "user-confirmed",
+    "basis": "사용자가 BG-EXTERIOR-S0-GATE-OPEN R1 및 FHD/720 계약 재조립을 승인했다.",
+    "date": "2026-07-30"
+  },
+  "approvedForGeneration": true
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "BG-EXTERIOR-S0-GATE-OPEN",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-GATE",
+  "semanticPurpose": "S0-STATE-GATE 전용의 이미 열린 exterior background다. PR-SHOP-GATE-S0/open R6는 제작 provenance와 기하 검수 증거이며, 이 complete-layer 위에서 runtime visual로 재합성하지 않는다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 pixel gate-open R1과 GATE FHD/720 계약 재조립을 승인했다."
+  },
+  "sourceReferences": [
+    {
+      "file": "../source/bg-exterior-s0-gate-open-r1-pixel-source.png",
+      "sha256": "ad90f608666614e59f15eb4cbbc5cbb416f8238925b7a590b5ac8c213d15dc14",
+      "role": "approved gate-open R1 raw source provenance"
+    },
+    {
+      "file": "../../../../../exterior-key/preflight/topology-contract.md",
+      "sha256": "d1b103947ed6b634573ee1af2a39fe7dde3edb4db69aaa562f8ea1a64ec49323",
+      "role": "approved fixed-camera topology shared with KEY"
+    },
+    {
+      "file": "../../../../pr-shop-gate-s0/open/r6/assets/pr-shop-gate-s0-open-r6.png",
+      "sha256": "db0bb8dde213b28f4cfccad9f6153a699174d06f7ede4e2082ab69a013f6b82f",
+      "role": "open gate geometry provenance only; forbidden as a second runtime visual layer"
+    },
+    {
+      "file": "spatial-inference.json",
+      "sha256": "06bbbf61e184a251fb29089e87922debb3b049353e9bd4c4e1e3c349d029d817",
+      "role": "approved gate-open spatial inference and no-double-render rule"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "approved source revision preservation",
+    "promptSummary": "Approved pixel-art wet-night exterior under the same fixed camera with open double doors and an empty cool interior. No closed door residue, key, body, UI, text, note, charcoal, brazier, or Aki.",
+    "rawChromaSource": "../source/bg-exterior-s0-gate-open-r1-pixel-source.png",
+    "rawChromaSourceSha256": "ad90f608666614e59f15eb4cbbc5cbb416f8238925b7a590b5ac8c213d15dc14",
+    "rawChromaSourceBytes": 2068531,
+    "postProcess": [
+      "approved FHD source revision R1 retained without color correction, crop, resize, or pixel mutation",
+      "opaque full-frame PNG evidence verified",
+      "approved FHD and 720 harness recomposition evidence retained",
+      "PR-SHOP-GATE-S0 R6 retained as provenance input only; no second runtime overlay"
+    ]
+  },
+  "output": {
+    "file": "../assets/bg-exterior-s0-gate-open-r1-pixel-fhd.png",
+    "sha256": "c97f4c435a2d5ab78e8603879dfbad79a5a4569963d939b9ae354aefb42d6f6a",
+    "bytes": 2774152,
+    "width": 1920,
+    "height": 1080
+  },
+  "runtimeRegistrationAllowed": false
+}

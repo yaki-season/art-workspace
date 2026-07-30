@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-EXTERIOR-S0-GATE-OPEN",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-GATE",
+  "status": "approved-by-user",
+  "assets": ["BG-EXTERIOR-S0-GATE-OPEN"],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "f8a900aa3185eec242b5aa4b13031f44959644ff6a2f9e33f9afd70af8177f75"
+  },
+  "optimizations": [
+    {
+      "file": "optimization-report.json",
+      "sha256": "1053bd625c8c5bbbe70de0020de7b3c80771ab43f8e75226dde3e1b3f5bae3aa"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-07-30",
+    "basis": "사용자가 BG-EXTERIOR-S0-GATE-OPEN R1 원본과 GATE FHD/720 소비 재조립을 승인했다. 최적화는 동일 SHA의 lossless passthrough이며 R6는 provenance only다."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-EXTERIOR-S0-CLOSED",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/bg-exterior-s0-closed-r2-pixel-fhd.png",
+    "sha256": "504bc88e874a53e6a69e7dcfaad11cc949b654166d17815cae15a9948e67be21"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/bg-exterior-s0-closed-r2-pixel-fhd.png",
+      "url": "/assets/core/s0/prologue/bg-exterior-s0-closed-r2-b1.png",
+      "sha256": "504bc88e874a53e6a69e7dcfaad11cc949b654166d17815cae15a9948e67be21",
+      "bytes": 2616094,
+      "format": "png",
+      "dimensions": { "width": 1920, "height": 1080 }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless passthrough: approved source and runtime primary artifact SHA-256 are identical",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": ["single approved opaque PNG", "no pixel transform", "no dimension change", "no byte growth"]
+  }
+}

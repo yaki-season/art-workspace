@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "S0-KEY-BG-EXTERIOR-CLOSED-R2",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "BG-EXTERIOR-S0-CLOSED",
+      "profile": "complete-layer",
+      "sourceRevision": 2,
+      "sha256": "504bc88e874a53e6a69e7dcfaad11cc949b654166d17815cae15a9948e67be21",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../recomposition/recomposition-bg-exterior-s0-closed-fhd-r2.png",
+      "sha256": "6db56ab95d8e914d1247e6db7f28dcec78bd5cb174ecab06a85eb563c27df23f",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../recomposition/recomposition-bg-exterior-s0-closed-hd-r2.png",
+      "sha256": "ce827403c9dfc2f82706a8799dff1be4f77fbc7101fa4f0155a399e0c972de6c",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 KEY state-specific background FHD/720 계약 재조립을 승인했다."
+  }
+}

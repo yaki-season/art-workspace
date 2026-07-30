@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "S0-GATE-BG-EXTERIOR-OPEN-R1",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-GATE",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "BG-EXTERIOR-S0-GATE-OPEN",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "c97f4c435a2d5ab78e8603879dfbad79a5a4569963d939b9ae354aefb42d6f6a",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../recomposition/recomposition-bg-exterior-s0-gate-open-fhd-r1.png",
+      "sha256": "1f3d1a5a973a5eb9b675e517c93b441b2d085c86e40d74d6eca5b4ac3e2c7ed6",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../recomposition/recomposition-bg-exterior-s0-gate-open-hd-r1.png",
+      "sha256": "824527e6e493e1fe80a0917f721eb48943aedc137e2c3b32623ea8c9b9c37ca1",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 GATE state-specific background FHD/720 계약 재조립을 승인했다."
+  }
+}

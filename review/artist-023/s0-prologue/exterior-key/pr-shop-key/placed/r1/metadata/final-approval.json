@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "PR-SHOP-KEY",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "status": "approved-by-user",
+  "assets": ["PR-SHOP-KEY"],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "20a34f497a91a4cee2061786c1113c62f6952962a49c3d5315760d5973aebcdd"
+  },
+  "optimizations": [
+    {
+      "file": "optimization-report.json",
+      "sha256": "29d10055615ad900ef7760790e12d41ccea5fc94a4f3799c6231e3d76e2f9cb8"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-07-30",
+    "basis": "사용자가 approval을 명시해 BG-EXTERIOR-S0-CLOSED R2와 PR-SHOP-KEY R1의 실제 FHD/720 소비 화면을 승인했다."
+  }
+}

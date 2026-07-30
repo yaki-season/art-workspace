@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "BG-EXTERIOR-S0-CLOSED",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "semanticPurpose": "S0-STATE-KEY 전용의 완전 닫힘 exterior background다. BG-EXTERIOR-S0-GATE-OPEN과 픽셀·runtime asset을 공유하지 않으며 PR-SHOP-KEY는 별도 z40 소비 대상이다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 pixel closed R2와 KEY FHD/720 계약 재조립을 승인했다."
+  },
+  "sourceReferences": [
+    {
+      "file": "../source/bg-exterior-s0-closed-r2-pixel-source.png",
+      "sha256": "8f900f768ce4c6c7fc3c41815a75577b8ddf06e013a619fd947d485706c40856",
+      "role": "approved closed R2 raw source provenance"
+    },
+    {
+      "file": "spatial-inference.json",
+      "sha256": "b483338435f31c4c1d9194f8e499a69ab27782fd46ed6afc6638ce6612801bb5",
+      "role": "approved exterior-key topology and fixed-camera inference"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "approved source revision preservation",
+    "promptSummary": "Approved pixel-art wet-night exterior, small wooden shop, fully closed central gate; no interior opening, key, body, UI, text, note, charcoal, brazier, or Aki.",
+    "rawChromaSource": "../source/bg-exterior-s0-closed-r2-pixel-source.png",
+    "rawChromaSourceSha256": "8f900f768ce4c6c7fc3c41815a75577b8ddf06e013a619fd947d485706c40856",
+    "rawChromaSourceBytes": 1883417,
+    "postProcess": [
+      "approved FHD source revision R2 retained without color correction, crop, resize, or pixel mutation",
+      "opaque full-frame PNG evidence verified",
+      "approved FHD and 720 harness recomposition evidence retained"
+    ]
+  },
+  "output": {
+    "file": "../assets/bg-exterior-s0-closed-r2-pixel-fhd.png",
+    "sha256": "504bc88e874a53e6a69e7dcfaad11cc949b654166d17815cae15a9948e67be21",
+    "bytes": 2616094,
+    "width": 1920,
+    "height": 1080
+  },
+  "runtimeRegistrationAllowed": false
+}

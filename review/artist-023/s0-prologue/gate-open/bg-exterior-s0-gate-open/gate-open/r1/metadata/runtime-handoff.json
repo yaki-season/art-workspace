@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "complete-layer",
+  "id": "BG-EXTERIOR-S0-GATE-OPEN",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-GATE",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "58f6697e819177bfd81b3afbfbb62fa1720e51b5eb02e6ad56c9f4583c5f26a8"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "f988138befbc41c1d4cca85b1a99cac64d5d9c6fad029be53f2f18fad234b81f"
+    },
+    "recomposition": {
+      "file": "recomposition-report.json",
+      "sha256": "f8a900aa3185eec242b5aa4b13031f44959644ff6a2f9e33f9afd70af8177f75"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "1053bd625c8c5bbbe70de0020de7b3c80771ab43f8e75226dde3e1b3f5bae3aa"
+    },
+    "finalApproval": {
+      "file": "final-approval.json",
+      "sha256": "f15d3b1513dd153e068c0ed3034083c8926cba1d5db65cd78334a00e2caade3a"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "a153b5f9bb6b7da061888aae392ab0c1b43df2ae50082e3b8a27c6b8fc134dfc"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/bg-exterior-s0-gate-open-r1-pixel-fhd.png",
+      "url": "/assets/core/s0/prologue/bg-exterior-s0-gate-open-r1-b1.png",
+      "sha256": "c97f4c435a2d5ab78e8603879dfbad79a5a4569963d939b9ae354aefb42d6f6a",
+      "bytes": 2774152,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-07-30T14:03:32.967Z"
+}

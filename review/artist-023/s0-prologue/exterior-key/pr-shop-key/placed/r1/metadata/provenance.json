@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "PR-SHOP-KEY",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "semanticPurpose": "S0-STATE-KEY에서 BG-EXTERIOR-S0-CLOSED R2 위 FHD 256,650,224,150 / 720 171,433,149,100에 놓이는 단일 key raster다. interaction은 DOM에 남기고 raster에는 신체·UI를 넣지 않는다.",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 actual closed-key 소비 화면을 승인했다."
+  },
+  "sourceReferences": [
+    {
+      "file": "../source/pr-shop-key-placed-r1-chroma.png",
+      "sha256": "fc210dc5f9ac04fa90bc53743abc41d0b5b43288b582732f098a5e9bb0cc5a2b",
+      "role": "approved PR-SHOP-KEY R1 chroma source provenance"
+    },
+    {
+      "file": "../../../../consumption/closed-key/r1/KEY-CONSUMPTION-REPORT.md",
+      "sha256": "a67603f43ff7887be7a33c96ae119648240a8fe745f5b7af2b65fcd58f8fd061",
+      "role": "approved actual closed-key FHD/720 consumption review evidence"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen plus chroma removal",
+    "mode": "approved source revision preservation",
+    "promptSummary": "One old brass key with rounded bow and simple bit; transparent background; pixel clusters; no ledge, architecture, character, hand, UI, text, cursor, note, charcoal, brazier, or Aki.",
+    "rawChromaSource": "../source/pr-shop-key-placed-r1-chroma.png",
+    "rawChromaSourceSha256": "fc210dc5f9ac04fa90bc53743abc41d0b5b43288b582732f098a5e9bb0cc5a2b",
+    "rawChromaSourceBytes": 1056034,
+    "postProcess": [
+      "approved R1 alpha raster retained without color correction, crop, resize, or pixel mutation",
+      "lossless passthrough only",
+      "approved CLOSED R2 plus KEY R1 FHD/720 DOM-harness consumption evidence retained"
+    ]
+  },
+  "output": {
+    "file": "../assets/pr-shop-key-placed-r1.png",
+    "sha256": "a8a22c3beaa6a4ffa1b45dad6eb4438eda729d325740ad9bcb265d3363229eeb",
+    "bytes": 268103,
+    "width": 1254,
+    "height": 1254
+  },
+  "runtimeRegistrationAllowed": false
+}

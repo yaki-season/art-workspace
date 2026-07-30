@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "standalone-raster",
+  "id": "PR-SHOP-KEY",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "e6847efd2e75bffb0087d3b2f26c2f5fceff0c16dffbe6670987afe8b188cea6"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "e61a188f80fdacc232aa0629dc418f4b5a489c83ebb390504fee19f1f2dde6ee"
+    },
+    "recomposition": {
+      "file": "recomposition-report.json",
+      "sha256": "20a34f497a91a4cee2061786c1113c62f6952962a49c3d5315760d5973aebcdd"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "29d10055615ad900ef7760790e12d41ccea5fc94a4f3799c6231e3d76e2f9cb8"
+    },
+    "finalApproval": {
+      "file": "final-approval.json",
+      "sha256": "7667fb8a63b67e5effbd49a4f2017ba04d021282339ad22384943199065c1c4b"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "8de7d25b248d8e3fcb1d665a782c8dd13946015c60a3591134a7516e8e967f43"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/pr-shop-key-placed-r1.png",
+      "url": "/assets/core/s0/prologue/pr-shop-key-placed-r1-b1.png",
+      "sha256": "a8a22c3beaa6a4ffa1b45dad6eb4438eda729d325740ad9bcb265d3363229eeb",
+      "bytes": 268103,
+      "format": "png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    }
+  ],
+  "generatedAt": "2026-07-30T14:41:23.806Z"
+}

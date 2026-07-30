@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 4,
+  "profile": "complete-layer",
+  "screenUnit": "SCR-STORY-PROLOGUE:S0-STATE-KEY",
+  "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+  "topologyRegistryEntry": {
+    "sourceMasterId": "CM-PROLOGUE-INHERITANCE-R1",
+    "approvalStatus": "approved-by-user",
+    "approvalDate": "2026-07-30"
+  },
+  "screen": {
+    "screenIds": ["SCR-STORY-PROLOGUE", "S0-STATE-KEY", "exterior-key", "S0-KEY-SELECT"],
+    "gameState": "S0-STATE-KEY / exterior-key / S0-KEY-SELECT",
+    "playerAction": "화면 하단 왼쪽 ledge의 열쇠를 한 번 선택한다.",
+    "semanticOwner": "artist-2.s0-prologue-story",
+    "assetMeaning": "비 갠 밤의 젖은 골목과 작은 목조 점포 정면을 담은 완전 닫힘 외관 full-frame background다."
+  },
+  "settingSources": [
+    {
+      "file": "art-workspace/review/artist-023/s0-prologue/exterior-key/preflight/topology-contract.md",
+      "sha256": "d1b103947ed6b634573ee1af2a39fe7dde3edb4db69aaa562f8ea1a64ec49323",
+      "evidence": "사용자 승인 topology R2: 중앙 닫힌 대문, 젖은 골목, 하단 왼쪽 key ledge, 동일 fixed camera 불변식을 고정한다."
+    }
+  ],
+  "camera": {
+    "position": "점포 맞은편 젖은 골목의 고정 외관 카메라 S0-EXTERIOR-FIXED-V1",
+    "viewDirection": "작은 목조 점포의 중앙 대문과 좌우 닫힌 인접 점포를 정면으로 본다.",
+    "framing": "fixed 16:9 contain, 1920x1080 full-frame; DOM safe 하단 128,936,1664,104는 래스터에 표시하지 않는다."
+  },
+  "spatialOrder": [
+    "street-facing-fixed-exterior-camera",
+    "wet-alley-foreground-and-lower-left-key-ledge",
+    "small-wooden-shop-facade",
+    "single-centered-fully-closed-main-gate",
+    "opaque-closed-interior-occlusion"
+  ],
+  "topology": {
+    "mainEntranceRelation": "single-centered-main-gate-in-small-wooden-shop-facade",
+    "entranceComposition": "fully-closed-double-leaf-gate-with-no-visible-interior-opening",
+    "sideWallsRelation": "wet-alley-and-closed-adjacent-shop-continuity-to-both-frame-edges",
+    "keyLedgeRelation": "lower-left ledge remains available for separate PR-SHOP-KEY z40 placement",
+    "backgroundLayer": "full-frame background z0 with null interactionBounds"
+  },
+  "occludedContinuation": [
+    {
+      "occluder": "fully-closed-central-gate",
+      "hiddenSurfaceMustContinueAs": "점포 내부는 닫힌 문 뒤에 완전히 가려지고 래스터에 보이는 열린 구멍·실내광·카운터가 없다."
+    }
+  ],
+  "invariants": [
+    "S0-EXTERIOR-FIXED-V1 카메라, 수평선, 점포 폭, 문틀과 문턱 anchor를 gate-open 상태와 공유한다.",
+    "중앙 대문은 완전히 닫혀 있고 BG-EXTERIOR-S0-GATE-OPEN 또는 열린 문 픽셀이 없다.",
+    "layer는 background z0, interactionBounds는 null, bodyPartCount는 0이다.",
+    "열쇠·숯·화로·아키·노트·손·팔·전신과 UI·문자·버튼·커서는 background에 포함하지 않는다."
+  ],
+  "forbiddenSubstitutions": [
+    "open-central-gate-or-visible-interior",
+    "BG-EXTERIOR-S0-GATE-OPEN-pixels",
+    "PR-SHOP-GATE-S0-overlay",
+    "key-or-other-interactable-baked-into-background",
+    "charcoal-brazier-note-or-aki-portrait",
+    "player-hand-arm-or-full-body",
+    "raster-ui-text-button-gauge-cursor-or-skip",
+    "camera-or-crop-change"
+  ],
+  "inferenceSummary": "사용자 승인 closed R2는 승인 topology의 KEY 소비용 complete-layer다. 별도 PR-SHOP-KEY만 z40에서 소비하며 background 자체는 불투명 full-frame 한 장이다.",
+  "unresolvedQuestions": [],
+  "approval": {
+    "status": "user-confirmed",
+    "basis": "사용자가 exterior-key topology R2, BG-EXTERIOR-S0-CLOSED R2 및 FHD/720 계약 재조립을 승인했다.",
+    "date": "2026-07-30"
+  },
+  "approvedForGeneration": true
+}
