@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v7",
+  "profile": "complete-layer",
+  "id": "BG-WORKSPACE-DRINK",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-DRINK",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "7824e3b6cb3a190896bfe70c87459ab11aceb2fe573a0a46afe480ea06a3fd2e"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "694263b6c7f16e795a68765f82c4558047dd0411e655bdd7b4d48fa4413f5408"
+    },
+    "recomposition": {
+      "file": "recomposition-report.json",
+      "sha256": "0c68c52a4978a102ba6b9afdd239874df2e6020173afd9bd0771cafcac1d8186"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "c241a8fa7dd1d02768d71368352cf582076614d795bc86547d929b0d16f40a2b"
+    },
+    "finalApproval": {
+      "file": "final-approval.json",
+      "sha256": "f51c065314b7f4bc5674ab5f69756bff8771778f681dfe03a241a65fb0d8ffd7"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "4de638875d5f8795f7657d68379d369c210f5136fade5c1bf8426d94219eca98"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/bg-workspace-drink-r2.png",
+      "url": "/assets/core/drink/bg-workspace-drink-r2-b1.png",
+      "sha256": "a30b2d44635ba52eef5d5461d4ea9b86ea80a2ab12e47f5377b58279dddeafce",
+      "bytes": 2859834,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-07-30T13:18:26.486Z"
+}

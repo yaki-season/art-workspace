@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 4,
+  "profile": "complete-layer",
+  "screenUnit": "SCR-SVC-DRINK",
+  "sourceMasterId": "CM-DRINK-STATION-R1",
+  "topologyRegistryEntry": {
+    "sourceMasterId": "CM-DRINK-STATION-R1",
+    "approvalStatus": "approved-by-user",
+    "approvalDate": "2026-07-30"
+  },
+  "screen": {
+    "screenIds": ["SCR-SVC-DRINK"],
+    "gameState": "D1-drink-base",
+    "playerAction": "No direct action belongs to this background; it is the static rear layer behind the later station, glass, lever, liquid, VFX, and DOM interaction layers.",
+    "semanticOwner": "artist-3.d1-drink-service-cleanup-customer-settlement",
+    "assetMeaning": "An opaque full-frame, body-free D1 drink-workspace background containing rear architecture and empty workspace continuity only."
+  },
+  "settingSources": [
+    {
+      "file": "docs/spec/art/ART-003_런타임_아트_에셋_목록과_제작_계약.md",
+      "sha256": "0eee1f0252a4e5f06532d5180461ce68af22a08aa637281e0d33c9ae3ea680d9",
+      "evidence": "Defines BG-WORKSPACE-DRINK as an independent drink workspace and keeps the station, model, VFX, and DOM in separate layers."
+    },
+    {
+      "file": "docs/spec/ui/UI-003_전체_게임_상세_화면_설계.md",
+      "sha256": "77d7c6850db6610421b5db97f8726144b3ce670a3192b5285281cb0703f61031",
+      "evidence": "Defines SCR-SVC-DRINK as an independent screen and separates scene.background, station architecture, interactables, VFX, and DOM semantic UI."
+    },
+    {
+      "file": "app/src/assets/s0D1ArtBindingContract.js",
+      "sha256": "04151c4f17e2fd81c9db8dae3d7a10008b52d1441a23fd311ea6f0f27ba20c62",
+      "evidence": "Fixes D1-DRINK-FIXED-V1, the base-empty-workspace full-frame bounds, background z0, DOM safe rectangles, and 720 two-thirds contain consumption."
+    },
+    {
+      "file": "art-workspace/concept-masters/2026-07-26/06_drink-station-master.png",
+      "sha256": "667e8f704c74f6515e1a401fc4e2e0981545226fb42ce3f6916e9624fa183ee2",
+      "evidence": "Read-only side/down perspective, rear shelving, and warm interior light reference; R2 intentionally replaces the source-side exterior alley with indoor-only continuity, and excludes all mixed dynamic objects and UI."
+    }
+  ],
+  "camera": {
+    "position": "D1-DRINK-FIXED-V1 player eye (0, 2.6, 12)",
+    "viewDirection": "fixed side/down look toward (1.8, -1.4, -4.4), preserving rear architecture behind the drink station",
+    "framing": "fixed 16:9 contain; the background fills the 1920×1080 logical frame, and 1280×720 is the same frame at two-thirds scale without a separate crop"
+  },
+  "spatialOrder": [
+    "fixed-side-down-drink-camera",
+    "left-interior-wall-shelving-and-storage-depth",
+    "empty-workspace-continuity-plane",
+    "station-architecture",
+    "glass-and-lever-interactables",
+    "liquid-state-overlay",
+    "beer-vfx",
+    "dom-receipt-and-prepared-dock"
+  ],
+  "topology": {
+    "counterRelation": "The background restores only unoccupied rear planes and empty workspace continuity; it does not contain a station body, counter hardware, rack, tray, or contact anchor.",
+    "customerSeatRelation": "No customer seating, customer actor, staff actor, player body, hand, or arm exists on this independent drink screen background.",
+    "mainEntranceRelation": "There is no exterior opening; both sides resolve as continuous interior rear architecture behind the drink workspace and do not introduce a second workspace or customer-screen composition.",
+    "entranceComposition": "Left and right interior timber walls, shelving, and storage depth remain behind the rear architecture; they are not UI panels or interaction surfaces.",
+    "sideWallsRelation": "Both side walls and the rear timber wall, shelving recesses, posts, trim, and light fixtures continue consistently behind removed station and staff occluders.",
+    "exteriorRelation": "No exterior alley or opening is visible in the R2 interior-only background."
+  },
+  "occludedContinuation": [
+    {
+      "occluder": "tower, nozzle, lever, rack, trays, glasses, liquid, foam, and VFX in the concept master",
+      "hiddenSurfaceMustContinueAs": "rear wall, shelf recesses, fixed trim, and empty workspace plane only"
+    },
+    {
+      "occluder": "right-side staff figure and all visible body parts in the concept master",
+      "hiddenSurfaceMustContinueAs": "rear architecture and unoccupied wall/shelf depth with no actor, automatic-production cue, or machine"
+    },
+    {
+      "occluder": "top receipt rail and bottom prepared-item dock",
+      "hiddenSurfaceMustContinueAs": "quiet full-frame background beneath DOM safe rectangles, with no baked control, icon, text, number, ring, or gauge"
+    }
+  ],
+  "invariants": [
+    "BG-WORKSPACE-DRINK is base-empty-workspace at background z0 with no interaction bounds",
+    "the output is opaque and exactly 1920×1080 for the shared logical canvas",
+    "1280×720 is the same canvas consumed at two-thirds contain without a crop or an independent camera",
+    "rear architecture and empty workspace continuity are the only visible content",
+    "all station, lever, glass, liquid, foam, VFX, quality/result, and DOM responsibilities remain in later contract layers",
+    "every player or staff body part is absent"
+  ],
+  "forbiddenSubstitutions": [
+    "player-body-or-staff-body",
+    "beer-tower-or-nozzle",
+    "lever-glass-rack-or-tray",
+    "liquid-foam-overflow-or-finished-product",
+    "vfx-ui-text-number-button-ring-or-gauge",
+    "separate-720-crop-or-camera"
+  ],
+  "inferenceSummary": "The PM-corrected R2 background is a full-frame reconstruction for the fixed side/down drink camera: continuous interior timber architecture, shelving, storage, trim, lights, and only the empty workspace surfaces needed behind later layers on both sides. It contains no exterior opening, does not reuse the mixed concept master directly, and contains no dynamic station, person, body part, UI, or semantic information.",
+  "unresolvedQuestions": [],
+  "approval": {
+    "status": "user-confirmed",
+    "basis": "PM approved replacement of the stale left-night-alley topology wording with interior-only continuity; the user then approved the R2 FHD/720 final consumption screen with body=0, raster UI=0, station=0, and harness DOM excluded from the background asset.",
+    "date": "2026-07-30"
+  },
+  "approvedForGeneration": true
+}

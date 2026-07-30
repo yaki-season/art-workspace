@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-DRINK",
+  "creationUnitCount": 1,
+  "id": "BG-WORKSPACE-DRINK",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-DRINK-STATION-R1",
+  "semanticOwner": "artist-3.d1-drink-service-cleanup-customer-settlement",
+  "assetMeaning": "D1-DRINK-FIXED-V1 카메라의 full-frame z0용, 좌우 실내 연속면과 빈 workspace만 담은 opaque 배경 complete layer",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "basis": "사용자가 BG-WORKSPACE-DRINK R2의 FHD/720 소비 화면을 최종 승인했다. 대상은 R2 asset a30b…afce, FHD c6f2…789c, 720 fbc5…b87e이며, 좌우 실내 연속면·외부 개구부 없음·body=0·raster UI=0·station=0 및 harness DOM 비포함을 명시했다.",
+    "date": "2026-07-30"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../assets/bg-workspace-drink-r2.png",
+    "sha256": "a30b2d44635ba52eef5d5461d4ea9b86ea80a2ab12e47f5377b58279dddeafce"
+  },
+  "spatialInference": {
+    "file": "../../../preflight/bg-workspace-drink-spatial-inference-r2.json",
+    "sha256": "eb614dafe862e62144310ef207d88b3c1bcfeb79cb91a3084ce5d58be3713825"
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0,
+    "hasAlpha": false
+  },
+  "topologyReview": {
+    "result": "passed",
+    "observations": [
+      "좌우 모두 연속된 실내 timber wall, shelving, storage depth로 해석된다",
+      "외부 alley 또는 외부 개구부가 없다",
+      "D1-DRINK-FIXED-V1, full-frame z0, DOM safe rect는 R2에서 바뀌지 않았다"
+    ]
+  },
+  "categoryContaminationReview": {
+    "result": "passed",
+    "absent": [
+      "people-or-body-parts",
+      "raster-ui-or-text",
+      "beer-station-tower-lever-glass-rack-or-tray",
+      "liquid-foam-vfx-or-finished-product"
+    ]
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/bg-workspace-drink-r2.png",
+      "sha256": "a30b2d44635ba52eef5d5461d4ea9b86ea80a2ab12e47f5377b58279dddeafce"
+    },
+    "reviewBoard": {
+      "file": "review/review-bg-workspace-drink-isolated-fhd-r2.png",
+      "sha256": "9a2f361fe75d2ffda78d05cbf4ccd9180b4b76fc24cf938ced1469ffe3ca4e38"
+    }
+  },
+  "rejectedIntermediate": {
+    "retained": false
+  },
+  "nextAction": "provenance → lossless optimization B1 → finalizer → runtime-handoff; Developer 2 promotion 결과 전에는 ST-DRINK-BEER-TIER-1을 시작하지 않는다"
+}

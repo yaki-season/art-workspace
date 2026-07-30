@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-WORKSPACE-DRINK",
+  "screenUnit": "SCR-SVC-DRINK",
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/bg-workspace-drink-r2.png",
+    "sha256": "a30b2d44635ba52eef5d5461d4ea9b86ea80a2ab12e47f5377b58279dddeafce"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/bg-workspace-drink-r2.png",
+      "url": "/assets/core/drink/bg-workspace-drink-r2-b1.png",
+      "sha256": "a30b2d44635ba52eef5d5461d4ea9b86ea80a2ab12e47f5377b58279dddeafce",
+      "bytes": 2859834,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless passthrough: approved R2 source and runtime B1 primary artifact SHA-256 are identical",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "single opaque PNG artifact",
+      "1920×1080 logical canvas retained",
+      "no decoded-pixel, dimension, or byte growth",
+      "no independent 720 artifact or crop"
+    ]
+  }
+}

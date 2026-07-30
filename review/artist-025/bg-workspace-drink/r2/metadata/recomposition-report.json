@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-DRINK-BG-WORKSPACE-DRINK-R2",
+  "screenUnit": "SCR-SVC-DRINK",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "BG-WORKSPACE-DRINK",
+      "profile": "complete-layer",
+      "sourceRevision": 2,
+      "sha256": "a30b2d44635ba52eef5d5461d4ea9b86ea80a2ab12e47f5377b58279dddeafce",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../review/recomposition-bg-workspace-drink-fhd-r2.png",
+      "sha256": "c6f2ca31ace91e7a3d5ded07fe464ff5b63c89eeeafa8287e2d43c742d93789c",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../review/recomposition-bg-workspace-drink-hd-r2.png",
+      "sha256": "fbc5649efb36bd1e397e5f86b6605e7d443ac319de22af3d4056b0d00404b87e",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자는 동일 R2 logical canvas를 소비한 FHD/720 검수판을 최종 승인했다. 720은 별도 crop이 아니며, harness DOM은 background raster에 포함되지 않는다."
+  }
+}
