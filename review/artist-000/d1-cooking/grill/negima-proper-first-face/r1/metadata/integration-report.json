@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-PROPER-FIRST-FACE",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.face-0.proper",
+  "assetMeaning": "보이는 첫 면(face 0)이 8초 적정 구간에 들어간 derived Three.js material state다. 승인 raw GLB·nearest albedo를 수정하지 않고 proper fragment shader mask만 적용한다.",
+  "baseComposition": {
+    "id": "MDL-NEGIMA-GRILL-RAW",
+    "file": "../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json",
+    "approvalStatus": "approved-by-user",
+    "triangleCount": 476,
+    "sourceGLBAndAlbedoPolicy": "reuse only; no copy, resize, recolour, bake or new texture"
+  },
+  "state": {
+    "completedFlips": 0,
+    "rotationY": 0,
+    "visibleFace": 0,
+    "stage": "proper",
+    "face0ElapsedSeconds": 8,
+    "face1ElapsedSeconds": 0
+  },
+  "derivedOutputs": {
+    "stateFile": {
+      "file": "../assets/mdl-negima-grill-proper-first-face-r1.state.json",
+      "sha256": "4a18afef05f41c1cfe28b15f730905167adc0f04712d6153183fddde5868c128",
+      "bytes": 1359
+    },
+    "runtimeModule": {
+      "file": "../runtime/compose-mdl-negima-grill-proper-first-face.mjs",
+      "sha256": "68331d40035bcb3a5aa4896aafb846f4ace89aab1488dbb1a3a4b635f81bc3db",
+      "bytes": 3924
+    },
+    "isolatedReview": {
+      "file": "../review-mdl-negima-grill-proper-first-face-fhd-r1.html",
+      "sha256": "39358b6ec9c53e88ef04653dab4d10dd64022bf7058fe2e81f5d5f663efdcdda"
+    },
+    "reviewScreenshot": {
+      "file": "../review-mdl-negima-grill-proper-first-face-fhd-r1.png",
+      "sha256": "e32d9d59a40afa6d108171cd8a63e144884b1de2d45c2f4bc43bb8485edfca2b",
+      "bytes": 65080,
+      "width": 1920,
+      "height": 1080
+    },
+    "browserReviewReport": {
+      "file": "proper-state-review-report.json",
+      "sha256": "17e8aef6a8be05703b69d08518564e1adcfebfb48e41dae08ce8edb3ac4f0d0d",
+      "bytes": 897
+    }
+  },
+  "validation": {
+    "harness": "actual Three.js GLTFLoader composition plus proper fragment mask in Chromium",
+    "exactState": {
+      "rotationY": 0,
+      "visibleFace": 0,
+      "face0ElapsedSeconds": 8,
+      "face1ElapsedSeconds": 0
+    },
+    "boundComponents": [
+      "chicken-01",
+      "green-onion-02",
+      "chicken-03",
+      "green-onion-04",
+      "chicken-05"
+    ],
+    "materialBindingCount": 5,
+    "newRaster": false,
+    "newTexture": false,
+    "newGLB": false,
+    "triangleCount": 476,
+    "result": "passed"
+  },
+  "runtimeRegistrationAllowed": false,
+  "approval": {
+    "status": "pending-user-review"
+  },
+  "nextGate": "사용자 승인 뒤에만 첫 뒤집기 후 반대면 적정 상태 또는 사용자가 지정한 다음 단일 조리 상태를 검수한다."
+}

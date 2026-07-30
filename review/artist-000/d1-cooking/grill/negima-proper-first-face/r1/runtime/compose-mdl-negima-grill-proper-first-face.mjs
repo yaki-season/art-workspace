@@ -5,7 +5,8 @@ export const NEGIMA_GRILL_PROPER_FIRST_FACE_ID="MDL-NEGIMA-GRILL-PROPER-FIRST-FA
 export const NEGIMA_GRILL_PROPER_FIRST_FACE_TRIANGLES=NEGIMA_GRILL_RAW_TRIANGLES;
 export const NEGIMA_GRILL_PROPER_FIRST_FACE_SECONDS=8;
 
-const TINTS=Object.freeze({chicken:new THREE.Color(0x99511f),"green-onion":new THREE.Color(0x66600b)});
+// Proper means roasted chicken brown, not the amber pre-proper colour used by the 4 second state.
+const TINTS=Object.freeze({chicken:new THREE.Color(0x5b2e13),"green-onion":new THREE.Color(0x4d4c09)});
 
 function properMaterial(source,ingredient){
   const material=source.clone();material.side=THREE.DoubleSide;
@@ -15,16 +16,18 @@ function properMaterial(source,ingredient){
 uniform float uNegimaProperFace;
 uniform vec3 uNegimaProperTint;`);
     shader.fragmentShader=shader.fragmentShader.replace("#include <map_fragment>",`#include <map_fragment>
-// Proper cooking: preserve the approved albedo and derive only pixel-cell caramelization and gloss.
+// Proper cooking: preserve the approved albedo and derive a roasted-brown surface with restrained oil gloss.
 float negimaVisibleFace=gl_FrontFacing?0.0:1.0;
 float negimaFaceMatch=1.0-step(0.25,abs(negimaVisibleFace-uNegimaProperFace));
 vec2 negimaCell=floor(vMapUv*vec2(48.0,48.0));
 float negimaNoise=fract(sin(dot(negimaCell,vec2(12.9898,78.233)))*43758.5453);
 float negimaCenter=1.0-smoothstep(0.26,0.85,length(vMapUv-vec2(0.5))*1.18);
-float negimaSet=negimaFaceMatch*(0.56+0.44*step(0.18,negimaNoise))*(0.72+0.28*negimaCenter);
-float negimaGloss=negimaFaceMatch*step(0.90,negimaNoise)*smoothstep(0.18,0.72,negimaCenter);
-diffuseColor.rgb=mix(diffuseColor.rgb,uNegimaProperTint,negimaSet*0.82);
-diffuseColor.rgb=mix(diffuseColor.rgb,vec3(1.0,0.72,0.30),negimaGloss*0.18);`);
+float negimaRoast=negimaFaceMatch*(0.68+0.32*step(0.14,negimaNoise))*(0.78+0.22*negimaCenter);
+float negimaChar=negimaFaceMatch*step(0.66,negimaNoise)*smoothstep(0.12,0.76,negimaCenter);
+float negimaGloss=negimaFaceMatch*step(0.972,negimaNoise)*smoothstep(0.24,0.68,negimaCenter);
+diffuseColor.rgb=mix(diffuseColor.rgb,uNegimaProperTint,negimaRoast*0.96);
+diffuseColor.rgb=mix(diffuseColor.rgb,vec3(0.22,0.09,0.025),negimaChar*0.34);
+diffuseColor.rgb=mix(diffuseColor.rgb,vec3(0.74,0.34,0.09),negimaGloss*0.08);`);
     material.userData.negimaProperUniforms=shader.uniforms;
   };
   material.customProgramCacheKey=()=>`negima-proper-first-face-${ingredient}`;material.needsUpdate=true;return material;
