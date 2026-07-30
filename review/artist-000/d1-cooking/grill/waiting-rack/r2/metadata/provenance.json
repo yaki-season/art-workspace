@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "ST-GRILL-WAITING-RACK",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticPurpose": "D1 그릴 화면 좌측에 놓이는 빈 네기마 대기 rack의 투명 고정 skin이다. 조립이 끝난 생 네기마는 승인된 조립 모듈을 runtime에서 이 rack 위에 쌓으며, rack 자체는 음식 수량·선택·상태를 굽지 않는다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "id": "CM-GRILL-STATION-QUEUED-SELECTION-R3",
+      "file": "../../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+      "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
+      "role": "user-approved grill master; left waiting-rack placement (x=85..425, y=265..795), overhead-oblique tabletop camera, shallow tray cavity and material reference"
+    },
+    {
+      "id": "ST-GRILL-TIER-1-R2",
+      "file": "../../../station/r2/assets/st-grill-tier-1-fhd-r2.png",
+      "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89",
+      "role": "approved continuous grill; dark ink outline, aged-brass and black-iron pixel density reference"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit",
+    "promptSummary": "Generate exactly one empty portrait waiting rack matching the left side of the approved grill master: an overhead-oblique shallow black-iron tray with a visibly recessed cavity, foreshortened far and near rims, aged-brass edge wear, and no front-facing plaque appearance. Exclude every skewer, food item, selector, button, tool, UI, text, shadow, person and scene. Request a uniform #00ff00 chroma-key background.",
+    "rawSource": "../source/st-grill-waiting-rack-chroma-source-r2.png",
+    "rawSourceSha256": "33042f6a3b17f29e01271620c5e54b4984995b8962d4f2fcd03e6eacaa62a297",
+    "rawSourceBytes": 1576132,
+    "postProcess": [
+      "remove_chroma_key.py with border auto-key, soft matte and despill; detected key #0af909",
+      "alpha subject bbox crop from 1024x1536 source at (136,223)-(890,1282)",
+      "nearest-neighbor normalization to 340x530 and master-aligned placement at FHD coordinate x=85, y=265",
+      "no compositing or generated-pixel edits after source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/st-grill-waiting-rack-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "d875b1b50b814a2154e6e8f5f9d753a3b7192dead1e2fa59a2089ea01dc26651",
+    "bytes": 336651,
+    "alpha": "straight RGBA; four corner alpha values are 0"
+  },
+  "validation": {
+    "fourCornerAlpha": [0, 0, 0, 0],
+    "transparentPixels": 1904617,
+    "partialAlphaPixels": 1045,
+    "opaquePixels": 167938,
+    "greenDominantVisiblePixels": 0,
+    "subjectBounds": [85, 265, 425, 795],
+    "foodPresent": false,
+    "selectorOrButtonPresent": false,
+    "textPresent": false,
+    "topDownCavityPresent": true,
+    "frontFacingPlaquePresent": false
+  },
+  "dynamicCompositionContract": {
+    "rack": "one empty portrait shallow tray/rack only, aligned to the approved master left rack position",
+    "dynamicProduct": "approved raw negima assembly is composited above this rack at runtime; the number of queued skewers remains runtime state",
+    "D1Selection": "one DOM `네기마` control sits below the rack and selects the next raw negima for first-empty-grill placement; it is not part of this raster",
+    "rule": "This asset never encodes order count, skewer count, selected state, cook progress, completed state, discard action or hit area."
+  },
+  "reviewBoard": {
+    "file": "../review-st-grill-waiting-rack-isolated-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "65bb349f26c3ff5db0d93c1c68917d95040e181711f4dbe1b675d26a3fc06299",
+    "bytes": 297506,
+    "contains": [
+      "one ST-GRILL-WAITING-RACK transparent layer on a checkerboard at its master-aligned coordinate",
+      "one empty overhead-oblique black-iron and aged-brass shallow tray cavity",
+      "no skewer, food, selector, button, tool, UI, text, background scene, person or completed state"
+    ]
+  },
+  "excludes": [
+    "raw or cooked food, skewer, tongs, brush, fan, seasoning, ingredient bin, finished tray, discard tray, cursor, hand, person, background scene, UI, button, icon, arrow, text, quantity, quality marker, timer, checkmark, logo, watermark, animation, shadow or VFX"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "승인 완료.",
+  "nextGate": "다음 단일 검수는 빈 rack 위에 올릴 그릴 위 생 네기마 한 상태다. 조리 진행·완성·폐기 tray·집게·선택 DOM은 함께 만들지 않는다."
+}

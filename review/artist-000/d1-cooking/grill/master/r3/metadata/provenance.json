@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "profile": "concept-master-rebuild-review",
+  "id": "CM-GRILL-STATION-QUEUED-SELECTION",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인. 단, 그림에 보이는 3개의 대기 꼬치 선택 pad는 runtime UI로 승인하지 않으며 추출하지 않는다. D1의 올바른 제어는 대기 rack 아래 단일 DOM 네기마 선택 제어다."
+  },
+  "semanticPurpose": "연속 석쇠·네기마 조리 상태·조립 완료 대기 꼬치와 개별 선택 visual·완성·폐기 경로를 분리 제작하기 위한 전체 그릴 장면 기준이다.",
+  "sourceReferences": [
+    {
+      "id": "CM-GRILL-STATION-CONTINUOUS-GRATE-R2",
+      "file": "../../r2/review-cm-grill-station-continuous-grate-fhd-r2.png",
+      "sha256": "7ae465d67be353f44dde3ed4b23384c25026668542e6ed8fd9c04d745473df94",
+      "role": "direct edit target; preserve continuous grate, cooking states, tongs, trays, composition, tone and material language"
+    },
+    {
+      "id": "CM-GRILL-STATION-R1",
+      "file": "../../../../../../../concept-masters/2026-07-26/05_grill-station-master.png",
+      "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5",
+      "role": "original grill screen composition and tone source"
+    },
+    {
+      "id": "GPL-004/UI-002",
+      "role": "shared grate, per-side cooking and flip; queued-skewer selection is a DOM interaction; discard removes only the selected item and remains hidden during D1 failure-safe guidance"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit",
+    "promptFile": "PROMPT.md",
+    "rawSource": "../source/cm-grill-station-queued-selection-r3-generated.png",
+    "rawSourceSha256": "e52ac38b743d930061b12d026b7b4e0e394409be322e84bdaa73a057e6d409b8",
+    "rawSourceBytes": 2413786,
+    "postProcess": [
+      "one targeted edit adds only three icon-only queued-skewer selection pads beneath the left rack",
+      "nearest-neighbor FHD normalization from 1672x941 to 1920x1080",
+      "no crop, compositing, colour edit, transparency conversion, or generated-pixel edit after inspection"
+    ]
+  },
+  "output": {
+    "file": "../review-cm-grill-station-queued-selection-fhd-r3.png",
+    "width": 1920,
+    "height": 1080,
+    "colorMode": "RGB opaque full-scene master",
+    "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
+    "bytes": 2660687
+  },
+  "contentValidation": {
+    "continuousSharedGrate": true,
+    "visibleCookingPartitions": 0,
+    "visibleSlotMarkers": 0,
+    "activeGrillSkewers": 2,
+    "activeSkewerOrientation": "vertical and parallel",
+    "queuedRawSkewers": 3,
+    "queuedSkewerSelectionPads": 3,
+    "selectedQueuePadVisuals": 1,
+    "queuePadArtworkDisposition": "present only in the approved master as a superseded visual experiment; do not extract, ship, or reproduce it",
+    "d1WaitingAction": "one DOM negima menu-group control below the waiting rack; it selects one next raw negima and invokes existing first-empty-slot auto placement",
+    "selectionVisualTextOrNumbersBaked": false,
+    "selectionRuntimeOwner": "DOM",
+    "queueSource": "previous assembly output reference only; runtime count and selector repetition are dynamic",
+    "statesShown": ["raw queue", "one selected queue visual", "cooking", "tongs-held 180-degree flip", "proper finished", "fully burnt discard"],
+    "discardButtonSkin": "icon-only ash-bin/ember pictogram; DOM owns text, input, confirmation, accessibility and D1 visibility",
+    "discardVisibleInD1Guide": false,
+    "tareAndFanExcluded": true,
+    "textOrNumbersBaked": false,
+    "tongsFullyVisible": true,
+    "customerAndDrinkScenesExcluded": true
+  },
+  "deferredExtraction": [
+    "BG-WORKSPACE-GRILL",
+    "ST-GRILL-TIER-1 continuous body and ST-CHARCOAL-CORE",
+    "empty waiting rack plus individual raw negima queue state",
+    "grill-facing negima cooking, flip, proper and burnt states",
+    "MDL-TONGS complete flip pose",
+    "VFX oil-spark and smoke burst",
+    "finished tray and discard tray",
+    "UI-DISCARD-GRILL icon-only button skin plus DOM discard control"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "승인 완료. 사용자 정정에 따라 보이는 3개 queue pad는 후속 분리나 runtime에 사용하지 않는다.",
+  "nextGate": "승인 master에서 `BG-WORKSPACE-GRILL` 불투명 background layer를 한 장만 분리·격리 검수한다. D1 대기 rack의 실제 단일 네기마 선택은 raster가 아닌 DOM으로 구현·검증한다."
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.face-0.cooking",
+  "kind": "Three.js derived state; raw GLB composition plus procedural fragment mask, with no new GLB, albedo, or raster",
+  "baseComposition": "../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json",
+  "face": 0,
+  "sideElapsedSeconds": 4,
+  "stage": "cooking",
+  "materialState": {
+    "sourceAlbedoPolicy": "reuse the three approved nearest-sampled sRGB albedos without copying, resizing, recolouring, or baking",
+    "mask": "procedural pixel-cell sear mask in the fragment shader only",
+    "signals": ["partial warm sear on face 0", "localized caramel/olive pixel mottling"],
+    "excluded": ["new food raster", "duplicate texture", "new GLB", "smoke", "ember", "grill", "tray", "tongs", "UI", "text", "timer", "quality badge"]
+  },
+  "triangleCount": 476,
+  "runtimeModule": "../runtime/compose-mdl-negima-grill-cooking-first-face.mjs",
+  "runtimeRegistrationAllowed": false
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.face-1.cooking",
+  "assetMeaning": "첫 180도 뒤집기 endpoint에서 보이는 face 1이 익는 중인 derived Three.js material state다. 승인 raw GLB·nearest albedo를 다시 만들거나 수정하지 않고 face-specific fragment shader mask와 approved decal render order만 적용한다.",
+  "baseComposition": {"id":"MDL-NEGIMA-GRILL-RAW","file":"../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json","approvalStatus":"approved-by-user","triangleCount":476,"sourceGLBAndAlbedoPolicy":"reuse only; no copy, resize, recolour, bake or new texture"},
+  "previousApprovedState": {"id":"MDL-NEGIMA-GRILL-COOKING-FIRST-FACE","file":"../../../negima-cooking-first-face/r1/assets/mdl-negima-grill-cooking-first-face-r1.state.json","approvalStatus":"approved-by-user","preservedFace0ElapsedSeconds":4},
+  "state": {"completedFlips":1,"flipPivotRotationY":3.141592653589793,"visibleFace":1,"stage":"cooking","face0ElapsedSeconds":4,"face1ElapsedSeconds":4,"face0HeatProgress":0.52,"face1HeatProgress":0.52},
+  "derivedOutputs": {
+    "stateFile": {"file":"../assets/mdl-negima-grill-cooking-second-face-r1.state.json","sha256":"c9f831fe953fa7f412dc45357cd4445c4c42d5acc402f1d4938359d9367e1da1","bytes":1284},
+    "runtimeModule": {"file":"../runtime/compose-mdl-negima-grill-cooking-second-face.mjs","sha256":"54459e653b08ccca75f6293e12f121d3c52b843daa9d90596e4bd4673dc76cb3","bytes":5674},
+    "isolatedReview": {"file":"../review-mdl-negima-grill-cooking-second-face-fhd-r1.html","sha256":"22dd9918ef095f51611c8d510da9f0d8b72ebe87eb5582e6251d485fd2c157b2"},
+    "reviewScreenshot": {"file":"../review-mdl-negima-grill-cooking-second-face-fhd-r1.png","sha256":"ddc8e51e6db8be03df962c19fe0230651c4b91e4ffd0c0062a0f4bab86790eec","bytes":73477,"width":1920,"height":1080},
+    "browserReviewReport": {"file":"cooking-state-review-report.json","sha256":"36b80efce098e00c0a691079c3e931f0c186f116e689fc594023985a003c8721","bytes":1024}
+  },
+  "validation": {"harness":"actual Three.js GLTFLoader composition at PI plus face-specific fragment cooking mask in Chromium","firstFlipEndpoint":{"rotationY":3.141592653589793,"visibleFace":1},"boundComponents":["chicken-01","green-onion-02","chicken-03","green-onion-04","chicken-05"],"materialBindingCount":5,"approvedFoodAndBambooDecalsVisibleAtPi":true,"newRaster":false,"newTexture":false,"newGLB":false,"triangleCount":476,"result":"passed"},
+  "runtimeRegistrationAllowed": false,
+  "approval": {"status":"approved-by-user","date":"2026-07-30","basis":"사용자 응답: 승인"},
+  "nextGate": "사용자 승인 뒤에만 첫 면의 적정 상태 또는 사용자가 지정한 다음 단일 조리 상태를 검수한다."
+}

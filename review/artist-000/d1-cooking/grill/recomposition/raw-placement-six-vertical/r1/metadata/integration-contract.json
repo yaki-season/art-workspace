@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-model-integration-review",
+  "id": "D1-GRILL-RAW-PLACEMENT-SIX-VERTICAL",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-COOKING-GRILL",
+  "status": "superseded-by-master-r1",
+  "purpose": "승인된 연속 석쇠와 승인된 세 GLB 종류만 실제 node 결합하여, 큰 생 네기마 여섯 꼬치가 세로 방향으로 한 줄 나란히 굽히는 배치인지 격리 검수한다.",
+  "approvedInputs": [
+    {"id":"ST-GRILL-TIER-1","profile":"standalone-raster","sourceRevision":2,"sha256":"da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89","role":"approved continuous charcoal bed and single square-grid grate"},
+    {"id":"MDL-SKEWER-BASE","profile":"bundle-model","sourceRevision":2,"sha256":"fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5","role":"actual base with slot-01 through slot-05"},
+    {"id":"MDL-INGREDIENT-CHICKEN","profile":"bundle-model","sourceRevision":1,"sha256":"740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc","role":"slot-01, slot-03, slot-05"},
+    {"id":"MDL-INGREDIENT-NEGI","profile":"bundle-model","sourceRevision":3,"sha256":"065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3","role":"slot-02 and slot-04"}
+  ],
+  "assembly": {
+    "skewerCount": 6,
+    "arrangement": "one horizontal row of six parallel vertical skewers inside the continuous grate",
+    "baseRotationZ": 0,
+    "grillSkewerScale": 190,
+    "placements":[[550,620],[710,620],[870,620],[1030,620],[1190,620],[1350,620]],
+    "binding":"each component skewerSocket is attached to the matching MDL-SKEWER-BASE slot node",
+    "componentScaleRelativeToBase":1.40,
+    "sequence":["chicken","green-onion","chicken","green-onion","chicken"],
+    "state":"six raw assembled negima; not heated, turned, removed, transferred, plated, served, or a new runtime asset"
+  },
+  "output":{"file":"../review-d1-grill-raw-placement-six-vertical-fhd-r1.png","width":1920,"height":1080,"sha256":"c16df1447cdd5591ac17c4349cdb863e3a165aae03eec065506d0d82bc7df342","bytes":1163015},
+  "excludes":["new raster art","other grill layout","cooking","browning","flame","smoke","turning","removal","transfer","serving","customer scene","text","quantity","timer","button","cursor","checkmark","VFX","runtime registration"],
+  "runtimeRegistrationAllowed":false,
+  "approvalQuestion":"연속 석쇠 안에 큰 생 네기마 꼬치 6개가 세로 방향으로 한 줄 나란히, 여유 없이 작아 보이지 않는 크기로 완전히 들어가는지 확인한다. 이 후보는 실제 승인 GLB node 결합만 사용하며 조리·불꽃·UI·새 래스터는 포함하지 않는다.",
+  "nextGate":"사용자가 석쇠 위 네기마 상태를 별도 자산으로 만들기 위해 전체 그릴 장면 재구성을 지시했다. 이 후보는 승인·반려를 요청하지 않고 master/r1의 사용자 검토 결과 뒤에 새 분리 작업으로 대체한다."
+}

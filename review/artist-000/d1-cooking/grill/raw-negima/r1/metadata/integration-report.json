@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-model-integration",
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.raw",
+  "assetMeaning": "승인된 꼬치·닭·대파 GLB와 nearest albedo를 무손실 연결한, 그릴 위 생 네기마 한 꼬치의 Three.js runtime 조합이다. 새 GLB·새 raster·구운 외형은 포함하지 않는다.",
+  "integrationContract": {
+    "file": "integration-contract.json",
+    "sha256": "793013cb5ed21ea81dba52a2c901463c9358ca7050dc9ce48134048e8b1f84b1",
+    "bytes": 5619
+  },
+  "approvedInputs": [
+    {
+      "id": "MDL-SKEWER-BASE",
+      "sourceRevision": 2,
+      "glbSha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "albedoSha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "MDL-INGREDIENT-CHICKEN",
+      "sourceRevision": 1,
+      "glbSha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
+      "albedoSha256": "4baa5ca99f5f190053930461251f0497219731048a7d3caddf5ae2e03cfefb47",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "MDL-INGREDIENT-NEGI",
+      "sourceRevision": 3,
+      "glbSha256": "065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3",
+      "albedoSha256": "8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "composition": {
+    "sequence": ["chicken", "green-onion", "chicken", "green-onion", "chicken"],
+    "ingredientScaleRelativeToBase": 1.4,
+    "skewerLengthAxis": "local +Y",
+    "grillPose": "screen-vertical",
+    "triangleCount": 476,
+    "texturePolicy": "all three approved sRGB albedos use nearest sampling; texture pixels are neither rewritten nor duplicated"
+  },
+  "flipVerification": {
+    "harness": "actual Three.js GLTFLoader composition and pointer click",
+    "initial": { "turn": 0, "face": 0, "rotationY": 0 },
+    "afterFirstClick": { "turn": 1, "face": 1, "rotationY": 3.141592653589793 },
+    "afterSecondClick": { "turn": 2, "face": 0, "rotationY": 6.283185307179586 },
+    "result": "passed: 0 -> PI -> 2PI on the same positive local +Y axis"
+  },
+  "reviewBoard": {
+    "file": "../review-mdl-negima-grill-raw-flip-fhd-r1.png",
+    "sha256": "dc62c3c3034676e968b3a1747afee6877465319b6aea19af422feca3901f78e6",
+    "bytes": 77053,
+    "width": 1920,
+    "height": 1080,
+    "contains": [
+      "one raw negima Three.js composition at initial face 0 on a checkerboard",
+      "approved raw chicken, green onion and bamboo pixel albedos only",
+      "no grill, rack, tray, tongs, UI, text, customer, scene, shadow or VFX"
+    ]
+  },
+  "runtimeRegistrationAllowed": false,
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 승인"
+  },
+  "nextGate": "사용자 승인 뒤에만 첫 면 익는 중 네기마 한 상태를 별도 단일 검수한다. runtime 등록은 계속 금지한다."
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>ST-GRILL-TIER-1 R2 isolated review</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#242424}
+#review{position:relative;width:1920px;height:1080px;overflow:hidden;background:#242424}
+#checker,#asset{position:absolute;inset:0;width:1920px;height:1080px;image-rendering:pixelated}
+#asset{object-fit:contain;pointer-events:none}
+</style>
+<div id="review"><canvas id="checker" width="1920" height="1080"></canvas><img id="asset" src="assets/st-grill-tier-1-fhd-r2.png" alt=""></div>
+<script type="module">
+const context=document.querySelector('#checker').getContext('2d');
+for(let y=0;y<1080;y+=48)for(let x=0;x<1920;x+=48){context.fillStyle=((x/48+y/48)%2===0)?'#242424':'#3c3c3c';context.fillRect(x,y,48,48)}
+await document.querySelector('#asset').decode();
+document.body.dataset.ready='true';
+</script>

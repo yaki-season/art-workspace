@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "ST-GRILL-TIER-1",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.station.base",
+  "assetMeaning": "D1 그릴 화면에서 꼬치·익힘·UI와 분리되어 유지되는, 최대 평행 꼬치 여섯 개를 올릴 수 있는 연속 격자형 석쇠와 charcoal bed의 고정 raster layer",
+  "sourceEvidence": [
+    {"file":"../../../../../../artist-003/station-concepts/grill/r1/generated.png","sha256":"1277b3b2e13deef825fe524bb738f04e980972973e91294322298f28eec9acf5","bytes":2651557,"role":"existing-grill-concept-reference"},
+    {"file":"../../../../assembly/station/r3/assets/st-assembly-tier-1-fhd-r3.png","sha256":"b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca","bytes":988222,"role":"approved-style-reference"},
+    {"file":"../source/st-grill-tier-1-chroma-source-r2.png","sha256":"55fa619d7fe8b457cf704dd35ea0b2711644b57e7c0ddc0ef80570822db66d8e","bytes":1822055,"role":"generation-source"}
+  ],
+  "output": {"file":"../assets/st-grill-tier-1-fhd-r2.png","sha256":"da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89","bytes":1389129,"width":1920,"height":1080,"alpha":"straight","greenSpillPixels":0},
+  "reviewBoard": {"file":"../review-st-grill-tier-1-isolated-fhd-r2.png","sha256":"00e7557c7b1243d856f07729453b3e9e1a6931475f061f75e320b90eea070cf7","bytes":1238652,"width":1920,"height":1080,"subjectAssetOnly":true},
+  "lossPolicy": "lossless-required",
+  "excludes": ["all skewers and food", "cooking progress, flame, VFX, turn direction, timer, quality, customer order, or quantity", "tray, tool, ingredient, customer, background scene, text, UI, panel, icon, cursor, or watermark"],
+  "approval": {"status":"approved-by-user","date":"2026-07-29","basis":"사용자 응답: 승인"},
+  "runtimeRegistrationAllowed": false
+}

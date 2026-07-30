@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "reviewHarness": "Three.js actual GLB composition; one click per test",
+  "initial": {
+    "turn": 0,
+    "face": 0,
+    "rotationY": 0,
+    "locked": false
+  },
+  "afterFirst": {
+    "turn": 1,
+    "face": 1,
+    "rotationY": 3.141592653589793,
+    "locked": false
+  },
+  "afterSecond": {
+    "turn": 2,
+    "face": 0,
+    "rotationY": 6.283185307179586,
+    "locked": false
+  },
+  "screenshot": {
+    "file": "../review-mdl-negima-grill-raw-flip-fhd-r1.png",
+    "sha256": "dc62c3c3034676e968b3a1747afee6877465319b6aea19af422feca3901f78e6",
+    "bytes": 77053
+  },
+  "result": "passed"
+}

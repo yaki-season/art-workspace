@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "screenId": "CM-GRILL-STATION-D1-REBUILD-R1",
+  "gameState": "D1 first-order grill teaching scene; two available slots, one cooking and one being turned",
+  "semanticOwner": "D1 charcoal-grill workspace master",
+  "sourceMaster": {
+    "id": "CM-GRILL-STATION-R1",
+    "path": "art-workspace/concept-masters/2026-07-26/05_grill-station-master.png",
+    "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5"
+  },
+  "approvedForGeneration": true,
+  "camera": {
+    "view": "independent downward player workstation, 16:9",
+    "horizon": "none; no customer-facing seating composition",
+    "focalPlane": "central charcoal grill and its adjacent trays"
+  },
+  "composition": {
+    "top": "empty receipt-safe area and only nonsemantic UI-frame shapes; no readable or generated text",
+    "center": "one six-lane grill body: exactly two unlocked active central lanes for D1, four dark unavailable lanes; active skewers stand vertically and side by side",
+    "left": "waiting tray with one raw negima, vertical skewer orientation",
+    "right": "finished tray with one proper golden-brown negima and discard tray with one fully burnt negima, each visually separated",
+    "bottom": "empty prepared-item safe band plus only nonsemantic navigation-frame shapes; no labels, quantities, values, or quality words"
+  },
+  "interaction": {
+    "activeSkewerA": "vertical raw-to-cooking negima seated on a grate; pale chicken turning warm golden with a little fat sheen, green onion still fresh but softened",
+    "activeSkewerB": "vertical negima held just above its lane by metal tongs during a 180-degree turn; caramelized dark grill-marked underside readable; small oil sparks and thin smoke only",
+    "slotRules": "D1 has two active slots. The four remaining lanes show dark unavailable hardware, not additional food or an active 2x3 grid.",
+    "stateVisuals": "raw = pale pink chicken and vivid green onion; cooking = warm caramelizing chicken and softened green onion; proper = glossy deep golden-brown with distinct grill marks; burnt = near-black uneven char, reserved for discard"
+  },
+  "layering": [
+    "dark walnut player workspace background",
+    "grill body and charcoal core",
+    "vertical active skewers and locked lanes",
+    "tongs and flip sparks/smoke",
+    "waiting, finished, and discard trays",
+    "nonsemantic UI frames"
+  ],
+  "invariants": [
+    "warm handcrafted pixel-art tone matching approved customer and negima work",
+    "dark ink outlines, clustered pixels, muted aged brass and dark walnut, restrained amber charcoal glow with deep indigo shadow",
+    "complete skewer, bamboo handle, chicken, and green onion proportions remain physically plausible",
+    "tongs visibly grip one skewer without hands or malformed contact",
+    "no customer scene, no human character, no drink station, no tare brush or pot, no fan, no plated serving scene",
+    "no generated semantic text, numbers, quality labels, watermarks, logos, or fake Japanese"
+  ],
+  "deferredExtraction": [
+    "BG-WORKSPACE-GRILL",
+    "ST-GRILL-TIER-1 with D1 active-slot/locked-slot split",
+    "ST-CHARCOAL-CORE states",
+    "FD/MDL negima grill-facing raw, cooking, turn, proper, burnt states",
+    "MDL-TONGS flip contact pose",
+    "VFX ember, smoke, and oil-spark states",
+    "waiting, finished, and discard trays"
+  ],
+  "conflictsResolved": [
+    "The generic concept master shows several enabled lanes, while GPL-002/GPL-004 require two active D1 slots. This rebuilt D1 master keeps the six-lane upgrade-capable body but enables exactly two central lanes and makes the remaining four unavailable."
+  ]
+}

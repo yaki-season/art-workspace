@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "ST-GRILL-TIER-1",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticPurpose": "D1 네기마 그릴 화면의 연속 charcoal bed와 연속 격자형 석쇠를 가진 고정 layer다. 빈 석쇠는 평행 꼬치 여섯 개를 한 번에 올릴 물리적 폭을 가지며, 꼬치와 익힘 변화는 별도 동적 상태로 올린다.",
+  "status": "approved-by-user",
+  "approval": {"status":"approved-by-user","date":"2026-07-29","basis":"사용자 응답: 승인"},
+  "sourceReferences": [
+    {
+      "file": "../../../../../../artist-003/station-concepts/grill/r1/generated.png",
+      "sha256": "1277b3b2e13deef825fe524bb738f04e980972973e91294322298f28eec9acf5",
+      "role": "existing Artist 003 grill concept; direct visual source for tabletop perspective and fixed iron/wood workstation language, but not for its rejected divided cooking wells"
+    },
+    {
+      "file": "../../../../assembly/station/r3/assets/st-assembly-tier-1-fhd-r3.png",
+      "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+      "role": "approved D1 assembly station; pixel density, dark-ink outline, warm wood/brass palette, and FHD coordinate style reference"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "background-extraction",
+    "promptSummary": "Use the existing grill concept and approved assembly station as visual references. Generate exactly one empty Japanese yakitori charcoal grill with one uninterrupted charcoal bed and one continuous wide square-grid wire grate for up to six parallel skewers. Exclude all food, skewers, tools, UI, cards, text, trays, people, and scene.",
+    "rawSource": "../source/st-grill-tier-1-chroma-source-r2.png",
+    "rawSourceSha256": "55fa619d7fe8b457cf704dd35ea0b2711644b57e7c0ddc0ef80570822db66d8e",
+    "rawSourceBytes": 1822055,
+    "postProcess": [
+      "remove_chroma_key.py with border auto-key, soft matte, and despill",
+      "alpha subject bbox crop from 1672x941 source",
+      "nearest-neighbor fit to 1280x590 and center placement at FHD coordinate x=320, y=245",
+      "no pixel-content edits after generated-source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/st-grill-tier-1-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89",
+    "bytes": 1389129,
+    "alpha": "straight RGBA; four corner alpha values are 0"
+  },
+  "validation": {
+    "fourCornerAlpha": [0, 0, 0, 0],
+    "transparentPixels": 1413874,
+    "partialAlphaPixels": 5054,
+    "opaquePixels": 654672,
+    "greenDominantVisiblePixels": 0,
+    "subjectBounds": [320, 245, 1600, 835]
+  },
+  "dynamicCompositionContract": {
+    "base": "one fixed continuous charcoal bed covered by one continuous metal wire grate",
+    "capacity": "up to six parallel skewers at once; the capacity is spatial only and has no baked position markers or divided wells",
+    "dynamicProduct": "approved raw skewer and subsequent cooked state are placed freely on the continuous grate; neither is baked into this raster",
+    "dynamicStates": ["raw placement", "face-one cook progress", "flipped face-two cook progress", "retrieval", "discard when both faces burnt"],
+    "rule": "The fixed grill layer never encodes product count, customer order, timer, quality, turn direction, or fire VFX state."
+  },
+  "reviewBoard": {
+    "file": "../review-st-grill-tier-1-isolated-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "00e7557c7b1243d856f07729453b3e9e1a6931475f061f75e320b90eea070cf7",
+    "bytes": 1238652,
+    "contains": ["one ST-GRILL-TIER-1 transparent layer on a checkerboard", "one continuous empty gridded grate with no divided wells or position markers", "no food, skewer, tool, tray, UI, text, background scene, customer, or completed state"]
+  },
+  "excludes": [
+    "raw or cooked food, skewer, tongs, brush, fan, seasoning, ingredient bin, waiting tray, completion tray, cursor, hand, person, background scene, UI, card, panel, icon, arrow, text, quantity, quality marker, timer, checkmark, logo, watermark, animation, or VFX"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "D1 고정 그릴 한 장만 검토한다. 조리 칸 없이 한 장의 연속 격자형 석쇠로 읽히고, 빈 표면이 평행 꼬치 여섯 개를 한 번에 올릴 폭을 가지는지, 승인 조립대와 따뜻한 픽셀 밀도·황동/목재/검은 철 톤이 어울리는지, 투명 경계가 깨끗한지 확인한다. 꼬치·음식·익힘·불꽃·뒤집기·tray·주문 UI는 이 후보에 포함하지 않는다.",
+  "nextGate": "다음 raw-placement 격리 검수는 사용자에게 먼저 한 꼬치 node 결합 검증인지 D1 주문 수량의 세 꼬치 배치 검증인지 확인한 뒤에만 만든다."
+}

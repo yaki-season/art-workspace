@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "reviewHarness": "actual Three.js raw composition at the first flip endpoint plus face-specific fragment cooking mask",
+  "state": {
+    "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+    "completedFlips": 1,
+    "rotationY": 3.141592653589793,
+    "visibleFace": 1,
+    "stage": "cooking",
+    "face0ElapsedSeconds": 4,
+    "face1ElapsedSeconds": 4,
+    "face0HeatProgress": 0.52,
+    "face1HeatProgress": 0.52,
+    "boundComponents": [
+      "chicken-01",
+      "green-onion-02",
+      "chicken-03",
+      "green-onion-04",
+      "chicken-05"
+    ],
+    "materialBindingCount": 5,
+    "triangleCount": 476,
+    "hasNewRaster": false,
+    "hasNewTexture": false,
+    "hasNewGLB": false
+  },
+  "screenshot": {
+    "file": "../review-mdl-negima-grill-cooking-second-face-fhd-r1.png",
+    "sha256": "ddc8e51e6db8be03df962c19fe0230651c4b91e4ffd0c0062a0f4bab86790eec",
+    "bytes": 73477,
+    "width": 1920,
+    "height": 1080
+  },
+  "result": "passed"
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>MDL-NEGIMA-GRILL-RAW R1 flip review</title>
+<style>
+html,body{margin:0;width:100%;height:100%;background:#252525;overflow:hidden}
+#review{position:relative;width:1920px;height:1080px;overflow:hidden;background:#252525}
+#checker,#models{position:absolute;inset:0;width:1920px;height:1080px;image-rendering:pixelated}
+#models{cursor:pointer}
+</style>
+<div id="review"><canvas id="checker" width="1920" height="1080"></canvas><canvas id="models" width="1920" height="1080"></canvas></div>
+<script type="importmap">{"imports":{"three":"/app/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from "/app/node_modules/three/build/three.module.js";
+import {composeMdlNegimaGrillRaw,nextFlipTargetRadians,faceAfterCompletedFlips} from "./runtime/compose-mdl-negima-grill-raw.mjs";
+const checker=document.querySelector("#checker").getContext("2d");
+for(let y=0;y<1080;y+=96)for(let x=0;x<1920;x+=96){checker.fillStyle=((x/96+y/96)%2===0)?"#282828":"#3e3e3e";checker.fillRect(x,y,96,96)}
+const canvas=document.querySelector("#models");
+const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:false,preserveDrawingBuffer:true});
+renderer.setSize(1920,1080,false);renderer.setClearColor(0x000000,0);renderer.outputColorSpace=THREE.SRGBColorSpace;
+const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(0,1920,1080,0,.1,100);camera.position.z=50;
+const {root,flipPivot}=await composeMdlNegimaGrillRaw({skewerScale:300});
+root.position.set(960,540,0);scene.add(root);scene.updateMatrixWorld(true);renderer.render(scene,camera);
+let completedFlips=0,locked=false;
+function render(){scene.updateMatrixWorld(true);renderer.render(scene,camera)}
+function requestFlip(){
+  if(locked)return false;
+  locked=true;document.body.dataset.locked="true";
+  const start=flipPivot.rotation.y,target=nextFlipTargetRadians(completedFlips),started=performance.now(),duration=180;
+  const tick=(now)=>{const progress=Math.min(1,(now-started)/duration),eased=progress<.5?2*progress*progress:1-Math.pow(-2*progress+2,2)/2;flipPivot.rotation.y=THREE.MathUtils.lerp(start,target,eased);render();if(progress<1){requestAnimationFrame(tick);return;}completedFlips+=1;flipPivot.userData.face=faceAfterCompletedFlips(completedFlips);locked=false;document.body.dataset.turn=String(completedFlips);document.body.dataset.face=String(flipPivot.userData.face);document.body.dataset.locked="false";};
+  requestAnimationFrame(tick);return true;
+}
+canvas.addEventListener("click",requestFlip);
+window.__negimaFlipReview={requestFlip,state:()=>({turn:completedFlips,face:flipPivot.userData.face,rotationY:flipPivot.rotation.y,locked})};
+document.body.dataset.turn="0";document.body.dataset.face="0";document.body.dataset.locked="false";document.body.dataset.ready="true";
+</script>

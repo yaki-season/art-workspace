@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+  "reviewHarness": "actual Three.js raw composition plus fragment cooking mask",
+  "state": {
+    "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+    "face": 0,
+    "stage": "cooking",
+    "sideElapsedSeconds": 4,
+    "heatProgress": 0.52,
+    "boundComponents": [
+      "chicken-01",
+      "green-onion-02",
+      "chicken-03",
+      "green-onion-04",
+      "chicken-05"
+    ],
+    "materialBindingCount": 5,
+    "triangleCount": 476,
+    "hasNewRaster": false,
+    "hasNewTexture": false
+  },
+  "screenshot": {
+    "file": "../review-mdl-negima-grill-cooking-first-face-fhd-r1.png",
+    "sha256": "b313ded62670bd78fc7b19daa7c024e0e292783ccd7d68d6d028f65e89f32c02",
+    "bytes": 73663,
+    "width": 1920,
+    "height": 1080
+  },
+  "result": "passed"
+}

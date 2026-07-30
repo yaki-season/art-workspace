@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state-review",
+  "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 승인"
+  },
+  "purpose": "승인된 그릴 위 생 네기마 조합의 앞면(face 0)이 4초 동안 익는 중인 모습을, 새 음식 그림 없이 Three.js fragment mask로 검수한다.",
+  "approvedInputs": [
+    {"id":"MDL-NEGIMA-GRILL-RAW","file":"../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json","approvalStatus":"approved-by-user","role":"476 triangles raw composition, local +Y flipPivot, approved GLB/albedo references"},
+    {"id":"MDL-SKEWER-BASE","sourceRevision":2,"approvalStatus":"approved-by-user","role":"bamboo base remains unmodified"},
+    {"id":"MDL-INGREDIENT-CHICKEN","sourceRevision":1,"approvalStatus":"approved-by-user","role":"nearest albedo is sampled directly by shader"},
+    {"id":"MDL-INGREDIENT-NEGI","sourceRevision":3,"approvalStatus":"approved-by-user","role":"nearest albedo is sampled directly by shader"}
+  ],
+  "state": {
+    "face": 0,
+    "stage": "cooking",
+    "sideElapsedSeconds": 4,
+    "domainRange": "0 <= elapsed < 8 seconds; first-face pre-proper interval under GPL-004",
+    "domainBoundary": "The gameplay domain owns face, elapsed time, heat, quality and input lock. This module derives pixels from the supplied render snapshot only."
+  },
+  "shaderContract": {
+    "method":"nearest raw albedo sample plus procedural pixel-cell sear mask in cloned MeshBasicMaterial shader code",
+    "activeSide":"The initial raw pose maps the visible fragment side to face 0; face 1 remains raw in this state",
+    "visualSignals":["partial amber/caramel sear on chicken","localized olive/caramel mottling on green onion"],
+    "forbidden":["new raster","new GLB","new texture","texture copy","texture resize","texture recolour","texture bake","material atlas","smoke or ember VFX"]
+  },
+  "output": {
+    "stateFile":"../assets/mdl-negima-grill-cooking-first-face-r1.state.json",
+    "runtimeModule":"../runtime/compose-mdl-negima-grill-cooking-first-face.mjs",
+    "isolatedReview":"../review-mdl-negima-grill-cooking-first-face-fhd-r1.html",
+    "reviewScreenshot":"../review-mdl-negima-grill-cooking-first-face-fhd-r1.png"
+  },
+  "excludes":["grill","charcoal","waiting rack","finished tray","discard tray","tongs","hand","customer","background scene","UI","text","quantity","timer","checkmark","quality marker","smoke","ember","runtime manifest or registration"],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion":"승인 완료.",
+  "nextGate":"사용자 승인 뒤에만 같은 조합의 첫 뒤집기 후 반대면 익는 중 상태를 하나의 단일 검수로 진행한다."
+}

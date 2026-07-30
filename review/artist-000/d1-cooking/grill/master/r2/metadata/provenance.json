@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "profile": "concept-master-rebuild-review",
+  "id": "CM-GRILL-STATION-CONTINUOUS-GRATE",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "superseded-by-r3",
+  "semanticPurpose": "연속 석쇠 위 네기마 상태와 조리 뒤집기, 조립 완료 대기 꼬치, 완성·폐기 경로를 분리 제작하기 위한 전체 그릴 장면 기준이다.",
+  "sourceReferences": [
+    {
+      "id": "CM-GRILL-STATION-D1-REBUILD-R1",
+      "file": "../../r1/review-cm-grill-station-d1-rebuild-fhd-r1.png",
+      "sha256": "eb40d8ca2efb5f76df9fac3621833543770ad435bb57055b3779dad928f8084e",
+      "role": "direct edit target for accepted tone, perspective, material language, and negima shape"
+    },
+    {
+      "id": "CM-GRILL-STATION-R1",
+      "file": "../../../../../../../concept-masters/2026-07-26/05_grill-station-master.png",
+      "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5",
+      "role": "original grill screen composition and tone source"
+    },
+    {
+      "id": "GPL-004/UI-002",
+      "role": "shared grate, independent face cooking and flip; discard removes only the item, and its DOM control remains hidden during D1 failure-safe guidance"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit",
+    "promptFile": "PROMPT.md",
+    "rawSource": "../source/cm-grill-station-continuous-grate-r2-generated.png",
+    "rawSourceSha256": "2762d73d718ce76b4be07c44437b6c79b9e844d1ee684502e18d33ba4658afab",
+    "rawSourceBytes": 2530923,
+    "postProcess": [
+      "one targeted edit restored the complete tongs tool inside the frame without changing the scene contract",
+      "nearest-neighbor FHD normalization from 1672x941 to 1920x1080",
+      "no crop, compositing, colour edit, transparency conversion, or generated-pixel edit after inspection"
+    ]
+  },
+  "output": {
+    "file": "../review-cm-grill-station-continuous-grate-fhd-r2.png",
+    "width": 1920,
+    "height": 1080,
+    "colorMode": "RGB opaque full-scene master",
+    "sha256": "7ae465d67be353f44dde3ed4b23384c25026668542e6ed8fd9c04d745473df94",
+    "bytes": 2699168
+  },
+  "contentValidation": {
+    "continuousSharedGrate": true,
+    "visibleCookingPartitions": 0,
+    "visibleSlotMarkers": 0,
+    "activeGrillSkewers": 2,
+    "activeSkewerOrientation": "vertical and parallel",
+    "queuedRawSkewers": 3,
+    "queueSource": "previous assembly output reference only; runtime count is dynamic",
+    "statesShown": ["raw queue", "cooking", "tongs-held 180-degree flip", "proper finished", "fully burnt discard"],
+    "discardButtonSkin": "icon-only ash-bin/ember pictogram; DOM owns text, input, confirmation, accessibility and D1 visibility",
+    "discardVisibleInD1Guide": false,
+    "tareAndFanExcluded": true,
+    "textOrNumbersBaked": false,
+    "tongsFullyVisible": true,
+    "customerAndDrinkScenesExcluded": true
+  },
+  "deferredExtraction": [
+    "BG-WORKSPACE-GRILL",
+    "ST-GRILL-TIER-1 continuous body and ST-CHARCOAL-CORE",
+    "empty waiting rack plus individual raw negima queue state",
+    "grill-facing negima cooking, flip, proper and burnt states",
+    "MDL-TONGS complete flip pose",
+    "VFX oil-spark and smoke burst",
+    "finished tray and discard tray",
+    "UI-DISCARD-GRILL icon-only button skin plus DOM discard control"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "이 전체 장면을 새 그릴 분리 작업의 기준으로 승인할지 확인한다. 하나의 연속 석쇠인지, 중심 균형과 세로 꼬치 배치가 자연스러운지, 조립 완료 꼬치 대기 rack·완성 tray·탄 꼬치 폐기 tray·아이콘형 폐기 버튼이 각각 분리 가능한지, 상태별 색과 집게 접촉이 설득력 있는지를 본다. 승인 전에는 새 분리 자산과 runtime 등록을 진행하지 않는다.",
+  "nextGate": "R3의 대기 꼬치 개별 선택 visual까지 포함한 전체 장면을 사용자 검토한다. R3 승인 뒤에만 연속 석쇠의 단일 분리 layer부터 또는 사용자 지정 네기마 상태 자산부터 한 항목씩 checkerboard 격리 검수한다."
+}

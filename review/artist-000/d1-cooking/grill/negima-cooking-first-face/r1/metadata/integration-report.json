@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.face-0.cooking",
+  "assetMeaning": "승인된 생 네기마 조합의 첫 면이 익는 중인 derived Three.js material state다. 승인 GLB·nearest albedo를 다시 만들거나 수정하지 않고 fragment shader의 procedural pixel-cell sear mask만 더한다.",
+  "baseComposition": {
+    "id": "MDL-NEGIMA-GRILL-RAW",
+    "file": "../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json",
+    "approvalStatus": "approved-by-user",
+    "triangleCount": 476,
+    "sourceGLBAndAlbedoPolicy": "reuse only; no copy, resize, recolour, bake or new texture"
+  },
+  "state": {
+    "face": 0,
+    "stage": "cooking",
+    "sideElapsedSeconds": 4,
+    "heatProgress": 0.52,
+    "domainRange": "0 <= elapsed < 8 seconds"
+  },
+  "derivedOutputs": {
+    "stateFile": {
+      "file": "../assets/mdl-negima-grill-cooking-first-face-r1.state.json",
+      "sha256": "4244c28b2a1cd6e21a5e670fa25052ec5b343b8363368ea2e60439c27d098cc8",
+      "bytes": 1125
+    },
+    "runtimeModule": {
+      "file": "../runtime/compose-mdl-negima-grill-cooking-first-face.mjs",
+      "sha256": "22a2ca01a5ce8a8445b68d9ea5317c2648781781579921f5b1fcd965de24bda5",
+      "bytes": 5391
+    },
+    "isolatedReview": {
+      "file": "../review-mdl-negima-grill-cooking-first-face-fhd-r1.html",
+      "sha256": "2ee39d1c872f9c1e678e1500d2f146863dea070da598fa8a6fe53dd3a87642f4"
+    },
+    "reviewScreenshot": {
+      "file": "../review-mdl-negima-grill-cooking-first-face-fhd-r1.png",
+      "sha256": "b313ded62670bd78fc7b19daa7c024e0e292783ccd7d68d6d028f65e89f32c02",
+      "bytes": 73663,
+      "width": 1920,
+      "height": 1080
+    },
+    "browserReviewReport": {
+      "file": "cooking-state-review-report.json",
+      "sha256": "cf08b47dca3d2caf4d143b9f9f7825d88fff0f50b99ec8aa942a33f930442a65",
+      "bytes": 821
+    }
+  },
+  "validation": {
+    "harness": "actual Three.js GLTFLoader composition plus fragment cooking mask in Chromium",
+    "boundComponents": ["chicken-01", "green-onion-02", "chicken-03", "green-onion-04", "chicken-05"],
+    "materialBindingCount": 5,
+    "newRaster": false,
+    "newTexture": false,
+    "newGLB": false,
+    "triangleCount": 476,
+    "result": "passed"
+  },
+  "runtimeRegistrationAllowed": false,
+  "approval": {"status": "approved-by-user", "date": "2026-07-30", "basis": "사용자 응답: 승인"},
+  "nextGate": "사용자 승인 뒤에만 첫 뒤집기 후 반대면 익는 중 상태 하나를 검수한다."
+}

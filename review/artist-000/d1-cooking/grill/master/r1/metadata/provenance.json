@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "profile": "concept-master-rebuild-review",
+  "id": "CM-GRILL-STATION-D1-REBUILD",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "superseded-by-r2",
+  "semanticPurpose": "D1 그릴 화면을 다시 분리·제작하기 위한 전체 장면 기준이다. D1의 2칸 활성 규칙과, 생·익는 중·뒤집기·적정·완전 탄 네기마의 색·접지·가림 관계를 한 장에서 고정한다.",
+  "sourceReferences": [
+    {
+      "id": "CM-GRILL-STATION-R1",
+      "file": "../../../../../../../concept-masters/2026-07-26/05_grill-station-master.png",
+      "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5",
+      "role": "approved composition and tone source for the independent downward grill workspace"
+    },
+    {
+      "id": "GPL-002/GPL-004",
+      "role": "D1 has two active grill slots; grilling records separate faces and a flip is a 180-degree turn with tongs, brief oil sparks, and re-contact"
+    },
+    {
+      "id": "ART-003",
+      "role": "master-to-layer separation and DOM-only semantic text/live-value contract"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "new stylized full-scene generation",
+    "promptFile": "PROMPT.md",
+    "rawSource": "../source/cm-grill-station-d1-rebuild-r1-generated.png",
+    "rawSourceSha256": "5c713673040997755eac0513b938c93eae83f71562e3e8d323c567ab08cf98f7",
+    "rawSourceBytes": 2637560,
+    "postProcess": [
+      "nearest-neighbor FHD normalization from 1672x941 to 1920x1080",
+      "no crop, colour edit, compositing, transparency conversion, or generated-pixel edit after source inspection"
+    ]
+  },
+  "output": {
+    "file": "../review-cm-grill-station-d1-rebuild-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "colorMode": "RGB opaque full-scene master",
+    "sha256": "eb40d8ca2efb5f76df9fac3621833543770ad435bb57055b3779dad928f8084e",
+    "bytes": 2819788
+  },
+  "contentValidation": {
+    "activeD1Slots": 2,
+    "inactiveSlots": 4,
+    "activeSkewers": 2,
+    "screenOrientation": "both active skewers are vertical and parallel",
+    "stateReferences": ["one raw waiting skewer", "one cooking-on-grate skewer", "one tongs-held vertical flip skewer", "one proper finished skewer", "one fully burnt discard skewer"],
+    "textOrNumbersBaked": false,
+    "futureD3TareExcluded": true,
+    "futureD6FanExcluded": true,
+    "customerAndDrinkScenesExcluded": true
+  },
+  "deferredExtraction": [
+    "BG-WORKSPACE-GRILL",
+    "ST-GRILL-TIER-1 and locked-slot overlay",
+    "ST-CHARCOAL-CORE states",
+    "grill-facing negima state assets",
+    "MDL-TONGS flip pose",
+    "VFX ember, smoke, and oil-spark assets",
+    "waiting, finished, and discard tray assets",
+    "DOM receipt and prepared-list UI frames"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "이 전체 장면을 새 그릴 분리 작업의 유일한 기준으로 승인할지 확인한다. 특히 D1의 두 활성 칸, 세로 병렬 꼬치, 생→익는 중→집게 180도 뒤집기→적정→완전 탄의 색 차이, tray별 접지와 톤앤매너를 본다. 승인 전에는 어떤 새 분리 자산·runtime 등록도 진행하지 않는다.",
+  "nextGate": "사용자가 연속 석쇠·조립 완료 대기 rack·폐기 버튼을 포함한 R2 재구성을 지시했다. R1은 사용자 검토를 더 요청하지 않으며 R2의 승인 결과 뒤에 새 분리 작업으로 대체한다."
+}

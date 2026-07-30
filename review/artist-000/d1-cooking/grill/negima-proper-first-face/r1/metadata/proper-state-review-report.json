@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-PROPER-FIRST-FACE",
+  "reviewHarness": "actual Three.js raw composition plus proper fragment mask",
+  "state": {
+    "id": "MDL-NEGIMA-GRILL-PROPER-FIRST-FACE",
+    "completedFlips": 0,
+    "rotationY": 0,
+    "visibleFace": 0,
+    "stage": "proper",
+    "face0ElapsedSeconds": 8,
+    "face1ElapsedSeconds": 0,
+    "boundComponents": [
+      "chicken-01",
+      "green-onion-02",
+      "chicken-03",
+      "green-onion-04",
+      "chicken-05"
+    ],
+    "materialBindingCount": 5,
+    "triangleCount": 476,
+    "hasNewRaster": false,
+    "hasNewTexture": false,
+    "hasNewGLB": false
+  },
+  "screenshot": {
+    "file": "../review-mdl-negima-grill-proper-first-face-fhd-r1.png",
+    "sha256": "3e3129440155b8ae11d6a2f3b1376437ceada29ae3ba6133ec3538b5e3119b60",
+    "bytes": 70495,
+    "width": 1920,
+    "height": 1080
+  },
+  "result": "passed"
+}

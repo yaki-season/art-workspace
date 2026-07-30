@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-PROPER-FIRST-FACE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.face-0.proper",
+  "kind": "Three.js derived state; approved raw GLB composition plus procedural fragment mask, with no new GLB, albedo, or raster",
+  "baseComposition": "../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json",
+  "flipPose": {"rotationYRadians": 0, "completedFlips": 0, "visibleFace": 0},
+  "sideElapsedSeconds": {"face0": 8, "face1": 0},
+  "stage": "proper",
+  "materialState": {
+    "sourceAlbedoPolicy": "reuse the three approved nearest-sampled sRGB albedos without copying, resizing, recolouring, or baking",
+    "mask": "procedural pixel-cell proper-sear and sparse gloss mask in the fragment shader only",
+    "signals": ["face 0 set golden/amber chicken surface", "face 0 caramel-olive green onion surface with sparse restrained gloss pixels"],
+    "excluded": ["new food raster", "duplicate texture", "new GLB", "smoke", "ember", "grill", "tray", "tongs", "UI", "text", "timer", "quality badge"]
+  },
+  "triangleCount": 476,
+  "runtimeModule": "../runtime/compose-mdl-negima-grill-proper-first-face.mjs",
+  "runtimeRegistrationAllowed": false
+}

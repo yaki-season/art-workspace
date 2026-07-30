@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "screenId": "CM-GRILL-STATION-QUEUED-SELECTION-R3",
+  "gameState": "grill workspace master showing two active skewers, a selectable queued assembly output, and completion/discard routes",
+  "semanticOwner": "shared charcoal-grill workspace master",
+  "editTarget": {
+    "path": "../../r2/review-cm-grill-station-continuous-grate-fhd-r2.png",
+    "sha256": "7ae465d67be353f44dde3ed4b23384c25026668542e6ed8fd9c04d745473df94",
+    "role": "preserve all R2 geometry and visual language; add only queue selection-pad reference"
+  },
+  "sourceMaster": {
+    "id": "CM-GRILL-STATION-R1",
+    "path": "art-workspace/concept-masters/2026-07-26/05_grill-station-master.png",
+    "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5"
+  },
+  "approvedForGeneration": true,
+  "camera": {
+    "view": "independent centered downward player workstation, 16:9",
+    "focalPlane": "one broad continuous charcoal grate with symmetric left and right work modules",
+    "forbidden": ["customer-facing seating view", "compartmentalized cook wells", "2x3 food grid"]
+  },
+  "composition": {
+    "center": "one single uninterrupted rectangular square-grid grate over one charcoal bed. It has no internal lane dividers, cooking cells, slot outlines, position markers, or locked-lane hardware. Logical placement anchors are deferred to runtime hit zones.",
+    "activeFood": "two large complete negima skewers cook vertically and parallel on the same shared grate; one is cooking on the grate, the other is held just above it by tongs during a 180-degree turn.",
+    "leftModule": "a shallow waiting rack of three complete raw negima skewers already assembled at the assembly station. The three icon-only pads visible beneath it are a superseded master-art experiment and must not be extracted or used. D1 uses one DOM `네기마` action beneath the rack to select the next raw skewer and auto-place it in the first empty grill slot.",
+    "rightModule": "upper finished tray with a proper glossy golden-brown negima, lower discard tray with one fully burnt negima, and directly below it one clearly isolated circular discard-button skin using only an ash-bin/ember pictogram and no words.",
+    "balance": "left queue rack with pads and right finish/discard stack have matched visual mass; tongs enter from lower center without overtaking the central grate; top receipt-safe and bottom prepared-list-safe areas stay unobstructed."
+  },
+  "interaction": {
+    "flip": "metal tongs grip a complete vertical skewer at a believable point, lifting it a short distance above the shared grate; show its darker caramelized underside, tiny oil sparks, and thin smoke.",
+    "queueSelection": "the three visible pad graphics are not a runtime reference and are excluded from extraction. The approved D1 contract is one DOM `네기마` menu-group action beneath the waiting rack; it selects one next raw negima and uses the existing first-empty-slot auto placement. DOM owns the hit target, enabled state, keyboard interaction, accessibility and text.",
+    "discard": "the burnt skewer is visually associated with a separate discard tray and adjacent icon-only discard-button skin. Runtime DOM supplies text, input behavior, confirmation, accessibility, and visibility. Per UI-002 8-2, the discard control is hidden during D1 failure-safe guidance and appears in normal service only."
+  },
+  "layering": [
+    "dark walnut workspace background",
+    "continuous grill body and charcoal core",
+    "active negima states",
+    "tongs plus small flip VFX",
+    "waiting rack plus queued raw skewers",
+    "non-extractable superseded queue-pad artwork in the master only; no runtime layer",
+    "finished tray, discard tray, and icon-only discard-button skin",
+    "nonsemantic UI-frame safe areas"
+  ],
+  "invariants": [
+    "retain R2's warm handcrafted pixel art, dark ink outlines, aged brass, walnut, deep indigo, and restrained ember glow",
+    "all grill-facing skewers are vertical and have chicken-green onion-chicken-green onion-chicken order on complete bamboo skewers",
+    "no visual cooking divisions anywhere within the central grate",
+    "the visible three queue pads are not an approved runtime asset; only one DOM negima action may be composed beneath the D1 waiting rack",
+    "complete elements have readable isolated silhouettes for later layer separation",
+    "no customer, drink station, tare, fan, human hand, generated words, numbers, prices, quality labels, watermark, or logo"
+  ],
+  "deferredExtraction": [
+    "BG-WORKSPACE-GRILL",
+    "ST-GRILL-TIER-1 continuous body and ST-CHARCOAL-CORE",
+    "empty waiting rack and individual raw negima queue state",
+    "grill-facing negima cooking, flip, proper, and burnt states",
+    "MDL-TONGS flip pose",
+    "VFX oil-spark and smoke burst",
+    "finished tray and discard tray",
+    "UI-DISCARD-GRILL icon-only button skin plus DOM control"
+  ],
+  "conflictsResolved": [
+    "The previous R1 visually divided the grill into lanes. User direction supersedes it: the grate is one uninterrupted physical cook surface; runtime placement is logical, not baked as visible cells.",
+    "User clarified that D1 has only negima: the approved runtime control is one DOM negima action, not three per-skewer pads. The pads remain visible only in the frozen master image and are explicitly excluded from every extraction and runtime composite.",
+    "Discard is a normal-service visual route, while D1 preserves its failure-safe rule by hiding the DOM control in that guide."
+  ]
+}

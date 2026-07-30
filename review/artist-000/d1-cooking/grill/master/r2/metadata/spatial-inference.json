@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "screenId": "CM-GRILL-STATION-CONTINUOUS-GRATE-R2",
+  "gameState": "grill workspace master showing a current two-skewer cook, queued assembly output, completion and immediate discard routes",
+  "semanticOwner": "shared charcoal-grill workspace master",
+  "editTarget": {
+    "path": "../r1/review-cm-grill-station-d1-rebuild-fhd-r1.png",
+    "sha256": "eb40d8ca2efb5f76df9fac3621833543770ad435bb57055b3779dad928f8084e",
+    "role": "tone, pixel density, material language, food shape, and initial composition reference only"
+  },
+  "sourceMaster": {
+    "id": "CM-GRILL-STATION-R1",
+    "path": "art-workspace/concept-masters/2026-07-26/05_grill-station-master.png",
+    "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5"
+  },
+  "approvedForGeneration": true,
+  "camera": {
+    "view": "independent centered downward player workstation, 16:9",
+    "focalPlane": "one broad continuous charcoal grate with symmetric left and right work modules",
+    "forbidden": ["customer-facing seating view", "compartmentalized cook wells", "2x3 food grid"]
+  },
+  "composition": {
+    "center": "one single uninterrupted rectangular square-grid grate over one charcoal bed. It has no internal lane dividers, cooking cells, slot outlines, position markers, or locked-lane hardware. Logical placement anchors are deferred to runtime hit zones.",
+    "activeFood": "two large complete negima skewers cook vertically and parallel on the same shared grate; one is cooking on the grate, the other is held just above it by tongs during a 180-degree turn.",
+    "leftModule": "a shallow waiting rack of three complete raw negima skewers already assembled at the assembly station; their silhouettes are clear enough to separate later from the rack asset.",
+    "rightModule": "upper finished tray with a proper glossy golden-brown negima, lower discard tray with one fully burnt negima, and directly below it one clearly isolated circular discard-button skin using only an ash-bin/ember pictogram and no words.",
+    "balance": "left queue rack and right finish/discard stack have matched visual mass; tongs enter only a short distance from lower center so the central grate remains the visual centre; keep top receipt-safe and bottom prepared-list-safe areas unobstructed."
+  },
+  "interaction": {
+    "flip": "metal tongs grip a complete vertical skewer at a believable point, lifting it a short distance above the shared grate; show its darker caramelized underside, tiny oil sparks, and thin smoke.",
+    "discard": "the burnt skewer is visually associated with a separate discard tray and adjacent icon-only discard-button skin. Runtime DOM supplies text, input behavior, confirmation, accessibility, and visibility. Per UI-002 8-2, the discard control is hidden during D1 failure-safe guidance and appears in normal service only.",
+    "queue": "the raw holding rack represents prior assembly output. Runtime later composes variable counts from an empty rack plus individual raw skewer assets; the three-skewer master arrangement is reference-only."
+  },
+  "layering": [
+    "dark walnut workspace background",
+    "continuous grill body and charcoal core",
+    "active negima states",
+    "tongs plus small flip VFX",
+    "waiting rack plus queued raw skewers",
+    "finished tray, discard tray, and icon-only discard-button skin",
+    "nonsemantic UI-frame safe areas"
+  ],
+  "invariants": [
+    "retain R1's warm handcrafted pixel art, dark ink outlines, aged brass, walnut, deep indigo, and restrained ember glow",
+    "all grill-facing skewers are vertical and have chicken-green onion-chicken-green onion-chicken order on complete bamboo skewers",
+    "no visual cooking divisions anywhere within the central grate",
+    "complete elements have readable isolated silhouettes for later layer separation",
+    "no customer, drink station, tare, fan, human hand, generated words, numbers, prices, quality labels, watermark, or logo"
+  ],
+  "deferredExtraction": [
+    "BG-WORKSPACE-GRILL",
+    "ST-GRILL-TIER-1 continuous body and ST-CHARCOAL-CORE",
+    "empty waiting rack and individual raw negima queue state",
+    "grill-facing negima cooking, flip, proper, and burnt states",
+    "MDL-TONGS flip pose",
+    "VFX oil-spark and smoke burst",
+    "finished tray and discard tray",
+    "UI-DISCARD-GRILL icon-only button skin plus DOM control"
+  ],
+  "conflictsResolved": [
+    "The previous R1 visually divided the grill into lanes. User direction supersedes it: the grate is now one uninterrupted physical cook surface; runtime placement is logical, not baked as visible cells.",
+    "Discard is required as a normal-service visual route, while D1 preserves its failure-safe rule by hiding the DOM control in that guide."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-model-integration-review",
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 승인"
+  },
+  "purpose": "승인된 생 네기마 조립 구성만으로 그릴 위 raw 상태를 Three.js에서 조합하고, 클릭마다 꼬치 길이축을 중심으로 180도 뒤집어 두 번째 클릭에 원래 면으로 복귀하는지를 검수한다.",
+  "approvedInputs": [
+    {
+      "id": "MDL-SKEWER-BASE",
+      "file": "../../../../assembly/skewer-base/r2/assets/mdl-skewer-base-r2.glb",
+      "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "albedo": {
+        "file": "../../../../assembly/skewer-base/r2/assets/tex-skewer-base-albedo-r2.png",
+        "sha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+        "sampling": "nearest"
+      },
+      "role": "local +Y length axis, handle/tip and slot-01 through slot-05"
+    },
+    {
+      "id": "MDL-INGREDIENT-CHICKEN",
+      "file": "../../../../assembly/ingredient-chicken/r1/assets/mdl-ingredient-chicken-r1.glb",
+      "sha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
+      "albedo": {
+        "file": "../../../../assembly/ingredient-chicken/r1/assets/tex-ingredient-chicken-albedo-r1.png",
+        "sha256": "4baa5ca99f5f190053930461251f0497219731048a7d3caddf5ae2e03cfefb47",
+        "sampling": "nearest"
+      },
+      "role": "slot-01, slot-03 and slot-05 raw chicken source"
+    },
+    {
+      "id": "MDL-INGREDIENT-NEGI",
+      "file": "../../../../assembly/ingredient-negi/r3/assets/mdl-ingredient-negi-r3.glb",
+      "sha256": "065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3",
+      "albedo": {
+        "file": "../../../../assembly/ingredient-negi/r3/assets/tex-ingredient-negi-albedo-r3.png",
+        "sha256": "8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95",
+        "sampling": "nearest"
+      },
+      "role": "slot-02 and slot-04 assembly-pose-corrected green onion source"
+    }
+  ],
+  "styleContract": {
+    "referenceMaster": "CM-GRILL-STATION-QUEUED-SELECTION-R3",
+    "referenceMasterFile": "../../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+    "referenceMasterSha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
+    "rule": "The approved nearest-sampled pixel albedos are reused exactly. New food raster, color correction, texture bake, texture resize and material replacement are forbidden."
+  },
+  "composition": {
+    "rootNode": "grillNegimaRoot",
+    "flipPivotNode": "flipPivot",
+    "skewerAxis": "local +Y",
+    "grillPose": "screen-vertical skewer; no assembly-jig Z=-90 degree parent rotation",
+    "sequence": ["chicken", "green-onion", "chicken", "green-onion", "chicken"],
+    "ingredientScaleRelativeToBase": 1.4,
+    "triangleCount": 476,
+    "rawState": "uncooked on both faces; no browning, tare, smoke, ember, tongs, rack, grill, tray or customer is baked into this composition"
+  },
+  "flipContract": {
+    "input": "one valid click or tap on the grill skewer",
+    "firstValidClick": "flipPivot.rotation.y: 0 -> PI; face 0 -> face 1",
+    "secondValidClick": "flipPivot.rotation.y: PI -> 2PI; face 1 -> face 0",
+    "direction": "same positive direction for both 180-degree turns; cumulative visual rotation is exactly 360 degrees",
+    "domainBoundary": "the model supplies visual endpoints only. Current face, independent side timers, quality and 0.3-second same-skewer re-input lock remain gameplay-domain state.",
+    "reviewHarnessDurationMs": 180,
+    "reviewHarnessDurationNote": "This duration is only for the isolated interaction review; it is not a new gameplay timing rule."
+  },
+  "output": {
+    "compositionFile": {
+      "file": "../assets/mdl-negima-grill-raw-r1.composition.json",
+      "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+      "bytes": 1177
+    },
+    "runtimeModule": {
+      "file": "../runtime/compose-mdl-negima-grill-raw.mjs",
+      "sha256": "a0b51c4ab2ab3419f6c17bccdeee22368ae22c6a023e2c720ca12454738c38ca",
+      "bytes": 4821
+    },
+    "isolatedReview": "../review-mdl-negima-grill-raw-flip-fhd-r1.html",
+    "reviewScreenshot": {
+      "file": "../review-mdl-negima-grill-raw-flip-fhd-r1.png",
+      "sha256": "dc62c3c3034676e968b3a1747afee6877465319b6aea19af422feca3901f78e6",
+      "bytes": 77053,
+      "width": 1920,
+      "height": 1080
+    },
+    "flipReviewReport": {
+      "file": "flip-review-report.json",
+      "sha256": "8e13b4a245ca9649f59c481b7fef0a43302ae71c7ca7ca26f7e64a60b3757f8d",
+      "bytes": 648
+    }
+  },
+  "excludes": [
+    "new raster, duplicate texture, baked cooking color, grill or charcoal layer, waiting rack, finished tray, discard tray, tongs, hand, person, background scene, UI, text, quantity, timer, checkmark, shadow, VFX, quality marker, animation that changes domain state, manifest or runtime registration"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "승인 완료.",
+  "nextGate": "사용자 승인 뒤에만 같은 조합의 다음 단일 조리 상태(첫 면 익는 중)를 검수한다. runtime 등록은 계속 금지한다."
+}

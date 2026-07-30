@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "BG-WORKSPACE-GRILL",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticPurpose": "D1 그릴 화면의 고정 목재 frame과 빈 deep-indigo 작업면을 제공하는 불투명 complete background layer다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "id": "CM-GRILL-STATION-QUEUED-SELECTION-R3",
+      "file": "../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+      "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
+      "role": "user-approved grill master; fixed camera, walnut/brass frame, work-surface material, safe areas and lighting reference only"
+    }
+  ],
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise-object-edit",
+    "promptSummary": "Remove every grill, food, rack, tray, tongs, button, VFX and UI object from the approved master; preserve only the fixed walnut/brass frame and empty deep-indigo workspace surface.",
+    "rawSource": "../source/bg-workspace-grill-r1-generated.png",
+    "rawSourceSha256": "3dd9ea27ee3a907ca218da370be0547823e6f8aa910f20b1fa0067ffd59a38b0",
+    "rawSourceBytes": 1873697,
+    "postProcess": [
+      "nearest-neighbor normalization from 1672x941 to 1920x1080",
+      "no crop, compositing, colour edit, transparency conversion, or generated-pixel edit after source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/bg-workspace-grill-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449",
+    "bytes": 2115788,
+    "alpha": "opaque RGB background"
+  },
+  "reviewBoard": {
+    "file": "../review-bg-workspace-grill-isolated-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449",
+    "contains": [
+      "one empty grill workspace background layer",
+      "fixed dark-walnut and aged-brass frame",
+      "empty deep-indigo central work surface",
+      "no dynamic item, state, UI or other station"
+    ]
+  },
+  "excludes": [
+    "grill grate, charcoal bed, skewer, food, waiting rack, finished tray, discard tray, tongs, selector, button, smoke, spark, tare, fan, drink equipment, people, customer scene, and seating",
+    "text, quantity, timer, order rail, prepared dock, panel, button, icon, cursor, checkmark, logo, or watermark"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "승인 완료.",
+  "nextGate": "고정층은 승인된 `BG-WORKSPACE-GRILL` R1과 `ST-GRILL-TIER-1` R2에서 멈춘다. 다음 단일 분리 후보는 빈 대기 rack `ST-GRILL-WAITING-RACK` 한 개이며, 생 네기마는 이미 승인된 조립 모듈의 동적 조합으로 별도 runtime 합성한다."
+}
