@@ -5,7 +5,7 @@
   "status": "pending-user-review",
   "runtimeModule": {
     "file": "../runtime/compose-mdl-negima-grill-cooking-second-face.mjs",
-    "sha256": "439b04edb3f8b854725cbb0d114df1095a6a3e7f0c0f7e081322f82e5f6e1001"
+    "sha256": "afff6821e0cebd1141dc2fda87d9436d00984d76ce95a39646484ca6638ef3e1"
   },
   "stateFile": {
     "file": "../assets/mdl-negima-grill-cooking-second-face-r2.state.json",
