@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "sourceRevision": 2,
+  "status": "pending-user-review",
+  "runtimeModule": {
+    "file": "../runtime/compose-mdl-negima-grill-cooking-second-face.mjs",
+    "sha256": "7389b077cb5d95384c92bd9992a4429ed3ea566276e1e77855df2802f216514b"
+  },
+  "stateFile": {
+    "file": "../assets/mdl-negima-grill-cooking-second-face-r2.state.json",
+    "sha256": "7895965471abae0da8a1b2dd396a3d09e2880511592f50de1d9b925c16b2cb03"
+  },
+  "approvedSourceSha256": {
+    "skewerGlb": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+    "skewerAlbedo": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+    "chickenGlb": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
+    "chickenAlbedo": "4baa5ca99f5f190053930461251f0497219731048a7d3caddf5ae2e03cfefb47",
+    "greenOnionGlb": "065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3",
+    "greenOnionAlbedo": "8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95"
+  },
+  "validation": {
+    "triangleCount": 476,
+    "rotationY": 3.141592653589793,
+    "completedFlips": 1,
+    "face1HeatProgress": 0.52,
+    "sourceAssetsByteIdentical": true,
+    "newRaster": false,
+    "newGlb": false,
+    "newTexture": false,
+    "newAtlas": false,
+    "newBake": false,
+    "result": "pass"
+  },
+  "runtimeRegistrationAllowed": false
+}
