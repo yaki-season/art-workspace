@@ -1,6 +1,6 @@
 # `ST-S0-BRAZIER / cold-to-ignited` R1 — 차가운 primary 단품 후보
 
-- 상태: `pending-user-review`
+- 상태: `withdrawn-by-design`
 - asset: `ST-S0-BRAZIER`, source revision `1`, `standalone-raster`
 - semanticOwner: `artist-2.s0-prologue-story`
 - screen/state/phase/interaction: `SCR-STORY-PROLOGUE / S0-STATE-CHARCOAL / ignite / S0-CHARCOAL-IGNITE`
@@ -42,5 +42,6 @@ outline과 절제된 청회색/갈색 반사광으로 기존 비 갠 밤 픽셀 
 
 ## 사용자 승인 요청
 
-이 단품의 화로 형태·비어 있는 내부·밤 조명 톤·pixel-art 밀도를 승인하면, 다음 단계는 FHD/720 contract
-harness 검수뿐이다. 불씨·숯·VFX·아키는 그 다음 단계에도 추가하지 않는다.
+2026-07-31 기획 변경으로 S0 숯 점화 직접 조작이 제거되고 점화 완료를 이야기 대사로 처리한다.
+따라서 이 후보는 사용자 승인 대상이 아니며 optimizer·recomposition·finalizer·runtime handoff·promotion을
+생성하지 않는다. 원본과 SHA는 중복 제작의 경위와 복구 가능한 증거로만 보존한다.
