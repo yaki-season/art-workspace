@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "status": "superseded-by-user-feedback",
+  "reviewBoards": [
+    {
+      "file": "../review-mdl-negima-grill-raw-station-fhd-r1.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2556849,
+      "sha256": "a0a537e1378451ab7ca807e729d7e80935441d51b8f1042c7805a1a9d2a18b72",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-RAW",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 0,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        },
+        "gameplay": {
+          "frontElapsedSec": 0,
+          "backElapsedSec": 0,
+          "contactFace": null,
+          "qualityOwner": "game domain"
+        },
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "screen-space orthographic overlay aligned to the approved master-derived base",
+          "modelPose": "screen-vertical skewer with a shallow station-facing 3/4 compensation",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "visualRect": {
+          "x": 570.24,
+          "y": 469.8,
+          "width": 78.72,
+          "height": 291.6
+        },
+        "renderer": {
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false,
+          "nearestAlbedosReused": true
+        }
+      }
+    },
+    {
+      "file": "../review-mdl-negima-grill-raw-station-720-r1.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1335549,
+      "sha256": "e00c3e22634620245278dfc35be2a113fa06ed91f2b5703a0c1bbc33e08199ec",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-RAW",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 0,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        },
+        "gameplay": {
+          "frontElapsedSec": 0,
+          "backElapsedSec": 0,
+          "contactFace": null,
+          "qualityOwner": "game domain"
+        },
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "screen-space orthographic overlay aligned to the approved master-derived base",
+          "modelPose": "screen-vertical skewer with a shallow station-facing 3/4 compensation",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "visualRect": {
+          "x": 380.15999999999997,
+          "y": 313.2,
+          "width": 52.480000000000004,
+          "height": 194.4
+        },
+        "renderer": {
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false,
+          "nearestAlbedosReused": true
+        }
+      }
+    }
+  ],
+  "result": "pass",
+  "runtimeRegistrationAllowed": false
+}

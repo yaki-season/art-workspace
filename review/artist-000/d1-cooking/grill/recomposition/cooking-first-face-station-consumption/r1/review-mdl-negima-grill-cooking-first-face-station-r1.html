@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDL-NEGIMA-GRILL-COOKING-FIRST-FACE station consumption R1</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; overflow: hidden; background: #000; }
+  #review { position: relative; overflow: hidden; }
+  #base, #models { position: absolute; inset: 0; display: block; image-rendering: pixelated; }
+</style>
+<body>
+  <main id="review" aria-label="D1 first-face cooking negima station consumption">
+    <img id="base" src="../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png" alt="">
+    <canvas id="models"></canvas>
+  </main>
+<script>document.body.dataset.phase = "before-module";</script>
+<script type="importmap">{"imports":{"three":"/app/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+  import * as THREE from "three";
+  import { composeMdlNegimaGrillCookingFirstFace, NEGIMA_GRILL_COOKING_FIRST_FACE_TRIANGLES } from "../../../negima-cooking-first-face/r1/runtime/compose-mdl-negima-grill-cooking-first-face.mjs";
+
+  try {
+  document.body.dataset.phase = "module-loaded";
+  const viewport = new URLSearchParams(location.search).get("viewport") === "720" ? { width: 1280, height: 720 } : { width: 1920, height: 1080 };
+  const { width, height } = viewport;
+  for (const element of [document.documentElement, document.body, document.querySelector("#review"), document.querySelector("#base"), document.querySelector("#models")]) {
+    element.style.width = `${width}px`;
+    element.style.height = `${height}px`;
+  }
+  const canvas = document.querySelector("#models");
+  canvas.width = width;
+  canvas.height = height;
+  await document.querySelector("#base").decode();
+  document.body.dataset.phase = "base-decoded";
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false, preserveDrawingBuffer: true });
+  renderer.setSize(width, height, false);
+  renderer.setClearColor(0x000000, 0);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(0, width, height, 0, 0.1, 100);
+  camera.position.z = 50;
+  const scale = width / 1920;
+  const composition = await composeMdlNegimaGrillCookingFirstFace({
+    skewerScale: 270 * scale,
+    cookingFace: 0,
+    heatProgress: 0.52,
+    sideElapsedSeconds: 4
+  });
+  document.body.dataset.phase = "composition-loaded";
+  const { root, flipPivot } = composition;
+  root.position.set(609.6 * scale, 565 * scale, 0);
+  root.scale.set(1.45, 1.18, 1);
+  root.rotation.set(-0.035, 0.055, 0);
+  root.traverse((node) => {
+    if (!node.isMesh || !node.material) return;
+    for (const material of (Array.isArray(node.material) ? node.material : [node.material])) {
+      // Existing nearest albedo sampling and cooking mask stay intact; no texture pixels change.
+      if (material.color) material.color.setRGB(1.0, 0.94, 0.86);
+      material.side = THREE.DoubleSide;
+      material.needsUpdate = true;
+    }
+  });
+  scene.add(root);
+  scene.updateMatrixWorld(true);
+  renderer.render(scene, camera);
+  document.body.dataset.phase = "rendered";
+
+  const gl = renderer.getContext();
+  const pixels = new Uint8Array(width * height * 4);
+  gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+  let minX = width, minY = height, maxX = -1, maxY = -1;
+  for (let y = 0; y < height; y += 1) for (let x = 0; x < width; x += 1) {
+    if (pixels[(y * width + x) * 4 + 3] === 0) continue;
+    minX = Math.min(minX, x); maxX = Math.max(maxX, x); minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+  }
+  const renderedAlphaBBox = maxX < minX ? null : { x: minX, y: height - 1 - maxY, width: maxX - minX + 1, height: maxY - minY + 1 };
+  window.__cookingFirstStationConsumption = {
+    state: () => ({
+      id: "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+      sourceRevision: 1,
+      triangleCount: NEGIMA_GRILL_COOKING_FIRST_FACE_TRIANGLES,
+      camera: { sourceMasterId: "CM-GRILL-STATION-QUEUED-SELECTION", sourceRevision: 3, projection: "approved master-derived fixed screen-space overlay", rootRotationRadians: { x: -0.035, y: 0.055, z: 0 } },
+      laneAnchor: { x: 0.3175 * width, y: 0.4768518519 * height },
+      transform: { horizontalScale: 1.45, verticalScale: 1.18 },
+      renderedAlphaBBox,
+      gameplay: { status: "front", orientationFaceDown: "front", contactFace: "front", frontElapsedSec: 4, backElapsedSec: 0, stage: "cooking" },
+      shader: { cookingFace: composition.state.face, heatProgress: composition.state.heatProgress, materialBindingCount: composition.state.materialBindingCount, nearestAlbedosReused: true, newRaster: false, newGlb: false, newTexture: false },
+      flipPivot: { axis: "local +Y", rotationY: flipPivot.rotation.y, firstInput: "0->PI", secondInput: "PI->2PI" }
+    })
+  };
+  document.body.dataset.ready = "true";
+  document.body.dataset.phase = "complete";
+  } catch (error) {
+    console.error(error);
+    document.body.dataset.error = error instanceof Error ? error.stack : String(error);
+    document.body.dataset.ready = "error";
+    document.body.dataset.phase = "error";
+  }
+</script>
+</body>

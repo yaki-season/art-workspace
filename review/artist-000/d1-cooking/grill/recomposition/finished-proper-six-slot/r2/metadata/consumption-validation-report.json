@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-GRILL-FINISHED-PROPER-SIX-SLOT",
+  "sourceRevision": 2,
+  "status": "pending-user-review",
+  "approvedInputs": [
+    {
+      "id": "CM-GRILL-STATION-EMPTY-BASE",
+      "revision": 1,
+      "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+    },
+    {
+      "id": "ST-GRILL-FINISHED-TRAY",
+      "revision": 1,
+      "sha256": "9cffb28a2e7a99955de060dd16a7f52ba23a1292e3454e9dad56b91310134be6"
+    },
+    {
+      "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+      "revision": 1,
+      "stateSha256": "6207bd86013adcf9aaea261b0c86e6eeaa9ec63779f7a432763bd91b2b140ab9"
+    }
+  ],
+  "screenshots": {
+    "fhd": {
+      "file": "../review-scr-svc-grill-finished-proper-six-slot-fhd-r2.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2589970,
+      "sha256": "6321d3c773a1b0fc33436b899bf410f294ac0b893003c94a527e2b47965d20b9",
+      "render": {
+        "state": {
+          "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+          "stage": "finished",
+          "contactFace": null,
+          "completionQuality": "Perfect",
+          "foodCount": 1,
+          "foodItem": "negima",
+          "completedFlips": 1,
+          "rotationY": 3.141592653589793,
+          "visibleFace": 1,
+          "face0ElapsedSeconds": 8,
+          "face1ElapsedSeconds": 8,
+          "materialBindingCount": 5,
+          "boundComponents": [
+            "chicken-01",
+            "green-onion-02",
+            "chicken-03",
+            "green-onion-04",
+            "chicken-05"
+          ],
+          "triangleCount": 476,
+          "staticTray": {
+            "id": "ST-GRILL-FINISHED-TRAY",
+            "asset": "../../../finished-tray/r1/assets/st-grill-finished-tray-fhd-r1.png",
+            "placement": {
+              "x": 1534,
+              "y": 130,
+              "width": 218,
+              "height": 342
+            }
+          },
+          "fixedGrillSlotCount": 6,
+          "grillSlotStates": [
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty"
+          ],
+          "completionTrayPlacementFhd": {
+            "x": 1534,
+            "y": 130,
+            "width": 218,
+            "height": 342
+          },
+          "completionTrayAnchorFhd": {
+            "x": 1643,
+            "y": 301
+          },
+          "skewerPositionFhd": {
+            "x": 1643,
+            "y": 301
+          },
+          "skewerRootThreeWorld": {
+            "x": 1643,
+            "y": 779
+          },
+          "skewerScale": 180,
+          "baseAssetId": "CM-GRILL-STATION-EMPTY-BASE",
+          "baseCameraCanonical": "CM-GRILL-STATION-QUEUED-SELECTION R3",
+          "hasNewFoodRaster": false,
+          "hasNewTexture": false,
+          "hasNewGLB": false,
+          "visibleDomControls": 0
+        },
+        "screen": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "base": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "tray": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "modelCanvas": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "safeArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "output": "fhd"
+      }
+    },
+    "hd720": {
+      "file": "../review-scr-svc-grill-finished-proper-six-slot-720p-r2.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1254726,
+      "sha256": "aeb5419130631c5765ecd53f5c304deda4343b79a03f3ecd18522918d3342197",
+      "render": {
+        "state": {
+          "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+          "stage": "finished",
+          "contactFace": null,
+          "completionQuality": "Perfect",
+          "foodCount": 1,
+          "foodItem": "negima",
+          "completedFlips": 1,
+          "rotationY": 3.141592653589793,
+          "visibleFace": 1,
+          "face0ElapsedSeconds": 8,
+          "face1ElapsedSeconds": 8,
+          "materialBindingCount": 5,
+          "boundComponents": [
+            "chicken-01",
+            "green-onion-02",
+            "chicken-03",
+            "green-onion-04",
+            "chicken-05"
+          ],
+          "triangleCount": 476,
+          "staticTray": {
+            "id": "ST-GRILL-FINISHED-TRAY",
+            "asset": "../../../finished-tray/r1/assets/st-grill-finished-tray-fhd-r1.png",
+            "placement": {
+              "x": 1534,
+              "y": 130,
+              "width": 218,
+              "height": 342
+            }
+          },
+          "fixedGrillSlotCount": 6,
+          "grillSlotStates": [
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty"
+          ],
+          "completionTrayPlacementFhd": {
+            "x": 1534,
+            "y": 130,
+            "width": 218,
+            "height": 342
+          },
+          "completionTrayAnchorFhd": {
+            "x": 1643,
+            "y": 301
+          },
+          "skewerPositionFhd": {
+            "x": 1643,
+            "y": 301
+          },
+          "skewerRootThreeWorld": {
+            "x": 1643,
+            "y": 779
+          },
+          "skewerScale": 180,
+          "baseAssetId": "CM-GRILL-STATION-EMPTY-BASE",
+          "baseCameraCanonical": "CM-GRILL-STATION-QUEUED-SELECTION R3",
+          "hasNewFoodRaster": false,
+          "hasNewTexture": false,
+          "hasNewGLB": false,
+          "visibleDomControls": 0
+        },
+        "screen": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "base": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "tray": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "modelCanvas": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "safeArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "output": "720"
+      }
+    }
+  },
+  "result": "pass"
+}

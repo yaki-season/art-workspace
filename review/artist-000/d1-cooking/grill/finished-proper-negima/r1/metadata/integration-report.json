@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-composition",
+  "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
+  "assetMeaning": "승인된 양면 적정 네기마 한 꼬치가 그릴 접촉면을 떠나 완료품 보관 tray에 놓인 상태다. tray는 이후 서빙 화면에서 선택하는 접시와 별개다.",
+  "inputs": {
+    "properNegima": {"id":"MDL-NEGIMA-GRILL-PROPER-SECOND-FACE","file":"../../../negima-proper-second-face/r1/assets/mdl-negima-grill-proper-second-face-r1.state.json","approvalStatus":"approved-by-user","triangleCount":476,"rotationY":"PI","face0ElapsedSeconds":8,"face1ElapsedSeconds":8,"foodRasterPolicy":"reuse only; no new food raster, texture or GLB"},
+    "finishedTray": {"id":"ST-GRILL-FINISHED-TRAY","file":"../../../finished-tray/r1/assets/st-grill-finished-tray-fhd-r1.png","sha256":"9cffb28a2e7a99955de060dd16a7f52ba23a1292e3454e9dad56b91310134be6","placementFhd":{"x":1534,"y":130,"width":218,"height":342},"approvalStatus":"approved-by-user"}
+  },
+  "state": {"stage":"finished","contactFace":null,"completionQuality":"Perfect","foodCount":1,"foodItem":"negima","completedFlips":1,"rotationY":"PI","visibleFace":1,"face0ElapsedSeconds":8,"face1ElapsedSeconds":8},
+  "derivedOutputs": {
+    "stateFile": {"file":"../assets/cmp-grill-finished-proper-negima-r1.state.json","sha256":"6207bd86013adcf9aaea261b0c86e6eeaa9ec63779f7a432763bd91b2b140ab9","bytes":1628},
+    "runtimeModule": {"file":"../runtime/compose-cmp-grill-finished-proper-negima.mjs","sha256":"bfc43b00b37d304d85301a3be1a51b931036a0b226f5d2e8004c5799153e8f7d","bytes":1905},
+    "isolatedReview": {"file":"../review-cmp-grill-finished-proper-negima-fhd-r1.html","sha256":"1105fa64d9084fdc8539fbebba7a16465196f45e2e3916580b451ef41f5eb088"},
+    "reviewScreenshot": {"file":"../review-cmp-grill-finished-proper-negima-fhd-r1.png","sha256":"8f0609dd3a58a3fc60f70e4964374cc41480c6facbf1450e46177014d68fc76c","bytes":152119,"width":1920,"height":1080},
+    "browserReviewReport": {"file":"finished-state-review-report.json","sha256":"1bfed9f30dd5dfca9c00c487034084362584ee8f75a3b645d646d67afc8e7294","bytes":1308}
+  },
+  "validation": {"harness":"actual Three.js approved proper state plus isolated finished-tray raster composition in Chromium","exactState":{"stage":"finished","contactFace":null,"completionQuality":"Perfect","foodCount":1,"completedFlips":1,"rotationY":"PI","visibleFace":1,"face0ElapsedSeconds":8,"face1ElapsedSeconds":8},"materialBindingCount":5,"triangleCount":476,"newFoodRaster":false,"newTexture":false,"newGLB":false,"result":"passed"},
+  "runtimeRegistrationAllowed": false,
+  "approval": {"status":"approved-by-user","date":"2026-07-30","basis":"사용자 응답: 승인"},
+  "nextGate": "사용자 지시 뒤에만 cooking-owned 공용 prepared dock 또는 서빙 인계 직전의 다음 단일 상태를 검수한다. Artist 3 소유 서비스 tray·접시·손님 제공 composition은 수정하지 않는다."
+}

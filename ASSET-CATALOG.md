@@ -1,8 +1,8 @@
 # YAKI SEASON 에셋 카탈로그
 
-- 상태: `D1 승인 runtime 자산 8항목 app 등록 완료, 다음 단일 아트 과업 사용자 지시 대기`
-- 기준: `Artist-002 v5.0.1`, `ART-002 v3.6.1`, `ART-003 v5.0.0`, `UI-002 v5.24.1`, `UI-003 v1.0.0`, `YS-HANDCRAFTED-NIGHT-v1`
-- 최종 갱신: `2026-07-28`
+- 상태: `D1 승인 runtime 자산 8항목 등록 완료, Artist 1·2·3 병렬 제작 체제로 전환`
+- 기준: `ART-002 v3.6.1`, `ART-003 v5.9.0`, `UI-002 v5.25.0`, `UI-003 v1.2.0`, `YS-HANDCRAFTED-NIGHT-v1`
+- 최종 갱신: `2026-07-30`
 
 현재 app runtime에는 D1 소비 화면 승인 자산 8항목이 등록돼 있다. 사용자 승인에 따라 각 asset의
 무손실 passthrough build·finalizer·dry-run 영수증·명시적 write를 통과했으며, 전량 수령 bundle의
@@ -44,6 +44,32 @@ R3은 손님 어깨폭의 둥근 반투명 말풍선 외피이며, 상단 약 60
 | ID | 기존 ID | 상태 | 우선순위·pack | 종류·규격 | runtime 또는 review | source | provenance | 대표 사용 화면·콘텐츠 | SHA-256 |
 |---|---|---|---|---|---|---|---|---|---|
 <!-- asset-registry:end -->
+
+## Artist 3인 소유권 ledger
+
+이 표는 stable asset ID의 중복 제작을 막는 작업 배정 원본이다. 세부 파일 상태·SHA는 위 registry와
+각 review report가 원본이며, 다른 Artist의 행은 읽기 전용으로 취급한다.
+
+| 담당 | 태스크·namespace | 독점 semantic 범위 | 현재 순서 | 읽기 전용 공유 입력 |
+|---|---|---|---|---|
+| Artist 1 | `epic/artist/000`, `review/artist-000/` | D1 조립·고정 6칸 그릴, 꼬치·재료·네기마 model/shader, 대기·완료 tray와 해당 finalizer | 승인 empty base → 음식 없는 완료 tray R2 원근 검수 → 음식 station 소비 검수 → finalizer | 기존 승인 D1 손님 runtime 8개 |
+| Artist 2 | `epic/artist/023`, `review/artist-023/` | S0 외관·대문·열쇠·숯 상태, 아사노 아키 이야기 초상과 S0 finalizer | `S0-STATE-KEY` topology → `PR-SHOP-KEY` 놓임 → 대문 → 숯 → 이야기 | 개발자 2 작업 004의 state ID와 작업 007의 component/bounds/layer |
+| Artist 3 | `epic/artist/025`, `review/artist-025/` | D1 드링크·서빙·좌석 정리·이름 없는 엑스트라·정산과 해당 finalizer. `BG-WORKSPACE-DRINK R2`는 좌우 실내 연속면·외부 개구부 없음 | `BG-WORKSPACE-DRINK R2` finalizer handoff → Developer 2 promotion 결과 대기 → 작업대 → 레버 → 잔/액체/VFX → 서빙 → 정리 → 엑스트라 → 정산 | Artist 1 음식 stable ID, Artist 2 아키 초상 ID, 기존 runtime 8개, 개발자 2 작업 007 inventory |
+
+- `sourceMasterId`, stable asset ID, semantic state, finalizer bundle마다 owner는 한 명뿐이다.
+- 공유 asset은 source 파일을 복사·수정하지 않고 manifest ID 또는 승인 review 입력으로만 합성한다.
+- Artist 1 후속 `artist-026`은 D2 모모·D3 타레 음식 model/shader, Artist 3 후속
+  `artist-024`는 D2·D3 서비스·이야기·정산을 맡는다.
+- 각 Artist는 자기 owner 행의 상태·SHA만 갱신한다. 공용 registry 충돌이 예상되면 handoff report를
+  먼저 만들고 catalog steward가 순차 병합한다.
+- Artist 1 정본 소유권은 `Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER`, 기계 판독 owner ID는
+  `artist-1.d1-assembly-grill-food-shader`다.
+- `ST-GRILL-FINISHED-TRAY` R1과 `CMP-GRILL-FINISHED-PROPER-NEGIMA` R1은
+  `2026-07-30` 사용자 승인 완료다. 두 항목은 소비 화면 재조립·finalizer 전까지
+  `runtimeRegistrationAllowed: false`이며 runtime registry·manifest에는 아직 등록하지 않는다.
+- `CM-GRILL-STATION-EMPTY-BASE R1`은 `2026-07-30` 사용자 승인 완료다. 기존 tray+food 소비 화면
+  R2는 정면 원근·톤 때문에 superseded됐고, `ART-003 v5.9.0`에 따라 다음 단일 후보는 음식 없는
+  `ST-GRILL-FINISHED-TRAY R2`다. tray 승인 전 음식 model/shader 보정·재합성·finalizer를 금지한다.
 
 ## 등록 규칙
 

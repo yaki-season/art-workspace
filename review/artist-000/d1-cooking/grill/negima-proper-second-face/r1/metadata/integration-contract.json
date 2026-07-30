@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state-review",
+  "id": "MDL-NEGIMA-GRILL-PROPER-SECOND-FACE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "approval": {"status":"approved-by-user","date":"2026-07-30","basis":"사용자 응답: 승인"},
+  "purpose": "첫 180도 뒤집기 뒤 반대면(face 1)이 정확히 8초에 적정 구간으로 들어간 네기마를, 승인 raw 조합 위 Three.js fragment mask로 검수한다.",
+  "approvedInputs": [{"id":"MDL-NEGIMA-GRILL-RAW","file":"../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json","approvalStatus":"approved-by-user","role":"476 triangles raw composition, local +Y flipPivot, approved GLB/albedo references"},{"id":"MDL-NEGIMA-GRILL-PROPER-FIRST-FACE","file":"../../../negima-proper-first-face/r1/assets/mdl-negima-grill-proper-first-face-r1.state.json","approvalStatus":"approved-by-user","role":"face 0 8-second proper heat history and approved grey-brown proper palette reference"}],
+  "state":{"completedFlips":1,"flipPivotRotationY":"PI","visibleFace":1,"stage":"proper","face0ElapsedSeconds":8,"face1ElapsedSeconds":8,"domainRange":"both faces are in the 8 through <16 second proper interval under GPL-004","domainBoundary":"The gameplay domain owns face, elapsed time, heat, quality and input lock. This module derives pixels from the supplied render snapshot only."},
+  "shaderContract":{"method":"nearest raw albedo sample plus procedural pixel-cell light grey-brown cooked-meat tint, sparse restrained sear and minimal oil-gloss mask in cloned MeshBasicMaterial shader code; approved food and bamboo double-sided decals render after their untextured source backings at the PI endpoint","visualSignals":["visible face 1 is light appetising grey-brown cooked chicken with sparse dark-brown sear","visible face 1 has muted cooked green onion with minimal oil-gloss pixels","face 0 8-second proper history is preserved"],"forbidden":["new raster","new GLB","new texture","texture copy","texture resize","texture recolour","texture bake","material atlas","smoke or ember VFX"]},
+  "output":{"stateFile":"../assets/mdl-negima-grill-proper-second-face-r1.state.json","runtimeModule":"../runtime/compose-mdl-negima-grill-proper-second-face.mjs","isolatedReview":"../review-mdl-negima-grill-proper-second-face-fhd-r1.html","reviewScreenshot":"../review-mdl-negima-grill-proper-second-face-fhd-r1.png"},
+  "excludes":["grill","charcoal","waiting rack","finished tray","discard tray","tongs","hand","customer","background scene","UI","text","quantity","timer","checkmark","quality marker","smoke","ember","runtime manifest or registration"],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion":"승인 완료.",
+  "nextGate":"사용자 지시 뒤에만 완성 네기마의 전달 tray/plate 상태 또는 사용자가 지정한 다음 단일 조리 상태를 검수한다."
+}

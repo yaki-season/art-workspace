@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>MDL-NEGIMA-GRILL-PROPER-SECOND-FACE R1 review</title>
+<style>html,body{margin:0;width:100%;height:100%;background:#252525;overflow:hidden}#review{position:relative;width:1920px;height:1080px;overflow:hidden;background:#252525}#checker,#models{position:absolute;inset:0;width:1920px;height:1080px;image-rendering:pixelated}</style>
+<div id="review"><canvas id="checker" width="1920" height="1080"></canvas><canvas id="models" width="1920" height="1080"></canvas></div>
+<script type="importmap">{"imports":{"three":"/app/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from "/app/node_modules/three/build/three.module.js";import {composeMdlNegimaGrillProperSecondFace} from "./runtime/compose-mdl-negima-grill-proper-second-face.mjs";
+const checker=document.querySelector("#checker").getContext("2d");for(let y=0;y<1080;y+=96)for(let x=0;x<1920;x+=96){checker.fillStyle=((x/96+y/96)%2===0)?"#282828":"#3e3e3e";checker.fillRect(x,y,96,96)}
+const canvas=document.querySelector("#models"),renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:false,preserveDrawingBuffer:true});renderer.setSize(1920,1080,false);renderer.setClearColor(0x000000,0);renderer.outputColorSpace=THREE.SRGBColorSpace;
+const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(0,1920,1080,0,.1,100);camera.position.z=50;const composition=await composeMdlNegimaGrillProperSecondFace({skewerScale:300});composition.root.position.set(960,540,0);scene.add(composition.root);scene.updateMatrixWorld(true);renderer.render(scene,camera);
+window.__negimaProperSecondFaceReview={state:()=>({...composition.state,triangleCount:476,hasNewRaster:false,hasNewTexture:false,hasNewGLB:false})};document.body.dataset.ready="true";document.body.dataset.face="1";document.body.dataset.stage="proper";
+</script>

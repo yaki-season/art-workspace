@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCR-SVC-GRILL-FINISHED-PROPER-SIX-SLOT R2 review</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 100%; min-height: 100%; overflow: hidden; background: #000; }
+  #presentation { width: 1920px; height: 1080px; overflow: hidden; }
+  #screen { position: relative; width: 1920px; height: 1080px; transform-origin: top left; overflow: hidden; }
+  #base, #finished-tray, #models { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+  #base, #finished-tray { display: block; image-rendering: pixelated; }
+  #dom-safe-area { position: absolute; inset: 0; pointer-events: none; }
+  body[data-output="720"] #presentation { width: 1280px; height: 720px; }
+  body[data-output="720"] #screen { transform: scale(0.6666666667); }
+</style>
+<body>
+  <main id="presentation" aria-label="D1 완료 네기마 소비 화면 검수">
+    <section id="screen">
+      <img id="base" src="../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png" alt="">
+      <img id="finished-tray" src="../../../finished-tray/r1/assets/st-grill-finished-tray-fhd-r1.png" alt="">
+      <canvas id="models" width="1920" height="1080"></canvas>
+      <div id="dom-safe-area" aria-hidden="true"></div>
+    </section>
+  </main>
+<script type="importmap">{"imports":{"three":"/app/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+  import * as THREE from "/app/node_modules/three/build/three.module.js";
+  import { composeGrillFinishedProperNegima } from "../../../finished-proper-negima/r1/runtime/compose-cmp-grill-finished-proper-negima.mjs";
+
+  const params = new URLSearchParams(location.search);
+  document.body.dataset.output = params.get("output") === "720" ? "720" : "fhd";
+  await Promise.all([...document.images].map((image) => image.decode()));
+  const canvas = document.querySelector("#models");
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false, preserveDrawingBuffer: true });
+  renderer.setSize(1920, 1080, false);
+  renderer.setClearColor(0x000000, 0);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(0, 1920, 1080, 0, 0.1, 100);
+  camera.position.z = 50;
+  const composition = await composeGrillFinishedProperNegima({ skewerScale: 180 });
+  const trayPlacement = { x: 1534, y: 130, width: 218, height: 342 };
+  // This orthographic camera uses a bottom-origin Three.js Y axis; convert the approved top-origin FHD anchor.
+  composition.root.position.set(trayPlacement.x + trayPlacement.width / 2, 1080 - (trayPlacement.y + trayPlacement.height / 2), 0);
+  scene.add(composition.root);
+  scene.updateMatrixWorld(true);
+  renderer.render(scene, camera);
+  window.__finishedProperSixSlotReview = {
+    state: () => ({
+      ...composition.state,
+      fixedGrillSlotCount: 6,
+      grillSlotStates: ["empty", "empty", "empty", "empty", "empty", "empty"],
+      completionTrayPlacementFhd: trayPlacement,
+      completionTrayAnchorFhd: { x: 1643, y: 301 },
+      skewerPositionFhd: { x: 1643, y: 301 },
+      skewerRootThreeWorld: { x: 1643, y: 779 },
+      skewerScale: 180,
+      baseAssetId: "CM-GRILL-STATION-EMPTY-BASE",
+      baseCameraCanonical: "CM-GRILL-STATION-QUEUED-SELECTION R3",
+      hasNewFoodRaster: false,
+      hasNewTexture: false,
+      hasNewGLB: false,
+      visibleDomControls: 0
+    })
+  };
+  document.body.dataset.ready = "true";
+  document.body.dataset.stage = "finished";
+</script>
+</body>

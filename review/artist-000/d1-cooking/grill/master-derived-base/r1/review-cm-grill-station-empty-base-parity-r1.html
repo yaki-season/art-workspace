@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CM-GRILL-STATION-EMPTY-BASE R1 parity review</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 100%; min-height: 100%; overflow: hidden; background: #000; }
+  .frame { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+  img { display: block; width: 1920px; height: 1080px; image-rendering: pixelated; }
+  #finished-tray-reservation { position: absolute; left: 1534px; top: 130px; width: 218px; height: 342px; pointer-events: none; opacity: 0; }
+  #comparison { display: flex; width: 3840px; height: 1080px; }
+</style>
+<body>
+  <main id="base" class="frame" aria-label="CM-GRILL-STATION-EMPTY-BASE R1">
+    <img id="base-image" src="assets/cm-grill-station-empty-base-fhd-r1.png" alt="">
+    <div id="finished-tray-reservation" aria-hidden="true"></div>
+  </main>
+  <main id="comparison" hidden aria-label="왼쪽 승인 master, 오른쪽 빈 그릴 base">
+    <img id="master-image" src="../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png" alt="">
+    <img id="comparison-base-image" src="assets/cm-grill-station-empty-base-fhd-r1.png" alt="">
+  </main>
+<script>
+  const comparison = new URLSearchParams(location.search).get('mode') === 'comparison';
+  document.querySelector('#base').hidden = comparison;
+  document.querySelector('#comparison').hidden = !comparison;
+  Promise.all([...document.images].map((image) => image.decode())).then(() => { document.body.dataset.ready = 'true'; });
+</script>
+</body>

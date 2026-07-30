@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-PROPER-SECOND-FACE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.face-1.proper",
+  "assetMeaning": "첫 180도 뒤집기 endpoint에서 보이는 반대면(face 1)이 8초 적정 구간에 들어간 derived Three.js material state다. 앞면 face 0의 8초 적정 이력도 보존하고, 승인 raw GLB·nearest albedo를 수정하지 않는다.",
+  "baseComposition": {
+    "id": "MDL-NEGIMA-GRILL-RAW",
+    "file": "../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json",
+    "approvalStatus": "approved-by-user",
+    "triangleCount": 476,
+    "sourceGLBAndAlbedoPolicy": "reuse only; no copy, resize, recolour, bake or new texture"
+  },
+  "state": {
+    "completedFlips": 1,
+    "rotationY": "PI",
+    "visibleFace": 1,
+    "stage": "proper",
+    "face0ElapsedSeconds": 8,
+    "face1ElapsedSeconds": 8
+  },
+  "derivedOutputs": {
+    "stateFile": {
+      "file": "../assets/mdl-negima-grill-proper-second-face-r1.state.json",
+      "sha256": "fd2f5bf7da791b35703e52f28e73675b0d5c16554ec6e0f5e8422530c7b57891",
+      "bytes": 1388
+    },
+    "runtimeModule": {
+      "file": "../runtime/compose-mdl-negima-grill-proper-second-face.mjs",
+      "sha256": "8424566bdfc0fc1c96d2a93f2357111bb2abf13d37b1a6def09de7ca059c129e",
+      "bytes": 4369
+    },
+    "isolatedReview": {
+      "file": "../review-mdl-negima-grill-proper-second-face-fhd-r1.html",
+      "sha256": "03e084da00fe9e965f78c4d756d84f08cda30ca6f53a58b76ddc0b0284b933b0"
+    },
+    "reviewScreenshot": {
+      "file": "../review-mdl-negima-grill-proper-second-face-fhd-r1.png",
+      "sha256": "f595494776f6ac36e3dac4179bb11d2b31076b4814f2e38c40de1a9563b30c1f",
+      "bytes": 62831,
+      "width": 1920,
+      "height": 1080
+    },
+    "browserReviewReport": {
+      "file": "proper-state-review-report.json",
+      "sha256": "807562ee5a4547a1a004bb7e861b602b1672175171f66789ccaf07e0e58105f7",
+      "bytes": 939
+    }
+  },
+  "validation": {
+    "harness": "actual Three.js GLTFLoader composition plus proper fragment mask at first-flip endpoint in Chromium",
+    "exactState": {
+      "completedFlips": 1,
+      "rotationY": "PI",
+      "visibleFace": 1,
+      "face0ElapsedSeconds": 8,
+      "face1ElapsedSeconds": 8
+    },
+    "boundComponents": [
+      "chicken-01",
+      "green-onion-02",
+      "chicken-03",
+      "green-onion-04",
+      "chicken-05"
+    ],
+    "materialBindingCount": 5,
+    "reverseDecalPolicy": "approved food and bamboo double-sided decals render after their untextured source backings at PI; no rear texture is invented",
+    "newRaster": false,
+    "newTexture": false,
+    "newGLB": false,
+    "triangleCount": 476,
+    "result": "passed"
+  },
+  "runtimeRegistrationAllowed": false,
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 승인"
+  },
+  "nextGate": "사용자 지시 뒤에만 완성 네기마의 전달 tray/plate 상태 또는 사용자가 지정한 다음 단일 조리 상태를 검수한다."
+}

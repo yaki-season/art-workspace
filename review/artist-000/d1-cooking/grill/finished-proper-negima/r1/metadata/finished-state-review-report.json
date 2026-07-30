@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+  "reviewHarness": "actual Three.js approved proper state plus isolated finished-tray raster composition",
+  "state": {
+    "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+    "stage": "finished",
+    "contactFace": null,
+    "completionQuality": "Perfect",
+    "foodCount": 1,
+    "foodItem": "negima",
+    "completedFlips": 1,
+    "rotationY": 3.141592653589793,
+    "visibleFace": 1,
+    "face0ElapsedSeconds": 8,
+    "face1ElapsedSeconds": 8,
+    "materialBindingCount": 5,
+    "boundComponents": [
+      "chicken-01",
+      "green-onion-02",
+      "chicken-03",
+      "green-onion-04",
+      "chicken-05"
+    ],
+    "triangleCount": 476,
+    "staticTray": {
+      "id": "ST-GRILL-FINISHED-TRAY",
+      "asset": "../../../finished-tray/r1/assets/st-grill-finished-tray-fhd-r1.png",
+      "placement": {
+        "x": 1534,
+        "y": 130,
+        "width": 218,
+        "height": 342
+      }
+    },
+    "hasNewFoodRaster": false,
+    "hasNewTexture": false,
+    "hasNewGLB": false
+  },
+  "screenshot": {
+    "file": "../review-cmp-grill-finished-proper-negima-fhd-r1.png",
+    "sha256": "8f0609dd3a58a3fc60f70e4964374cc41480c6facbf1450e46177014d68fc76c",
+    "bytes": 152119,
+    "width": 1920,
+    "height": 1080
+  },
+  "result": "passed"
+}

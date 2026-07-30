@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDL-NEGIMA-GRILL-RAW R1 station consumption R3</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; overflow: hidden; background: #000; }
+  #review, #scene { display: block; border: 0; overflow: hidden; }
+</style>
+<body>
+  <main id="review" aria-label="D1 vertically extended raw negima station consumption review">
+    <iframe id="scene" title="one raw negima in the first vertical grill lane"></iframe>
+  </main>
+<script>
+  const viewport = new URLSearchParams(location.search).get("viewport") === "720" ? { name: "720", width: 1280, height: 720 } : { name: "fhd", width: 1920, height: 1080 };
+  for (const element of [document.documentElement, document.body, document.querySelector("#review"), document.querySelector("#scene")]) {
+    element.style.width = `${viewport.width}px`;
+    element.style.height = `${viewport.height}px`;
+  }
+  const frame = document.querySelector("#scene");
+  frame.src = `../r2/review-mdl-negima-grill-raw-station-r2.html?viewport=${viewport.name}&stretchY=1.18`;
+  const ready = () => frame.contentWindow?.__rawStationConsumption && frame.contentWindow.document.body.dataset.ready === "true";
+  const waitForReady = () => { if (!ready()) return requestAnimationFrame(waitForReady); window.__rawStationConsumption = frame.contentWindow.__rawStationConsumption; document.body.dataset.ready = "true"; };
+  frame.addEventListener("load", waitForReady);
+</script>
+</body>

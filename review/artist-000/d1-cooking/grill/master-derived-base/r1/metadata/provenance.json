@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "CM-GRILL-STATION-EMPTY-BASE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "master-derived-runtime-base-parity-review",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 둘 다 승인"
+  },
+  "purpose": "승인된 CM-GRILL-STATION-QUEUED-SELECTION R3의 카메라·원근·구도·조명·색조를 보존하면서 동적 조리 상태만 제거한, D1 소비 화면의 불투명 base 후보다.",
+  "sourceMaster": {
+    "id": "CM-GRILL-STATION-QUEUED-SELECTION",
+    "revision": 3,
+    "file": "../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+    "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
+    "role": "camera, perspective, composition, lighting and palette canonical source"
+  },
+  "generation": {
+    "tool": "built-in imagegen",
+    "mode": "precise object removal from full-frame master",
+    "promptFile": "../PROMPT.md",
+    "rawSource": "../source/cm-grill-station-empty-base-r1-generated.png",
+    "rawSourceSha256": "017fc38b249253f6d61061d58fe482905afd2686752d5a712dae0e06bf617e92",
+    "rawSourceBytes": 2280072,
+    "postProcess": [
+      "nearest-neighbor full-canvas normalization from 1672×941 to 1920×1080",
+      "no crop, camera translation, layer re-placement, colour edit, transparency conversion, or post-generation pixel edit"
+    ]
+  },
+  "output": {
+    "file": "../assets/cm-grill-station-empty-base-fhd-r1.png",
+    "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a",
+    "bytes": 2518817,
+    "width": 1920,
+    "height": 1080,
+    "colorMode": "RGB opaque full-scene base"
+  },
+  "includedStaticVisuals": ["master frame and wood border", "deep-indigo work surface", "empty left waiting-rack skin", "central continuous grate", "ember lighting", "upper-right empty tray reservation"],
+  "excludedDynamicVisuals": ["raw, cooking, finished and burnt negima", "all skewers", "tongs", "smoke and sparks", "upper-right finished tray", "lower-right discard tray", "queue selection pads", "discard button", "all text and runtime UI"],
+  "reservedRuntimePlacement": {
+    "id": "ST-GRILL-FINISHED-TRAY",
+    "fhd": {"x": 1534, "y": 130, "width": 218, "height": 342},
+    "source": "approved ST-GRILL-FINISHED-TRAY R1 metadata",
+    "visibleInThisBase": false
+  },
+  "developerHandoffDisposition": {
+    "discardedFinishedTrayBounds": {"x": 1478.4, "y": 529.2, "width": 240, "height": 194.4},
+    "reason": "superseded by the user-fixed approved finished-tray placement; not consumed by this candidate"
+  },
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "승인 완료.",
+  "nextGate": "음식 없이 ST-GRILL-FINISHED-TRAY R2만 정확히 (1534,130,218,342) 예약 영역과 upper-right station 원근·톤에 맞춰 FHD/720으로 검수한다. tray 승인 전 음식 합성을 금지한다."
+}

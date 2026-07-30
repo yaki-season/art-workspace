@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "sourceRevision": 1,
+  "status": "not-submitted-face-signal-insufficient",
+  "reviewBoards": [
+    {
+      "file": "../review-mdl-negima-grill-cooking-second-face-station-fhd-r1.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2568656,
+      "sha256": "6c96b4e2fd0f0e72b3c0b0452576f114f27910e4d0e094765f3c278e20c1ed00",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "laneAnchor": {
+          "x": 609.6,
+          "y": 515.000000052
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 543,
+          "y": 257,
+          "width": 131,
+          "height": 516
+        },
+        "gameplay": {
+          "status": "back",
+          "completedFlips": 1,
+          "orientationFaceDown": "back",
+          "contactFace": "back",
+          "frontElapsedSec": 4,
+          "backElapsedSec": 4,
+          "stage": "cooking"
+        },
+        "shader": {
+          "visibleFace": 1,
+          "face0HeatProgress": 0.52,
+          "face1HeatProgress": 0.52,
+          "materialBindingCount": 5,
+          "reverseDecalPreserved": true,
+          "nearestAlbedosReused": true,
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false
+        },
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 3.141592653589793,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        }
+      }
+    },
+    {
+      "file": "../review-mdl-negima-grill-cooking-second-face-station-720-r1.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1341604,
+      "sha256": "67d8a7e98f1315f9ac75cbf5e2321c7f8dceb0ff9654c49d09156ce132e4559d",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "laneAnchor": {
+          "x": 406.4,
+          "y": 343.333333368
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 362,
+          "y": 172,
+          "width": 88,
+          "height": 344
+        },
+        "gameplay": {
+          "status": "back",
+          "completedFlips": 1,
+          "orientationFaceDown": "back",
+          "contactFace": "back",
+          "frontElapsedSec": 4,
+          "backElapsedSec": 4,
+          "stage": "cooking"
+        },
+        "shader": {
+          "visibleFace": 1,
+          "face0HeatProgress": 0.52,
+          "face1HeatProgress": 0.52,
+          "materialBindingCount": 5,
+          "reverseDecalPreserved": true,
+          "nearestAlbedosReused": true,
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false
+        },
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 3.141592653589793,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        }
+      }
+    }
+  ],
+  "comparison": {
+    "file": "../review-mdl-negima-grill-cooking-face-compare-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 1396801,
+    "sha256": "8f4ec69bb85664195888ed0ecff80daa8a8480102c2aad437611547cedd4e1e5",
+    "left": "approved cooking-first-face station R1",
+    "right": "cooking-second-face 4+4 sec",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 1080
+    },
+    "parity": "same D1 slot0 anchor, shared transform and master-derived base; only face orientation and approved face-specific shader state differ"
+  },
+  "faceDistinction": {
+    "automatedEvidence": "first/second screenshots were compared pixel-for-pixel inside the grill safe area. This detects an actual reversed decal/ingredient-direction screen difference, but is not an automatic sear-legibility approval.",
+    "views": [
+      {
+        "viewport": "fhd",
+        "region": {
+          "x": 500,
+          "y": 210,
+          "width": 960,
+          "height": 580
+        },
+        "distinctPixels": 31622,
+        "distinctPixelCoverage": 0.056792385057471265,
+        "totalDelta": 4699781,
+        "maxChannelDelta": 247,
+        "minimumDistinctPixels": 500,
+        "result": "technical-screen-difference-pass"
+      },
+      {
+        "viewport": "720",
+        "region": {
+          "x": 333,
+          "y": 140,
+          "width": 640,
+          "height": 387
+        },
+        "distinctPixels": 14166,
+        "distinctPixelCoverage": 0.057194767441860465,
+        "totalDelta": 2101298,
+        "maxChannelDelta": 241,
+        "minimumDistinctPixels": 225,
+        "result": "technical-screen-difference-pass"
+      }
+    ],
+    "visualReview": "failed: actual FHD/720 inspection found onion end and surface-direction reversal, but the partial sear is too weak to communicate an actively cooking second face.",
+    "result": "insufficient-for-user-candidate"
+  },
+  "result": "not-submitted",
+  "runtimeRegistrationAllowed": false
+}

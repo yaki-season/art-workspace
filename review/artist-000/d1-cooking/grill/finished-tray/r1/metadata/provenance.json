@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 1,
+  "status": "approved-by-user",
+  "approval": {"status":"approved-by-user","date":"2026-07-30","basis":"사용자 응답: 승인"},
+  "profile": "standalone-raster-input-to-derived-composition",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
+  "sourceMaster": {"id":"CM-GRILL-STATION-D1-R3","file":"../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png","role":"approved D1 grill master; upper-right completed-tray visual reference"},
+  "generation": {
+    "tool": "built-in imagegen",
+    "intent": "precise-object-edit",
+    "prompt": "Extract and recreate only the upper-right completed-food tray from the approved D1 grill master, completely empty, as warm handcrafted pixel art on uniform #00ff00 chroma. No food, skewer, grill, UI, text, shadow or scene.",
+    "generatedSource": "source/st-grill-finished-tray-chroma-source-r1.png",
+    "generatedSourceSha256": "9b3e7e50c1a20036853a0bb4f7dfdb517074e00509220271821de096155b794e",
+    "generatedSourceBytes": 1447261
+  },
+  "postprocess": {
+    "chromaRemoval": {"tool":"/Users/jeongdong/.codex/skills/.system/imagegen/scripts/remove_chroma_key.py","python":"/private/tmp/yaki-art-venv/bin/python","autoKey":"border","softMatte":true,"transparentThreshold":12,"opaqueThreshold":220,"despill":true,"alphaSource":"source/st-grill-finished-tray-alpha-source-r1.png","alphaSourceSha256":"82503541f393b7ea006e0fdbd273d2ddeac76000ccf260bdd0b12e5ebbdc9481","alphaSourceBytes":995066},
+    "normalization": {"tool":"Pillow","method":"subject alpha bbox crop, nearest-neighbor resize to 218x342, FHD transparent canvas placement","placementFhd":{"x":1534,"y":130,"width":218,"height":342}}
+  },
+  "output": {"file":"assets/st-grill-finished-tray-fhd-r1.png","sha256":"9cffb28a2e7a99955de060dd16a7f52ba23a1292e3454e9dad56b91310134be6","bytes":164389,"width":1920,"height":1080,"mode":"RGBA","straightAlpha":true,"alphaBBox":{"x":1534,"y":130,"width":218,"height":342},"cornersAlpha":[0,0,0,0],"visibleGreenPixels":0},
+  "excludes": ["food", "skewer", "tongs", "grill", "charcoal", "waiting rack", "discard tray", "button", "hand", "customer", "scene", "UI", "text", "shadow", "reflection"],
+  "runtimeRegistrationAllowed": false,
+  "approvalGate": "CMP-GRILL-FINISHED-PROPER-NEGIMA R1과 함께 사용자 승인 완료. 소비 화면 재조립·finalizer 전까지 runtime 등록은 금지한다."
+}

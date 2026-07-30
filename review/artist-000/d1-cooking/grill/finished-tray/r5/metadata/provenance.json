@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 5,
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "flat-bamboo-makisu-completed-food-resting-mat",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
+  "status": "superseded-by-user-feedback",
+  "supersededBy": "2026-07-30 사용자 정정: 대나무 mat의 양옆 길이를 넓히고, 아주 살짝 뒤로 눕히며 우측 기울기와 작은 반시계 회전을 적용한다.",
+  "purpose": "`grill.finished` 공용 완료품을 서빙 전 잠시 올려두는 빈 대나무 김밥말이 resting mat이다. 음식·수량·품질·서빙 결과는 runtime 동적 조합이며, mat은 바닥에 까는 단일 고정 skin만 제공한다.",
+  "stationBase": {"id":"CM-GRILL-STATION-EMPTY-BASE","revision":1,"file":"../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png","sha256":"ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a","role":"approved R3 master camera and fixed upper-right station slot"},
+  "generation": {"tool":"built-in imagegen","mode":"new isolated static resting-mat raster","promptFile":"../PROMPT.md","rawSource":"../source/st-grill-finished-makisu-chroma-source-r5.png","rawSourceSha256":"960080d77a6e259c8c65010a078f0a2ee73e76da4099f0c1ab9e15e39f07f4f6","rawSourceBytes":1580202},
+  "postProcess": {"chromaRemoval":{"tool":"/Users/jeongdong/.codex/skills/.system/imagegen/scripts/remove_chroma_key.py","python":"/private/tmp/yaki-art-venv/bin/python","key":"#03f805 border auto-key","softMatte":true,"transparentThreshold":12,"opaqueThreshold":220,"despill":true,"alphaSource":"../source/st-grill-finished-makisu-alpha-source-r5.png","alphaSourceSha256":"81dedbbcbfc70e3f0cad87489e221e02b01f6b08b62ad0214bbc0804a04d6687","alphaSourceBytes":1274020},"normalization":{"tool":"Pillow","method":"subject alpha bbox crop (747×1032), nearest-neighbor normalize to 218×342, transparent FHD canvas placement","placementFhd":{"x":1534,"y":130,"width":218,"height":342}}},
+  "output": {"file":"../assets/st-grill-finished-tray-fhd-r5.png","sha256":"41e8eb6c893d1c3d0812392886615cabb67693a3fe9b878ccdd1fcfa962c406d","bytes":188358,"width":1920,"height":1080,"mode":"RGBA","straightAlpha":true,"alphaBBox":{"x":1534,"y":130,"width":218,"height":342},"cornersAlpha":[0,0,0,0],"visibleGreenPixels":0},
+  "included": ["one flat empty bamboo makisu resting mat", "parallel warm bamboo slats", "dark binding cords", "subtle worn pixel-art edges"],
+  "excludes": ["food", "skewer", "food model", "food shader", "quantity", "quality", "timer", "checkmark", "tongs", "grill", "button", "text", "serving plate", "customer", "background scene", "runtime registration"],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": "사용자 정정으로 검토 중단.",
+  "nextGate": "대나무 mat의 폭·뒤로 눕힘·우측 기울기·작은 반시계 회전을 반영한 R6를 단일 후보로 검수한다."
+}

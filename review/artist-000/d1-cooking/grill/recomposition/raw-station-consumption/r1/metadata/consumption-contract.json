@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "profile": "station-consumption-review",
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "status": "superseded-by-user-feedback",
+  "supersededBy": "2026-07-30 사용자 피드백: 한 줄에 한 꼬치만 굽는 D1 6칸 그릴에 비해 꼬치 길이가 너무 짧다. R2에서 석쇠의 대부분을 쓰는 길이로 다시 검수한다.",
+  "purpose": "승인된 raw 네기마 R1을 canonical D1 station master camera의 slot0에 한 꼬치만 소비해, 사용자 노출 placeholder 제거를 위한 상태별 검수의 첫 gate를 만든다.",
+  "approvedInputs": [
+    {
+      "id": "CM-GRILL-STATION-EMPTY-BASE",
+      "sourceRevision": 1,
+      "file": "../../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png",
+      "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a",
+      "role": "approved full-frame canonical station camera, perspective, composition and lighting"
+    },
+    {
+      "id": "CM-GRILL-STATION-QUEUED-SELECTION",
+      "sourceRevision": 3,
+      "file": "../../../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+      "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
+      "role": "approved camera and tone master; never cropped, moved or reinterpreted"
+    },
+    {
+      "id": "MDL-NEGIMA-GRILL-RAW",
+      "sourceRevision": 1,
+      "file": "../../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json",
+      "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+      "role": "approved 476 triangle raw GLB composition with approved nearest albedos"
+    }
+  ],
+  "slot0": {
+    "normalizedVisualRect": { "x": 0.297, "y": 0.435, "width": 0.041, "height": 0.27 },
+    "fhd": { "x": 570.24, "y": 469.8, "width": 78.72, "height": 291.6 },
+    "hd720": { "x": 380.16, "y": 313.2, "width": 52.48, "height": 194.4 }
+  },
+  "state": {
+    "raw": true,
+    "frontElapsedSec": 0,
+    "backElapsedSec": 0,
+    "contactFace": null,
+    "qualityOwner": "game domain",
+    "triangleCount": 476,
+    "flipPivot": { "axis": "local +Y", "firstInput": "0->PI", "secondInput": "PI->2PI" }
+  },
+  "renderPolicy": {
+    "oneSkewer": true,
+    "newRaster": false,
+    "newGlb": false,
+    "newTexture": false,
+    "sourceAlbedoPolicy": "all approved nearest albedo files are loaded unchanged; only an in-scene warm light color multiplier is applied",
+    "camera": "approved master-derived FHD base, with a shallow model-facing 3/4 transform and a slot0-fit root transform compensated inside its fixed slot"
+  },
+  "excludes": [
+    "other raw or cooking negima state", "food raster", "GLB", "texture", "albedo replacement", "DOM UI", "text", "timer", "quality marker", "tongs", "hand", "customer", "serving tray", "R6 mat", "finalizer", "manifest", "runtime registration"
+  ],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion": null,
+  "nextGate": "R2에서 수직 6칸 그릴에 맞는 더 긴 raw 네기마 한 꼬치를 단일 후보로 검수한다."
+}

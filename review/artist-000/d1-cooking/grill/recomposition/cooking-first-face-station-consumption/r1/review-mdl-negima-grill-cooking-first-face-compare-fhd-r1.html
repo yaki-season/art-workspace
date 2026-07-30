@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>Raw R3 and cooking-first R1 perspective comparison</title>
+<style>
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+  canvas { display: block; width: 1920px; height: 1080px; image-rendering: pixelated; }
+</style>
+<body>
+  <canvas id="comparison" width="1920" height="1080" aria-label="left raw R3 and right cooking-first R1 visual parity evidence"></canvas>
+<script type="module">
+  const load = (src) => new Promise((resolve, reject) => { const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = src; });
+  const [raw, cooking] = await Promise.all([
+    load("../../raw-station-consumption/r3/review-mdl-negima-grill-raw-station-fhd-r3.png"),
+    load("./review-mdl-negima-grill-cooking-first-face-station-fhd-r1.png")
+  ]);
+  const context = document.querySelector("#comparison").getContext("2d");
+  context.imageSmoothingEnabled = false;
+  // Same-size left station crop: left raw R3, right cooking-first. No labels or UI are baked.
+  context.drawImage(raw, 0, 0, 900, 1080, 30, 0, 900, 1080);
+  context.drawImage(cooking, 0, 0, 900, 1080, 990, 0, 900, 1080);
+  window.__cookingFirstComparison = { left: "approved raw R3", right: "cooking-first-face 4 sec", sourceCrop: { x: 0, y: 0, width: 900, height: 1080 } };
+  document.body.dataset.ready = "true";
+</script>
+</body>

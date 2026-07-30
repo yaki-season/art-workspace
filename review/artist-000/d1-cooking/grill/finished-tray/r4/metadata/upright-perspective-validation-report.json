@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 4,
+  "status": "pending-user-review",
+  "screenshot": {
+    "file": "../review-st-grill-finished-tray-fhd-r4.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 2590064,
+    "sha256": "03f192036d9d7bb0644c78fac1ac03b37300983b807ec0a13b33356c855c4d28"
+  },
+  "outputAsset": {
+    "file": "../assets/st-grill-finished-tray-fhd-r4.png",
+    "bytes": 155436,
+    "sha256": "129f2a292b12123c0e1dbf5c4f2c793dd2b772445cfd4aa5c524d9456f6367d6",
+    "visualAlphaBBox": {
+      "x": 1536,
+      "y": 130,
+      "width": 215,
+      "height": 342
+    },
+    "placementSlot": {
+      "x": 1534,
+      "y": 130,
+      "width": 218,
+      "height": 342
+    },
+    "cornersAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "visibleGreenPixels": 0
+  },
+  "approvedReference": {
+    "id": "ST-GRILL-WAITING-RACK",
+    "revision": 2,
+    "sha256": "d875b1b50b814a2154e6e8f5f9d753a3b7192dead1e2fa59a2089ea01dc26651",
+    "sourceBoundsFhd": {
+      "x": 85,
+      "y": 265,
+      "width": 340,
+      "height": 530
+    }
+  },
+  "base": {
+    "id": "CM-GRILL-STATION-EMPTY-BASE",
+    "revision": 1,
+    "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+  },
+  "geometry": {
+    "base": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "completedRackLayer": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "completedRackSlot": {
+      "x": 1534,
+      "y": 130,
+      "width": 218,
+      "height": 342
+    },
+    "natural": {
+      "base": [
+        1920,
+        1080
+      ],
+      "completedRack": [
+        1920,
+        1080
+      ]
+    }
+  },
+  "perspective": {
+    "farRimWidthPx": 184,
+    "nearRimWidthPx": 218,
+    "farRimIsNarrower": true,
+    "nearRimIsWider": true,
+    "placementXChanged": false
+  },
+  "content": {
+    "purpose": "grill.finished shared completed-food holding rack before manual serving",
+    "foodOrSkewerBaked": false,
+    "visibleDomControls": 0
+  },
+  "result": "pass"
+}

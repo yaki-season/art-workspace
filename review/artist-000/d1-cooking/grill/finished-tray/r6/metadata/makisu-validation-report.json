@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 6,
+  "status": "approved-by-user",
+  "approvedAt": "2026-07-30",
+  "screenshot": {
+    "file": "../review-st-grill-finished-makisu-fhd-r6.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 2614153,
+    "sha256": "4bbef2eb01e45feffd82431855dbbad3d6fc576f38112adf06960c5c0e545885"
+  },
+  "outputAsset": {
+    "file": "../assets/st-grill-finished-tray-fhd-r6.png",
+    "bytes": 215874,
+    "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184",
+    "alphaBBox": {
+      "x": 1534,
+      "y": 123,
+      "width": 266,
+      "height": 354
+    },
+    "cornersAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "visibleGreenPixels": 0
+  },
+  "base": {
+    "id": "CM-GRILL-STATION-EMPTY-BASE",
+    "revision": 1,
+    "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+  },
+  "stableTransformOrigin": {
+    "x": 1534,
+    "y": 130
+  },
+  "transform": {
+    "sourceWidth": 218,
+    "widthScale": 1.15,
+    "rotateXDeg": 4,
+    "rotateYDeg": -3,
+    "rotateZDeg": -1.5,
+    "transformOrigin": "left top"
+  },
+  "geometry": {
+    "base": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "completedMatLayer": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "stableTransformOrigin": {
+      "x": 1534,
+      "y": 130,
+      "width": 1,
+      "height": 1
+    },
+    "natural": {
+      "base": [
+        1920,
+        1080
+      ],
+      "completedMat": [
+        1920,
+        1080
+      ]
+    }
+  },
+  "content": {
+    "purpose": "grill.finished shared completed-food resting mat before manual serving",
+    "material": "flat bamboo makisu",
+    "foodOrSkewerBaked": false,
+    "visibleDomControls": 0
+  },
+  "result": "pass"
+}

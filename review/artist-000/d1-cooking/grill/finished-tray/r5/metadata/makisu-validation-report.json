@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 5,
+  "status": "pending-user-review",
+  "screenshot": {
+    "file": "../review-st-grill-finished-makisu-fhd-r5.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 2611165,
+    "sha256": "1603e6372fe11cc815d9e5781a9be20db2ac99768354ad213824d3f43aeca352"
+  },
+  "outputAsset": {
+    "file": "../assets/st-grill-finished-tray-fhd-r5.png",
+    "bytes": 188358,
+    "sha256": "41e8eb6c893d1c3d0812392886615cabb67693a3fe9b878ccdd1fcfa962c406d",
+    "alphaBBox": {
+      "x": 1534,
+      "y": 130,
+      "width": 218,
+      "height": 342
+    },
+    "cornersAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "visibleGreenPixels": 0
+  },
+  "base": {
+    "id": "CM-GRILL-STATION-EMPTY-BASE",
+    "revision": 1,
+    "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+  },
+  "geometry": {
+    "base": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "completedMatLayer": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "completedMatSlot": {
+      "x": 1534,
+      "y": 130,
+      "width": 218,
+      "height": 342
+    },
+    "natural": {
+      "base": [
+        1920,
+        1080
+      ],
+      "completedMat": [
+        1920,
+        1080
+      ]
+    }
+  },
+  "content": {
+    "purpose": "grill.finished shared completed-food resting mat before manual serving",
+    "material": "flat bamboo makisu",
+    "foodOrSkewerBaked": false,
+    "visibleDomControls": 0
+  },
+  "placementGapChange": "on hold; original FHD slot retained",
+  "result": "pass"
+}

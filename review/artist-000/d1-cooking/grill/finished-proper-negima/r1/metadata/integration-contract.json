@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-composition-review",
+  "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
+  "status": "approved-by-user",
+  "approval": {"status":"approved-by-user","date":"2026-07-30","basis":"사용자 응답: 승인"},
+  "purpose": "양면이 적정인 네기마 한 꼬치가 그릴에서 회수되어 `grill.finished` 완성 tray에 놓인 상태를 검수한다. 이 tray는 서빙 화면의 접시가 아니며, 접시는 이후 공용 완성품에서 선택한다.",
+  "approvedInputs": [{"id":"MDL-NEGIMA-GRILL-PROPER-SECOND-FACE","file":"../../../negima-proper-second-face/r1/assets/mdl-negima-grill-proper-second-face-r1.state.json","approvalStatus":"approved-by-user","role":"one proper negima, first flip π, face 0/1 each 8 seconds, 476 triangles"}],
+  "newStaticTrayInput":{"id":"ST-GRILL-FINISHED-TRAY","file":"../../../finished-tray/r1/assets/st-grill-finished-tray-fhd-r1.png","approvalStatus":"approved-by-user","role":"empty completed-food tray skin derived from approved D1 grill master; no food, UI, text or other scene elements"},
+  "state":{"stage":"finished","contactFace":null,"completionQuality":"Perfect","foodCount":1,"foodItem":"negima","completedFlips":1,"flipPivotRotationY":"PI","visibleFace":1,"face0ElapsedSeconds":8,"face1ElapsedSeconds":8},
+  "layout":{"runtimeTrayPlacementFhd":{"x":1534,"y":130,"width":218,"height":342},"isolatedReviewTrayCenterFhd":{"x":960,"y":540},"skewerScale":180,"runtimeNote":"the isolated checkerboard review centers the approved state; runtime uses the fixed tray placement"},
+  "excludes":["additional food","skewer quantity","order marker","grill","charcoal","waiting rack","discard tray","tongs","hand","customer","background scene","UI","text","timer","checkmark","quality badge","smoke","ember","runtime manifest or registration"],
+  "runtimeRegistrationAllowed": false,
+  "approvalQuestion":"승인 완료.",
+  "nextGate":"사용자 지시 뒤에만 cooking-owned 공용 prepared dock 또는 서빙 인계 직전의 다음 단일 상태를 검수한다. Artist 3 소유 서비스 tray·접시·손님 제공 composition은 수정하지 않는다."
+}

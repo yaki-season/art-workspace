@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDL-NEGIMA-GRILL-RAW R1 station consumption 720</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; background: #000; }
+  #review { position: relative; width: 1280px; height: 720px; overflow: hidden; }
+  #base, #models { position: absolute; inset: 0; display: block; width: 1280px; height: 720px; image-rendering: pixelated; }
+</style>
+<body>
+  <main id="review" aria-label="D1 raw negima station consumption 720">
+    <img id="base" src="../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png" alt="">
+    <canvas id="models" width="1280" height="720"></canvas>
+  </main>
+<script type="importmap">{"imports":{"three":"/app/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+  import { renderRawStationConsumption } from "./runtime/render-raw-station-consumption.mjs";
+  await document.querySelector("#base").decode();
+  const composition = await renderRawStationConsumption({ canvas: document.querySelector("#models"), width: 1280, height: 720 });
+  window.__rawStationConsumption = { state: () => composition.state };
+  document.body.dataset.ready = "true";
+</script>
+</body>

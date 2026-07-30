@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 3,
+  "status": "pending-user-review",
+  "screenshot": {
+    "file": "../review-st-grill-finished-tray-fhd-r3.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 2590842,
+    "sha256": "c7a6c180c3b4589930f2e2145478a429f99d08cf2218e31a05e1a228b4c1f0f1"
+  },
+  "outputAsset": {
+    "file": "../assets/st-grill-finished-tray-fhd-r3.png",
+    "bytes": 163302,
+    "sha256": "824358d04d3cba428f26f04a1d1f4d104fcaaf6c320272cdd3c8322d50ce0d39",
+    "alphaBBox": {
+      "x": 1534,
+      "y": 130,
+      "width": 218,
+      "height": 342
+    },
+    "cornersAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "visibleGreenPixels": 0
+  },
+  "approvedReference": {
+    "id": "ST-GRILL-WAITING-RACK",
+    "revision": 2,
+    "sha256": "d875b1b50b814a2154e6e8f5f9d753a3b7192dead1e2fa59a2089ea01dc26651",
+    "sourceBoundsFhd": {
+      "x": 85,
+      "y": 265,
+      "width": 340,
+      "height": 530
+    }
+  },
+  "base": {
+    "id": "CM-GRILL-STATION-EMPTY-BASE",
+    "revision": 1,
+    "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+  },
+  "geometry": {
+    "base": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "completedRackLayer": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "completedRackReservation": {
+      "x": 1534,
+      "y": 130,
+      "width": 218,
+      "height": 342
+    },
+    "natural": {
+      "base": [
+        1920,
+        1080
+      ],
+      "completedRack": [
+        1920,
+        1080
+      ]
+    }
+  },
+  "content": {
+    "purpose": "grill.finished shared completed-food holding rack before manual serving",
+    "foodOrSkewerBaked": false,
+    "topDownCavityPresent": true,
+    "frontFacingPlaquePresent": false,
+    "visibleDomControls": 0
+  },
+  "result": "pass"
+}

@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+  "sourceRevision": 1,
+  "status": "approved-by-user",
+  "approvedAt": "2026-07-30",
+  "reviewBoards": [
+    {
+      "file": "../review-mdl-negima-grill-cooking-first-face-station-fhd-r1.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2576484,
+      "sha256": "54fbf825e5919a092e585d106670ed25eedd018d7b81b37eff7aa4c1e44c906c",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "laneAnchor": {
+          "x": 609.6,
+          "y": 515.000000052
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 545,
+          "y": 257,
+          "width": 131,
+          "height": 516
+        },
+        "gameplay": {
+          "status": "front",
+          "orientationFaceDown": "front",
+          "contactFace": "front",
+          "frontElapsedSec": 4,
+          "backElapsedSec": 0,
+          "stage": "cooking"
+        },
+        "shader": {
+          "cookingFace": 0,
+          "heatProgress": 0.52,
+          "materialBindingCount": 5,
+          "nearestAlbedosReused": true,
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false
+        },
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 0,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        }
+      }
+    },
+    {
+      "file": "../review-mdl-negima-grill-cooking-first-face-station-720-r1.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1344374,
+      "sha256": "8f07b88095a9b2f5a8d2e9fd9e619b8c766a6dbe6bda946c53acf9053542a13b",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-COOKING-FIRST-FACE",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "laneAnchor": {
+          "x": 406.4,
+          "y": 343.333333368
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 363,
+          "y": 171,
+          "width": 88,
+          "height": 344
+        },
+        "gameplay": {
+          "status": "front",
+          "orientationFaceDown": "front",
+          "contactFace": "front",
+          "frontElapsedSec": 4,
+          "backElapsedSec": 0,
+          "stage": "cooking"
+        },
+        "shader": {
+          "cookingFace": 0,
+          "heatProgress": 0.52,
+          "materialBindingCount": 5,
+          "nearestAlbedosReused": true,
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false
+        },
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 0,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        }
+      }
+    }
+  ],
+  "comparison": {
+    "file": "../review-mdl-negima-grill-cooking-first-face-compare-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 1371992,
+    "sha256": "213596be128a48437da27088dc43793901177e716f0c5e17d2885609ffdef78e",
+    "left": "approved raw R3",
+    "right": "cooking-first-face 4 sec",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 1080
+    },
+    "parity": "cooking alphaBBox, lane anchor and transform were separately matched against raw R3"
+  },
+  "result": "pass",
+  "runtimeRegistrationAllowed": false
+}

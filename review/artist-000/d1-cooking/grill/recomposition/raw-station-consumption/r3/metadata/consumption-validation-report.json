@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "reviewRevision": 3,
+  "status": "approved-by-user",
+  "approvedAt": "2026-07-30",
+  "reviewBoards": [
+    {
+      "file": "../review-mdl-negima-grill-raw-station-fhd-r3.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2575810,
+      "sha256": "f13b3808b56c9462854c863c6b8843206aebfbbf2bf5669b1fb86d5bbc5a1579",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-RAW",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 0,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        },
+        "gameplay": {
+          "frontElapsedSec": 0,
+          "backElapsedSec": 0,
+          "contactFace": null,
+          "qualityOwner": "game domain"
+        },
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "legacySlot0VisualRect": {
+          "x": 570.24,
+          "y": 469.8,
+          "width": 78.72,
+          "height": 291.6
+        },
+        "laneAnchor": {
+          "x": 609.6,
+          "y": 515.000000052
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 545,
+          "y": 257,
+          "width": 131,
+          "height": 516
+        },
+        "renderer": {
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false,
+          "nearestAlbedosReused": true
+        }
+      }
+    },
+    {
+      "file": "../review-mdl-negima-grill-raw-station-720-r3.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1344063,
+      "sha256": "d33791d5da0e21d59bafb81f065a623c50e7f758d3c921b45c4219ef388da1ae",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-RAW",
+        "sourceRevision": 1,
+        "triangleCount": 476,
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 0,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        },
+        "gameplay": {
+          "frontElapsedSec": 0,
+          "backElapsedSec": 0,
+          "contactFace": null,
+          "qualityOwner": "game domain"
+        },
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "legacySlot0VisualRect": {
+          "x": 380.15999999999997,
+          "y": 313.2,
+          "width": 52.480000000000004,
+          "height": 194.4
+        },
+        "laneAnchor": {
+          "x": 406.4,
+          "y": 343.333333368
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 363,
+          "y": 171,
+          "width": 88,
+          "height": 344
+        },
+        "renderer": {
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false,
+          "nearestAlbedosReused": true
+        }
+      }
+    }
+  ],
+  "result": "pass",
+  "runtimeRegistrationAllowed": false
+}

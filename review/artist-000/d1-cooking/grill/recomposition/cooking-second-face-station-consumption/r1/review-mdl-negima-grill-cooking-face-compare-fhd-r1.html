@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>Cooking first and second face station comparison</title>
+<style>
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+  canvas { display: block; width: 1920px; height: 1080px; image-rendering: pixelated; }
+</style>
+<body>
+  <canvas id="comparison" width="1920" height="1080" aria-label="left cooking first face and right cooking second face station comparison"></canvas>
+<script type="module">
+  const load = (src) => new Promise((resolve, reject) => { const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = src; });
+  const [first, second] = await Promise.all([
+    load("../../cooking-first-face-station-consumption/r1/review-mdl-negima-grill-cooking-first-face-station-fhd-r1.png"),
+    load("./review-mdl-negima-grill-cooking-second-face-station-fhd-r1.png")
+  ]);
+  const context = document.querySelector("#comparison").getContext("2d");
+  context.imageSmoothingEnabled = false;
+  // Same-size station crop with no baked labels or UI: first face at left, flipped second face at right.
+  context.drawImage(first, 0, 0, 900, 1080, 30, 0, 900, 1080);
+  context.drawImage(second, 0, 0, 900, 1080, 990, 0, 900, 1080);
+  window.__cookingFaceComparison = { left: "cooking-first-face 4 sec", right: "cooking-second-face 4+4 sec", sourceCrop: { x: 0, y: 0, width: 900, height: 1080 } };
+  document.body.dataset.ready = "true";
+</script>
+</body>

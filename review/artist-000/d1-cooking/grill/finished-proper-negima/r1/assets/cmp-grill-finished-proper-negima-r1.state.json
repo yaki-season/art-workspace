@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-composition",
+  "id": "CMP-GRILL-FINISHED-PROPER-NEGIMA",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
+  "kind": "One completed proper negima on the finished-tray architecture; approved proper GLB state plus one generated tray skin, no new food raster, GLB, albedo, or texture",
+  "staticTray": {
+    "id": "ST-GRILL-FINISHED-TRAY",
+    "file": "../../../finished-tray/r1/assets/st-grill-finished-tray-fhd-r1.png",
+    "screenPlacementFhd": {"x": 1534, "y": 130, "width": 218, "height": 342},
+    "role": "empty completed-food tray architecture from the approved D1 grill master"
+  },
+  "properNegima": {
+    "id": "MDL-NEGIMA-GRILL-PROPER-SECOND-FACE",
+    "file": "../../../negima-proper-second-face/r1/assets/mdl-negima-grill-proper-second-face-r1.state.json",
+    "approvalStatus": "approved-by-user",
+    "flipPose": {"rotationYRadians": "PI", "completedFlips": 1, "visibleFace": 1},
+    "sideElapsedSeconds": {"face0": 8, "face1": 8},
+    "triangleCount": 476
+  },
+  "state": {
+    "stage": "finished",
+    "contactFace": null,
+    "completionQuality": "Perfect",
+    "foodCount": 1,
+    "foodItem": "negima"
+  },
+  "reviewPresentation": {"trayCenterFhd": {"x": 960, "y": 540}, "skewerScale": 180, "purpose": "checkerboard isolated review only; runtime uses staticTray.screenPlacementFhd"},
+  "approval": {"status":"approved-by-user","date":"2026-07-30","basis":"사용자 응답: 승인"},
+  "runtimeRegistrationAllowed": false
+}

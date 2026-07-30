@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ST-GRILL-FINISHED-TRAY R4 review</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 100%; min-height: 100%; overflow: hidden; background: #000; }
+  #review { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+  #base, #completed-rack { position: absolute; inset: 0; display: block; width: 1920px; height: 1080px; image-rendering: pixelated; }
+  #completed-rack-slot { position: absolute; left: 1534px; top: 130px; width: 218px; height: 342px; opacity: 0; pointer-events: none; }
+</style>
+<body>
+  <main id="review" aria-label="D1 upright empty completed-food rack review">
+    <img id="base" src="../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png" alt="">
+    <img id="completed-rack" src="assets/st-grill-finished-tray-fhd-r4.png" alt="">
+    <div id="completed-rack-slot" aria-hidden="true"></div>
+  </main>
+<script>
+  Promise.all([...document.images].map((image) => image.decode())).then(() => { document.body.dataset.ready = "true"; });
+</script>
+</body>

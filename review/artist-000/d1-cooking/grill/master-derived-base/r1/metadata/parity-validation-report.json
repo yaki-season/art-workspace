@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "candidate": "CM-GRILL-STATION-EMPTY-BASE R1",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 둘 다 승인"
+  },
+  "runtimeRegistrationAllowed": false,
+  "captures": {
+    "fhd": {
+      "file": "../review-cm-grill-station-empty-base-fhd-r1.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "55f9ad44578d2a03d67e8c629df068a27ed09d10006ed3c0ed5439076dbf33bc",
+      "bytes": 2540284
+    },
+    "sideBySideParity": {
+      "file": "../review-cm-grill-station-empty-base-parity-r1.png",
+      "width": 3840,
+      "height": 1080,
+      "sha256": "48b63e0b7e40ada3cffb1c54693f30ab9e3206c9bc33c9b254c215afcb8c2d36",
+      "bytes": 5218108
+    }
+  },
+  "master": {
+    "id": "CM-GRILL-STATION-QUEUED-SELECTION R3",
+    "file": "../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+    "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
+    "width": 1920,
+    "height": 1080
+  },
+  "candidateAsset": {
+    "file": "../assets/cm-grill-station-empty-base-fhd-r1.png",
+    "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a",
+    "bytes": 2518817,
+    "opaqueRgb": true,
+    "width": 1920,
+    "height": 1080
+  },
+  "geometry": {
+    "base": {
+      "image": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "trayReservation": {
+        "x": 1534,
+        "y": 130,
+        "width": 218,
+        "height": 342
+      },
+      "natural": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    "comparison": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "naturalWidth": 1920,
+        "naturalHeight": 1080
+      },
+      {
+        "x": 1920,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "naturalWidth": 1920,
+        "naturalHeight": 1080
+      }
+    ]
+  },
+  "visualInspection": {
+    "method": "master and candidate shown at native 1920×1080 side by side; manual artist inspection",
+    "cameraPerspective": "preserved from master-derived whole-frame edit",
+    "continuousGrate": "preserved",
+    "lightingAndTone": "preserved",
+    "dynamicItemsExcluded": [
+      "all negima and skewers",
+      "tongs",
+      "smoke and sparks",
+      "right finished and discard trays",
+      "queue pads",
+      "discard button"
+    ],
+    "staticReservation": {
+      "target": "ST-GRILL-FINISHED-TRAY",
+      "x": 1534,
+      "y": 130,
+      "width": 218,
+      "height": 342,
+      "visibleInBase": false
+    }
+  },
+  "result": "pass"
+}

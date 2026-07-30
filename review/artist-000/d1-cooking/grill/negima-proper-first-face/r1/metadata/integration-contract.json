@@ -2,16 +2,17 @@
   "schemaVersion": 1,
   "profile": "runtime-derived-material-state-review",
   "id": "MDL-NEGIMA-GRILL-PROPER-FIRST-FACE",
-  "sourceRevision": 2,
+  "sourceRevision": 3,
   "screenUnit": "SCR-SVC-GRILL",
-  "status": "pending-user-review",
+  "status": "approved-by-user",
+  "approval": {"status":"approved-by-user","date":"2026-07-30","basis":"사용자 응답: 승인"},
   "purpose": "그릴 위 네기마의 첫 면(face 0)이 정확히 8초에 적정 구간으로 들어간 모습을, 승인 raw 조합 위 Three.js fragment mask로 검수한다.",
   "approvedInputs": [{"id":"MDL-NEGIMA-GRILL-RAW","file":"../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json","approvalStatus":"approved-by-user","role":"476 triangles raw composition, approved GLB and nearest albedo references"},{"id":"MDL-NEGIMA-GRILL-COOKING-FIRST-FACE","file":"../../../negima-cooking-first-face/r1/assets/mdl-negima-grill-cooking-first-face-r1.state.json","approvalStatus":"approved-by-user","role":"face 0 cooking color and texture continuity reference"}],
   "state":{"completedFlips":0,"flipPivotRotationY":0,"visibleFace":0,"stage":"proper","face0ElapsedSeconds":8,"face1ElapsedSeconds":0,"domainRange":"face 0 proper begins at 8 seconds; face 1 has not begun under GPL-004","domainBoundary":"The gameplay domain owns face, elapsed time, heat, quality and input lock. This module derives pixels from the supplied render snapshot only."},
-  "shaderContract":{"method":"nearest raw albedo sample plus procedural pixel-cell roasted-brown proper-sear, controlled char and sparse oil-gloss mask in cloned MeshBasicMaterial shader code","visualSignals":["roasted brown chicken surface with restrained dark char","dark caramel-olive green onion surface with sparse oil-gloss pixels"],"forbidden":["new raster","new GLB","new texture","texture copy","texture resize","texture recolour","texture bake","material atlas","smoke or ember VFX"]},
+  "shaderContract":{"method":"nearest raw albedo sample plus procedural pixel-cell light grey-brown cooked-meat tint, sparse restrained sear and minimal oil-gloss mask in cloned MeshBasicMaterial shader code","visualSignals":["light appetising grey-brown cooked chicken surface with sparse dark-brown sear","muted cooked green onion surface with minimal oil-gloss pixels"],"forbidden":["new raster","new GLB","new texture","texture copy","texture resize","texture recolour","texture bake","material atlas","smoke or ember VFX"]},
   "output":{"stateFile":"../assets/mdl-negima-grill-proper-first-face-r1.state.json","runtimeModule":"../runtime/compose-mdl-negima-grill-proper-first-face.mjs","isolatedReview":"../review-mdl-negima-grill-proper-first-face-fhd-r1.html","reviewScreenshot":"../review-mdl-negima-grill-proper-first-face-fhd-r1.png"},
   "excludes":["grill","charcoal","waiting rack","finished tray","discard tray","tongs","hand","customer","background scene","UI","text","quantity","timer","checkmark","quality marker","smoke","ember","runtime manifest or registration"],
   "runtimeRegistrationAllowed": false,
-  "approvalQuestion":"첫 면의 적정 구간이 익는 중·과다·탄과 명확히 구별되고, 기존 픽셀 질감과 자연스럽게 이어지는가?",
-  "nextGate":"사용자 승인 뒤에만 첫 뒤집기 후 반대면 적정 상태 또는 사용자가 지정한 다음 단일 조리 상태를 검수한다."
+  "approvalQuestion":"승인 완료.",
+  "nextGate":"사용자 지시 뒤에만 첫 뒤집기 후 반대면 적정 상태 또는 사용자가 지정한 다음 단일 조리 상태를 검수한다."
 }

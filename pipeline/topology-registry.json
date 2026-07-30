@@ -65,8 +65,47 @@
     {
       "sourceMasterId": "CM-DRINK-STATION-R1",
       "screenUnits": ["SCR-SVC-DRINK", "SCR-SVC-HIGHBALL"],
-      "approvalStatus": "pending-user-review",
-      "reason": "Draft beer and highball reuse the station shell but require separate vessel, nozzle, ingredient, and tray contracts."
+      "approvalStatus": "approved-by-user",
+      "approval": {
+        "date": "2026-07-30",
+        "basis": "PM approved Artist 3 BG-WORKSPACE-DRINK topology R2 correction to left-interior-wall-shelving-and-storage-depth: fixed side/down D1 drink camera, full-frame indoor rear architecture and empty workspace continuity only, no exterior opening, with body, station, vessel, liquid, VFX, and DOM excluded."
+      },
+      "topology": {
+        "spatialOrder": [
+          "fixed-side-down-drink-camera",
+          "left-interior-wall-shelving-and-storage-depth",
+          "empty-workspace-continuity-plane",
+          "station-architecture",
+          "glass-and-lever-interactables",
+          "liquid-state-overlay",
+          "beer-vfx",
+          "dom-receipt-and-prepared-dock"
+        ],
+        "relations": {
+          "cameraRelation": "D1-DRINK-FIXED-V1-fixed-16-by-9-contain",
+          "backgroundRelation": "full-frame-opaque-background-at-z0",
+          "workspaceRelation": "rear-architecture-and-empty-workspace-only-behind-later-station-layers",
+          "domRelation": "receipt-and-prepared-safe-rects-remain-dom-owned",
+          "mainEntranceRelation": "There is no exterior opening; both sides resolve as continuous interior rear architecture behind the drink workspace and do not introduce a second workspace or customer-screen composition.",
+          "entranceComposition": "Left and right interior timber walls, shelving, and storage depth remain behind the rear architecture; they are not UI panels or interaction surfaces.",
+          "sideWallsRelation": "Both side walls and the rear timber wall, shelving recesses, posts, trim, and light fixtures continue consistently behind removed station and staff occluders."
+        },
+        "invariants": [
+          "background-is-body-free",
+          "background-is-ui-free",
+          "background-has-no-station-glass-lever-rack-or-tray",
+          "720-consumes-the-same-logical-canvas-at-two-thirds-contain",
+          "highball-specific-vessels-and-ingredients-require-their-own-later-asset-review"
+        ],
+        "forbiddenSubstitutions": [
+          "player-body-or-staff-body",
+          "beer-tower-or-nozzle",
+          "lever-glass-rack-or-tray",
+          "liquid-foam-overflow-or-finished-product",
+          "vfx-ui-text-number-button-ring-or-gauge",
+          "separate-720-crop-or-camera"
+        ]
+      }
     },
     {
       "sourceMasterId": "CM-SETTLEMENT-R1",
