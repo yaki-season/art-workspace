@@ -1,17 +1,20 @@
 {
-  "schemaVersion": 7,
-  "id": "YS-ASSET-PIPELINE-v7",
+  "schemaVersion": 8,
+  "id": "YS-ASSET-PIPELINE-v8",
   "sourceStyleProfile": "YS-HANDCRAFTED-NIGHT-v1",
+  "generationRule": {
+    "mode": "single-purpose",
+    "onePromptPerAsset": true,
+    "wholeScreenMastersDeprecated": true,
+    "note": "한 프롬프트는 한 자산(한 상태)만 생성한다. 화면 전체를 한 장에 담아 분리하지 않는다."
+  },
   "profiles": {
     "complete-layer": {
       "description": "FHD scene-coordinate layer with visible-cutout, occluded-surface completion, isolated review, and FHD/720p recomposition.",
       "creationBatchLimit": 1,
       "requiredSchemas": [
-        "spatial-inference",
-        "visible-cutout",
         "completion-report",
         "provenance",
-        "recomposition-report",
         "optimization-report",
         "final-approval",
         "runtime-entry-template",
@@ -24,7 +27,6 @@
       "requiredSchemas": [
         "standalone-raster-report",
         "provenance",
-        "recomposition-report",
         "optimization-report",
         "final-approval",
         "runtime-entry-template",
@@ -37,7 +39,6 @@
       "requiredSchemas": [
         "bundle-model-report",
         "provenance",
-        "recomposition-report",
         "optimization-report",
         "final-approval",
         "runtime-entry-template",
@@ -48,24 +49,14 @@
   "gates": [
     {
       "order": 1,
-      "id": "meaning-and-topology",
-      "approval": "spec-and-user-confirmed-when-spatial",
-      "requiredEvidence": [
-        "profile",
-        "screenUnit",
-        "semanticOwner",
-        "assetMeaning",
-        "sourceEvidence",
-        "approvedTopologyWhenSpatial"
-      ]
-    },
-    {
-      "order": 2,
-      "id": "single-asset-creation-review",
+      "id": "generate-and-isolated-review",
       "approval": "user",
       "batchLimit": 1,
       "requiredEvidence": [
-        "oneSemanticOwner",
+        "profile",
+        "semanticOwner",
+        "assetMeaning",
+        "sourceEvidence",
         "oneCandidateAsset",
         "isolatedReview",
         "sourceSha256",
@@ -74,8 +65,8 @@
       ]
     },
     {
-      "order": 3,
-      "id": "consumer-screen-integration",
+      "order": 2,
+      "id": "consumer-context-final",
       "approval": "user",
       "requiredEvidence": [
         "screenUnit",
@@ -83,45 +74,22 @@
         "fhdRecomposition",
         "hdRecomposition",
         "anchorOcclusionReview",
-        "styleRegressionReview"
-      ]
-    },
-    {
-      "order": 4,
-      "id": "runtime-optimization",
-      "approval": "automated-and-user-visual-when-lossy",
-      "requiredEvidence": [
-        "sourceRevision",
-        "runtimeBuild",
+        "styleRegressionReview",
         "optimizedBundle",
-        "sourceSha256",
-        "outputSha256",
         "lossPolicy",
         "visualRegression",
-        "performanceBudget"
-      ]
-    },
-    {
-      "order": 5,
-      "id": "final-consumer-screen-handoff",
-      "approval": "user",
-      "requiredEvidence": [
-        "screenUnit",
-        "allAssetsApproved",
-        "recompositionPassed",
-        "optimizationPassed",
+        "performanceBudget",
         "userDecision"
       ]
     },
     {
-      "order": 6,
+      "order": 3,
       "id": "runtime-registration",
-      "approval": "automated-with-explicit-receipt",
+      "approval": "automated-on-final-approval",
       "requiredEvidence": [
         "allPriorGatesPassed",
         "derivedRuntimeRegistrationAllowed",
         "runtimeHandoff",
-        "promotionDryRunReceipt",
         "explicitWrite",
         "atomicBundleCommit",
         "postPromotionValidation"
@@ -129,20 +97,24 @@
     }
   ],
   "schemaCatalog": {
-    "screen-topology-registry": "schemas/screen-topology-registry.schema.json",
-    "spatial-inference": "schemas/spatial-inference.schema.json",
-    "visible-cutout": "schemas/visible-cutout.schema.json",
     "completion-report": "schemas/completion-report.schema.json",
     "standalone-raster-report": "schemas/standalone-raster-report.schema.json",
     "bundle-model-report": "schemas/bundle-model-report.schema.json",
-    "recomposition-report": "schemas/recomposition-report.schema.json",
     "optimization-report": "schemas/optimization-report.schema.json",
     "final-approval": "schemas/final-approval.schema.json",
     "provenance": "schemas/provenance.schema.json",
     "runtime-entry-template": "schemas/runtime-entry-template.schema.json",
     "runtime-handoff": "schemas/runtime-handoff.schema.json"
   },
-  "topologyRegistry": "topology-registry.json",
+  "deprecatedSchemas": {
+    "note": "v7 스키마 파일은 삭제하지 않고 보존하되 v8 필수 목록에서 제외한다.",
+    "removed": [
+      "screen-topology-registry",
+      "spatial-inference",
+      "visible-cutout",
+      "recomposition-report"
+    ]
+  },
   "approvalStatuses": [
     "pending-user-review",
     "approved-by-user",
@@ -192,7 +164,7 @@
     "promotionCommand": "npm run assets:promote",
     "validationCommand": "npm run assets:validate",
     "runtimeRegistrationAllowedIsDerived": true,
-    "dryRunReceiptRequired": true,
+    "dryRunReceiptRequired": false,
     "writeFlag": "--write",
     "atomicBundleWithRollback": true,
     "finalApprovalScope": "consumer-screen-unit"

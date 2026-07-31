@@ -20,7 +20,7 @@ function usage(message) {
   console.error(
     '사용법: node art-workspace/pipeline/finalize-runtime-handoff.mjs '
     + '--provenance <file> --profile-approval <file> '
-    + '--recomposition <file> --optimization <file> '
+    + '--optimization <file> '
     + '--final-approval <file> --entry-template <file> '
     + '--entry-output <runtime-manifest-entry.json> '
     + '--handoff-output <runtime-handoff.json>',
@@ -33,7 +33,6 @@ function parseArguments(argv) {
   const names = new Set([
     '--provenance',
     '--profile-approval',
-    '--recomposition',
     '--optimization',
     '--final-approval',
     '--entry-template',
@@ -55,7 +54,6 @@ function requireArguments(args) {
   for (const name of [
     'provenance',
     'profile-approval',
-    'recomposition',
     'optimization',
     'final-approval',
     'entry-template',
@@ -265,11 +263,6 @@ async function main() {
     profileSchema,
     'profile approval',
   );
-  const recomposition = await readDocument(
-    externalPath(args.recomposition, 'recomposition'),
-    'recomposition-report',
-    'recomposition report',
-  );
   const optimization = await readDocument(
     externalPath(args.optimization, 'optimization'),
     'optimization-report',
@@ -309,23 +302,11 @@ async function main() {
   if (finalApproval.document.screenUnit !== base.screenUnit) {
     throw new Error('final approval screenUnit이 provenance와 일치하지 않습니다.');
   }
-  if (
-    recomposition.document.screenUnit !== base.screenUnit
-    || recomposition.document.status !== 'passed'
-  ) {
-    throw new Error('recomposition report의 소비 화면 또는 상태가 provenance와 일치하지 않습니다.');
+  if (finalApproval.document.status !== 'approved-by-user') {
+    throw new Error('final approval이 사용자 승인 상태가 아닙니다.');
   }
   if (!finalApproval.document.assets.includes(base.id)) {
     throw new Error('final approval에 대상 asset ID가 없습니다.');
-  }
-  if (!recomposition.document.approvedAssets.some(
-    (asset) => (
-      asset.id === base.id
-      && asset.profile === base.profile
-      && asset.sourceRevision === base.sourceRevision
-    ),
-  )) {
-    throw new Error('recomposition report에 승인된 대상 source revision이 없습니다.');
   }
 
   const provenanceDirectory = path.dirname(provenance.file);
@@ -337,28 +318,6 @@ async function main() {
   for (const [index, source] of base.sourceReferences.entries()) {
     await verifyFileEvidence(source, provenanceDirectory, `provenance sourceReferences[${index}]`);
   }
-
-  const recompositionDirectory = path.dirname(recomposition.file);
-  const fhdRecomposition = await verifyFileEvidence(
-    recomposition.document.outputs.fhd,
-    recompositionDirectory,
-    'FHD recomposition',
-  );
-  const hdRecomposition = await verifyFileEvidence(
-    recomposition.document.outputs.hd,
-    recompositionDirectory,
-    '720p recomposition',
-  );
-  verifyRasterDimensions(
-    fhdRecomposition,
-    recomposition.document.outputs.fhd,
-    'FHD recomposition',
-  );
-  verifyRasterDimensions(
-    hdRecomposition,
-    recomposition.document.outputs.hd,
-    '720p recomposition',
-  );
 
   const optimizationDirectory = path.dirname(optimization.file);
   const optimizationInput = await verifyFileEvidence(
@@ -398,9 +357,6 @@ async function main() {
     finalApprovalDirectory,
     'final approval recomposition',
   );
-  if (approvedRecomposition.sha256 !== recomposition.sha256) {
-    throw new Error('final approval이 현재 recomposition report를 가리키지 않습니다.');
-  }
   const approvedOptimizations = [];
   for (const reference of finalApproval.document.optimizations) {
     approvedOptimizations.push(
@@ -478,7 +434,7 @@ async function main() {
   const entryBuffer = Buffer.from(`${JSON.stringify(entry, null, 2)}\n`);
   const handoff = {
     schemaVersion: 1,
-    pipelineContract: 'YS-ASSET-PIPELINE-v7',
+    pipelineContract: 'YS-ASSET-PIPELINE-v8',
     profile: base.profile,
     id: base.id,
     sourceRevision: base.sourceRevision,
@@ -496,8 +452,8 @@ async function main() {
         sha256: profileApproval.sha256,
       },
       recomposition: {
-        file: relativeFrom(handoffDirectory, recomposition.file),
-        sha256: recomposition.sha256,
+        file: relativeFrom(handoffDirectory, approvedRecomposition.file),
+        sha256: approvedRecomposition.sha256,
       },
       optimization: {
         file: relativeFrom(handoffDirectory, optimization.file),

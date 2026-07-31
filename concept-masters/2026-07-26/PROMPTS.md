@@ -1,5 +1,17 @@
 # 전체 화면 콘셉트 마스터 프롬프트 세트
 
+## 단일 자산 생성 규약(v8)
+
+파이프라인 v8은 **자산 1개 = 프롬프트 1개**다. 한 프롬프트는 하나의 대상(한 자산의
+한 상태)만 생성한다.
+
+- 대상 하나만 그린다. 그 외 다른 요소·상태·UI·배경은 넣지 않는다.
+- 화면 전체를 한 장에 담아 사후 분리하는 통짜 마스터 방식은 폐기했다(deprecated).
+- 검수는 checkerboard 위에 대상 한 자산만 격리해 확인한다.
+
+아래 열 개 "화면별 프롬프트"는 `deprecated: 톤·구도 참고용, 실제 생성에는 쓰지
+않음`이다. 실제 생성은 위 규약대로 자산 단위로 나눠 진행한다.
+
 ## 공통 프롬프트
 
 ```text
@@ -14,6 +26,9 @@ Avoid: photorealism, smooth plastic skin, glossy PBR, uniform vector lines, full
 ```
 
 ## 화면별 프롬프트
+
+> `deprecated: 톤·구도 참고용, 실제 생성에는 쓰지 않음`. 통짜 화면 생성 방식은
+> 폐기했다. 실제 생성은 "단일 자산 생성 규약(v8)"대로 자산 단위로 나눈다.
 
 ### 01 프롤로그
 
@@ -42,7 +57,7 @@ Independent downward assembly workspace in the same bar. Include three ingredien
 ### 05 그릴
 
 ```text
-Independent downward grill workspace. Include one six-slot grill body with four glowing active lanes and two unavailable dark lanes; waiting tray; raw, cooking, turn-ready, tare, overdone, and burnt skewer states; finished and discard trays; tongs; tare brush/pot; hand fan with cooldown ring; fire bar; restrained embers, smoke, oil sparks; receipts, prepared band, navigation, and three nonblocking warning locations.
+Independent downward grill workspace. Include one variable grill body of 2 to 8 reputation-unlocked lanes (baseline 2); waiting tray; raw, cooking, turn-ready, tare, overdone, and burnt skewer states; finished and discard trays; tongs; tare brush/pot; hand fan with cooldown ring; fire bar; restrained embers, smoke, oil sparks; receipts, prepared band, navigation, and three nonblocking warning locations.
 ```
 
 ### 06 드링크

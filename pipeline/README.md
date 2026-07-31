@@ -14,38 +14,34 @@
 제작과 개별 검수는 항상 `semanticOwner` 하나, 후보 자산 하나만 다룬다. 통합 검수에서는
 이미 개별 승인된 자산만 한 소비 화면에 조립할 수 있다.
 
-## 0번 게이트: 의미와 화면 topology
+## 생성 규약(단일 자산)
 
-공간을 포함하는 생성은 `topology-registry.json`에서 해당 `sourceMasterId`와
-`screenUnit`이 `approved-by-user`여야 시작할 수 있다. 현재 열 개 마스터 중
-`CM-CUSTOMER-SERVICE-R1`만 승인됐고 나머지 아홉 개는 각 마스터가 여러 화면·상태를
-섞고 있어 topology 승인 전까지 차단된다. 일반적인 이자카야 관습으로 빈칸을 채우지
-않는다.
+생성은 언제나 **자산 1개 = 프롬프트 1개**다. 한 프롬프트는 한 자산의 한 상태만
+만든다. 화면 전체를 한 장에 담아 나중에 조각내는 통짜 화면 마스터 방식은
+폐기했다(deprecated). 이 방식이 아트가 계속 틀리게 나오고 하류 게이트에 반려만
+쌓이게 만든 원인이었다.
 
-complete layer는 생성 전에 `spatial-inference.json`을 작성한다. 다음이 하나라도
-비어 있으면 실패한다.
+- 한 프롬프트는 하나의 `semanticOwner`, 하나의 후보 자산만 대상으로 한다.
+- 대상 하나만 그린다. 그 외 다른 요소·상태·UI·배경은 넣지 않는다.
+- 검수는 checkerboard 위에 대상 한 자산만 격리해 확인한다.
+- 화면을 통째로 생성해 사후 분리하지 않는다.
 
-- 화면 ID, 게임 상태, 플레이어 행동, `semanticOwner`, 자산 의미
-- 설정 원문과 승인 이미지의 경로·정확한 SHA-256
-- 카메라, 앞뒤 순서, 인접 관계, 가려진 연속면
-- 불변 요소, 금지 치환, 미해결 질문 0개
-- 사용자 승인과 `approvedForGeneration=true`
+`concept-masters/`의 화면별 통짜 프롬프트는 톤·구도 참고용으로만 남긴다. 실제
+생성에는 쓰지 않는다.
 
-손님 서비스 화면의 고정 순서는
-`바 안쪽 주인공 카메라 → 단일 바 테이블 → 손님 좌석 → 바로 뒤 중앙 단일 대문 → 밤 골목`이다.
-대문 좌우는 화면 끝까지 막힌 벽이고 골목은 중앙 개구부에서만 보인다.
+## 세 게이트
 
-## 여섯 게이트
-
-1. 의미·topology 승인
-2. 단일 자산 생성과 격리 검수 사용자 승인
-3. 승인 자산만 사용한 소비 화면 FHD/720p 재조립 사용자 승인
-4. runtime 최적화와 성능·시각 회귀
-5. 소비 화면 단위 최종 사용자 승인
-6. finalizer가 `runtimeRegistrationAllowed=true`인 handoff를 파생하고 app이 승격
+1. **단일 자산 생성과 격리 검수 사용자 승인** — 프로필·`semanticOwner`·자산 의미·
+   원본 증거를 확인하고, 후보 자산 하나를 생성해 checkerboard 격리 검수로 사용자
+   승인을 받는다. source/output SHA-256을 기록한다.
+2. **소비 화면 맥락 최종 승인** — 이미 개별 승인된 자산만 한 소비 화면에 FHD/720p로
+   재조립하고, anchor·occlusion·style 회귀와 runtime 최적화(loss 정책·시각 회귀·성능
+   예산)를 확인한 뒤 소비 화면 단위 최종 사용자 승인을 받는다.
+3. **runtime 등록** — finalizer가 `runtimeRegistrationAllowed=true`인 handoff를
+   파생하고 app이 원자적으로 승격한다. 별도 dry-run 영수증이나 시간창은 없다.
 
 개별 provenance와 프로필 보고서의 `runtimeRegistrationAllowed`는 항상 `false`다.
-사람이 이를 `true`로 편집하지 않는다.
+사람이 이를 `true`로 편집하지 않는다. 최종 승인에서만 finalizer가 파생한다.
 
 ## 해시와 버전
 
@@ -63,16 +59,19 @@ UI icon, alpha 자산, atlas는 무손실만 허용한다. 손실 압축은 불�
 
 ## 스키마와 검증
 
-`schemas/`에는 topology, spatial inference, provenance, 세 프로필 보고서, 재조립,
-최적화, 최종 승인, manifest entry template, runtime handoff의 JSON Schema가 있다.
-`REQUIRED` 같은 placeholder는 통과하지 못한다.
+v8 필수 스키마는 provenance, 세 프로필 보고서(completion·standalone-raster·
+bundle-model), 최적화, 최종 승인, manifest entry template, runtime handoff다.
+`REQUIRED` 같은 placeholder는 통과하지 못한다. topology, spatial inference,
+visible-cutout, recomposition 스키마 파일은 삭제하지 않고 보존하되 v8 필수
+목록에서는 제외한다(`deprecatedSchemas` 참고).
 
 ```bash
 node art-workspace/pipeline/validate-pipeline.mjs
 ```
 
-validator는 schema, 실제 경로, SHA-256, byte, PNG 치수·alpha·green spill, 승인 topology,
-spec 해시와 승인 provenance↔profile report 대응을 검사한다.
+validator는 schema, 실제 경로, SHA-256, byte, PNG 치수·alpha 네 모서리·green spill,
+격리 checkerboard 검수, standalone/bundle 보고서, spec 해시와 승인
+provenance↔profile report 대응을 검사한다.
 
 ## 격리 검수판
 
@@ -98,7 +97,6 @@ checkerboard 중앙에 놓는다.
 node art-workspace/pipeline/finalize-runtime-handoff.mjs \
   --provenance review/.../metadata/provenance.json \
   --profile-approval review/.../metadata/standalone-raster-report.json \
-  --recomposition review/.../metadata/recomposition-report.json \
   --optimization review/.../metadata/optimization-report.json \
   --final-approval review/.../metadata/final-approval.json \
   --entry-template review/.../metadata/runtime-entry-template.json \
@@ -110,9 +108,8 @@ node art-workspace/pipeline/finalize-runtime-handoff.mjs \
 bundle report를 전달한다. finalizer는 모든 파일과 해시를 다시 읽고 두 출력 파일을
 원자적으로 생성한다. 기존 출력을 덮어쓰지 않는다.
 
-app 승격은 별도 dry-run 영수증이 필요하고 단일 파일도 같은 bundle transaction을 쓴다.
-파일이나 manifest가 달라지거나 30분이 지나면 영수증은 무효다. 성공하면 영수증은
-소비되고, 반영 중 하나라도 실패하면 파일 묶음과 manifest를 전부 복구한다.
+app 승격은 단일 파일도 같은 bundle transaction을 쓴다. 반영 중 하나라도 실패하면
+파일 묶음과 manifest를 전부 복구한다. 별도 dry-run 영수증이나 시간창은 없다.
 
 ## 보존과 비공개 Git LFS
 

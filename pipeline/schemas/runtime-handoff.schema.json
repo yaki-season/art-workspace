@@ -11,7 +11,7 @@
   ],
   "properties": {
     "schemaVersion": { "const": 1 },
-    "pipelineContract": { "const": "YS-ASSET-PIPELINE-v7" },
+    "pipelineContract": { "enum": ["YS-ASSET-PIPELINE-v7", "YS-ASSET-PIPELINE-v8"] },
     "profile": { "enum": ["complete-layer", "standalone-raster", "bundle-model"] },
     "id": { "type": "string", "pattern": "^(?!.*-R[0-9]+$)[A-Z0-9-]+$" },
     "sourceRevision": { "type": "integer", "minimum": 1 },
