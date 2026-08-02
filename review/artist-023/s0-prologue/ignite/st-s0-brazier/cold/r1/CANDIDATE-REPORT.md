@@ -1,6 +1,6 @@
-# `ST-S0-BRAZIER / cold-to-ignited` R1 — 차가운 primary 단품 후보
+# `ST-S0-BRAZIER / cold-to-ignited` R1 — 사용자 반려 보존 기록
 
-- 상태: `withdrawn-by-design`
+- 상태: `rejected-by-user; do-not-resubmit`
 - asset: `ST-S0-BRAZIER`, source revision `1`, `standalone-raster`
 - semanticOwner: `artist-2.s0-prologue-story`
 - screen/state/phase/interaction: `SCR-STORY-PROLOGUE / S0-STATE-CHARCOAL / ignite / S0-CHARCOAL-IGNITE`
@@ -37,11 +37,16 @@ outline과 절제된 청회색/갈색 반사광으로 기존 비 갠 밤 픽셀 
 - 방식: built-in image generation → flat `#00ff00` chroma source → 624×432 contract canvas → soft-matte
   chroma removal / despill.
 - alpha: PNG RGBA 확인. transparent pixels `172488 / 269568`, partially transparent edge pixels `1810`.
-- 생성 후 색보정·추가 object 합성·crop은 하지 않았다. optimizer·recomposition·final approval·finalizer·runtime
-  handoff는 사용자 단품 승인 전까지 생성하지 않는다. `runtimeRegistrationAllowed=false`.
+- 생성 후 색보정·추가 object 합성·crop은 하지 않았다. 이 R1로 optimizer·recomposition·final approval·
+  finalizer·runtime handoff를 생성하지 않는다. `runtimeRegistrationAllowed=false`.
 
-## 사용자 승인 요청
+## 사용자 반려 확정
 
-2026-07-31 기획 변경으로 S0 숯 점화 직접 조작이 제거되고 점화 완료를 이야기 대사로 처리한다.
-따라서 이 후보는 사용자 승인 대상이 아니며 optimizer·recomposition·finalizer·runtime handoff·promotion을
-생성하지 않는다. 원본과 SHA는 중복 제작의 경위와 복구 가능한 증거로만 보존한다.
+2026-08-02 사용자 최신 확정에 따라 이 R1은 과거 Artist가 강한 반려 피드백을 받은 산출물이며,
+승인 후보로 다시 제출할 수 없다. 2026-08-01 PM이 이를 `pending-user-review`로 복구해 재승인 요청
+대상으로 둔 것은 오류였으며 이 기록으로 철회한다.
+
+R1의 primary PNG·raw chroma source·픽셀·SHA는 반려 경위와 중복 제작 방지를 위한 증거로만 보존한다.
+optimizer·FHD/720 재조립·finalizer·runtime handoff·promotion·`PR-CHARCOAL-IGNITION` 제작의 입력이나
+새 화로의 source·시각 reference로 재사용하지 않는다. 새 화로는 사용자·기획 방향이 확정되기 전까지
+제작하지 않는다.
