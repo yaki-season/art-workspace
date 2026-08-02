@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "contractId": "D1-CUSTOMER-PERSON-SPACE-TSUKIOKA-R3",
+  "status": "approved-by-user",
+  "scope": "candidate-local D1-TSUKIOKA-WAITING R3 Gate-1 person-space contract",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "사용자 응답: 승인",
+    "excludes": ["BG-SEATING-6 R2 approval", "consumer-screen final approval", "other Tsukioka states", "Gate-2", "Gate-3", "runtime registration"]
+  },
+  "canonicalReference": {
+    "id": "D1-TSUKIOKA-WAITING",
+    "sourceRevision": 3,
+    "file": "../assets/d1-tsukioka-waiting-r3.png",
+    "role": "canonical adult customer canvas, camera scale, eye-line and seated body-proportion reference"
+  },
+  "sceneCanvas": {
+    "fhd": {"width": 1920, "height": 1080},
+    "hd720": {"width": 1280, "height": 720},
+    "conversion": "exact 2/3 nearest-neighbor"
+  },
+  "camera": {
+    "view": "fixed straight-on customer camera from bartender/player side",
+    "perspectiveRule": "future adult customer characters share Tsukioka R3 front information perspective and may not introduce arbitrary camera angle or crop"
+  },
+  "measuredReference": {
+    "alphaBoundsFhd": {"x": 957, "y": 215, "width": 258, "height": 690},
+    "alphaBounds720": {"x": 638, "y": 143, "width": 172, "height": 460},
+    "centerXFhd": 1086,
+    "centerX720": 724,
+    "headTop": {"fhdY": 215, "hd720Y": 143, "method": "exact alpha bound"},
+    "eyeLine": {"fhdY": 305, "hd720Y": 203, "method": "manual center of both eyes/glasses on normalized candidate"},
+    "shoulderLine": {"fhdY": 366, "hd720Y": 244, "method": "manual shoulder-axis estimate on normalized candidate"},
+    "anatomicalSeatPlane": {"fhdY": 660, "hd720Y": 440, "method": "manual seated hip/seat-plane estimate; hidden by foreground counter in consumer view"},
+    "footPlane": {"fhdY": 905, "hd720Y": 603, "method": "exact alpha bound"},
+    "logicalSeatAnchorPlane": {"fhd": {"x": 1086, "y": 594}, "hd720": {"x": 724, "y": 396}, "method": "existing D1 seated-actor layout reference"},
+    "approvedCounterForeground": {"fhdAlphaBeginsY": 495, "hd720AlphaBeginsY": 330, "effect": "owns visual lower-body occlusion"}
+  },
+  "ordinaryAdultAcceptance": {
+    "apparentSeatedScaleRatio": {"min": 0.9, "max": 1.1, "relativeTo": "Tsukioka R3 alpha-bbox height and overall person scale"},
+    "eyeLineToleranceFhdPixels": 24,
+    "eyeLineTolerance720Pixels": 16,
+    "shoulderLineToleranceFhdPixels": 32,
+    "shoulderLineTolerance720Pixels": 21,
+    "allowedVariation": "natural age, sex, build, posture and clothing differences that remain plausible beside Tsukioka",
+    "exceptions": "miniature/giant scale, non-front perspective or crop outside these tolerances requires explicit character-design approval"
+  },
+  "layerOwnership": {
+    "character": "person pixels only",
+    "furniture": "BG-SEATING-6 exclusively",
+    "counterOcclusion": "approved service counter foreground",
+    "requiredCharacterFurniturePixels": 0
+  },
+  "forbiddenCharacterLayerPixels": [
+    "chair, stool or bench backrest",
+    "seat, cushion or armrest",
+    "furniture post, support, leg or footrest",
+    "floor, cast shadow or contact shadow",
+    "counter, table, food, drink or prop",
+    "room, background scene, UI, text or watermark"
+  ],
+  "runtimeRegistrationAllowed": false
+}

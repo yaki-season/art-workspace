@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "gateContract": "v8-gate-1-isolated-candidate",
+  "runId": "ART3-D1-TSUKIOKA-FURNITURE-FREE-20260802-R3",
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "complete-layer",
+  "status": "approved-by-user",
+  "approvalStatus": "approved-by-user",
+  "approval": {
+    "date": "2026-08-02",
+    "basis": "사용자 응답: 승인",
+    "scope": "D1-TSUKIOKA-WAITING R3 furniture-free Gate-1 only",
+    "approvedPrimarySha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3",
+    "reviewedContextSha256": [
+      "3842ecf522ffefdc7308f13dcaa84a59a92a1cb71747174ae42ba244723cacd7",
+      "8078cdffdc7abd93d6578407449050e8e904ce4529985b15b83e77630afe60f3"
+    ],
+    "excludes": ["BG-SEATING-6 R2 approval", "consumer-screen final approval", "other Tsukioka states", "Gate-2", "Gate-3", "finalizer", "promotion", "runtime registration", "app binding"]
+  },
+  "source": {
+    "file": "../source/tsukioka-waiting-furniture-free-chroma-r3.png",
+    "width": 941,
+    "height": 1672,
+    "mode": "RGB",
+    "bytes": 1377399,
+    "sha256": "808e1c7d4f3ecdba98b47fdbccf82e57d2ea1ee6b1dc020aa648f47feae08906"
+  },
+  "output": {
+    "file": "../assets/d1-tsukioka-waiting-r3.png",
+    "width": 1920,
+    "height": 1080,
+    "mode": "RGBA",
+    "alpha": "straight",
+    "bytes": 296850,
+    "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3",
+    "alphaBounds": [957, 215, 1215, 905]
+  },
+  "normalization": {
+    "r2FurnitureInclusiveSourceBounds": [229, 207, 712, 1387],
+    "r3PersonOnlySourceBounds": [251, 207, 692, 1387],
+    "r2ApprovedFhdBounds": [944, 215, 1227, 905],
+    "r3NoDriftFhdBounds": [957, 215, 1215, 905],
+    "method": "same R2 source-to-FHD mapping, nearest-neighbor; no horizontal stretch to legacy furniture width"
+  },
+  "alphaValidation": {
+    "minAlpha": 0,
+    "maxAlpha": 255,
+    "transparentPixels": 1961955,
+    "partiallyTransparentPixels": 2053,
+    "opaquePixels": 109592,
+    "cornerAlpha": [0, 0, 0, 0],
+    "magentaSpillPixels": 0,
+    "largeHumanConnectedComponents": 1,
+    "result": "pass"
+  },
+  "identityValidation": {
+    "visualResult": "pass",
+    "preserved": ["face", "gray hair", "glasses", "expression", "green cardigan", "shirt", "belt", "trousers", "socks", "shoes", "hands", "seated pose", "lighting", "pixel-ink-gouache style"],
+    "sourceCoordinatePixelComparison": {"pixels": 324038, "meanAbsoluteRgbDelta": 8.2535, "medianAbsoluteRgbDelta": 6.0, "p95AbsoluteRgbDelta": 22.0},
+    "materialIdentityChange": false,
+    "correctionCallUsed": false
+  },
+  "categoryValidation": {
+    "personCount": 1,
+    "furniturePixels": 0,
+    "forbiddenSceneOrUiPixels": 0,
+    "result": "pass"
+  },
+  "reviewOutputs": [
+    {"file": "../review/review-d1-tsukioka-waiting-isolated-fhd-r3.png", "width": 1920, "height": 1080, "bytes": 255663, "sha256": "ae440c6bc3b34084c47118c9c148fee15e2f864d04e3800e87408498a6dfaf0c"},
+    {"file": "../review/review-d1-tsukioka-waiting-isolated-720-r3.png", "width": 1280, "height": 720, "bytes": 121995, "sha256": "02fcd04a5c1270d466e23c5ddae1e36ec5ab374dd40361541baf35d96cb780d9"},
+    {"file": "../review/context-d1-tsukioka-waiting-fhd-r3.png", "width": 1920, "height": 1080, "bytes": 2716435, "sha256": "3842ecf522ffefdc7308f13dcaa84a59a92a1cb71747174ae42ba244723cacd7", "status": "composition-evidence-only-not-approval-artifact"},
+    {"file": "../review/context-d1-tsukioka-waiting-720-r3.png", "width": 1280, "height": 720, "bytes": 1405248, "sha256": "8078cdffdc7abd93d6578407449050e8e904ce4529985b15b83e77630afe60f3", "status": "composition-evidence-only-not-approval-artifact"}
+  ],
+  "nextGate": "Gate-1 complete; dependent furniture-free state conversion requires a separate task and approval",
+  "runtimeRegistrationAllowed": false
+}

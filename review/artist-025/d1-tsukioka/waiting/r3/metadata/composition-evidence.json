@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 3,
+  "status": "composition-evidence-only-not-approval-artifact",
+  "layerOrder": [
+    "approved background",
+    "BG-SEATING-6 R2 furniture",
+    "D1-TSUKIOKA-WAITING R3 furniture-free person",
+    "approved service counter foreground"
+  ],
+  "outputs": [
+    {"file": "../review/context-d1-tsukioka-waiting-fhd-r3.png", "width": 1920, "height": 1080, "bytes": 2716435, "sha256": "3842ecf522ffefdc7308f13dcaa84a59a92a1cb71747174ae42ba244723cacd7"},
+    {"file": "../review/context-d1-tsukioka-waiting-720-r3.png", "width": 1280, "height": 720, "bytes": 1405248, "sha256": "8078cdffdc7abd93d6578407449050e8e904ce4529985b15b83e77630afe60f3"}
+  ],
+  "producerInspection": {
+    "result": "pass",
+    "personCount": 1,
+    "characterFurniturePixels": 0,
+    "duplicateChair": false,
+    "seatReading": "BG-SEATING-6 seat-04 is the only furniture behind Tsukioka and is mostly covered by his torso",
+    "identity": "face, gray hair, glasses, expression, green cardigan, shirt, hands, trousers, socks, shoes and seated pose remain visually consistent with approved R2",
+    "scale": "same head-top and foot-plane as R2 source mapping; furniture-free width contracts naturally without horizontal stretch",
+    "fhd720": "same fixed front view, eye line, seat position and counter occlusion at both sizes"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "사용자 응답: 승인",
+    "scope": "D1-TSUKIOKA-WAITING R3 Gate-1 only; context remains evidence, not consumer-screen final approval",
+    "bgSeating6R2Approved": false
+  },
+  "runtimeRegistrationAllowed": false
+}
