@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "gateContract": "v8-gate-1-isolated-candidate",
+  "runId": "ART3-D1-BG-SEATING-6-20260802-R1",
+  "id": "BG-SEATING-6",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "component": "customers.seat[n]",
+  "profile": "complete-layer",
+  "status": "needs-revision; rejected-by-pm-context-review",
+  "source": {
+    "file": "../source/bg-seating-6-r1-chroma.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "bytes": 1227082,
+    "sha256": "a8bdd2d2c8530ca1c0c5e646a4d6aaa48bf24346dfd151e09eb440231988a94c"
+  },
+  "output": {
+    "file": "../assets/bg-seating-6-r1.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGBA",
+    "alpha": "straight",
+    "bytes": 550605,
+    "sha256": "d8bb83a6fe43e44293f07e27bc6869c925852f8bf1a514dc74cda53c255e6ea1"
+  },
+  "alphaValidation": {
+    "minAlpha": 0,
+    "maxAlpha": 255,
+    "transparentPixels": 1280796,
+    "partiallyTransparentPixels": 18101,
+    "opaquePixels": 274455,
+    "cornerAlpha": [0, 0, 0, 0],
+    "greenSpillPixels": 0,
+    "nonTransparentBounds": {"x": 52, "y": 316, "width": 1566, "height": 397},
+    "result": "pass"
+  },
+  "seatValidation": {
+    "expectedSeatCount": 6,
+    "detectedLargeConnectedComponents": 6,
+    "componentAlphaThreshold": 128,
+    "centerX": [148.5, 423.0, 685.0, 950.0, 1238.0, 1521.0],
+    "centerGapsPixels": [274.5, 262.0, 265.0, 288.0, 283.0],
+    "meanCenterGapPixels": 274.5,
+    "maxGapDeviationRatio": 0.0492,
+    "sharedGroundingY": 712,
+    "result": "pass"
+  },
+  "visualInspection": {
+    "originalScale": "pass: exactly six unoccupied seats; straight-on; shared base line; no baked guides, text, UI or extra objects",
+    "scale720": "pass: six silhouettes, slatted backs, walnut material and warm/cool lighting remain readable",
+    "styleHarmony": "pass-for-gate-1: walnut/espresso grain, amber key, indigo shadow and hand-painted stepped edges match the supplied approved references",
+    "consumerSceneRecomposition": "not-run; prohibited until Gate-1 user approval"
+  },
+  "reviewBoards": [
+    {
+      "file": "../review/review-bg-seating-6-isolated-fhd-r1.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 535460,
+      "sha256": "11a6ffbd2c3b1aa5cb6081a2ad4ed6c600459109417df12a20c2d36facd48d05"
+    },
+    {
+      "file": "../review/review-bg-seating-6-isolated-720-r1.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 305062,
+      "sha256": "79f27c8cf00242cbc48cd1d8e8050e4c31dace4724392563663ba1c26bdcf04b"
+    }
+  ],
+  "compositionEvidence": {
+    "file": "../review/context-bg-seating-6-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 2745495,
+    "sha256": "8b08700edc842e38f16beae33402d42cf71a4ee304ad49671ff8debbc764888e",
+    "status": "composition-evidence-only-not-approval-artifact"
+  },
+  "disposition": {
+    "status": "needs-revision",
+    "reviewer": "PM",
+    "userReviewOccurred": false,
+    "reason": [
+      "The six seats read as high-backed dining chairs rather than compact bar-seat backrests/stools.",
+      "The seat backs obscure too much of the approved central entrance and background.",
+      "The seat backs are oversized relative to the approved Tsukioka seated-person context."
+    ]
+  },
+  "excluded": [
+    "customers or body parts",
+    "counter or countertop",
+    "player-side stools",
+    "food, dishes or tools",
+    "room, wall, doorway or floor",
+    "UI, icons, numbers, labels, text or watermark",
+    "FHD/720 consumer recomposition",
+    "optimization, final approval, finalizer, runtime handoff, promotion or app binding"
+  ],
+  "nextGate": "none for R1; wait for a separate R2 follow-up brief",
+  "runtimeRegistrationAllowed": false
+}

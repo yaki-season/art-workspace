@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "gateContract": "v8-gate-1-isolated-candidate",
+  "runId": "ART3-D1-BG-SEATING-6-20260802-R2",
+  "id": "BG-SEATING-6",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "component": "customers.seat[n]",
+  "profile": "complete-layer",
+  "status": "pending-user-review",
+  "source": {
+    "file": "../source/bg-seating-6-r2-chroma.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "bytes": 989055,
+    "sha256": "73e60ee65159fbe3bf34770bf612aaf97f0b2fa064a10081e69dac2dc3b6eb38"
+  },
+  "output": {
+    "file": "../assets/bg-seating-6-r2.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGBA",
+    "alpha": "straight",
+    "bytes": 150337,
+    "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908"
+  },
+  "alphaValidation": {
+    "minAlpha": 0,
+    "maxAlpha": 255,
+    "transparentPixels": 1501547,
+    "partiallyTransparentPixels": 5255,
+    "opaquePixels": 66550,
+    "cornerAlpha": [0, 0, 0, 0],
+    "greenSpillPixels": 0,
+    "nonTransparentBounds": {"x": 70, "y": 464, "width": 1531, "height": 69},
+    "result": "pass"
+  },
+  "seatValidation": {
+    "expectedSeatCount": 6,
+    "detectedLargeConnectedComponents": 6,
+    "componentAlphaThreshold": 128,
+    "centerX": [176.0, 442.0, 703.0, 966.5, 1227.0, 1495.5],
+    "centerGapsPixels": [266.0, 261.0, 263.5, 260.5, 268.5],
+    "result": "pass"
+  },
+  "contextValidation": {
+    "mappedCentersFhdX": [210.1, 512.5, 809.2, 1108.7, 1404.8, 1710.1],
+    "mappedVisibleBoundsFhd": [90, 410, 1830, 489],
+    "centralDoorwayReadable": true,
+    "lowerGeometryOccludedByApprovedCounter": true,
+    "tsukiokaCoversMostOfSeat04": true,
+    "oversizedOrHighBackReading": false,
+    "producerResult": "pass"
+  },
+  "reviewOutputs": [
+    {"file": "../review/review-bg-seating-6-isolated-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 152494, "sha256": "a948f4da7b40f1731fe4a50be69385647ee89f124ca4eb50c73a5f2fb8f25794"},
+    {"file": "../review/review-bg-seating-6-isolated-720-r2.png", "width": 1280, "height": 720, "bytes": 86431, "sha256": "cb23efb80f10b26511b08028527c6803ed70d8d33dea127ab55714f9cc9cc208"},
+    {"file": "../review/context-bg-seating-6-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2718277, "sha256": "ba07e52e22414bef4133f0cd2d51b9c2f9680f831fcf55bb8e15a5709a0fa55b", "status": "composition-evidence-only-not-approval-artifact"},
+    {"file": "../review/context-bg-seating-6-720-r2.png", "width": 1280, "height": 720, "bytes": 1405381, "sha256": "923303e030d91b2216a1ad32ffa8d9b3a8c2bbf9e75e5855fc8f12c85d768b0d", "status": "composition-evidence-only-not-approval-artifact"}
+  ],
+  "excluded": [
+    "full chairs, high backs, tall legs, ladder backs or footrests",
+    "people or body parts",
+    "room, doorway, lantern, counter or countertop",
+    "food, dishes, tools or extra props",
+    "UI, text, symbols, numbers, watermark or guides",
+    "Gate-2, finalizer, runtime handoff, promotion, app binding or docs edits"
+  ],
+  "nextGate": "user Gate-1 visual review",
+  "runtimeRegistrationAllowed": false
+}

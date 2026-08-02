@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-SEATING-6",
+  "sourceRevision": 2,
+  "status": "composition-evidence-only-not-approval-artifact",
+  "layerOrder": [
+    "approved background",
+    "BG-SEATING-6 R2 candidate",
+    "approved D1-TSUKIOKA-WAITING R2 scale context",
+    "approved service counter foreground"
+  ],
+  "transform": {
+    "scale": 1.13679424,
+    "x": 10,
+    "y": -117,
+    "mappedCentersFhdX": [210.1, 512.5, 809.2, 1108.7, 1404.8, 1710.1],
+    "mappedVisibleBoundsFhd": [90, 410, 1830, 489],
+    "counterTopNearFhdY": 500
+  },
+  "outputs": [
+    {"file": "../review/context-bg-seating-6-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2718277, "sha256": "ba07e52e22414bef4133f0cd2d51b9c2f9680f831fcf55bb8e15a5709a0fa55b"},
+    {"file": "../review/context-bg-seating-6-720-r2.png", "width": 1280, "height": 720, "bytes": 1405381, "sha256": "923303e030d91b2216a1ad32ffa8d9b3a8c2bbf9e75e5855fc8f12c85d768b0d"}
+  ],
+  "producerInspection": {
+    "result": "pass",
+    "centralDoorway": "readable above and between all low backs",
+    "counterOcclusion": "visible geometry ends at FHD y489 and approved counter begins near y500",
+    "tsukiokaScale": "seat-04 back is mostly covered by the approved seated person; no R1 overscale mismatch",
+    "focalHierarchy": "Tsukioka remains dominant; backs stay low contrast"
+  },
+  "approval": {"status": "pending-user-review", "basis": "Context evidence supports Gate-1 review but is not itself an approval artifact."},
+  "runtimeRegistrationAllowed": false
+}

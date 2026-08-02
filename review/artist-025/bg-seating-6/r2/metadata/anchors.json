@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-SEATING-6",
+  "sourceRevision": 2,
+  "status": "pending-user-review",
+  "coordinateSpace": "source-local-pixels",
+  "sourceSize": {"width": 1672, "height": 941},
+  "seatAnchors": [
+    {"id": "seat-01", "centerX": 176.0, "centerY": 498.0},
+    {"id": "seat-02", "centerX": 442.0, "centerY": 498.0},
+    {"id": "seat-03", "centerX": 703.0, "centerY": 498.0},
+    {"id": "seat-04", "centerX": 966.5, "centerY": 498.0},
+    {"id": "seat-05", "centerX": 1227.0, "centerY": 498.0},
+    {"id": "seat-06", "centerX": 1495.5, "centerY": 498.0}
+  ],
+  "consumerEvidenceTransform": {
+    "status": "review-only-not-runtime-binding",
+    "scale": 1.13679424,
+    "x": 10,
+    "y": -117,
+    "mappedCentersFhdX": [210.1, 512.5, 809.2, 1108.7, 1404.8, 1710.1],
+    "mappedVisibleBoundsFhd": {"x": 90, "y": 410, "width": 1740, "height": 79},
+    "counterTopNearFhdY": 500,
+    "mappedCenters720X": [140.1, 341.7, 539.5, 739.1, 936.5, 1140.1],
+    "mappedVisibleBounds720": {"x": 60, "y": 273, "width": 1160, "height": 53}
+  },
+  "runtimeRegistrationAllowed": false
+}

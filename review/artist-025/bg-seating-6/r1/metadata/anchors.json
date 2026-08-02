@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-SEATING-6",
+  "sourceRevision": 1,
+  "status": "needs-revision; rejected-by-pm-context-review",
+  "coordinateSpace": "source-local-pixels",
+  "sourceSize": {
+    "width": 1672,
+    "height": 941
+  },
+  "seatAnchors": [
+    {"id": "seat-01", "centerX": 148.5, "groundY": 712, "normalizedX": 0.08882},
+    {"id": "seat-02", "centerX": 423.0, "groundY": 712, "normalizedX": 0.25299},
+    {"id": "seat-03", "centerX": 685.0, "groundY": 712, "normalizedX": 0.40969},
+    {"id": "seat-04", "centerX": 950.0, "groundY": 712, "normalizedX": 0.56818},
+    {"id": "seat-05", "centerX": 1238.0, "groundY": 712, "normalizedX": 0.74043},
+    {"id": "seat-06", "centerX": 1521.0, "groundY": 712, "normalizedX": 0.90969}
+  ],
+  "sharedGroundingLine": {
+    "sourceY": 712,
+    "normalizedY": 0.75664,
+    "meaning": "candidate alpha extent; foreground counter owns final customer occlusion"
+  },
+  "consumerContractReference": {
+    "status": "reference-only-not-runtime-binding",
+    "customerOcclusionLineFhdY": 594,
+    "customerOcclusionLine720Y": 396,
+    "seatCentersFhdX": [230.4, 514.56, 798.72, 1082.88, 1367.04, 1651.2],
+    "seatCenters720X": [153.6, 343.04, 532.48, 721.92, 911.36, 1100.8]
+  },
+  "runtimeRegistrationAllowed": false
+}
