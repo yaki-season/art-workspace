@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "creationUnitCount": 1,
+  "id": "CM-GRILL-STATION-EMPTY-BASE",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION-R3",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "assetMeaning": "승인된 R3 master의 카메라·원근·구도·조명·색조를 보존하면서 동적 조리 상태만 제거한 D1 그릴 소비 화면의 불투명 base다.",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "basis": "사용자 응답: 둘 다 승인",
+    "date": "2026-07-30"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../assets/cm-grill-station-empty-base-fhd-r1.png",
+    "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+  },
+  "spatialInference": {
+    "file": "../../../master/r3/metadata/spatial-inference.json",
+    "sha256": "5d7c989212b799ed0407fce8df91dda63f74a2b74653b8cec811022106c68be6"
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/cm-grill-station-empty-base-fhd-r1.png",
+      "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+    },
+    "reviewBoard": {
+      "file": "review-cm-grill-station-empty-base-fhd-r1.png",
+      "sha256": "55f9ad44578d2a03d67e8c629df068a27ed09d10006ed3c0ed5439076dbf33bc"
+    }
+  },
+  "rejectedIntermediate": {"retained": false}
+}

@@ -14,7 +14,7 @@
   "sourceReferences": [
     {
       "id": "CM-GRILL-STATION-QUEUED-SELECTION-R3",
-      "file": "../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+      "file": "../../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
       "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
       "role": "user-approved grill master; fixed camera, walnut/brass frame, work-surface material, safe areas and lighting reference only"
     }
@@ -23,9 +23,9 @@
     "tool": "built-in imagegen",
     "mode": "precise-object-edit",
     "promptSummary": "Remove every grill, food, rack, tray, tongs, button, VFX and UI object from the approved master; preserve only the fixed walnut/brass frame and empty deep-indigo workspace surface.",
-    "rawSource": "../source/bg-workspace-grill-r1-generated.png",
-    "rawSourceSha256": "3dd9ea27ee3a907ca218da370be0547823e6f8aa910f20b1fa0067ffd59a38b0",
-    "rawSourceBytes": 1873697,
+    "rawChromaSource": "../source/bg-workspace-grill-r1-generated.png",
+    "rawChromaSourceSha256": "3dd9ea27ee3a907ca218da370be0547823e6f8aa910f20b1fa0067ffd59a38b0",
+    "rawChromaSourceBytes": 1873697,
     "postProcess": [
       "nearest-neighbor normalization from 1672x941 to 1920x1080",
       "no crop, compositing, colour edit, transparency conversion, or generated-pixel edit after source inspection"

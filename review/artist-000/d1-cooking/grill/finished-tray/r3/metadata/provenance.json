@@ -1,17 +1,30 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "ST-GRILL-FINISHED-TRAY",
   "sourceRevision": 3,
   "screenUnit": "SCR-SVC-GRILL",
-  "profile": "approved-waiting-rack-derived-completed-rack",
+  "profile": "standalone-raster",
   "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
   "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
-  "status": "superseded-by-user-feedback",
+  "status": "superseded",
   "supersededBy": "2026-07-30 사용자 정정: 완료품 rack은 그릴보다 평면적으로 눕지 않고 더 세워진 원근을 가져야 한다. x 간격 변경은 보류한다.",
   "purpose": "`grill.finished`의 공용 완료품을 서빙 전 잠시 보관하는 빈 completed-food rack이다. 좌측 `ST-GRILL-WAITING-RACK R2`가 조립 완료 생 네기마를 보관하는 것과 같은 수납 계열이며, 음식·수량·품질·서빙 결과를 굽지 않는다.",
+  "semanticPurpose": "`grill.finished`의 공용 완료품을 서빙 전 잠시 보관하는 빈 completed-food rack이다. 좌측 `ST-GRILL-WAITING-RACK R2`가 조립 완료 생 네기마를 보관하는 것과 같은 수납 계열이며, 음식·수량·품질·서빙 결과를 굽지 않는다.",
   "approvedSource": {"id":"ST-GRILL-WAITING-RACK","revision":2,"file":"../../../waiting-rack/r2/assets/st-grill-waiting-rack-fhd-r2.png","sha256":"d875b1b50b814a2154e6e8f5f9d753a3b7192dead1e2fa59a2089ea01dc26651","role":"approved left waiting rack; exact top-down shallow cavity, near rim, black-iron/brass pixel language and anti-plaque reference","cropFhd":{"x":85,"y":265,"width":340,"height":530}},
   "stationBase": {"id":"CM-GRILL-STATION-EMPTY-BASE","revision":1,"file":"../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png","sha256":"ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a","role":"approved R3 master camera and upper-right station placement"},
+  "sourceReferences": [
+    {"file":"../../../waiting-rack/r2/assets/st-grill-waiting-rack-fhd-r2.png","sha256":"d875b1b50b814a2154e6e8f5f9d753a3b7192dead1e2fa59a2089ea01dc26651","role":"approved left waiting rack; exact top-down shallow cavity, near rim, black-iron/brass pixel language and anti-plaque reference"},
+    {"file":"../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png","sha256":"ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a","role":"approved R3 master camera and upper-right station placement"}
+  ],
   "derivation": {"tool":"Pillow","method":"lossless alpha crop of the approved left waiting rack at 340×530, nearest-neighbor resize to 218×342, then alpha composite onto a transparent 1920×1080 canvas","sourceCropFile":"../source/st-grill-waiting-rack-r2-master-crop.png","sourceCropSha256":"341bdc2894bc03644b2e95c4fe2065b9472cb2b838539fda2923b062126c3c09","sourceCropBytes":288252,"placementFhd":{"x":1534,"y":130,"width":218,"height":342},"newImageGeneration":false,"newFoodRaster":false,"newTexture":false,"newGLB":false},
+  "generation": {
+    "tool": "Pillow",
+    "promptSummary": "승인된 좌측 waiting rack의 투명 crop만 사용해 우측 상단의 빈 completed-food rack 한 개를 파생한다.",
+    "rawChromaSource": "../source/st-grill-waiting-rack-r2-master-crop.png",
+    "rawChromaSourceSha256": "341bdc2894bc03644b2e95c4fe2065b9472cb2b838539fda2923b062126c3c09",
+    "rawChromaSourceBytes": 288252,
+    "postProcess": ["lossless alpha crop of the approved left waiting rack at 340×530, nearest-neighbor resize to 218×342, then alpha composite onto a transparent 1920×1080 canvas"]
+  },
   "output": {"file":"../assets/st-grill-finished-tray-fhd-r3.png","sha256":"824358d04d3cba428f26f04a1d1f4d104fcaaf6c320272cdd3c8322d50ce0d39","bytes":163302,"width":1920,"height":1080,"mode":"RGBA","straightAlpha":true,"alphaBBox":{"x":1534,"y":130,"width":218,"height":342},"cornersAlpha":[0,0,0,0],"visibleGreenPixels":0},
   "included": ["one empty shallow completed-food holding rack", "same top-down cavity and near rim family as ST-GRILL-WAITING-RACK R2", "black iron, aged brass and charcoal interior"],
   "excludes": ["food", "skewer", "food model", "food shader", "quantity", "quality", "timer", "checkmark", "tongs", "grill", "button", "text", "serving plate", "customer", "background scene", "runtime registration"],

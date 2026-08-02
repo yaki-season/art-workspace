@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-GRILL-MDL-NEGIMA-GRILL-RAW-R1-CONSUMPTION-R3-FINAL",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "assets": [
+    "MDL-NEGIMA-GRILL-RAW"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "fb8ce7815ccf06d17fc0387b14e8c9f0894c48062460f1d6c4be600154b55bdd"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../raw-negima/r1/metadata/optimization-report.json",
+      "sha256": "cb8f0980c40f868af9ac3281de39de6ea2e1d8576a413c42b3de4cb1376f31da"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-07-30",
+    "basis": "기존 사용자 승인 evidence: 사용자가 R3의 위아래로 확장된 raw 네기마 station 소비 화면을 승인했다. noSemanticChange=true: composition ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869, FHD f13b3808b56c9462854c863c6b8843206aebfbbf2bf5669b1fb86d5bbc5a1579, 720 d33791d5da0e21d59bafb81f065a623c50e7f758d3c921b45c4219ef388da1ae를 그대로 참조하는 v8 record refresh이며 픽셀·공간·시각·runtime 의미 변화가 없다."
+  }
+}

@@ -23,9 +23,9 @@
     "tool": "built-in imagegen",
     "mode": "background-extraction",
     "promptSummary": "Use the existing grill concept and approved assembly station as visual references. Generate exactly one empty Japanese yakitori charcoal grill with one uninterrupted charcoal bed and one continuous wide square-grid wire grate for up to six parallel skewers. Exclude all food, skewers, tools, UI, cards, text, trays, people, and scene.",
-    "rawSource": "../source/st-grill-tier-1-chroma-source-r2.png",
-    "rawSourceSha256": "55fa619d7fe8b457cf704dd35ea0b2711644b57e7c0ddc0ef80570822db66d8e",
-    "rawSourceBytes": 1822055,
+    "rawChromaSource": "../source/st-grill-tier-1-chroma-source-r2.png",
+    "rawChromaSourceSha256": "55fa619d7fe8b457cf704dd35ea0b2711644b57e7c0ddc0ef80570822db66d8e",
+    "rawChromaSourceBytes": 1822055,
     "postProcess": [
       "remove_chroma_key.py with border auto-key, soft matte, and despill",
       "alpha subject bbox crop from 1672x941 source",

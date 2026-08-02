@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 2,
+  "profile": "bundle-model",
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.raw",
+  "semanticPurpose": "승인 MDL-SKEWER-BASE R2, MDL-INGREDIENT-CHICKEN R1, MDL-INGREDIENT-NEGI R3를 lossless reuse해 닭→파→닭→파→닭 순서와 local +Y flipPivot 0→PI→2PI를 정의하는 D1 생 네기마 runtime composition JSON이다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "integration-contract.json",
+      "sha256": "40cda02627f55d0c2f550e83d4fbdd71f7864ea8f903eddeaae2a4259149543c",
+      "role": "approved composition, flip, source-model, exclusion, and domain-boundary contract"
+    },
+    {
+      "file": "../../../../assembly/skewer-base/r2/assets/mdl-skewer-base-r2.glb",
+      "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "role": "approved MDL-SKEWER-BASE R2 geometry with local +Y length axis and slot-01 through slot-05"
+    },
+    {
+      "file": "../../../../assembly/skewer-base/r2/assets/tex-skewer-base-albedo-r2.png",
+      "sha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+      "role": "approved lossless nearest-sampled bamboo albedo"
+    },
+    {
+      "file": "../../../../assembly/ingredient-chicken/r1/assets/mdl-ingredient-chicken-r1.glb",
+      "sha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
+      "role": "approved MDL-INGREDIENT-CHICKEN R1 geometry reused three times"
+    },
+    {
+      "file": "../../../../assembly/ingredient-chicken/r1/assets/tex-ingredient-chicken-albedo-r1.png",
+      "sha256": "4baa5ca99f5f190053930461251f0497219731048a7d3caddf5ae2e03cfefb47",
+      "role": "approved lossless nearest-sampled raw chicken albedo"
+    },
+    {
+      "file": "../../../../assembly/ingredient-negi/r3/assets/mdl-ingredient-negi-r3.glb",
+      "sha256": "065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3",
+      "role": "approved MDL-INGREDIENT-NEGI R3 geometry reused twice"
+    },
+    {
+      "file": "../../../../assembly/ingredient-negi/r3/assets/tex-ingredient-negi-albedo-r3.png",
+      "sha256": "8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95",
+      "role": "approved lossless nearest-sampled green-onion albedo"
+    }
+  ],
+  "generation": {
+    "tool": "deterministic Three.js composition contract; no new GLB, texture, or raster",
+    "mode": "lossless runtime composition metadata",
+    "promptSummary": "Reuse only the three approved source model bundles to assemble one raw negima in chicken, green-onion, chicken, green-onion, chicken order; preserve 476 triangles, local +Y flipPivot, and exact 0→PI→2PI endpoints; create no replacement visual artifact.",
+    "rawChromaSource": "integration-contract.json",
+    "rawChromaSourceSha256": "40cda02627f55d0c2f550e83d4fbdd71f7864ea8f903eddeaae2a4259149543c",
+    "rawChromaSourceBytes": 5365,
+    "postProcess": [
+      "no chroma or raster processing; the required rawChromaSource field records the exact deterministic integration contract",
+      "reuse approved GLB and nearest albedo bytes without copy, resize, recolour, bake, or material replacement",
+      "record one composition JSON with sequence, 476-triangle total, local +Y flipPivot, and positive 0→PI→2PI endpoints",
+      "verify the actual source GLBs in Three.js and preserve the approved isolated and FHD/720 consumer evidence unchanged"
+    ]
+  },
+  "output": {
+    "file": "../assets/mdl-negima-grill-raw-r1.composition.json",
+    "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+    "bytes": 1177
+  },
+  "runtimeRegistrationAllowed": false
+}

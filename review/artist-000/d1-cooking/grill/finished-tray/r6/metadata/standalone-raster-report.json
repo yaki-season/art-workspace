@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 6,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "assetMeaning": "grill.finished 공용 완료품을 서빙 전 잠시 올려두는 빈 대나무 makisu resting mat이다.",
+  "sourceEvidence": [
+    {
+      "file": "../source/st-grill-finished-makisu-normalized-r6.png",
+      "sha256": "5a73f1046b69cdf4523bbba58fd56e4c9e80038df810939b338bcbdec09ac4f3"
+    },
+    {
+      "file": "../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png",
+      "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a"
+    }
+  ],
+  "output": {
+    "file": "../assets/st-grill-finished-tray-fhd-r6.png",
+    "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184",
+    "bytes": 215874,
+    "width": 1920,
+    "height": 1080,
+    "alpha": "straight",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../review-st-grill-finished-makisu-fhd-r6.png",
+    "sha256": "4bbef2eb01e45feffd82431855dbbad3d6fc576f38112adf06960c5c0e545885",
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "food, skewer, food model, food shader, quantity, quality, and timer",
+    "grill, UI, text, customer, serving scene, and runtime registration"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 R6 검수 후보를 승인했다. 왼쪽 기준점 유지, 우측 15% 확장, 작은 뒤로·우측·반시계 보정만 확정한다."
+  },
+  "runtimeRegistrationAllowed": false
+}

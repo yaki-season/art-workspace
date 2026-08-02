@@ -14,16 +14,19 @@
   },
   "sourceReferences": [
     {
-      "file": "art-workspace/review/artist-000/d1-cooking/assembly/r1/assembly-station-fhd-r1.png",
+      "file": "../../../r1/assembly-station-fhd-r1.png",
       "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
       "role": "user-approved D1 assembly full-screen source; direct visual reference for raw chicken form, palette, dark pixel contour, and material density"
-    },
+    }
+  ],
+  "contractReferences": [
     {
       "file": "docs/spec/art/ART-003_런타임_아트_에셋_목록과_제작_계약.md",
       "role": "MDL-INGREDIENT-CHICKEN model contract: skewerSocket, cut-face UV, and 800-triangle limit"
     }
   ],
   "generation": {
+    "tool": "deterministic Three.js GLTFExporter with built-in imagegen texture source",
     "modelTool": "deterministic Three.js GLTFExporter",
     "textureTool": "built-in imagegen",
     "textureMode": "single raw chicken-thigh pixel-art material derived from the user-approved D1 source",
@@ -40,6 +43,9 @@
     ]
   },
   "output": {
+    "file": "../assets/mdl-ingredient-chicken-r1.glb",
+    "bytes": 5168,
+    "sha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
     "model": {
       "file": "../assets/mdl-ingredient-chicken-r1.glb",
       "bytes": 5168,

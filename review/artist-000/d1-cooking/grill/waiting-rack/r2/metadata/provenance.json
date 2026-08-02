@@ -29,9 +29,9 @@
     "tool": "built-in imagegen",
     "mode": "precise-object-edit",
     "promptSummary": "Generate exactly one empty portrait waiting rack matching the left side of the approved grill master: an overhead-oblique shallow black-iron tray with a visibly recessed cavity, foreshortened far and near rims, aged-brass edge wear, and no front-facing plaque appearance. Exclude every skewer, food item, selector, button, tool, UI, text, shadow, person and scene. Request a uniform #00ff00 chroma-key background.",
-    "rawSource": "../source/st-grill-waiting-rack-chroma-source-r2.png",
-    "rawSourceSha256": "33042f6a3b17f29e01271620c5e54b4984995b8962d4f2fcd03e6eacaa62a297",
-    "rawSourceBytes": 1576132,
+    "rawChromaSource": "../source/st-grill-waiting-rack-chroma-source-r2.png",
+    "rawChromaSourceSha256": "33042f6a3b17f29e01271620c5e54b4984995b8962d4f2fcd03e6eacaa62a297",
+    "rawChromaSourceBytes": 1576132,
     "postProcess": [
       "remove_chroma_key.py with border auto-key, soft matte and despill; detected key #0af909",
       "alpha subject bbox crop from 1024x1536 source at (136,223)-(890,1282)",

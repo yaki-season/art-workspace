@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "ST-GRILL-WAITING-RACK",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "assetMeaning": "D1 그릴 화면 좌측에 놓이는 빈 네기마 대기 rack의 투명 고정 skin이다.",
+  "sourceEvidence": [
+    {
+      "file": "../../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+      "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c"
+    },
+    {
+      "file": "../../../station/r2/assets/st-grill-tier-1-fhd-r2.png",
+      "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89"
+    }
+  ],
+  "output": {
+    "file": "../assets/st-grill-waiting-rack-fhd-r2.png",
+    "sha256": "d875b1b50b814a2154e6e8f5f9d753a3b7192dead1e2fa59a2089ea01dc26651",
+    "bytes": 336651,
+    "width": 1920,
+    "height": 1080,
+    "alpha": "straight",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../review-st-grill-waiting-rack-isolated-fhd-r2.png",
+    "sha256": "65bb349f26c3ff5db0d93c1c68917d95040e181711f4dbe1b675d26a3fc06299",
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "food, skewer, tongs, tools, finished tray, discard tray, and VFX",
+    "selector, button, UI, text, quantity, customer, and background scene"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인"
+  },
+  "runtimeRegistrationAllowed": false
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "profile": "bundle-model",
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.raw",
+  "assetMeaning": "승인된 세 source model bundle을 중복 없이 참조해 닭→파→닭→파→닭과 local +Y flipPivot 0→PI→2PI를 정의하는 476-triangle raw negima runtime composition이다.",
+  "artifacts": [
+    {
+      "role": "runtime-composition",
+      "file": "../assets/mdl-negima-grill-raw-r1.composition.json",
+      "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+      "bytes": 1177,
+      "format": "json"
+    },
+    {
+      "role": "flip-review-report",
+      "file": "flip-review-report.json",
+      "sha256": "8e13b4a245ca9649f59c481b7fef0a43302ae71c7ca7ca26f7e64a60b3757f8d",
+      "bytes": 648,
+      "format": "json"
+    },
+    {
+      "role": "isolated-review-board",
+      "file": "../review-mdl-negima-grill-raw-flip-fhd-r1.png",
+      "sha256": "dc62c3c3034676e968b3a1747afee6877465319b6aea19af422feca3901f78e6",
+      "bytes": 77053,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "technicalReview": {
+    "result": "passed",
+    "checks": [
+      "actual Three.js GLTFLoader composition preserves 476 triangles and the chicken, green-onion, chicken, green-onion, chicken sequence",
+      "first and second flip endpoints are exactly 0→PI and PI→2PI on the same positive local +Y axis",
+      "approved source GLB and nearest albedo SHA-256 values match the integration contract",
+      "isolated review contains one raw negima and no grill, tray, person, UI, text, timer, quality marker, smoke, or ember",
+      "runtime implementation source remains app-owned; this art bundle promotes the approved composition JSON without duplicating its three independently identified source model bundles"
+    ]
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자 응답: 승인"
+  },
+  "runtimeRegistrationAllowed": false
+}

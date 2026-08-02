@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "bundle-model",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/mdl-negima-grill-raw-r1.composition.json",
+    "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/mdl-negima-grill-raw-r1.composition.json",
+      "url": "/assets/core/cooking/mdl-negima-grill-raw-r1-b1.json",
+      "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+      "bytes": 1177,
+      "format": "json"
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless passthrough: approved R1 composition JSON and runtime B1 primary artifact have identical SHA-256 and bytes",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "single 1177-byte composition JSON runtime payload",
+      "no byte, geometry, texture, raster, sequence, pivot, or flip endpoint change",
+      "three source model bundles remain separate stable assets and are not duplicated in this runtime build"
+    ]
+  }
+}

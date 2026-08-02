@@ -13,12 +13,12 @@
   },
   "sourceReferences": [
     {
-      "file": "../../r1/assembly-station-fhd-r1.png",
+      "file": "../../../r1/assembly-station-fhd-r1.png",
       "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
       "role": "user-approved D1 assembly full-screen source; direct visual source for all station geometry and ingredient forms"
     },
     {
-      "file": "../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "file": "../../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
       "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
       "role": "approved fixed workspace background; alpha composite target"
     }
@@ -27,8 +27,9 @@
     "tool": "built-in imagegen",
     "mode": "background-extraction",
     "promptSummary": "Use the approved assembly full screen as the direct visual source; isolate its station with chicken, large cylindrical negima green-onion segments, bamboo skewers, empty jig, and empty transfer tray. Remove only the one jig skewer because it is dynamic.",
-    "rawSource": "../source/st-assembly-tier-1-original-derived-chroma-source-r3.png",
-    "rawSourceSha256": "bbec00371d097c3f2c398f6819ae28b3022c00b178af2a443f0796ca8f522be5",
+    "rawChromaSource": "../source/st-assembly-tier-1-original-derived-chroma-source-r3.png",
+    "rawChromaSourceSha256": "bbec00371d097c3f2c398f6819ae28b3022c00b178af2a443f0796ca8f522be5",
+    "rawChromaSourceBytes": 1475857,
     "postProcess": [
       "nearest-neighbor normalization from 1672x941 to 1920x1080",
       "remove_chroma_key.py with border auto-key, soft matte, and despill",
@@ -40,6 +41,7 @@
     "width": 1920,
     "height": 1080,
     "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+    "bytes": 988222,
     "alpha": "straight RGBA; four corner alpha values are 0"
   },
   "validation": {

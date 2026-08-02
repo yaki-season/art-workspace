@@ -5,15 +5,15 @@
   "sourceRevision": 1,
   "screenUnit": "SCR-SVC-ASSEMBLY",
   "semanticPurpose": "D1 네기마 조립 화면의 고정 플레이어측 구조물(빈 재료 통 3개, 빈 5칸 꼬치 jig, 빈 전달 tray)만 제공한다.",
-  "status": "superseded-by-r2",
+  "status": "superseded",
   "sourceReferences": [
     {
-      "file": "../../r1/assembly-station-fhd-r1.png",
+      "file": "../../../r1/assembly-station-fhd-r1.png",
       "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
       "role": "user-approved D1 assembly full-screen source; station composition, scale, lighting, and camera reference"
     },
     {
-      "file": "../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "file": "../../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
       "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
       "role": "approved fixed workspace background; alpha composite target"
     }
@@ -22,8 +22,9 @@
     "tool": "built-in imagegen",
     "mode": "background-extraction",
     "promptSummary": "Create only the approved assembly scene's empty fixed station: three adjacent shallow ingredient bins, an empty five-slot wooden jig, and an empty dark transfer tray; no food, skewer, UI, or scene; uniform #00ff00 chroma background.",
-    "rawSource": "../source/st-assembly-tier-1-chroma-source-r1.png",
-    "rawSourceSha256": "d5b035f726ce14754fec12172c771510fca7620f72a4b703309cadc087988f1a",
+    "rawChromaSource": "../source/st-assembly-tier-1-chroma-source-r1.png",
+    "rawChromaSourceSha256": "d5b035f726ce14754fec12172c771510fca7620f72a4b703309cadc087988f1a",
+    "rawChromaSourceBytes": 1446658,
     "postProcess": [
       "nearest-neighbor normalization from 1672x941 to 1920x1080",
       "remove_chroma_key.py with border auto-key, soft matte, and despill",
@@ -35,6 +36,7 @@
     "width": 1920,
     "height": 1080,
     "sha256": "77f1cbbbee1be02e61db68adab1209777c242cc6f85eb035bb20d8b1c007fa36",
+    "bytes": 954113,
     "alpha": "straight RGBA; four corner alpha values are 0"
   },
   "validation": {

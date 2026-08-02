@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "ST-ASSEMBLY-TIER-1",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "assetMeaning": "D1 네기마 조립 화면의 생 닭고기·큼직한 대파 토막·대나무 꼬치 재료 통과 빈 5칸 jig·빈 전달 tray를 제공하는 고정 조립대다.",
+  "sourceEvidence": [
+    {
+      "file": "../../../r1/assembly-station-fhd-r1.png",
+      "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa"
+    },
+    {
+      "file": "../../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34"
+    }
+  ],
+  "output": {
+    "file": "../assets/st-assembly-tier-1-fhd-r3.png",
+    "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+    "bytes": 988222,
+    "width": 1920,
+    "height": 1080,
+    "alpha": "straight",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../review-st-assembly-tier-1-isolated-fhd-r3.png",
+    "sha256": "53b9716dca19e0796d6cce329b4f22a55ec17cbb7e21b3ff275205ca503b071f",
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "dynamic bamboo skewer and its incremental components",
+    "background scene, customer, completed food, text, UI, and VFX"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-29",
+    "basis": "사용자 응답: 승인한다"
+  },
+  "runtimeRegistrationAllowed": false
+}

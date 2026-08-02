@@ -1,10 +1,10 @@
 {
-  "schemaVersion": 1,
-  "profile": "concept-master-rebuild-review",
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
   "id": "CM-GRILL-STATION-D1-REBUILD",
   "sourceRevision": 1,
   "screenUnit": "SCR-SVC-GRILL",
-  "status": "superseded-by-r2",
+  "status": "superseded",
   "semanticPurpose": "D1 그릴 화면을 다시 분리·제작하기 위한 전체 장면 기준이다. D1의 2칸 활성 규칙과, 생·익는 중·뒤집기·적정·완전 탄 네기마의 색·접지·가림 관계를 한 장에서 고정한다.",
   "sourceReferences": [
     {
@@ -12,23 +12,20 @@
       "file": "../../../../../../../concept-masters/2026-07-26/05_grill-station-master.png",
       "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5",
       "role": "approved composition and tone source for the independent downward grill workspace"
-    },
-    {
-      "id": "GPL-002/GPL-004",
-      "role": "D1 has two active grill slots; grilling records separate faces and a flip is a 180-degree turn with tongs, brief oil sparks, and re-contact"
-    },
-    {
-      "id": "ART-003",
-      "role": "master-to-layer separation and DOM-only semantic text/live-value contract"
     }
+  ],
+  "contractReferences": [
+    {"id":"GPL-002/GPL-004","role":"D1 has two active grill slots; grilling records separate faces and a flip is a 180-degree turn with tongs, brief oil sparks, and re-contact"},
+    {"id":"ART-003","role":"master-to-layer separation and DOM-only semantic text/live-value contract"}
   ],
   "generation": {
     "tool": "built-in imagegen",
     "mode": "new stylized full-scene generation",
     "promptFile": "PROMPT.md",
-    "rawSource": "../source/cm-grill-station-d1-rebuild-r1-generated.png",
-    "rawSourceSha256": "5c713673040997755eac0513b938c93eae83f71562e3e8d323c567ab08cf98f7",
-    "rawSourceBytes": 2637560,
+    "promptSummary": "D1 그릴의 조리·뒤집기·대기·완성·폐기 상태를 분리 제작하기 위한 전체 장면 기준 한 장을 생성한다.",
+    "rawChromaSource": "../source/cm-grill-station-d1-rebuild-r1-generated.png",
+    "rawChromaSourceSha256": "5c713673040997755eac0513b938c93eae83f71562e3e8d323c567ab08cf98f7",
+    "rawChromaSourceBytes": 2637560,
     "postProcess": [
       "nearest-neighbor FHD normalization from 1672x941 to 1920x1080",
       "no crop, colour edit, compositing, transparency conversion, or generated-pixel edit after source inspection"

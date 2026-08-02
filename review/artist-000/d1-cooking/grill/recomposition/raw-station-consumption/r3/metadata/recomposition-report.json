@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-GRILL-MDL-NEGIMA-GRILL-RAW-R1-CONSUMPTION-R3",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "CM-GRILL-STATION-EMPTY-BASE",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "MDL-NEGIMA-GRILL-RAW",
+      "profile": "bundle-model",
+      "sourceRevision": 1,
+      "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../review-mdl-negima-grill-raw-station-fhd-r3.png",
+      "sha256": "f13b3808b56c9462854c863c6b8843206aebfbbf2bf5669b1fb86d5bbc5a1579",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../review-mdl-negima-grill-raw-station-720-r3.png",
+      "sha256": "d33791d5da0e21d59bafb81f065a623c50e7f758d3c921b45c4219ef388da1ae",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 R3의 위아래로 확장된 raw 네기마 station 소비 화면을 승인했다."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "creationUnitCount": 1,
+  "id": "BG-WORKSPACE-GRILL",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION-R3",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "assetMeaning": "D1 그릴 화면의 고정 목재 frame과 빈 deep-indigo 작업면을 제공하는 불투명 complete background layer다.",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "basis": "사용자 응답: 승인",
+    "date": "2026-07-29"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../assets/bg-workspace-grill-fhd-r1.png",
+    "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449"
+  },
+  "spatialInference": {
+    "file": "../../../master/r3/metadata/spatial-inference.json",
+    "sha256": "5d7c989212b799ed0407fce8df91dda63f74a2b74653b8cec811022106c68be6"
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/bg-workspace-grill-fhd-r1.png",
+      "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449"
+    },
+    "reviewBoard": {
+      "file": "review-bg-workspace-grill-isolated-fhd-r1.png",
+      "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449"
+    }
+  },
+  "rejectedIntermediate": {"retained": false}
+}

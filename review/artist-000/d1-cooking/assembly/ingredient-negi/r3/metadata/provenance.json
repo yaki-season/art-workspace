@@ -7,13 +7,14 @@
   "semanticOwner": "assembly.skewer.ingredient.negi",
   "semanticPurpose": "D1 네기마 조립의 큼직한 대파 토막 한 조각이다. 런타임은 MDL-SKEWER-BASE의 slot anchor에 skewerSocket을 결합해 닭→파→닭→파→닭 순서를 구성한다.",
   "status": "approved-by-user",
-  "approval": {"date":"2026-07-29","basis":"사용자 응답: 승인"},
+  "approval": {"status":"approved-by-user","date":"2026-07-29","basis":"사용자 응답: 승인"},
   "sourceReferences": [{
-    "file": "art-workspace/review/artist-000/d1-cooking/assembly/r1/assembly-station-fhd-r1.png",
+    "file": "../../../r1/assembly-station-fhd-r1.png",
     "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
     "role": "user-approved D1 assembly full-screen source; direct visual reference for chunky negi segment, layered cut end, green palette, and pixel contour"
   }],
   "generation": {
+    "tool": "deterministic Three.js GLTFExporter with reused approved imagegen texture source",
     "modelTool": "deterministic Three.js GLTFExporter",
     "textureTool": "built-in imagegen",
     "textureMode": "R2-approved raw Japanese green-onion material reused unchanged; only assembly-pose plane rotation is corrected",
@@ -24,6 +25,9 @@
     "postProcess": ["R2 source alpha and nearest 256×192 pixel albedo are reused unchanged", "R2 actual jig integration found the 64° decal correction doubled under the base parent Z=-90° rotation", "R3 changes only the pixel-material-plane rotation to -26° so its long silhouette is screen-vertical in the real horizontal-skewer assembly pose", "body long axis remains local X; skewerSocket local +Y crosses the body laterally", "actual R3 GLB plus albedo rendered alone on neutral checkerboard in the same assembly pose"]
   },
   "output": {
+    "file": "../assets/mdl-ingredient-negi-r3.glb",
+    "bytes": 5112,
+    "sha256": "065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3",
     "model": {"file":"../assets/mdl-ingredient-negi-r3.glb","bytes":5112,"sha256":"065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3","format":"glb"},
     "albedo": {"file":"../assets/tex-ingredient-negi-albedo-r3.png","bytes":55025,"sha256":"8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95","dimensions":[256,192],"colorSpace":"sRGB","sampling":"nearest"}
   },

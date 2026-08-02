@@ -5,20 +5,20 @@
   "sourceRevision": 2,
   "screenUnit": "SCR-SVC-ASSEMBLY",
   "semanticPurpose": "D1 네기마 조립 화면의 플레이어측 조립대: 닭고기·대파·대나무 꼬치가 채워진 세 재료 통, 빈 5칸 꼬치 jig, 빈 전달 tray를 제공한다.",
-  "status": "superseded-by-r3",
+  "status": "superseded",
   "sourceReferences": [
     {
-      "file": "../../r1/assembly-station-fhd-r1.png",
+      "file": "../../../r1/assembly-station-fhd-r1.png",
       "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
       "role": "user-approved D1 assembly full-screen source; station composition, scale, lighting, and camera reference"
     },
     {
-      "file": "../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "file": "../../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
       "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
       "role": "approved fixed workspace background; alpha composite target"
     },
     {
-      "file": "../../station/r1/assets/st-assembly-tier-1-fhd-r1.png",
+      "file": "../../r1/assets/st-assembly-tier-1-fhd-r1.png",
       "sha256": "77f1cbbbee1be02e61db68adab1209777c242cc6f85eb035bb20d8b1c007fa36",
       "role": "superseded R1 structure edit target; geometry and placement preserved"
     }
@@ -27,8 +27,9 @@
     "tool": "built-in imagegen",
     "mode": "precise-object-edit",
     "promptSummary": "Change only the three bin contents: raw chicken thigh cubes, chopped Japanese green onion, and unused bamboo skewers. Preserve all fixed station geometry; keep jig and tray empty on uniform #00ff00 chroma.",
-    "rawSource": "../source/st-assembly-tier-1-filled-chroma-source-r2.png",
-    "rawSourceSha256": "d72b127bcee1d3814abb8971d094a165deac4e05a9505ccff780d044bb28d674",
+    "rawChromaSource": "../source/st-assembly-tier-1-filled-chroma-source-r2.png",
+    "rawChromaSourceSha256": "d72b127bcee1d3814abb8971d094a165deac4e05a9505ccff780d044bb28d674",
+    "rawChromaSourceBytes": 1438303,
     "postProcess": [
       "nearest-neighbor normalization from 1672x941 to 1920x1080",
       "remove_chroma_key.py with border auto-key, soft matte, and despill",
@@ -40,6 +41,7 @@
     "width": 1920,
     "height": 1080,
     "sha256": "fa4714716861f8c8a2dc9489c3afe3a2fc27ee88555987a1acd390145b82286a",
+    "bytes": 964131,
     "alpha": "straight RGBA; four corner alpha values are 0"
   },
   "validation": {

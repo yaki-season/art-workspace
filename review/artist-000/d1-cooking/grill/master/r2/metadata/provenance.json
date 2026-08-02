@@ -1,10 +1,10 @@
 {
-  "schemaVersion": 1,
-  "profile": "concept-master-rebuild-review",
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
   "id": "CM-GRILL-STATION-CONTINUOUS-GRATE",
   "sourceRevision": 2,
   "screenUnit": "SCR-SVC-GRILL",
-  "status": "superseded-by-r3",
+  "status": "superseded",
   "semanticPurpose": "연속 석쇠 위 네기마 상태와 조리 뒤집기, 조립 완료 대기 꼬치, 완성·폐기 경로를 분리 제작하기 위한 전체 그릴 장면 기준이다.",
   "sourceReferences": [
     {
@@ -18,19 +18,19 @@
       "file": "../../../../../../../concept-masters/2026-07-26/05_grill-station-master.png",
       "sha256": "fa3fbd79332c6aeb5e50cdff381f0378954f802c4abbbc4a9b8f4ecc0d9b0da5",
       "role": "original grill screen composition and tone source"
-    },
-    {
-      "id": "GPL-004/UI-002",
-      "role": "shared grate, independent face cooking and flip; discard removes only the item, and its DOM control remains hidden during D1 failure-safe guidance"
     }
+  ],
+  "contractReferences": [
+    {"id":"GPL-004/UI-002","role":"shared grate, independent face cooking and flip; discard removes only the item, and its DOM control remains hidden during D1 failure-safe guidance"}
   ],
   "generation": {
     "tool": "built-in imagegen",
     "mode": "precise-object-edit",
     "promptFile": "PROMPT.md",
-    "rawSource": "../source/cm-grill-station-continuous-grate-r2-generated.png",
-    "rawSourceSha256": "2762d73d718ce76b4be07c44437b6c79b9e844d1ee684502e18d33ba4658afab",
-    "rawSourceBytes": 2530923,
+    "promptSummary": "R1의 톤·원근을 유지하면서 연속 석쇠, 조리 상태, 대기 rack, 완성·폐기 경로를 한 장의 분리 제작 기준으로 교정한다.",
+    "rawChromaSource": "../source/cm-grill-station-continuous-grate-r2-generated.png",
+    "rawChromaSourceSha256": "2762d73d718ce76b4be07c44437b6c79b9e844d1ee684502e18d33ba4658afab",
+    "rawChromaSourceBytes": 2530923,
     "postProcess": [
       "one targeted edit restored the complete tongs tool inside the frame without changing the scene contract",
       "nearest-neighbor FHD normalization from 1672x941 to 1920x1080",

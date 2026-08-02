@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "creationUnitCount": 1,
+  "id": "BG-WORKSPACE-ASSEMBLY",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-ASSEMBLY-STATION-R1",
+  "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
+  "assetMeaning": "D1 조립 화면의 고정 후면 공간과 빈 플레이어측 목재 작업면을 제공하는 불투명 complete background layer다.",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "basis": "사용자 응답: 승인",
+    "date": "2026-07-28"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../assets/bg-workspace-assembly-fhd-r1.png",
+    "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34"
+  },
+  "spatialInference": {
+    "file": "../../../r1/metadata/spatial-inference.json",
+    "sha256": "fc945ef33b18c415fcb84f4edb5ef7c639fca83b742c38173fd79f9340c1313d"
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/bg-workspace-assembly-fhd-r1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34"
+    },
+    "reviewBoard": {
+      "file": "review-workspace-background-fhd-r1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34"
+    }
+  },
+  "rejectedIntermediate": {"retained": false}
+}

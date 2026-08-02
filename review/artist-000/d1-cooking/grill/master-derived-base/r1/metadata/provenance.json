@@ -1,9 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "CM-GRILL-STATION-EMPTY-BASE",
   "sourceRevision": 1,
   "screenUnit": "SCR-SVC-GRILL",
-  "profile": "master-derived-runtime-base-parity-review",
+  "profile": "complete-layer",
   "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
   "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
   "status": "approved-by-user",
@@ -13,20 +13,25 @@
     "basis": "사용자 응답: 둘 다 승인"
   },
   "purpose": "승인된 CM-GRILL-STATION-QUEUED-SELECTION R3의 카메라·원근·구도·조명·색조를 보존하면서 동적 조리 상태만 제거한, D1 소비 화면의 불투명 base 후보다.",
+  "semanticPurpose": "승인된 CM-GRILL-STATION-QUEUED-SELECTION R3의 카메라·원근·구도·조명·색조를 보존하면서 동적 조리 상태만 제거한, D1 소비 화면의 불투명 base 후보다.",
   "sourceMaster": {
     "id": "CM-GRILL-STATION-QUEUED-SELECTION",
     "revision": 3,
-    "file": "../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
+    "file": "../../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png",
     "sha256": "b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c",
     "role": "camera, perspective, composition, lighting and palette canonical source"
   },
+  "sourceReferences": [
+    {"file":"../../../master/r3/review-cm-grill-station-queued-selection-fhd-r3.png","sha256":"b029f99434ee4a66036e3cdd0dd5125af7ce89028daa29ca39a219630973fb2c","role":"camera, perspective, composition, lighting and palette canonical source"}
+  ],
   "generation": {
     "tool": "built-in imagegen",
     "mode": "precise object removal from full-frame master",
     "promptFile": "../PROMPT.md",
-    "rawSource": "../source/cm-grill-station-empty-base-r1-generated.png",
-    "rawSourceSha256": "017fc38b249253f6d61061d58fe482905afd2686752d5a712dae0e06bf617e92",
-    "rawSourceBytes": 2280072,
+    "promptSummary": "승인된 R3 master에서 음식·꼬치·집게·VFX·tray·버튼 같은 동적 상태만 제거하고 카메라·구도·조명을 보존한다.",
+    "rawChromaSource": "../source/cm-grill-station-empty-base-r1-generated.png",
+    "rawChromaSourceSha256": "017fc38b249253f6d61061d58fe482905afd2686752d5a712dae0e06bf617e92",
+    "rawChromaSourceBytes": 2280072,
     "postProcess": [
       "nearest-neighbor full-canvas normalization from 1672×941 to 1920×1080",
       "no crop, camera translation, layer re-placement, colour edit, transparency conversion, or post-generation pixel edit"

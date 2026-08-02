@@ -1,21 +1,38 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "ST-GRILL-FINISHED-TRAY",
   "sourceRevision": 6,
   "screenUnit": "SCR-SVC-GRILL",
-  "profile": "flat-bamboo-makisu-asymmetric-perspective-resting-mat",
+  "profile": "standalone-raster",
   "semanticOwner": "Artist 1 / D1-ASSEMBLY-GRILL-FOOD-SHADER",
   "semanticOwnerId": "artist-1.d1-assembly-grill-food-shader",
   "status": "approved-by-user",
   "approvedAt": "2026-07-30",
-  "approval": "사용자가 R6 검수 후보를 승인했다. 왼쪽 기준점 유지, 우측 15% 확장, 작은 뒤로·우측·반시계 보정만 확정한다.",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-07-30",
+    "basis": "사용자가 R6 검수 후보를 승인했다. 왼쪽 기준점 유지, 우측 15% 확장, 작은 뒤로·우측·반시계 보정만 확정한다."
+  },
   "purpose": "`grill.finished` 공용 완료품을 서빙 전 잠시 올려두는 빈 대나무 김밥말이 resting mat이다. 음식·수량·품질·서빙 결과는 runtime 동적 조합이며, mat은 바닥에 까는 단일 고정 skin만 제공한다.",
+  "semanticPurpose": "`grill.finished` 공용 완료품을 서빙 전 잠시 올려두는 빈 대나무 김밥말이 resting mat이다. 음식·수량·품질·서빙 결과는 runtime 동적 조합이며, mat은 바닥에 까는 단일 고정 skin만 제공한다.",
   "stationBase": {
     "id": "CM-GRILL-STATION-EMPTY-BASE",
     "revision": 1,
-    "file": "../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png",
+    "file": "../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png",
     "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a",
     "role": "approved R3 master camera and fixed upper-right station slot"
+  },
+  "sourceReferences": [
+    {"file":"../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png","sha256":"ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a","role":"approved R3 master camera and fixed upper-right station slot"}
+  ],
+  "generation": {
+    "tool": "browser-rendered CSS 3D transform",
+    "mode": "approved R5 raster perspective derivation",
+    "promptSummary": "R5의 빈 대나무 makisu를 재생성하지 않고 왼쪽 기준점을 유지한 채 우측 15% 확장과 작은 투시·회전 보정만 적용한다.",
+    "rawChromaSource": "../source/st-grill-finished-makisu-normalized-r6.png",
+    "rawChromaSourceSha256": "5a73f1046b69cdf4523bbba58fd56e4c9e80038df810939b338bcbdec09ac4f3",
+    "rawChromaSourceBytes": 158553,
+    "postProcess": ["browser-rendered CSS 3D transform into a straight-alpha PNG; no food raster, texture, or GLB was created"]
   },
   "derivation": {
     "newImageGeneration": false,

@@ -14,17 +14,18 @@
   },
   "sourceReferences": [
     {
-      "file": "art-workspace/review/artist-000/d1-cooking/assembly/r1/assembly-station-fhd-r1.png",
+      "file": "../../../r1/assembly-station-fhd-r1.png",
       "sha256": "77564f0481c6f5f5f445da315271a544313029341d9ec0530f7db6aa69629daa",
       "role": "user-approved D1 assembly full-screen source; direct visual reference for the bamboo's pixel contour, grain, warm palette, and jig-scale"
     },
     {
-      "file": "art-workspace/review/artist-000/d1-cooking/assembly/station/r3/metadata/provenance.json",
-      "sha256": "37bcc3c496b94a29c617df678e2ae63fd2e13503a821e686a7ae3f2f2a58e9bc",
+      "file": "../../../station/r3/metadata/provenance.json",
+      "sha256": "470f63402402ada2c16543e3a78080fa6ab65536a007031f6b0a95205c534f69",
       "role": "approved empty jig and dynamic-composition contract"
     }
   ],
   "generation": {
+    "tool": "deterministic Three.js GLTFExporter with built-in imagegen texture source",
     "modelTool": "deterministic Three.js GLTFExporter",
     "textureTool": "built-in imagegen",
     "textureMode": "source-faithful pixel-art bamboo-skewer extraction from the user-approved D1 screen",
@@ -41,6 +42,9 @@
     ]
   },
   "output": {
+    "file": "../assets/mdl-skewer-base-r2.glb",
+    "bytes": 15996,
+    "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
     "model": {
       "file": "../assets/mdl-skewer-base-r2.glb",
       "bytes": 15996,
