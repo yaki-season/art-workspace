@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+  "sourceRevision": 2,
+  "status": "composition-evidence-only-not-approval-artifact",
+  "layerOrder": ["approved background", "BG-SEATING-6 R2", "candidate furniture-free person plus beer", "approved service counter"],
+  "outputs": [
+    {"file": "../review/context-d1-tsukioka-partial-beer-waiting-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2718356, "sha256": "2377ba3e1cd11e21c33b9bbe7b7985dae1620d3ebe1ea31918460ab6cb0fb3bc"},
+    {"file": "../review/context-d1-tsukioka-partial-beer-waiting-720-r2.png", "width": 1280, "height": 720, "bytes": 1406566, "sha256": "f1ccef0cff89d682741db9fed6f9e3c1445c2c8efc3d067e91063e975a9c7242"}
+  ],
+  "producerInspection": {
+    "result": "pass",
+    "personCount": 1,
+    "beerMugCount": 1,
+    "characterFurniturePixels": 0,
+    "duplicateChair": false,
+    "beerState": "upright amber draft beer with cream foam, held at chest height, away from mouth, readable above counter",
+    "otherHand": "empty",
+    "foodOrNegima": false,
+    "scale": "FHD height 690 and y215..905 match approved waiting R3; fixed front eye line and seat-04 placement preserved"
+  },
+  "approval": {"status": "pending-user-review", "basis": "Context is evidence only; no candidate or screen approval inferred."},
+  "runtimeRegistrationAllowed": false
+}

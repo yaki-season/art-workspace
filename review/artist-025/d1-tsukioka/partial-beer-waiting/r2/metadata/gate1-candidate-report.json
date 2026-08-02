@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "gateContract": "v8-gate-1-isolated-candidate",
+  "runId": "ART3-D1-TSUKIOKA-PARTIAL-BEER-FURNITURE-FREE-20260802-R2",
+  "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+  "sourceRevision": 2,
+  "status": "pending-user-review",
+  "output": {"file": "../assets/d1-tsukioka-partial-beer-waiting-r2.png", "width": 1920, "height": 1080, "bytes": 295089, "sha256": "590aba25dcf8ad897ebe13e85eb9db470f87a195bb9bb793cfc78d82163d9206", "alphaBounds": [952, 215, 1212, 905]},
+  "alphaValidation": {"transparentPixels": 1963649, "partiallyTransparentPixels": 1852, "opaquePixels": 108099, "cornerAlpha": [0, 0, 0, 0], "magentaSpillPixels": 0, "largeConnectedComponents": 1, "result": "pass"},
+  "scaleValidation": {"canonicalWaitingR3Bounds": [957, 215, 1215, 905], "candidateBounds": [952, 215, 1212, 905], "heightRatio": 1.0, "headTopDeltaFhd": 0, "footPlaneDeltaFhd": 0, "result": "pass"},
+  "identityStateValidation": {"visualResult": "pass", "furniturePixels": 0, "personCount": 1, "beerMugCount": 1, "beerHeldAtChest": true, "drinking": false, "otherHandEmpty": true, "negimaOrFood": false, "correctionCallUsed": false, "sourcePixelComparison": {"pixels": 318910, "meanAbsoluteRgbDelta": 11.1218, "medianAbsoluteRgbDelta": 6.6667, "p95AbsoluteRgbDelta": 35.0}},
+  "reviewOutputs": [
+    {"file": "../review/review-d1-tsukioka-partial-beer-waiting-isolated-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 254651, "sha256": "4d7d44641733d08ef8420179326b0cb7cbbd3440926df765d0998b1eea3b3f40"},
+    {"file": "../review/review-d1-tsukioka-partial-beer-waiting-isolated-720-r2.png", "width": 1280, "height": 720, "bytes": 121700, "sha256": "4ff7072c5b340e637eaffed49307bdac39bcefb4e72e3699663498433af069b6"},
+    {"file": "../review/context-d1-tsukioka-partial-beer-waiting-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2718356, "sha256": "2377ba3e1cd11e21c33b9bbe7b7985dae1620d3ebe1ea31918460ab6cb0fb3bc", "status": "evidence-only"},
+    {"file": "../review/context-d1-tsukioka-partial-beer-waiting-720-r2.png", "width": 1280, "height": 720, "bytes": 1406566, "sha256": "f1ccef0cff89d682741db9fed6f9e3c1445c2c8efc3d067e91063e975a9c7242", "status": "evidence-only"}
+  ],
+  "nextGate": "user Gate-1 visual review",
+  "runtimeRegistrationAllowed": false
+}
