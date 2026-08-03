@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "sourceRevision": 3,
+  "status": "approved-by-user",
+  "approvedAt": "2026-08-03",
+  "runtimeModule": {
+    "file": "../runtime/compose-mdl-negima-grill-cooking-second-face.mjs",
+    "sha256": "8230d6781948d86722911c86c65670f4c9667d0ece09b12a52d9055ba2ec5a36"
+  },
+  "stateFile": {
+    "file": "../assets/mdl-negima-grill-cooking-second-face-r3.state.json",
+    "sha256": "bea6cbc9821c17ccb6077bce33074b36a6bab0506f387ceb4ff94a22afb85e29"
+  },
+  "reviews": {
+    "fhdSha256": "9f0ca43dcdeb55d165bae2e4426e88458db8999638111919952b3fe9a12b5e43",
+    "hdSha256": "760fac509ba7f672c0e60267b605daf00d5429401553d84bcd1f7c6032ca3abe",
+    "comparisonSha256": "0a7e348155224841e77cf7e12283f1336968e7fc5b0577f7e085f543f74060b7"
+  },
+  "contract": {
+    "triangleCount": 476,
+    "rotationY": 3.141592653589793,
+    "sideElapsedSeconds": [4, 4],
+    "face1HeatProgress": 0.52,
+    "newGlb": false,
+    "newTexture": false,
+    "newRaster": false
+  },
+  "runtimeRegistrationAllowed": false,
+  "nextGate": "optimization-finalizer-runtime-handoff"
+}

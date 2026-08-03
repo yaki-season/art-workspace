@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "revision": 3,
+  "status": "approved-by-user-source",
+  "approvedAt": "2026-08-03",
+  "source": {
+    "file": "../review/review-mdl-negima-grill-cooking-second-face-station-fhd-r3.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2127571,
+    "sha256": "c45974acf54d8aa7d333a3ecc6bf787220791d7da1e292fd2ac66acae153f3d3"
+  },
+  "runtimeRegistrationAllowed": false,
+  "nextGate": "reconstruct-contract-preserving-fhd-720-consumption"
+}
+

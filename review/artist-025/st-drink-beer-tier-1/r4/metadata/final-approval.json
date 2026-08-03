@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-DRINK-BEER-TIER-1",
+  "sourceRevision": 4,
+  "status": "approved-by-user",
+  "approvedAt": "2026-08-03",
+  "assetSha256": "a0bd01f55f893520d48b8e38bccdb18c90868c228f6a7336eab43f162d0f6ed1",
+  "fhdReviewSha256": "9df35aa239082b849b60066c950db18210867ee193112e1f1d3b78dd2c8b677c",
+  "hdReviewSha256": "5b965de53b5973a6f124384b0be7274d3d8a5467c3da657e30e5c3832dbd28ab",
+  "runtimeRegistrationAllowed": false,
+  "nextGate": "lossless-runtime-build-and-finalizer"
+}

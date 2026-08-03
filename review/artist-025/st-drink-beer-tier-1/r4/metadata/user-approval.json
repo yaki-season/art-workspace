@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-DRINK-BEER-TIER-1",
+  "revision": 4,
+  "status": "approved-by-user-source",
+  "approvedAt": "2026-08-03",
+  "authoritativeConcept": "../../../../concept-masters/2026-07-26/06_drink-station-master.png",
+  "source": {
+    "file": "../review/recomposition-st-drink-beer-tier-1-fhd-r4.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2317390,
+    "sha256": "f110c0d80ca2c0bd3f9cb1bc7ccb7396449f11b3cdb1bb3a60fc5af1e797adf9"
+  },
+  "runtimeRegistrationAllowed": false,
+  "nextGate": "isolate-station-and-recompose-fhd-720"
+}

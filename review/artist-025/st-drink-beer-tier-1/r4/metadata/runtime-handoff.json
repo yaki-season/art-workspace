@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "standalone-raster",
+  "id": "ST-DRINK-BEER-TIER-1",
+  "sourceRevision": 4,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-DRINK",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {"file":"provenance.json","sha256":"1413d3f64bc25a71d4904ad5f82d7fb821355e2f98630d8f7d62000966cb5425"},
+    "profileApproval": {"file":"standalone-raster-report.json","sha256":"900e4064feb645cd93ec35eb2deac773b7fcfb10e30404aa27ab436a5847deb5"},
+    "recomposition": {"file":"recomposition-report.json","sha256":"9f7cb1758a88e674889e7d8948d915af67ab9d730f34c3be76aa5994e8799e9f"},
+    "optimization": {"file":"optimization-report.json","sha256":"0ba7e9e63693f654e6c7d03d18d17c21daae25da88b90f08a360565e08e4328f"},
+    "finalApproval": {"file":"final-approval.json","sha256":"0c12207403c487c1d0c348d7f1d758a397e24d70caa036d3ff3480041dc43ad1"}
+  },
+  "manifestEntry": {"file":"runtime-manifest-entry.json","sha256":"712824c662e7d9702ef8fd8ab38b324ebcd191e5d46d0f2c7556e96f2db4a48a"},
+  "bundle": [{"role":"primary","sourceFile":"../assets/st-drink-beer-tier-1-r4.png","url":"/assets/core/drink/st-drink-beer-tier-1-r4-b1.png","sha256":"a0bd01f55f893520d48b8e38bccdb18c90868c228f6a7336eab43f162d0f6ed1","bytes":243511,"format":"png","dimensions":{"width":1920,"height":1080}}],
+  "generatedAt": "2026-08-03"
+}

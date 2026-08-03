@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticOwner": "grill.negima.face-1.cooking",
+  "kind": "Three.js derived material state; approved raw GLB composition plus face-1-only coarse procedural sear signal, with no new GLB, albedo, raster, atlas or bake",
+  "baseComposition": "../../../raw-negima/r1/assets/mdl-negima-grill-raw-r1.composition.json",
+  "previousRevision": {"sourceRevision":2,"reason":"R2의 생 분홍 base가 사용자 승인 R3 source보다 덜 익어 보였다."},
+  "flipPose": {"rotationYRadians":3.141592653589793,"completedFlips":1,"visibleFace":1},
+  "sideElapsedSeconds": {"face0":4,"face1":4},
+  "stage": "cooking",
+  "materialState": {
+    "sourceAlbedoPolicy": "reuse the three approved nearest-sampled sRGB albedos byte-identically without copying, resizing, recolouring, or baking",
+    "face1Signal": {
+      "method":"the R3 second-face-only PI endpoint module adds a restrained cooked-base tint and coarse UV sear cells to the exposed reverse decal",
+      "chicken":"three asymmetric caramel/brown clusters in the chicken decal",
+      "greenOnion":"two constrained olive/caramel char bands in the green-onion decal",
+      "heatMeaning":"face1HeatProgress remains 0.52; the brighter cooked edge and restrained caramel signal follow the approved R3 source without changing elapsed time or cook-stage semantics"
+    },
+    "excluded": ["new food raster","duplicate texture","new GLB","texture copy","texture resize","texture recolour","texture bake","material atlas","smoke","ember","VFX","UI","text"]
+  },
+  "triangleCount": 476,
+  "runtimeModule": "../runtime/compose-mdl-negima-grill-cooking-second-face.mjs",
+  "runtimeRegistrationAllowed": false
+}

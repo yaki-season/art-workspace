@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "ST-DRINK-BEER-TIER-1",
+  "sourceRevision": 4,
+  "screenUnit": "SCR-SVC-DRINK",
+  "semanticPurpose": "D1 빈 드링크 화면의 원통형 황동 단일 탭 맥주 머신과 중앙 소형 타공 드립 트레이",
+  "status": "approved-by-user",
+  "sourceReferences": [
+    {
+      "file": "../../../../../concept-masters/2026-07-26/06_drink-station-master.png",
+      "sha256": "667e8f704c74f6515e1a401fc4e2e0981545226fb42ce3f6916e9624fa183ee2",
+      "role": "authoritative concept silhouette and lighting"
+    }
+  ],
+  "generation": {
+    "tool": "OpenAI image generation built-in mode",
+    "mode": "approved R4 full-scene source followed by chroma-key isolated extraction",
+    "promptSummary": "정본 컨셉의 원통형 황동 단일 탭 머신과 중앙 소형 타공 드립 트레이를 단독 추출",
+    "rawChromaSource": "../source/st-drink-beer-tier-1-chroma-r4.png",
+    "rawChromaSourceSha256": "320c753d4594d9326c9f3fdbdfb79fcf9ac26375609ed12e340604ae0f2081fc",
+    "rawChromaSourceBytes": 1210281,
+    "postProcess": [
+      "corner-sampled green chroma removal",
+      "soft matte with one-pixel contraction and feather",
+      "green spill cleanup",
+      "nearest-neighbor contract placement for FHD and 720 review"
+    ]
+  },
+  "output": {
+    "file": "../assets/st-drink-beer-tier-1-r4.png",
+    "sha256": "a0bd01f55f893520d48b8e38bccdb18c90868c228f6a7336eab43f162d0f6ed1",
+    "bytes": 243511,
+    "width": 1920,
+    "height": 1080,
+    "alphaBounds": [826, 258, 268, 505]
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자가 컨셉 정합 R4 source와 FHD/720 소비 화면을 순서대로 승인했다."
+  },
+  "runtimeRegistrationAllowed": false
+}

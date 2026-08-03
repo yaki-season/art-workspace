@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "runtime-derived-material-state",
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "integration": {"file":"integration-report.json","sha256":"3f703ec89568bbd3115132e0f46814e64cabd45e22bd4a57719572186b556b10"},
+    "consumptionValidation": {"file":"../../../recomposition/cooking-second-face-station-consumption/r3/metadata/consumption-validation-report.json","sha256":"a42b80c938ae5a168096c89906ae262823bc7e73922f410bcf06e3e774240466"},
+    "optimization": {"file":"optimization-report.json","sha256":"c5fb8083e486dc1dc07c8243b9ba6c68844aa1442aabd5c75bdfe4e808ac8d98"},
+    "finalApproval": {"file":"final-approval.json","sha256":"b5ca6c2f95ffa8ff30cfc16191dbc97c3873fe0150775fd8487466630708c652"}
+  },
+  "manifestEntry": {"file":"runtime-manifest-entry.json","sha256":"26c42b7c826919bd599a8977a01e1fddd5972c96413c87a0f7e0e1df75d9dfce"},
+  "bundle": [
+    {"role":"runtime-module","sourceFile":"../runtime/compose-mdl-negima-grill-cooking-second-face.mjs","url":"/assets/core/grill/compose-mdl-negima-grill-cooking-second-face-r3-b1.mjs","sha256":"8230d6781948d86722911c86c65670f4c9667d0ece09b12a52d9055ba2ec5a36","bytes":7753,"format":"mjs"},
+    {"role":"state-contract","sourceFile":"../assets/mdl-negima-grill-cooking-second-face-r3.state.json","url":"/assets/core/grill/mdl-negima-grill-cooking-second-face-r3-b1.state.json","sha256":"bea6cbc9821c17ccb6077bce33074b36a6bab0506f387ceb4ff94a22afb85e29","bytes":1850,"format":"json"}
+  ],
+  "generatedAt": "2026-08-03"
+}
