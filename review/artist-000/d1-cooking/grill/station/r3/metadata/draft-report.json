@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "gateContract": "review-only-concept-draft",
+  "runId": "ART1-GRILL-STATION-GROWTH-DRAFT-LAND-20260803-R6",
+  "stage": "D1",
+  "priority": "P0",
+  "id": "ST-GRILL-TIER-1",
+  "stableAssetId": "ST-GRILL-TIER-1",
+  "sourceRevision": 3,
+  "sourceRevisionLabel": "R3",
+  "owner": "Artist 1",
+  "semanticOwner": "grill.station.base",
+  "status": "candidate",
+  "userApprovalStatus": "pending",
+  "runtimeRegistrationAllowed": false,
+  "candidateAgainstRuntimeRevision": "R2",
+  "repositoryHeadAtLanding": "3b7645e9f6edbc21da93533e1130f07f96b89f42",
+  "artifact": {
+    "file": "../review/review-st-grill-tier-1-growth-draft-r3.png",
+    "sourceInputFile": "/Users/jeongdong/.codex/generated_images/019fbdcd-cc79-79b2-9174-9fc5db686c32/exec-780c92de-72db-4ac9-94af-3d20b5db3c7b.png",
+    "sha256": "2da58e232b6a5ad6452188acad16320ba59796f3d7d6287b7c53bc3006cd271e",
+    "bytes": 2029066,
+    "width": 1536,
+    "height": 1024,
+    "bitDepth": 8,
+    "colorType": "RGB (PNG color type 2)",
+    "alpha": "none",
+    "layout": "2x2 review board"
+  },
+  "generation": {
+    "tool": "built-in imagegen",
+    "useCase": "stylized-concept",
+    "prompt": "Use case: stylized-concept\nAsset type: YAKI SEASON game grill-station progression concept draft, review-only art board, not a runtime asset\nPrimary request: Create one landscape concept board showing four empty progression states of the same Japanese yakitori charcoal grill station: capacity 2, 4, 6, then 8 parallel skewers. Show the four variants at identical scale and identical fixed slightly top-down tabletop camera, arranged as a clean 2x2 comparison with generous separation. Do not add labels or numbers.\nInput images:\n- Image 1 is the approved ST-GRILL-TIER-1 R2 visual reference. Preserve its exact design language: one uninterrupted charcoal bed, one continuous square-grid metal wire grate, warm wood base, aged brass trim, black cast iron, compact horizontal proportions, hand-drawn pixel density and camera.\n- Image 2 is an early functional reference only. Use it only to understand a yakitori charcoal grill interaction. Ignore and do not reproduce its text, UI, food, hand cursor, gauges, divided cooking wells, or layout.\nProgression mechanism: Never divide the cooking surface into wells, lanes, cells, slots, or separate burners. It must always read as one continuous grate. At lower capacities, symmetrical dark iron-and-aged-brass side covers physically mask the unused left/right portions; each later state retracts those covers outward to reveal more of the same uninterrupted grate. Covered portions may have subtle mechanical latch details outside the exposed cooking surface, but no lock icons or text.\nStyle/medium: YS-HANDCRAFTED-NIGHT-v1; polished hand-drawn game concept; pixel-art-informed gouache and pencil-ink texture; crisp shape-explaining clusters; no glossy 3D render, no anti-aliased photorealism.\nLighting/mood: warm ember-orange underglow inside the grill, dark indigo-brown shadows, restrained brass highlights, cozy late-night izakaya tone. All four variants use identical lighting.\nMaterials/textures: weathered dark iron, aged brass, warm worn wood, continuous square wire grate, subdued charcoal bed beneath.\nComposition/framing: landscape board, centered 2x2 variants, identical viewpoint and object scale, entire grill visible with padding, no perspective drift between variants, no background scene beyond a simple dark neutral review backdrop.\nConstraints: empty grill station only. No skewers, food, flames, tongs, hand, person, waiting rack, finished tray, discard tray, seasoning, UI, cards, gauges, arrows, icons, labels, text, numbers, logo, watermark, customer scene, drink equipment, or assembly station. Do not change the approved R2 core silhouette and material language beyond the symmetric retractable side-cover progression. No separated cooking wells under any circumstance.\nReference exact paths/SHA: Image1 `review/artist-000/d1-cooking/grill/station/r2/assets/st-grill-tier-1-fhd-r2.png` SHA da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89; Image2 `../docs/inbox/2.art-concept/06_charcoal_grill_station.png` (compute/record actual SHA; referenceOnly, functional intent only)."
+  },
+  "references": [
+    {
+      "file": "review/artist-000/d1-cooking/grill/station/r2/assets/st-grill-tier-1-fhd-r2.png",
+      "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89",
+      "role": "approved R2 visual language, continuous grate, camera and material reference",
+      "referenceOnly": true
+    },
+    {
+      "file": "../docs/inbox/2.art-concept/06_charcoal_grill_station.png",
+      "sha256": "5e803ea6ed017599210834ec6e2781bce964cc488902c88f2fdfc6199b2f01b0",
+      "role": "early functional-intent reference only; text, UI, food, cursor, gauges, divided wells and layout excluded",
+      "referenceOnly": true
+    }
+  ],
+  "allowedIntent": "2→4→6→8 physical side-cover progression review only",
+  "validation": {
+    "variantCount": 4,
+    "variantCountResult": "pass",
+    "layout": "clean 2x2",
+    "continuousGrateAllVariants": true,
+    "dividedCookingWells": false,
+    "foodOrSkewers": false,
+    "uiOrLabelsOrNumbers": false,
+    "perspectiveHarmony": "pass-with-visible-row-drift",
+    "materialHarmonyWithR2": "pass",
+    "progressionRead": "exposed grate width grows in intended top-left → top-right → bottom-left → bottom-right order; capacity is conceptual and not metrically proven"
+  },
+  "visibleDefects": [
+    "the total grill silhouette grows across the sequence and the lower-row objects are larger, so identical scale and unchanged R2 core silhouette are not fully preserved",
+    "side-cover retraction is not mechanically explicit in every state; some progression is achieved by widening the entire body",
+    "perspective and front-rail height drift slightly between rows",
+    "fine anti-aliased/high-detail rendered texture is more 3D-like than crisp handcrafted pixel clusters",
+    "small glyph-like generation noise appears on portions of the feet and front timber"
+  ],
+  "runtimeBlockers": [
+    "charcoal and ember underglow are baked although ST-CHARCOAL-CORE is a separate semantic layer",
+    "RGB with no alpha",
+    "2x2 multi-variant review board rather than one isolated runtime layer",
+    "1536x1024 rather than a validated 1920x1080 FHD straight-alpha asset and exact 1280x720 consumer evidence"
+  ],
+  "notProduced": [
+    "runtime alpha asset",
+    "provenance.json",
+    "standalone-raster-report.json",
+    "consumer recomposition",
+    "finalizer output",
+    "optimizer output",
+    "promotion",
+    "manifest write",
+    "runtime binding",
+    "app, docs or ASSET-CATALOG change"
+  ],
+  "producerDecision": "pass as review-only progression concept; ineligible for runtime use",
+  "nextGate": "PM presents this exact artifact SHA as one user review candidate; any isolated FHD alpha production requires a separate post-decision task"
+}
