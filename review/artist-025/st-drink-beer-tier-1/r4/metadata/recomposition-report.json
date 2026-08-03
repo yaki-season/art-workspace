@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-DRINK-BEER-TIER-1",
+  "revision": 4,
+  "status": "approved-by-user",
+  "approvedSourceSha256": "f110c0d80ca2c0bd3f9cb1bc7ccb7396449f11b3cdb1bb3a60fc5af1e797adf9",
+  "isolatedAsset": {
+    "file": "../assets/st-drink-beer-tier-1-r4.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "a0bd01f55f893520d48b8e38bccdb18c90868c228f6a7336eab43f162d0f6ed1",
+    "alphaBounds": [826, 258, 268, 505],
+    "visibleChromaKeyPixels": 0
+  },
+  "placement": {
+    "fhd": [826, 258, 268, 505],
+    "hd": [551, 172, 179, 337]
+  },
+  "reviewBoards": [
+    {
+      "file": "../review/recomposition-st-drink-beer-tier-1-fhd-r4.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "9df35aa239082b849b60066c950db18210867ee193112e1f1d3b78dd2c8b677c"
+    },
+    {
+      "file": "../review/recomposition-st-drink-beer-tier-1-hd-r4.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "5b965de53b5973a6f124384b0be7274d3d8a5467c3da657e30e5c3832dbd28ab"
+    }
+  ],
+  "runtimeRegistrationAllowed": false,
+  "finalApprovalDate": "2026-08-03",
+  "nextGate": "v8-provenance-and-finalizer"
+}

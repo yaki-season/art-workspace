@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+  "sourceRevision": 3,
+  "status": "approved-by-user",
+  "reviewBoards": [
+    {
+      "file": "../review-mdl-negima-grill-cooking-second-face-station-fhd-r3.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2561497,
+      "sha256": "9f0ca43dcdeb55d165bae2e4426e88458db8999638111919952b3fe9a12b5e43",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+        "sourceRevision": 3,
+        "triangleCount": 476,
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "laneAnchor": {
+          "x": 609.6,
+          "y": 515.000000052
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 543,
+          "y": 257,
+          "width": 131,
+          "height": 516
+        },
+        "gameplay": {
+          "status": "back",
+          "completedFlips": 1,
+          "orientationFaceDown": "back",
+          "contactFace": "back",
+          "frontElapsedSec": 4,
+          "backElapsedSec": 4,
+          "stage": "cooking"
+        },
+        "shader": {
+          "face1HeatProgress": 0.52,
+          "face1Signal": {
+            "chickenClusters": 3,
+            "greenOnionBands": 2,
+            "coarseUvCells": [
+              16,
+              16
+            ],
+            "signalOnlyOnVisibleFace": true
+          },
+          "materialBindingCount": 5,
+          "reverseDecalPreserved": true,
+          "nearestAlbedosReused": true,
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false,
+          "newAtlas": false,
+          "newBake": false
+        },
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 3.141592653589793,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        }
+      }
+    },
+    {
+      "file": "../review-mdl-negima-grill-cooking-second-face-station-720-r3.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1338251,
+      "sha256": "760fac509ba7f672c0e60267b605daf00d5429401553d84bcd1f7c6032ca3abe",
+      "state": {
+        "id": "MDL-NEGIMA-GRILL-COOKING-SECOND-FACE",
+        "sourceRevision": 3,
+        "triangleCount": 476,
+        "camera": {
+          "sourceMasterId": "CM-GRILL-STATION-QUEUED-SELECTION",
+          "sourceRevision": 3,
+          "projection": "approved master-derived fixed screen-space overlay",
+          "rootRotationRadians": {
+            "x": -0.035,
+            "y": 0.055,
+            "z": 0
+          }
+        },
+        "laneAnchor": {
+          "x": 406.4,
+          "y": 343.333333368
+        },
+        "transform": {
+          "horizontalScale": 1.45,
+          "verticalScale": 1.18
+        },
+        "renderedAlphaBBox": {
+          "x": 362,
+          "y": 172,
+          "width": 88,
+          "height": 344
+        },
+        "gameplay": {
+          "status": "back",
+          "completedFlips": 1,
+          "orientationFaceDown": "back",
+          "contactFace": "back",
+          "frontElapsedSec": 4,
+          "backElapsedSec": 4,
+          "stage": "cooking"
+        },
+        "shader": {
+          "face1HeatProgress": 0.52,
+          "face1Signal": {
+            "chickenClusters": 3,
+            "greenOnionBands": 2,
+            "coarseUvCells": [
+              16,
+              16
+            ],
+            "signalOnlyOnVisibleFace": true
+          },
+          "materialBindingCount": 5,
+          "reverseDecalPreserved": true,
+          "nearestAlbedosReused": true,
+          "newRaster": false,
+          "newGlb": false,
+          "newTexture": false,
+          "newAtlas": false,
+          "newBake": false
+        },
+        "flipPivot": {
+          "axis": "local +Y",
+          "rotationY": 3.141592653589793,
+          "firstInput": "0->PI",
+          "secondInput": "PI->2PI"
+        }
+      }
+    }
+  ],
+  "comparison": {
+    "file": "../review-mdl-negima-grill-cooking-face-compare-fhd-r3.png",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 1390945,
+    "sha256": "0a7e348155224841e77cf7e12283f1336968e7fc5b0577f7e085f543f74060b7",
+    "left": "approved cooking-first-face station R1",
+    "right": "cooking-second-face R3",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 1080
+    },
+    "parity": "same master-derived base, D1 slot0 anchor and shared transform; only the approved R3 reverse-face shader signal differs"
+  },
+  "r3SignalAgainstR1": {
+    "evidence": "R1 and R3 second-face screenshots at the same station placement were compared inside the negima footprint; this proves the visible coarse shader signal without changing geometry or source textures.",
+    "views": [
+      {
+        "viewport": "fhd",
+        "region": {
+          "x": 530,
+          "y": 250,
+          "width": 165,
+          "height": 530
+        },
+        "signalPixels": 20190,
+        "amberOrCaramelSignalPixels": 10725,
+        "maxChannelDelta": 68,
+        "minimumSignalPixels": 500,
+        "result": "pass"
+      },
+      {
+        "viewport": "720",
+        "region": {
+          "x": 353,
+          "y": 167,
+          "width": 110,
+          "height": 353
+        },
+        "signalPixels": 8978,
+        "amberOrCaramelSignalPixels": 4799,
+        "maxChannelDelta": 75,
+        "minimumSignalPixels": 175,
+        "result": "pass"
+      }
+    ],
+    "result": "pass"
+  },
+  "result": "pass",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자가 로컬 최신 아트 검수 갤러리의 R3 FHD/720 station 소비 화면을 승인했다."
+  },
+  "runtimeRegistrationAllowed": false
+}
