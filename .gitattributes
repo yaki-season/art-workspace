@@ -8,3 +8,13 @@
 *.aseprite filter=lfs diff=lfs merge=lfs -text
 *.glb filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
+
+# 증거·계약 파일은 SHA-256을 바이트 단위로 대조한다(provenance, final-approval,
+# runtime-handoff 등). 윈도우 autocrlf가 체크아웃에서 CRLF로 바꾸면 기록된 해시와
+# 전부 어긋나 승격 파이프라인이 "증거 불일치"로 오진한다. LF로 고정한다.
+*.json text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
