@@ -1,0 +1,23 @@
+{
+  "assetId": "MDL-BEER-GLASS",
+  "revision": "R1",
+  "status": "user-approved-consumption-source",
+  "approvedAt": "2026-08-03",
+  "approvedFile": "review-mdl-beer-glass-deck-consumption-r1.png",
+  "sha256": "f19c3c2b20cda915d74e49528e8c160b07963d35ecd3327432f7ffdc36dfdde1",
+  "bytes": 2186243,
+  "dimensions": { "width": 1672, "height": 941 },
+  "approvedMeaning": [
+    "left empty-glass deck contains four matching handled mugs",
+    "one matching empty mug is centered below the approved station tap",
+    "deck and placed-glass states remain visually distinct at gameplay scale",
+    "no hands, player body, beer, foam, VFX, text, or UI are baked into the source"
+  ],
+  "excludedFromApproval": [
+    "transparent isolated glass asset",
+    "transparent isolated deck asset",
+    "FHD and 720 runtime recomposition",
+    "manifest registration and runtime binding"
+  ],
+  "nextGate": "isolate-glass-and-deck-then-fhd-720-recomposition"
+}
