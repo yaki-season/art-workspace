@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-ASSEMBLY-MDL-INGREDIENT-NEGI-R3-FINAL",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "approved-by-user",
+  "assets": [
+    "MDL-INGREDIENT-NEGI"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "6c1f9722e75afbf4b05ce43aef8dfef9139b9cc24ee4b0757f430f440d22c52f"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../ingredient-negi/r3/metadata/optimization-report.json",
+      "sha256": "4840d4faa93be95a9e121d0f312132bf1e6502728ffc81c2a7cf9b9e9754fc84"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). MDL-INGREDIENT-NEGI는 approved-by-user provenance를 가진다."
+  }
+}

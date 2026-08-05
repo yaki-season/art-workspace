@@ -1,0 +1,28 @@
+{
+  "id": "ST-ASSEMBLY-TIER-1",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "profile": "standalone-raster",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:ST-ASSEMBLY-TIER-1:R3",
+  "provenance": "PROV:ST-ASSEMBLY-TIER-1:R3",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.9.0",
+    "ART-002 v3.6.1"
+  ],
+  "reviewedAt": "2026-07-29"
+}

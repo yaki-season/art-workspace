@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "bundle-model",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {"file": "frame-manifest.json", "sha256": "4b9291b99962d54fe9f9623b4c16aacc1d7631ba12504aa1922de70fc4d122b7"},
+  "artifacts": [
+    {"role": "primary", "file": "../assets/d1-tsukioka-received-eating-eat-negima-r2.png", "url": "/assets/core/customer/d1-tsukioka-received-eating-negima-r2-b1.png", "sha256": "5a1e526672aad1eba9e50842ee4bdf0310f8564a9b6aa7c605aecd8fcac0525c", "bytes": 306454, "format": "png", "dimensions": {"width": 1920, "height": 1080}},
+    {"role": "drink-frame", "file": "../assets/d1-tsukioka-received-eating-drink-draft-beer-r2.png", "url": "/assets/core/customer/d1-tsukioka-received-eating-beer-r2-b1.png", "sha256": "973d568259f25c1711e4924d3b063b59ba82962c1dfcaddc418d3735aeef6ee3", "bytes": 304646, "format": "png", "dimensions": {"width": 1920, "height": 1080}},
+    {"role": "frame-manifest", "file": "frame-manifest.json", "url": "/assets/core/customer/d1-tsukioka-received-eating-r2-b1.json", "sha256": "4b9291b99962d54fe9f9623b4c16aacc1d7631ba12504aa1922de70fc4d122b7", "bytes": 1341, "format": "json"}
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {"result": "passed", "method": "lossless passthrough; approved Gate-2 artifact URLs, SHA-256 values, bytes and dimensions are unchanged; only the first frame role is normalized to finalizer-required primary", "userApprovalRequired": false},
+  "performanceBudget": {"result": "passed", "checks": ["atomic three-file bundle", "two PNG frames total 611100 bytes", "1341-byte manifest", "no dimension growth", "no byte growth"]}
+}

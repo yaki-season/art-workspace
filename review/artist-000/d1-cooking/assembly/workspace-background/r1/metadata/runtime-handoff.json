@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "complete-layer",
+  "id": "BG-WORKSPACE-ASSEMBLY",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "5020b21da5709870a70cdf270a8a28259ab6f8e7b3a6e4adcecabf02a90d9203"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "6c4d392dd19ab4b47314424d3275873c3350a44a7cf5bd74c0f578f6d4b4ce78"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/workspace-assembly-base/r1/metadata/recomposition-report.json",
+      "sha256": "690881b46e16701e117b63dfc394f004f038073cf26693437923754981ea1f3e"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "91f2777ec5d0baf42067b4db237e1d54e7bfb09b689f8e1e5f3867fe959a8b68"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/workspace-assembly-base/r1/metadata/final-approval.json",
+      "sha256": "d2f032f3c9596225bc4fb288225cdb41e5d814812484855b4dfeca06ce07c9eb"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "051b07f545b8d011eeff2b61b15c57f5f10cb7708dea25f21d14ed27d74ca07f"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/bg-workspace-assembly-fhd-r1.png",
+      "url": "/assets/core/cooking/bg-workspace-assembly-r1-b1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+      "bytes": 2753220,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:06.236Z"
+}

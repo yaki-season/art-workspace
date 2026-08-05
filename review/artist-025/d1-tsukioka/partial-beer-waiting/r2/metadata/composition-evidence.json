@@ -19,6 +19,13 @@
     "foodOrNegima": false,
     "scale": "FHD height 690 and y215..905 match approved waiting R3; fixed front eye line and seat-04 placement preserved"
   },
-  "approval": {"status": "pending-user-review", "basis": "Context is evidence only; no candidate or screen approval inferred."},
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: 승인",
+    "scope": "D1-TSUKIOKA-PARTIAL-BEER-WAITING R2 Gate-1 only; context remains evidence, not consumer-screen final approval",
+    "bgSeating6R2Approved": false,
+    "receivedEatingApproved": false
+  },
   "runtimeRegistrationAllowed": false
 }

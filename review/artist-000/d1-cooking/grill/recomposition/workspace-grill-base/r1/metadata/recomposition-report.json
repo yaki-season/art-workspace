@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-GRILL-BG-WORKSPACE-GRILL-BASE-R1",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "passed",
+  "consumerContext": "D1 그릴 화면(SCR-SVC-GRILL)의 고정 배경 layer로서, 승인된 불투명 full-frame background를 1:1로 소비한다. 동적 그릴·꼬치·상태 자산은 별도 layer이며 이 배경 위에 합성된다.",
+  "approvedAssets": [
+    {
+      "id": "BG-WORKSPACE-GRILL",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../background/r1/assets/bg-workspace-grill-fhd-r1.png",
+      "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed",
+    "note": "불투명 full-frame background는 소비 화면과 동일 해상도로 1:1 소비되므로 별도 720p 재조립 산출물이 없다."
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

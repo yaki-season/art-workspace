@@ -1,0 +1,47 @@
+{
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "complete-layer",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [
+    {
+      "id": "person-center-fhd",
+      "x": 1086,
+      "y": 560
+    },
+    {
+      "id": "logical-seat-anchor-fhd",
+      "x": 1086,
+      "y": 594
+    }
+  ],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:D1-TSUKIOKA-WAITING:R3",
+  "provenance": "PROV:D1-TSUKIOKA-WAITING:R3",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003",
+    "GPL-003"
+  ],
+  "reviewedAt": "2026-08-02",
+  "url": "/assets/core/customer/d1-tsukioka-waiting-r3-b1.png",
+  "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3",
+  "bytes": 296850,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

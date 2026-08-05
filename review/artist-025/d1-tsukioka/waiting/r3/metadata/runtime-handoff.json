@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "complete-layer",
+  "id": "D1-TSUKIOKA-WAITING",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "440542894fedfb014c7b2c3e4540c95e8084073bffa2740c18752f138acfc0f0"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "30c7917069963383716d6661117efc2be6a26de96a598cea88ec849a6950ccd7"
+    },
+    "recomposition": {
+      "file": "../../../../d1-customer-order/recomposition/furniture-free-first-customer/r1/metadata/recomposition-report.json",
+      "sha256": "99ded0993f126c18b241e860680d55dbf9a362fc5bf2e960e0af03a865488c8e"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "1170024d521c7239a7ddb6904c2d4edeb05ad7250bebfb3fd6ebb962f9d6eee4"
+    },
+    "finalApproval": {
+      "file": "../../../../d1-customer-order/recomposition/furniture-free-first-customer/r1/metadata/final-approval.json",
+      "sha256": "e4370889b6552ae70e284ea23846722666efd5fc859140ce5f89d0b641dfd9ba"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "e9c73485b531c71210774fa5521a86ab70591409274b4cf25ad46af518080eac"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/d1-tsukioka-waiting-r3.png",
+      "url": "/assets/core/customer/d1-tsukioka-waiting-r3-b1.png",
+      "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3",
+      "bytes": 296850,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:56:59.669Z"
+}

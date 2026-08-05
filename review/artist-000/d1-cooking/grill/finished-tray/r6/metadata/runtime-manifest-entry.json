@@ -1,0 +1,36 @@
+{
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 6,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "standalone-raster",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:ST-GRILL-FINISHED-TRAY:R6",
+  "provenance": "PROV:ST-GRILL-FINISHED-TRAY:R6",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.9.0",
+    "ART-002 v3.6.1"
+  ],
+  "reviewedAt": "2026-07-30",
+  "url": "/assets/core/cooking/st-grill-finished-tray-r6-b1.png",
+  "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184",
+  "bytes": 215874,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

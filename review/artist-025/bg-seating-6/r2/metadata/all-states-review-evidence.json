@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "runId": "ART3-D1-BG-SEATING-6-R2-ALL-STATES-REVIEW-20260803",
+  "id": "BG-SEATING-6",
+  "sourceRevision": 2,
+  "status": "review-evidence-only-not-approval-artifact",
+  "candidate": {
+    "status": "approved-by-user",
+    "file": "../assets/bg-seating-6-r2.png",
+    "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908"
+  },
+  "states": [
+    {
+      "label": "대기",
+      "id": "D1-TSUKIOKA-WAITING",
+      "sourceRevision": 3,
+      "gate1Status": "approved-by-user",
+      "contexts": [
+        {"file": "../../../d1-tsukioka/waiting/r3/review/context-d1-tsukioka-waiting-fhd-r3.png", "width": 1920, "height": 1080, "sha256": "3842ecf522ffefdc7308f13dcaa84a59a92a1cb71747174ae42ba244723cacd7"},
+        {"file": "../../../d1-tsukioka/waiting/r3/review/context-d1-tsukioka-waiting-720-r3.png", "width": 1280, "height": 720, "sha256": "8078cdffdc7abd93d6578407449050e8e904ce4529985b15b83e77630afe60f3"}
+      ]
+    },
+    {
+      "label": "맥주만 수령",
+      "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+      "sourceRevision": 2,
+      "gate1Status": "approved-by-user",
+      "contexts": [
+        {"file": "../../../d1-tsukioka/partial-beer-waiting/r2/review/context-d1-tsukioka-partial-beer-waiting-fhd-r2.png", "width": 1920, "height": 1080, "sha256": "2377ba3e1cd11e21c33b9bbe7b7985dae1620d3ebe1ea31918460ab6cb0fb3bc"},
+        {"file": "../../../d1-tsukioka/partial-beer-waiting/r2/review/context-d1-tsukioka-partial-beer-waiting-720-r2.png", "width": 1280, "height": 720, "sha256": "f1ccef0cff89d682741db9fed6f9e3c1445c2c8efc3d067e91063e975a9c7242"}
+      ]
+    },
+    {
+      "label": "네기마 식사",
+      "id": "D1-TSUKIOKA-RECEIVED-EATING",
+      "sourceRevision": 2,
+      "frame": "eat-negima",
+      "gate1Status": "approved-by-user",
+      "contexts": [
+        {"file": "../../../d1-tsukioka/received-eating/r2/review/context-d1-tsukioka-received-eating-eat-negima-fhd-r2.png", "width": 1920, "height": 1080, "sha256": "927c9db43351c9cae32335131483295f0bd6236c1472fa4c95b4f875dd17b266"},
+        {"file": "../../../d1-tsukioka/received-eating/r2/review/context-d1-tsukioka-received-eating-eat-negima-720-r2.png", "width": 1280, "height": 720, "sha256": "07d76753326a049e1b29d734bb1bc69afe6cf72213f19bf21bb260aead95046c"}
+      ]
+    },
+    {
+      "label": "맥주 음주",
+      "id": "D1-TSUKIOKA-RECEIVED-EATING",
+      "sourceRevision": 2,
+      "frame": "drink-draft-beer",
+      "gate1Status": "approved-by-user",
+      "contexts": [
+        {"file": "../../../d1-tsukioka/received-eating/r2/review/context-d1-tsukioka-received-eating-drink-draft-beer-fhd-r2.png", "width": 1920, "height": 1080, "sha256": "a5eb92ef2c408f136d5c3428a899b889e5233affe224ec691d6fa78eb24039f2"},
+        {"file": "../../../d1-tsukioka/received-eating/r2/review/context-d1-tsukioka-received-eating-drink-draft-beer-720-r2.png", "width": 1280, "height": 720, "sha256": "a4cac77e33339c0b26ec2309e610624d0ec486b71ad944049441b46e4853199e"}
+      ]
+    }
+  ],
+  "reviewSheets": [
+    {"file": "../review/review-bg-seating-6-all-tsukioka-states-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 1479678, "sha256": "20ed7c9668af4bac32ef22837546eae3c7c68d8fe96e26d04760d423163be101"},
+    {"file": "../review/review-bg-seating-6-all-tsukioka-states-720-r2.png", "width": 1280, "height": 720, "bytes": 1269147, "sha256": "da85199dba4079708f856bcb0067e7beab5bc7b031478fd795954262ed0a41a6", "derivation": "exact 2/3 nearest-neighbor resize of FHD sheet"}
+  ],
+  "layout": {
+    "type": "2x2 contact sheet",
+    "labels": ["대기", "맥주만 수령", "네기마 식사", "맥주 음주"],
+    "labelPlacement": "neutral external review margin only",
+    "frameTreatment": "full 16:9 consumer frame preserved; aspect-fit; no crop"
+  },
+  "producerInspection": {
+    "result": "pass",
+    "duplicateChairAcrossStates": false,
+    "seatCount": 6,
+    "mappedSeatCentersFhdX": [210.1, 512.5, 809.2, 1108.7, 1404.8, 1710.1],
+    "centralDoorwayReadableAcrossStates": true,
+    "approvedCounterOcclusionConsistentAcrossStates": true,
+    "personScaleConsistentAcrossStates": true,
+    "seat04IsOnlySeatBehindTsukioka": true
+  },
+  "approval": {
+    "tsukiokaStateGate1": "approved-by-user for all four displayed state/frame contexts",
+    "bgSeating6R2": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: r2 승인",
+    "scope": "BG-SEATING-6 R2 Gate-1 only; review sheets remain evidence, not consumer-screen final approval",
+    "consumerFinal": "not-approved",
+    "gate2": "not-approved",
+    "gate3": "not-approved"
+  },
+  "runtimeRegistrationAllowed": false
+}

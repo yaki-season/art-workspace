@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "standalone-raster",
+  "id": "ST-ASSEMBLY-TIER-1",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "470f63402402ada2c16543e3a78080fa6ab65536a007031f6b0a95205c534f69"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "d580f66acb4e3780d4323d9228458ccefe5922844fd092ed548c5a0a053c421d"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/assembly-station-base/r1/metadata/recomposition-report.json",
+      "sha256": "70f23dd078b5223c7c08356fc2468230af5468829a6b49bc88d66eb7fed177eb"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "285d38b6d1e721c441dbfe2119efc7be7c038bff9d1ab3d32101b5192a0d25c6"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/assembly-station-base/r1/metadata/final-approval.json",
+      "sha256": "e09af0597a7f58269daaf361be3c486a4574858a681b76118a5acae2c0b05cf7"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "f792f914377cb93838d0332d4cc7ef882a33f25807a71a83c87cdb4aa35f3e95"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/st-assembly-tier-1-fhd-r3.png",
+      "url": "/assets/core/cooking/st-assembly-tier-1-r3-b1.png",
+      "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+      "bytes": 988222,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:06.491Z"
+}

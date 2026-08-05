@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-CUSTOMERS-BG-INTERIOR-BASE-R1-FINAL",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "assets": ["BG-INTERIOR-BASE"],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "b4ce16c8bdb83ffad2a91429b0de7bf3b325cfbcc0f3232b7261a61bf8c973a2"
+  },
+  "optimizations": [
+    {
+      "file": "optimization-report.json",
+      "sha256": "154167f5b54b81fa45f70d350104c3bf90ccd3c7eac27aa78de3231b34c37c86"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-03",
+    "basis": "2026-08-03 사용자 r2 승인 (PM 기록). BG-INTERIOR-BASE R1은 approved-by-user provenance를 가지며 소비 화면 SCR-SVC-CUSTOMERS 고정 실내 배경(compositing order 0)으로 승격한다."
+  }
+}

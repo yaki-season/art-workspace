@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "bundle-model",
+  "id": "MDL-INGREDIENT-NEGI",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "7ab7a3e19992da404e209d960c5d565e38938f04175487f290ee3cef61613b0c"
+    },
+    "profileApproval": {
+      "file": "bundle-model-report.json",
+      "sha256": "b1eaceb9067b3e3bad7a20e34797b90236bc83f78c0e5289bc029ef99128ada6"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/ingredient-negi-consumption/r1/metadata/recomposition-report.json",
+      "sha256": "6c1f9722e75afbf4b05ce43aef8dfef9139b9cc24ee4b0757f430f440d22c52f"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "4840d4faa93be95a9e121d0f312132bf1e6502728ffc81c2a7cf9b9e9754fc84"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/ingredient-negi-consumption/r1/metadata/final-approval.json",
+      "sha256": "a422878f2be8b183da6a4b420769793683a2bf3953ed39bf58c6ef569c1cdb79"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "bffe83a7ee87053c3bd19a2f34381405bbd46d377ecd450177b13a550d947cdc"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/mdl-ingredient-negi-r3.glb",
+      "url": "/assets/core/cooking/mdl-ingredient-negi-r3-b1.glb",
+      "sha256": "065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3",
+      "bytes": 5112,
+      "format": "glb"
+    },
+    {
+      "role": "pixel-albedo",
+      "sourceFile": "../assets/tex-ingredient-negi-albedo-r3.png",
+      "url": "/assets/core/cooking/mdl-ingredient-negi-pixel-albedo-r3-b1.png",
+      "sha256": "8712631509a5477d81ab88b6e99dd62ae803225560667cd60ec8d18fe131aa95",
+      "bytes": 55025,
+      "format": "png",
+      "dimensions": {
+        "width": 256,
+        "height": 192
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:07.758Z"
+}

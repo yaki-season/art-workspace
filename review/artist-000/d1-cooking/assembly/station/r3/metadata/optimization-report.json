@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-ASSEMBLY-TIER-1",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "profile": "standalone-raster",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/st-assembly-tier-1-fhd-r3.png",
+    "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/st-assembly-tier-1-fhd-r3.png",
+      "url": "/assets/core/cooking/st-assembly-tier-1-r3-b1.png",
+      "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+      "bytes": 988222,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless-identity: 승인 provenance.output과 runtime primary 산출물이 동일한 SHA-256·byte이며 재인코딩·리샘플·메타데이터 편집이 없다",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "단일 primary runtime payload (988222 bytes, png)",
+      "byte·픽셀·지오메트리·치수 변화 없음 (lossless-identity)",
+      "companion 없음"
+    ]
+  }
+}

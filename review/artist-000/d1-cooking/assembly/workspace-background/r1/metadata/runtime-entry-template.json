@@ -1,0 +1,28 @@
+{
+  "id": "BG-WORKSPACE-ASSEMBLY",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "profile": "complete-layer",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "none",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:BG-WORKSPACE-ASSEMBLY:R1",
+  "provenance": "PROV:BG-WORKSPACE-ASSEMBLY:R1",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.9.0",
+    "ART-002 v3.6.1"
+  ],
+  "reviewedAt": "2026-07-28"
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-ASSEMBLY-ST-ASSEMBLY-TIER-1-R3-FINAL",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "approved-by-user",
+  "assets": [
+    "ST-ASSEMBLY-TIER-1"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "70f23dd078b5223c7c08356fc2468230af5468829a6b49bc88d66eb7fed177eb"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../station/r3/metadata/optimization-report.json",
+      "sha256": "285d38b6d1e721c441dbfe2119efc7be7c038bff9d1ab3d32101b5192a0d25c6"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). ST-ASSEMBLY-TIER-1는 approved-by-user provenance를 가진다."
+  }
+}

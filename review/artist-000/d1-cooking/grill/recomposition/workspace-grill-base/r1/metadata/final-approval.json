@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-GRILL-BG-WORKSPACE-GRILL-R1-FINAL",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "assets": ["BG-WORKSPACE-GRILL"],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "498624c130515530a5a5e0fa990244862120ba66fae6d4a5c2a5beb8be2a4b93"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../background/r1/metadata/optimization-report.json",
+      "sha256": "83d2e09f89fc96f97d5ccd1a911e9145158e127e3208b614d90b3bc4b82d4b3b"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). BG-WORKSPACE-GRILL R1은 approved-by-user provenance를 가지며 소비 화면 SCR-SVC-GRILL 고정 배경으로 승격한다."
+  }
+}

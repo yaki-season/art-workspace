@@ -1,0 +1,29 @@
+{
+  "id": "BG-SEATING-6",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "standalone-raster",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {"x": 0, "y": 0},
+  "anchors": [
+    {"id": "seat-01", "x": 176.0, "y": 498.0},
+    {"id": "seat-02", "x": 442.0, "y": 498.0},
+    {"id": "seat-03", "x": 703.0, "y": 498.0},
+    {"id": "seat-04", "x": 966.5, "y": 498.0},
+    {"id": "seat-05", "x": 1227.0, "y": 498.0},
+    {"id": "seat-06", "x": 1495.5, "y": 498.0}
+  ],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:BG-SEATING-6:R2",
+  "provenance": "PROV:BG-SEATING-6:R2",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": ["ART-003", "GPL-003"],
+  "reviewedAt": "2026-08-03"
+}

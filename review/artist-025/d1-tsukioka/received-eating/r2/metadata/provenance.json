@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "profile": "bundle-model",
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "Furniture-free Tsukioka post-receipt two-frame eating/drinking loop; BG-SEATING-6 exclusively owns furniture.",
+  "semanticOwner": "artist-3.d1-drink-service-cleanup-customer-settlement",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: 승인",
+    "scope": "D1-TSUKIOKA-RECEIVED-EATING R2 two-frame furniture-free Gate-1 bundle only",
+    "approvedPrimarySha256": ["5a1e526672aad1eba9e50842ee4bdf0310f8564a9b6aa7c605aecd8fcac0525c", "973d568259f25c1711e4924d3b063b59ba82962c1dfcaddc418d3735aeef6ee3"],
+    "reviewedFhdContextSha256": ["927c9db43351c9cae32335131483295f0bd6236c1472fa4c95b4f875dd17b266", "a5eb92ef2c408f136d5c3428a899b889e5233affe224ec691d6fa78eb24039f2"],
+    "excludes": ["BG-SEATING-6 R2", "consumer-screen final approval", "Gate-2", "Gate-3", "finalizer", "promotion", "runtime registration", "app binding"]
+  },
+  "sourceReferences": [
+    {"file": "../../../../../artist-000/d1-customer-order/complete-layers/d1-tsukioka/received-eating/r1/source/tsukioka-eating-negima-chroma-source-r1.png", "sha256": "cb6a0cc8d7315c58282366a0075bef4bd7e593f0035d01e3db2e042b402d62ac", "role": "frame A precise-object-edit target"},
+    {"file": "../../../../../artist-000/d1-customer-order/complete-layers/d1-tsukioka/received-eating/r1/source/tsukioka-drinking-beer-chroma-source-r1.png", "sha256": "d5a8453d4291d538be8fa23f18c57fa09f561a6b01a91f2f141a0da9d9623ecd", "role": "frame B precise-object-edit target"},
+    {"file": "../../../waiting/r3/assets/d1-tsukioka-waiting-r3.png", "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3", "role": "approved furniture-free identity and person-scale reference"},
+    {"file": "../../../waiting/r3/metadata/character-scale-contract.json", "sha256": "46995348c0dc3c04db700136b4339eed7204aac146c907a30c987e1104ac134d", "role": "approved person-space contract"},
+    {"file": "../../../partial-beer-waiting/r2/assets/d1-tsukioka-partial-beer-waiting-r2.png", "sha256": "590aba25dcf8ad897ebe13e85eb9db470f87a195bb9bb793cfc78d82163d9206", "role": "approved furniture-free identity and beer-state continuity reference"},
+    {"file": "../../../partial-beer-waiting/r2/metadata/provenance.json", "sha256": "606c117df4bd75edd17d6b1f32e9d17636b269243218926f11c5ea2314c81b60", "role": "approved partial-beer Gate-1 provenance"},
+    {"file": "../../../../bg-seating-6/r2/assets/bg-seating-6-r2.png", "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908", "role": "approved furniture layer used in context evidence"}
+  ],
+  "generation": {
+    "tool": "built-in image_gen",
+    "mode": "two precise-object-edit calls, one per frame",
+    "promptFile": "../PROMPT.md",
+    "promptSummary": "Remove only furniture in two calls while preserving the exclusive eat-negima and drink-draft-beer actions as one semantic bundle.",
+    "rawChromaSource": "../source/tsukioka-eat-negima-furniture-free-chroma-r2.png",
+    "rawChromaSourceSha256": "d5233363df1c40a6c4f95ba9d141c7e427edbfe9cc29cda12e31fc4131703692",
+    "rawChromaSourceBytes": 1407579,
+    "correctionCallsUsed": 0,
+    "frames": [
+      {
+        "action": "eat-negima",
+        "rawChromaSource": "../source/tsukioka-eat-negima-furniture-free-chroma-r2.png",
+        "rawChromaSourceSha256": "d5233363df1c40a6c4f95ba9d141c7e427edbfe9cc29cda12e31fc4131703692",
+        "rawChromaSourceBytes": 1407579,
+        "alphaSource": "../source/tsukioka-eat-negima-furniture-free-alpha-source-r2.png",
+        "alphaSourceSha256": "db530417e48cd7123650e1a02dbe318f8806c3f8eac0af7e0c4487a033e13127",
+        "alphaSourceBytes": 730129,
+        "keyColor": "#ea0ae4"
+      },
+      {
+        "action": "drink-draft-beer",
+        "rawChromaSource": "../source/tsukioka-drink-draft-beer-furniture-free-chroma-r2.png",
+        "rawChromaSourceSha256": "b6011910a1d621afd6e598d7278cf852e8de3a71e341cd33d6b438489f594fde",
+        "rawChromaSourceBytes": 1408863,
+        "alphaSource": "../source/tsukioka-drink-draft-beer-furniture-free-alpha-source-r2.png",
+        "alphaSourceSha256": "18285b327e73ad2cd86e4dccf0bec7723c411e02cfb87fc8925e9adf9abdca6b",
+        "alphaSourceBytes": 732808,
+        "keyColor": "#e70ae0"
+      }
+    ],
+    "postProcess": ["explicit sampled magenta keys; auto-key none; soft matte; thresholds 12/220; despill", "per-frame human-plus-action-prop crop normalized to FHD height 690, top y215, center x1086 with nearest-neighbor"]
+  },
+  "output": {"file": "frame-manifest.json", "sha256": "4b9291b99962d54fe9f9623b4c16aacc1d7631ba12504aa1922de70fc4d122b7", "bytes": 1341, "frameCount": 2, "bundleGate": "both frames together"},
+  "runtimeRegistrationAllowed": false
+}

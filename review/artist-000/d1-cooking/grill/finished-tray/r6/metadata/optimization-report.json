@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "standalone-raster",
+  "sourceRevision": 6,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/st-grill-finished-tray-fhd-r6.png",
+    "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/st-grill-finished-tray-fhd-r6.png",
+      "url": "/assets/core/cooking/st-grill-finished-tray-r6-b1.png",
+      "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184",
+      "bytes": 215874,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless-identity: 승인 provenance.output과 runtime primary 산출물이 동일한 SHA-256·byte이며 재인코딩·리샘플·메타데이터 편집이 없다",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "단일 primary runtime payload (215874 bytes, png)",
+      "byte·픽셀·지오메트리·치수 변화 없음 (lossless-identity)",
+      "companion 없음"
+    ]
+  }
+}

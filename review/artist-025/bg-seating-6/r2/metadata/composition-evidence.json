@@ -28,6 +28,14 @@
     "tsukiokaScale": "seat-04 back is mostly covered by the approved seated person; no R1 overscale mismatch",
     "focalHierarchy": "Tsukioka remains dominant; backs stay low contrast"
   },
-  "approval": {"status": "pending-user-review", "basis": "Context evidence supports Gate-1 review but is not itself an approval artifact."},
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: r2 승인",
+    "scope": "BG-SEATING-6 R2 Gate-1 only; contexts remain evidence, not consumer-screen final approval",
+    "consumerScreenFinalApproved": false,
+    "gate2Approved": false,
+    "gate3Approved": false
+  },
   "runtimeRegistrationAllowed": false
 }

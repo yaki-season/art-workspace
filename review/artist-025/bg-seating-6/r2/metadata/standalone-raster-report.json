@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "BG-SEATING-6",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticOwner": "artist-3.d1-drink-service-cleanup-customer-settlement",
+  "assetMeaning": "Six compact low walnut counter-seat backrest modules with source-local anchors; consumer composition owns placement and counter occlusion.",
+  "sourceEvidence": [
+    {"file": "../source/bg-seating-6-r2-chroma.png", "sha256": "73e60ee65159fbe3bf34770bf612aaf97f0b2fa064a10081e69dac2dc3b6eb38", "bytes": 989055, "role": "approved generation source"},
+    {"file": "anchors.json", "sha256": "2b2b55b0f0bcd2b6e4714579664e45b9e1388f2e64a2a7a1ae8dda16794a5f4f", "bytes": 1366, "role": "approved source-local six-seat anchor evidence"}
+  ],
+  "output": {"file": "../assets/bg-seating-6-r2.png", "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908", "bytes": 150337, "width": 1672, "height": 941, "alpha": "straight", "greenSpillPixels": 0},
+  "reviewBoard": {"file": "../review/review-bg-seating-6-isolated-fhd-r2.png", "sha256": "a948f4da7b40f1731fe4a50be69385647ee89f124ca4eb50c73a5f2fb8f25794", "bytes": 152494, "width": 1920, "height": 1080, "subjectAssetOnly": true},
+  "lossPolicy": "lossless-required",
+  "excludes": ["people or body parts", "room or counter pixels", "full chair bodies, tall legs or footrests", "consumer final approval", "runtime registration"],
+  "approval": {"status": "approved-by-user", "date": "2026-08-03", "basis": "사용자 응답: r2 승인"},
+  "runtimeRegistrationAllowed": false
+}

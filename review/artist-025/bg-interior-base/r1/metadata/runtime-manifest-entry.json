@@ -1,0 +1,36 @@
+{
+  "id": "BG-INTERIOR-BASE",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "standalone-raster",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "none",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:BG-INTERIOR-BASE:R1",
+  "provenance": "PROV:BG-INTERIOR-BASE:R1",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.9.0",
+    "ART-002 v3.6.1"
+  ],
+  "reviewedAt": "2026-08-03",
+  "url": "/assets/core/customer/bg-interior-base-r1-b1.png",
+  "sha256": "5f176702b5fa2222fe08e7c5349b1c436a68319cdadfff02dd44d9f342a7baee",
+  "bytes": 3111275,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

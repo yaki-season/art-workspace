@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "gateContract": "v8-gate-1-isolated-candidate-bundle",
+  "runId": "ART3-D1-TSUKIOKA-RECEIVED-EATING-FURNITURE-FREE-20260803-R2",
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "sourceRevision": 2,
+  "status": "approved-by-user",
+  "approvalStatus": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: 승인",
+    "scope": "D1-TSUKIOKA-RECEIVED-EATING R2 two-frame furniture-free Gate-1 bundle only",
+    "approvedPrimarySha256": ["5a1e526672aad1eba9e50842ee4bdf0310f8564a9b6aa7c605aecd8fcac0525c", "973d568259f25c1711e4924d3b063b59ba82962c1dfcaddc418d3735aeef6ee3"],
+    "reviewedFhdContextSha256": ["927c9db43351c9cae32335131483295f0bd6236c1472fa4c95b4f875dd17b266", "a5eb92ef2c408f136d5c3428a899b889e5233affe224ec691d6fa78eb24039f2"],
+    "excludes": ["BG-SEATING-6 R2 approval", "consumer-screen final approval", "Gate-2", "Gate-3", "finalizer", "promotion", "runtime registration", "app binding"]
+  },
+  "bundleValidation": {"frameCount": 2, "alternatingSingleState": true, "bothFramesRequiredForApproval": true, "result": "pass"},
+  "canonicalScale": {"centerXFhd": 1086, "topYFhd": 215, "heightFhd": 690, "hd720Conversion": "exact 2/3 nearest-neighbor", "result": "pass"},
+  "frames": [
+    {
+      "action": "eat-negima",
+      "output": {"file": "../assets/d1-tsukioka-received-eating-eat-negima-r2.png", "width": 1920, "height": 1080, "bytes": 306454, "sha256": "5a1e526672aad1eba9e50842ee4bdf0310f8564a9b6aa7c605aecd8fcac0525c", "alphaBounds": [947, 215, 1225, 905]},
+      "alphaValidation": {"transparentPixels": 1961171, "partiallyTransparentPixels": 1869, "opaquePixels": 110560, "cornerAlpha": [0, 0, 0, 0], "magentaSpillPixels": 0, "largeConnectedComponents": 1, "result": "pass"},
+      "identityActionValidation": {"visualResult": "pass", "furniturePixels": 0, "personCount": 1, "negimaSkewerCount": 1, "activeBitePose": true, "beerOrOtherFoodDrink": false, "correctionCallUsed": false, "sourcePixelComparison": {"pixels": 321802, "meanAbsoluteRgbDelta": 8.4769, "medianAbsoluteRgbDelta": 5.6667, "p95AbsoluteRgbDelta": 24.3333}},
+      "reviewOutputs": [
+        {"file": "../review/review-d1-tsukioka-received-eating-eat-negima-isolated-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 262995, "sha256": "7aa7d12e94a5c0c0bc4caddd85e214dd68322189da69de9801f129734f7930d8"},
+        {"file": "../review/review-d1-tsukioka-received-eating-eat-negima-isolated-720-r2.png", "width": 1280, "height": 720, "bytes": 125133, "sha256": "7604d4fe83fa941efd5d82ce435099c8ed74ae0d705d409a5f79365ee21a7ffa"},
+        {"file": "../review/context-d1-tsukioka-received-eating-eat-negima-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2722393, "sha256": "927c9db43351c9cae32335131483295f0bd6236c1472fa4c95b4f875dd17b266", "status": "evidence-only"},
+        {"file": "../review/context-d1-tsukioka-received-eating-eat-negima-720-r2.png", "width": 1280, "height": 720, "bytes": 1407985, "sha256": "07d76753326a049e1b29d734bb1bc69afe6cf72213f19bf21bb260aead95046c", "status": "evidence-only"}
+      ]
+    },
+    {
+      "action": "drink-draft-beer",
+      "output": {"file": "../assets/d1-tsukioka-received-eating-drink-draft-beer-r2.png", "width": 1920, "height": 1080, "bytes": 304646, "sha256": "973d568259f25c1711e4924d3b063b59ba82962c1dfcaddc418d3735aeef6ee3", "alphaBounds": [942, 215, 1230, 905]},
+      "alphaValidation": {"transparentPixels": 1961472, "partiallyTransparentPixels": 1991, "opaquePixels": 110137, "cornerAlpha": [0, 0, 0, 0], "magentaSpillPixels": 0, "largeConnectedComponents": 1, "result": "pass"},
+      "identityActionValidation": {"visualResult": "pass", "furniturePixels": 0, "personCount": 1, "draftBeerMugCount": 1, "activeSipPose": true, "negimaOrOtherFood": false, "correctionCallUsed": false, "sourcePixelComparison": {"pixels": 323907, "meanAbsoluteRgbDelta": 8.9114, "medianAbsoluteRgbDelta": 6.0, "p95AbsoluteRgbDelta": 25.0}},
+      "reviewOutputs": [
+        {"file": "../review/review-d1-tsukioka-received-eating-drink-draft-beer-isolated-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 261654, "sha256": "3d7f800b647500b76747dc361946d4b9495b06e17e4c61f7e0f113fffac5dfe3"},
+        {"file": "../review/review-d1-tsukioka-received-eating-drink-draft-beer-isolated-720-r2.png", "width": 1280, "height": 720, "bytes": 124195, "sha256": "a12d4de0ba5d876b47f3e62d8ab2cc02b441b1a76351b6a736056c8c4ee346b8"},
+        {"file": "../review/context-d1-tsukioka-received-eating-drink-draft-beer-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2723777, "sha256": "a5eb92ef2c408f136d5c3428a899b889e5233affe224ec691d6fa78eb24039f2", "status": "evidence-only"},
+        {"file": "../review/context-d1-tsukioka-received-eating-drink-draft-beer-720-r2.png", "width": 1280, "height": 720, "bytes": 1408121, "sha256": "a4cac77e33339c0b26ec2309e610624d0ec486b71ad944049441b46e4853199e", "status": "evidence-only"}
+      ]
+    }
+  ],
+  "contextValidation": {"fhd720": "pass", "singleBgSeatingSeatBehindTsukioka": true, "duplicateChair": false, "actionPropsReadableAboveCounter": true, "identityAndScaleConsistentAcrossFrames": true, "result": "pass"},
+  "nextGate": "user review of BG-SEATING-6 R2 using all approved Tsukioka state contexts",
+  "runtimeRegistrationAllowed": false
+}

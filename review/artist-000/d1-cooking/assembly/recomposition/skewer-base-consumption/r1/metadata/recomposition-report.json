@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-ASSEMBLY-MDL-SKEWER-BASE-R2",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "passed",
+  "consumerContext": "D1 소비 화면 SCR-SVC-ASSEMBLY에서 승인 자산 MDL-SKEWER-BASE를 lossless-identity로 소비하는 consumer-context 최종 검수 기록.",
+  "approvedAssets": [
+    {
+      "id": "MDL-SKEWER-BASE",
+      "profile": "bundle-model",
+      "sourceRevision": 2,
+      "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../skewer-base/r2/review/review-mdl-skewer-base-r2.png",
+      "sha256": "89c7f1e3248cbf585407b8dc90e4837b457d8aabb14a3efb27e260e61524193e",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

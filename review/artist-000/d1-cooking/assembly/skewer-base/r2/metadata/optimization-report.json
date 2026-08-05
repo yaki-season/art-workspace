@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-SKEWER-BASE",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "profile": "bundle-model",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/mdl-skewer-base-r2.glb",
+    "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/mdl-skewer-base-r2.glb",
+      "url": "/assets/core/cooking/mdl-skewer-base-r2-b1.glb",
+      "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "bytes": 15996,
+      "format": "glb"
+    },
+    {
+      "role": "pixel-albedo",
+      "file": "../assets/tex-skewer-base-albedo-r2.png",
+      "url": "/assets/core/cooking/mdl-skewer-base-pixel-albedo-r2-b1.png",
+      "sha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+      "bytes": 51293,
+      "format": "png",
+      "dimensions": {
+        "width": 1024,
+        "height": 64
+      }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless-identity: 승인 provenance.output과 runtime primary 산출물이 동일한 SHA-256·byte이며 재인코딩·리샘플·메타데이터 편집이 없다",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "단일 primary runtime payload (15996 bytes, glb)",
+      "byte·픽셀·지오메트리·치수 변화 없음 (lossless-identity)",
+      "1개 승인 companion을 재인코딩 없이 재참조"
+    ]
+  }
+}

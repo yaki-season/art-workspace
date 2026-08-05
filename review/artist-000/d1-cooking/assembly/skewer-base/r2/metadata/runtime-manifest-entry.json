@@ -1,0 +1,57 @@
+{
+  "id": "MDL-SKEWER-BASE",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "profile": "bundle-model",
+  "pack": "core",
+  "kind": "model",
+  "colorSpace": "not-applicable",
+  "alpha": "not-applicable",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "bounds": {
+    "min": {
+      "x": -0.0515,
+      "y": -0.82,
+      "z": -0.0385
+    },
+    "max": {
+      "x": 0.0515,
+      "y": 0.82,
+      "z": 0.0385
+    }
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:MDL-SKEWER-BASE:R2",
+  "provenance": "PROV:MDL-SKEWER-BASE:R2",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.9.0"
+  ],
+  "reviewedAt": "2026-07-29",
+  "url": "/assets/core/cooking/mdl-skewer-base-r2-b1.glb",
+  "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+  "bytes": 15996,
+  "format": "glb",
+  "companions": [
+    {
+      "role": "pixel-albedo",
+      "url": "/assets/core/cooking/mdl-skewer-base-pixel-albedo-r2-b1.png",
+      "sha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+      "bytes": 51293,
+      "format": "png",
+      "dimensions": {
+        "width": 1024,
+        "height": 64
+      }
+    }
+  ]
+}

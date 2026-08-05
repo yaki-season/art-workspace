@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-SEATING-6",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "standalone-raster",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {"file": "../assets/bg-seating-6-r2.png", "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908"},
+  "artifacts": [
+    {"role": "primary", "file": "../assets/bg-seating-6-r2.png", "url": "/assets/core/customer/bg-seating-6-r2-b1.png", "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908", "bytes": 150337, "format": "png", "dimensions": {"width": 1672, "height": 941}}
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {"result": "passed", "method": "lossless passthrough; approved primary and runtime artifact SHA-256 are identical", "userApprovalRequired": false},
+  "performanceBudget": {"result": "passed", "checks": ["single 150337-byte PNG artifact", "no dimension growth", "no byte growth", "six source-local anchors preserved in runtime entry template"]}
+}

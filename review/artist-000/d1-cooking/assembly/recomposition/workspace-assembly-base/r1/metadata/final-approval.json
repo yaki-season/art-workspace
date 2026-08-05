@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-ASSEMBLY-BG-WORKSPACE-ASSEMBLY-R1-FINAL",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "approved-by-user",
+  "assets": [
+    "BG-WORKSPACE-ASSEMBLY"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "690881b46e16701e117b63dfc394f004f038073cf26693437923754981ea1f3e"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../workspace-background/r1/metadata/optimization-report.json",
+      "sha256": "91f2777ec5d0baf42067b4db237e1d54e7bfb09b689f8e1e5f3867fe959a8b68"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). BG-WORKSPACE-ASSEMBLY는 approved-by-user provenance를 가진다."
+  }
+}

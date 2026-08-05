@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "D1-TSUKIOKA-WAITING",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "complete-layer",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {"file": "../assets/d1-tsukioka-waiting-r3.png", "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3"},
+  "artifacts": [
+    {"role": "primary", "file": "../assets/d1-tsukioka-waiting-r3.png", "url": "/assets/core/customer/d1-tsukioka-waiting-r3-b1.png", "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3", "bytes": 296850, "format": "png", "dimensions": {"width": 1920, "height": 1080}}
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {"result": "passed", "method": "lossless passthrough; approved primary and runtime artifact SHA-256 are identical", "userApprovalRequired": false},
+  "performanceBudget": {"result": "passed", "checks": ["single 296850-byte PNG artifact", "no dimension growth", "no byte growth", "one straight-alpha FHD layer"]}
+}

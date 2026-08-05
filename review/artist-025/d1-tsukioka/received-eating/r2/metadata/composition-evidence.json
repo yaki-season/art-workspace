@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "sourceRevision": 2,
+  "status": "composition-evidence-only-not-approval-artifact",
+  "layerOrder": ["approved background", "BG-SEATING-6 R2", "candidate furniture-free action frame", "approved service counter"],
+  "frames": [
+    {
+      "action": "eat-negima",
+      "outputs": [
+        {"file": "../review/context-d1-tsukioka-received-eating-eat-negima-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2722393, "sha256": "927c9db43351c9cae32335131483295f0bd6236c1472fa4c95b4f875dd17b266"},
+        {"file": "../review/context-d1-tsukioka-received-eating-eat-negima-720-r2.png", "width": 1280, "height": 720, "bytes": 1407985, "sha256": "07d76753326a049e1b29d734bb1bc69afe6cf72213f19bf21bb260aead95046c"}
+      ],
+      "producerInspection": {"result": "pass", "personCount": 1, "negimaSkewerCount": 1, "beer": false, "characterFurniturePixels": 0, "duplicateChair": false, "propReadableAboveCounter": true}
+    },
+    {
+      "action": "drink-draft-beer",
+      "outputs": [
+        {"file": "../review/context-d1-tsukioka-received-eating-drink-draft-beer-fhd-r2.png", "width": 1920, "height": 1080, "bytes": 2723777, "sha256": "a5eb92ef2c408f136d5c3428a899b889e5233affe224ec691d6fa78eb24039f2"},
+        {"file": "../review/context-d1-tsukioka-received-eating-drink-draft-beer-720-r2.png", "width": 1280, "height": 720, "bytes": 1408121, "sha256": "a4cac77e33339c0b26ec2309e610624d0ec486b71ad944049441b46e4853199e"}
+      ],
+      "producerInspection": {"result": "pass", "personCount": 1, "draftBeerMugCount": 1, "negimaOrFood": false, "characterFurniturePixels": 0, "duplicateChair": false, "propReadableAboveCounter": true}
+    }
+  ],
+  "bundleInspection": {"result": "pass", "sameTsukiokaIdentity": true, "sameFhdTopCenterHeight": true, "oneBgSeatingSeatBehindPerson": true, "alternatingReceivedEatingState": true},
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: 승인",
+    "scope": "D1-TSUKIOKA-RECEIVED-EATING R2 two-frame Gate-1 bundle only; context remains evidence, not consumer-screen final approval",
+    "bgSeating6R2Approved": false,
+    "consumerScreenFinalApproved": false
+  },
+  "runtimeRegistrationAllowed": false
+}

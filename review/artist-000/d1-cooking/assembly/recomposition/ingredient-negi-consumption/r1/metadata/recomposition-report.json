@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-ASSEMBLY-MDL-INGREDIENT-NEGI-R3",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "passed",
+  "consumerContext": "D1 소비 화면 SCR-SVC-ASSEMBLY에서 승인 자산 MDL-INGREDIENT-NEGI를 lossless-identity로 소비하는 consumer-context 최종 검수 기록.",
+  "approvedAssets": [
+    {
+      "id": "MDL-INGREDIENT-NEGI",
+      "profile": "bundle-model",
+      "sourceRevision": 3,
+      "sha256": "065a918355c625f4c2f364d26dc0e20b3326155c799399905c04aa48494bb3e3",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../ingredient-negi/r3/review/review-mdl-ingredient-negi-r3.png",
+      "sha256": "40359f8201f69e7627b1aec429fceab6432d75e89432e8c49d05cf700a622e23",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

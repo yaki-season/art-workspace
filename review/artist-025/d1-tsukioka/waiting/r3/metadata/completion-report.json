@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "creationUnitCount": 1,
+  "id": "D1-TSUKIOKA-WAITING",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "semanticOwner": "artist-3.d1-drink-service-cleanup-customer-settlement",
+  "assetMeaning": "Furniture-free Tsukioka waiting-state person layer at the canonical D1 first-customer camera and scale.",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {"status": "approved-by-user", "date": "2026-08-02", "basis": "사용자 응답: 승인"},
+  "approvedCutout": {"status": "approved-by-user", "file": "../assets/d1-tsukioka-waiting-r3.png", "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3"},
+  "spatialInference": {"file": "character-scale-contract.json", "sha256": "46995348c0dc3c04db700136b4339eed7204aac146c907a30c987e1104ac134d"},
+  "measurements": {"width": 1920, "height": 1080, "transparencyMode": "alpha-cutout", "transparentPixels": 1961955, "opaquePixels": 109592, "partialAlphaPixels": 2053},
+  "reviewComposition": {"mode": "isolated-alpha-checkerboard", "subjectAssetOnly": true, "cellSize": 24, "colors": ["#e0e0e0", "#b0b0b0"], "isolationDifferentPixels": 0, "included": ["D1-TSUKIOKA-WAITING R3", "neutral checkerboard"], "absent": ["other-customers", "food-or-drink", "state-ui", "navigation-ui", "counter", "background-scene"]},
+  "outputs": {
+    "completed": {"file": "assets/d1-tsukioka-waiting-r3.png", "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3"},
+    "reviewBoard": {"file": "review/review-d1-tsukioka-waiting-isolated-fhd-r3.png", "sha256": "ae440c6bc3b34084c47118c9c148fee15e2f864d04e3800e87408498a6dfaf0c"}
+  },
+  "rejectedIntermediate": {"retained": false}
+}

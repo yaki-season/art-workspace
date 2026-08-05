@@ -1,0 +1,28 @@
+{
+  "id": "ST-GRILL-TIER-1",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "standalone-raster",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "straight",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:ST-GRILL-TIER-1:R2",
+  "provenance": "PROV:ST-GRILL-TIER-1:R2",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.9.0",
+    "ART-002 v3.6.1"
+  ],
+  "reviewedAt": "2026-07-29"
+}

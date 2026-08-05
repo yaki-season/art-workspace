@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-ASSEMBLY-ST-ASSEMBLY-TIER-1-R3",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "passed",
+  "consumerContext": "D1 소비 화면 SCR-SVC-ASSEMBLY에서 승인 자산 ST-ASSEMBLY-TIER-1를 lossless-identity로 소비하는 consumer-context 최종 검수 기록.",
+  "approvedAssets": [
+    {
+      "id": "ST-ASSEMBLY-TIER-1",
+      "profile": "standalone-raster",
+      "sourceRevision": 3,
+      "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../station/r3/assets/st-assembly-tier-1-fhd-r3.png",
+      "sha256": "b15d40f448b54e49eb0dc895a291d02db6800d85aaddf8d706ad5ecea41b30ca",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

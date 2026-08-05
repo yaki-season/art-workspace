@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "bundle-model",
+  "id": "MDL-SKEWER-BASE",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "08b1c8c7baa18a70ea89728aed46b93eb7f1b37ed280d54c754c7ddca80c1e58"
+    },
+    "profileApproval": {
+      "file": "bundle-model-report.json",
+      "sha256": "e42db2a704e94e7928a5c77f0b71bd820f6c40565ffdf9ea48fb3df00d1a61c5"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/skewer-base-consumption/r1/metadata/recomposition-report.json",
+      "sha256": "4c3e7737da9fc10d0528d565fef66a57feb2ad22696fde9b2f9fcdbce6275f4c"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "8581b44b6bac9d11c1b2806ccc33abfca079efe10546ad2ac102ea1f6b58f47e"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/skewer-base-consumption/r1/metadata/final-approval.json",
+      "sha256": "dfa2c86897beb717fd157903bd248cb79f88d9809bf74d6560bc50ffe01c2b3e"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "3caba431bc11dfe73b0495b14a6eb9d0a29106942da355934035be9324ab0208"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/mdl-skewer-base-r2.glb",
+      "url": "/assets/core/cooking/mdl-skewer-base-r2-b1.glb",
+      "sha256": "fef2b4eae60b8657dafb5b9137b9220088e2d36366ac53298df132bd4f9b9bf5",
+      "bytes": 15996,
+      "format": "glb"
+    },
+    {
+      "role": "pixel-albedo",
+      "sourceFile": "../assets/tex-skewer-base-albedo-r2.png",
+      "url": "/assets/core/cooking/mdl-skewer-base-pixel-albedo-r2-b1.png",
+      "sha256": "dc9625b7961ddc36fdbe5fb44252407e4cdb036e20c50f51b0de1a639326446f",
+      "bytes": 51293,
+      "format": "png",
+      "dimensions": {
+        "width": 1024,
+        "height": 64
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:07.275Z"
+}

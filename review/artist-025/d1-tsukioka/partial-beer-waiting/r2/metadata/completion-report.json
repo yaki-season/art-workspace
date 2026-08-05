@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "creationUnitCount": 1,
+  "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-CUSTOMER-SERVICE-R1",
+  "semanticOwner": "artist-3.d1-drink-service-cleanup-customer-settlement",
+  "assetMeaning": "Furniture-free Tsukioka partial-delivery layer holding exactly one upright draft beer away from his mouth and no negima.",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {"status": "approved-by-user", "date": "2026-08-03", "basis": "사용자 응답: 승인"},
+  "approvedCutout": {"status": "approved-by-user", "file": "../assets/d1-tsukioka-partial-beer-waiting-r2.png", "sha256": "590aba25dcf8ad897ebe13e85eb9db470f87a195bb9bb793cfc78d82163d9206"},
+  "spatialInference": {"file": "../../../waiting/r3/metadata/character-scale-contract.json", "sha256": "46995348c0dc3c04db700136b4339eed7204aac146c907a30c987e1104ac134d"},
+  "measurements": {"width": 1920, "height": 1080, "transparencyMode": "alpha-cutout", "transparentPixels": 1963649, "opaquePixels": 108099, "partialAlphaPixels": 1852},
+  "reviewComposition": {"mode": "isolated-alpha-checkerboard", "subjectAssetOnly": true, "cellSize": 24, "colors": ["#e0e0e0", "#b0b0b0"], "isolationDifferentPixels": 0, "included": ["D1-TSUKIOKA-PARTIAL-BEER-WAITING R2 person plus one beer", "neutral checkerboard"], "absent": ["other-customers", "food-or-drink", "state-ui", "navigation-ui", "counter", "background-scene"]},
+  "outputs": {
+    "completed": {"file": "assets/d1-tsukioka-partial-beer-waiting-r2.png", "sha256": "590aba25dcf8ad897ebe13e85eb9db470f87a195bb9bb793cfc78d82163d9206"},
+    "reviewBoard": {"file": "review/review-d1-tsukioka-partial-beer-waiting-isolated-fhd-r2.png", "sha256": "4d7d44641733d08ef8420179326b0cb7cbbd3440926df765d0998b1eea3b3f40"}
+  },
+  "rejectedIntermediate": {"retained": false}
+}

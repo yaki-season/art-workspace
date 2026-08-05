@@ -6,20 +6,25 @@
   "screenUnit": "SCR-SVC-CUSTOMERS",
   "semanticPurpose": "Furniture-free Tsukioka partial state: exactly one upright amber draft beer held at chest height, not drinking, no negima; BG-SEATING-6 owns furniture.",
   "semanticOwner": "artist-3.d1-drink-service-cleanup-customer-settlement",
-  "status": "pending-user-review",
-  "approval": {"status": "pending-user-review", "basis": "PM producer visual/context check passed; no user approval inferred."},
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: 승인",
+    "scope": "D1-TSUKIOKA-PARTIAL-BEER-WAITING R2 furniture-free Gate-1 only",
+    "excludes": ["BG-SEATING-6 R2", "consumer-screen final approval", "received/eating states", "Gate-2", "Gate-3", "finalizer", "promotion", "runtime registration", "app binding"]
+  },
   "sourceReferences": [
     {"file": "../../../../../artist-000/d1-customer-order/complete-layers/d1-tsukioka/partial-beer-waiting/r1/source/tsukioka-partial-beer-waiting-chroma-source-r1.png", "sha256": "d6fb06180d652e8bb6f9b8ecae35efda1624bb0b07dbbd75c2ebb93254eb1937", "role": "R1 precise-object-edit target and partial-beer state source"},
     {"file": "../../../waiting/r3/assets/d1-tsukioka-waiting-r3.png", "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3", "role": "approved furniture-free identity and scale reference"},
     {"file": "../../../waiting/r3/metadata/character-scale-contract.json", "sha256": "46995348c0dc3c04db700136b4339eed7204aac146c907a30c987e1104ac134d", "role": "approved candidate-local person-space contract"},
-    {"file": "../../../../bg-seating-6/r2/assets/bg-seating-6-r2.png", "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908", "role": "pending furniture layer used only in context evidence"},
-    {"file": "../../../../../../../app/public/assets/core/customer/background-complete-r3-b1.png", "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49", "role": "approved context background"},
-    {"file": "../../../../../../../app/public/assets/core/customer/service-table-complete-r1-b1.png", "sha256": "64ed1bb62a5d25100d2a64c040872f172476ea34833170f811c9bfe3aad2ed7c", "role": "approved context counter and occlusion"}
+    {"file": "../../../../bg-seating-6/r2/assets/bg-seating-6-r2.png", "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908", "role": "approved furniture layer used in context evidence"}
   ],
   "generation": {
     "tool": "built-in image_gen",
     "mode": "precise-object-edit",
     "promptFile": "../PROMPT.md",
+    "promptSummary": "Remove every chair component while preserving Tsukioka identity, pose, exactly one held beer, palette, light and canonical placement.",
     "rawChromaSource": "../source/tsukioka-partial-beer-waiting-furniture-free-chroma-r2.png",
     "rawChromaSourceSha256": "c797a16ac030b84e70d55d010a1e067a833872f4e0a9ad7b881f9493d0256a28",
     "rawChromaSourceBytes": 1378703,

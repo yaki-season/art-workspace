@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "standalone-raster",
+  "id": "ST-GRILL-FINISHED-TRAY",
+  "sourceRevision": 6,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "97ccd5818b2b9ca50aeede6f61da87a339f0f23771f5812c2e8116f515e7fb6d"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "d5b3ca6b0d2503c7d7eff4f4ae055138b095eaa3e72a187abe2e1eaf2baabc30"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/finished-tray-base/r1/metadata/recomposition-report.json",
+      "sha256": "541d6add7914c0d8f8cdde4892e53bd5821ef6a24f3637650e75b31af9277d66"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "aab59a3b50d4c2177882fd7771f964532b990a429388a92a8735aa5e8f165cd0"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/finished-tray-base/r1/metadata/final-approval.json",
+      "sha256": "62fdcaa19c1b456a3c7b94e3d78b1dbacf865e088a9f4e959f860dd360d30520"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "ebf5409c1838e8b2675d69bfdc52f1b0ded2afe7a730f8f2251f8ae307d1394d"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/st-grill-finished-tray-fhd-r6.png",
+      "url": "/assets/core/cooking/st-grill-finished-tray-r6-b1.png",
+      "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184",
+      "bytes": 215874,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:07.002Z"
+}

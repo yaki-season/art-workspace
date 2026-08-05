@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-ASSEMBLY-BG-WORKSPACE-ASSEMBLY-R1",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "passed",
+  "consumerContext": "D1 소비 화면 SCR-SVC-ASSEMBLY에서 승인 자산 BG-WORKSPACE-ASSEMBLY를 lossless-identity로 소비하는 consumer-context 최종 검수 기록.",
+  "approvedAssets": [
+    {
+      "id": "BG-WORKSPACE-ASSEMBLY",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../workspace-background/r1/assets/bg-workspace-assembly-fhd-r1.png",
+      "sha256": "4b8570a524ffd3edaebc6493c82ada46eb3eab5d933b2e2ff59bf2c66e1b4b34",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

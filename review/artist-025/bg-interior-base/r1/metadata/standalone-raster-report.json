@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "BG-INTERIOR-BASE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticOwner": "Artist 3 / D1-SERVICE-ENVIRONMENT",
+  "assetMeaning": "D1 접객 화면의 compositing order 0(zOrder bottom) 불투명 full-frame 실내 배경 layer다. 동적 좌석/카운터/인물/주문 UI는 별도 layer로 이 배경 위에 합성된다.",
+  "sourceEvidence": [
+    {
+      "file": "../source/bg-interior-base-r1-generated.png",
+      "sha256": "896e33907b9f5895913be8eb12b053f4bf3cba23f7940d0eba90ec8f8d82826d"
+    }
+  ],
+  "output": {
+    "file": "../assets/bg-interior-base-fhd-r1.png",
+    "sha256": "5f176702b5fa2222fe08e7c5349b1c436a68319cdadfff02dd44d9f342a7baee",
+    "bytes": 3111275,
+    "width": 1920,
+    "height": 1080,
+    "alpha": "none",
+    "greenSpillPixels": 0
+  },
+  "reviewBoard": {
+    "file": "../assets/bg-interior-base-fhd-r1.png",
+    "sha256": "5f176702b5fa2222fe08e7c5349b1c436a68319cdadfff02dd44d9f342a7baee",
+    "width": 1920,
+    "height": 1080,
+    "subjectAssetOnly": true
+  },
+  "lossPolicy": "lossless-required",
+  "excludes": [
+    "seat, stool, counter, table, bar, person, customer, staff, order UI, panel, icon, text, quantity, timer, cursor, checkmark, logo, watermark",
+    "grill, skewer, food, drink equipment, tray, tongs, VFX, smoke, spark"
+  ],
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "2026-08-03 사용자 r2 승인 (PM 기록)"
+  },
+  "runtimeRegistrationAllowed": false
+}

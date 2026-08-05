@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "ST-GRILL-TIER-1",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "standalone-raster",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/st-grill-tier-1-fhd-r2.png",
+    "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/st-grill-tier-1-fhd-r2.png",
+      "url": "/assets/core/cooking/st-grill-tier-1-r2-b1.png",
+      "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89",
+      "bytes": 1389129,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless-identity: 승인 provenance.output과 runtime primary 산출물이 동일한 SHA-256·byte이며 재인코딩·리샘플·메타데이터 편집이 없다",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "단일 primary runtime payload (1389129 bytes, png)",
+      "byte·픽셀·지오메트리·치수 변화 없음 (lossless-identity)",
+      "companion 없음"
+    ]
+  }
+}

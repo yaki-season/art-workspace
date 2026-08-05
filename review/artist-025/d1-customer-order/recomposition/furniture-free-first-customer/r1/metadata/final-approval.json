@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "D1-FIRST-CUSTOMER-FURNITURE-FREE-FOUR-STATES-R1",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "assets": [
+    "BG-SEATING-6",
+    "D1-TSUKIOKA-WAITING",
+    "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+    "D1-TSUKIOKA-RECEIVED-EATING"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "99ded0993f126c18b241e860680d55dbf9a362fc5bf2e960e0af03a865488c8e"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../../bg-seating-6/r2/metadata/optimization-report.json",
+      "sha256": "ba515430e71023fba81f0edcd41a8fe81a8c5e253cd7d42fc2a503df703a53d7"
+    },
+    {
+      "file": "../../../../../d1-tsukioka/waiting/r3/metadata/optimization-report.json",
+      "sha256": "1170024d521c7239a7ddb6904c2d4edeb05ad7250bebfb3fd6ebb962f9d6eee4"
+    },
+    {
+      "file": "../../../../../d1-tsukioka/partial-beer-waiting/r2/metadata/optimization-report.json",
+      "sha256": "46afebcfa74947596fbc00eba2bcb78f84745e904afb8b51fdf780037d795def"
+    },
+    {
+      "file": "../../../../../d1-tsukioka/received-eating/r2/metadata/optimization-finalizer-report.json",
+      "sha256": "8876b7f88c31b647f3c2a4ed171e4f327ca109f8d5bf3e61780344dce9374f38"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-03",
+    "basis": "사용자 응답: 최종 승인"
+  }
+}

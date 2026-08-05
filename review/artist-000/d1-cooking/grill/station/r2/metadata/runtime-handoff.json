@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "standalone-raster",
+  "id": "ST-GRILL-TIER-1",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "202315eeb1aa5235e267a28e322d2179034cebe634578d26d1780ef7e610657e"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "d7f13550a5c672b8bf80a13abafce4ccdd77ab2f36a340fced49b35af2580443"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/grill-station-base/r1/metadata/recomposition-report.json",
+      "sha256": "135d240ec21d855b307d9fada08bca653361089c76aa77ec3e2e0f7d3bb4d64a"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "208c8b87c3499d6a16a1f43002f52d3ff68c0211fe499ab6f63aa8d5637e2075"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/grill-station-base/r1/metadata/final-approval.json",
+      "sha256": "386a291f084a71488f0eededa2b6a540fd3a8a6778cca4369acb9ab2b9245dd7"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "ed139e9acf667fd87ee6ed98bb240edcbbc50e04df80ba6362afa657b3714b19"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/st-grill-tier-1-fhd-r2.png",
+      "url": "/assets/core/cooking/st-grill-tier-1-r2-b1.png",
+      "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89",
+      "bytes": 1389129,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:06.748Z"
+}

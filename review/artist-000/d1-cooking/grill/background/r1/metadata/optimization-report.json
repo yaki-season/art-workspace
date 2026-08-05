@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-WORKSPACE-GRILL",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "complete-layer",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/bg-workspace-grill-fhd-r1.png",
+    "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/bg-workspace-grill-fhd-r1.png",
+      "url": "/assets/core/cooking/bg-workspace-grill-r1-b1.png",
+      "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449",
+      "bytes": 2115788,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "lossless-identity: 승인 provenance.output과 runtime primary 산출물이 동일한 SHA-256·byte이며 재인코딩·리샘플·메타데이터 편집이 없다",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "단일 primary runtime payload (2115788 bytes, png)",
+      "byte·픽셀·지오메트리·치수 변화 없음 (lossless-identity)",
+      "companion 없음"
+    ]
+  }
+}

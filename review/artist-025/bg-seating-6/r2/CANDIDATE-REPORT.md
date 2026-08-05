@@ -1,7 +1,7 @@
 # `BG-SEATING-6` R2 Gate-1 후보
 
 - runId: `ART3-D1-BG-SEATING-6-20260802-R2`
-- 상태: `pending-user-review`
+- 상태: `approved-by-user`
 - owner: `Artist 3 / service artist-025`
 - consumer: `SCR-SVC-CUSTOMERS / customers.seat[n]`
 - runtimeRegistrationAllowed: `false`
@@ -33,3 +33,28 @@ R1의 높은 식탁의자 형태를 제거하고, 카운터 위로 낮게 보이
 
 Context 이미지는 승인 배경·츠키오카·카운터를 읽기 전용으로 합성한 composition evidence이며 approval artifact가 아니다.
 사용자 Gate-1 승인 전에는 Gate-2, finalizer, runtime handoff, promotion 또는 app binding을 수행하지 않는다.
+
+## 승인된 츠키오카 전체 상태 검토 증거
+
+`대기 / 맥주만 수령 / 네기마 식사 / 맥주 음주` 네 상태를 동일한 2×2 무크롭 문맥 시트로 확인했다.
+네 상태 모두 duplicate chair 없음, 좌석 중심 6개·중앙 출입구·카운터 occlusion·인물 스케일 일관성을 producer pass했다.
+
+| 파일 | 규격 | SHA-256 |
+|---|---:|---|
+| `review/review-bg-seating-6-all-tsukioka-states-fhd-r2.png` | 1920×1080 | `20ed7c9668af4bac32ef22837546eae3c7c68d8fe96e26d04760d423163be101` |
+| `review/review-bg-seating-6-all-tsukioka-states-720-r2.png` | 1280×720 exact 2/3 | `da85199dba4079708f856bcb0067e7beab5bc7b031478fd795954262ed0a41a6` |
+| `metadata/all-states-review-evidence.json` | evidence map | `331c6ea9e5b9be722f0188c667e8def53c45cef17da47d448ea41bee88146176` |
+
+네 츠키오카 상태와 `BG-SEATING-6 R2`는 각각 Gate-1 승인 상태다. 이 시트는 consumer final 승인 산출물이 아니며
+`runtimeRegistrationAllowed=false`를 유지한다.
+
+## Gate-1 사용자 승인
+
+- date: `2026-08-03`
+- basis: `사용자 응답: r2 승인`
+- approved primary SHA-256: `10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908`
+- reviewed all-states sheet SHA-256: FHD `20ed7c9668af4bac32ef22837546eae3c7c68d8fe96e26d04760d423163be101`,
+  720 `da85199dba4079708f856bcb0067e7beab5bc7b031478fd795954262ed0a41a6`
+
+승인 범위는 `BG-SEATING-6 R2` Gate-1 하나뿐이다. consumer-screen final, Gate-2/3, finalizer, promotion,
+runtime 등록 또는 app binding 승인을 의미하지 않는다. `runtimeRegistrationAllowed=false`를 유지한다.

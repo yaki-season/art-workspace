@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-ASSEMBLY-MDL-SKEWER-BASE-R2-FINAL",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "approved-by-user",
+  "assets": [
+    "MDL-SKEWER-BASE"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "4c3e7737da9fc10d0528d565fef66a57feb2ad22696fde9b2f9fcdbce6275f4c"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../skewer-base/r2/metadata/optimization-report.json",
+      "sha256": "8581b44b6bac9d11c1b2806ccc33abfca079efe10546ad2ac102ea1f6b58f47e"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). MDL-SKEWER-BASE는 approved-by-user provenance를 가진다."
+  }
+}

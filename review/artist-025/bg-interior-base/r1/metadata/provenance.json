@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "BG-INTERIOR-BASE",
+  "sourceRevision": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "D1 접객 화면(SCR-SVC-CUSTOMERS)의 최하단(zOrder bottom, compositing order 0) 고정 실내 배경 layer다. 좌석·카운터·인물·주문 UI 등 동적 자산이 이 위에 합성되는 불투명 full-frame 실내 배경을 제공한다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "2026-08-03 사용자 r2 승인 (PM 기록)"
+  },
+  "sourceReferences": [
+    {
+      "file": "../source/bg-interior-base-r1-generated.png",
+      "sha256": "896e33907b9f5895913be8eb12b053f4bf3cba23f7940d0eba90ec8f8d82826d",
+      "role": "사용자 승인(2026-08-03 r2) codex-native 1672x941 불투명 실내 배경 생성 원본"
+    }
+  ],
+  "generation": {
+    "tool": "codex-native imagegen",
+    "mode": "full-frame opaque background generation",
+    "promptSummary": "야키토리야 D1 접객 화면의 고정 실내 배경. 좌석/카운터/인물/UI 없이 빈 실내 공간(벽면, 조명, 원근)만 담은 불투명 full-frame 배경.",
+    "rawChromaSource": "../source/bg-interior-base-r1-generated.png",
+    "rawChromaSourceSha256": "896e33907b9f5895913be8eb12b053f4bf3cba23f7940d0eba90ec8f8d82826d",
+    "rawChromaSourceBytes": 2852014,
+    "postProcess": [
+      "nearest-neighbor normalization from 1672x941 to 1920x1080 (no smoothing, no interpolation; pixel replication only)",
+      "no crop, compositing, colour edit, transparency conversion, or generated-pixel edit after source inspection"
+    ]
+  },
+  "output": {
+    "file": "../assets/bg-interior-base-fhd-r1.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "5f176702b5fa2222fe08e7c5349b1c436a68319cdadfff02dd44d9f342a7baee",
+    "bytes": 3111275
+  },
+  "runtimeRegistrationAllowed": false
+}

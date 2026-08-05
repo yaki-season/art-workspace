@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-GRILL-ST-GRILL-FINISHED-TRAY-R6-FINAL",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "assets": [
+    "ST-GRILL-FINISHED-TRAY"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "541d6add7914c0d8f8cdde4892e53bd5821ef6a24f3637650e75b31af9277d66"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../finished-tray/r6/metadata/optimization-report.json",
+      "sha256": "aab59a3b50d4c2177882fd7771f964532b990a429388a92a8735aa5e8f165cd0"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). ST-GRILL-FINISHED-TRAY는 approved-by-user provenance를 가진다."
+  }
+}

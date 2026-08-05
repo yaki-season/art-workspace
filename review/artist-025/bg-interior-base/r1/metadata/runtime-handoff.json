@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "standalone-raster",
+  "id": "BG-INTERIOR-BASE",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "0d651b4721dd0f17361f592f2c045899ebd60d54e376c87f97609b851269cedb"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "3efb3c7fcb34f91f5d3b51c8c38c761bd8bc1b353730dc6009a4c9dd81c302ca"
+    },
+    "recomposition": {
+      "file": "recomposition-report.json",
+      "sha256": "b4ce16c8bdb83ffad2a91429b0de7bf3b325cfbcc0f3232b7261a61bf8c973a2"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "154167f5b54b81fa45f70d350104c3bf90ccd3c7eac27aa78de3231b34c37c86"
+    },
+    "finalApproval": {
+      "file": "final-approval.json",
+      "sha256": "0690bcbad7237c77c23675ad8205faccc4d21cafd277f24da0ab2da0a9e8c6e7"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "545c3840898ca4ab1788e5db14222a3e7379fb337cd0242dc3599e62098024a7"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/bg-interior-base-fhd-r1.png",
+      "url": "/assets/core/customer/bg-interior-base-r1-b1.png",
+      "sha256": "5f176702b5fa2222fe08e7c5349b1c436a68319cdadfff02dd44d9f342a7baee",
+      "bytes": 3111275,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:51:21.598Z"
+}

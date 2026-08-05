@@ -3,7 +3,7 @@
 - runId: `ART3-D1-BG-SEATING-6-20260802-R2`
 - tool: built-in `image_gen`
 - use case: `stylized-concept`
-- status: `pending-user-review`
+- status: `approved-by-user`
 - output intent: isolated Gate-1 candidate plus non-approval context evidence
 
 ## Read-only references
@@ -35,3 +35,12 @@ Hard constraints: exactly six LOW lumbar backrest modules and no other object. N
 The official helper used border auto-key, soft matte, transparent threshold `12`, opaque threshold `220` and despill.
 No crop, color correction, generated-object edit or consumer binding was applied. The first R2 generation passed isolated and
 actual-context inspection, so the permitted correction iteration was not used.
+
+## Gate-1 approval
+
+- status: `approved-by-user`
+- date: `2026-08-03`
+- basis: `사용자 응답: r2 승인`
+- scope: `BG-SEATING-6 R2` Gate-1 only
+
+This does not approve a consumer-screen final, Gate-2/3, finalizer, promotion, runtime registration or app binding.

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-ASSEMBLY-MDL-INGREDIENT-CHICKEN-R1",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "passed",
+  "consumerContext": "D1 소비 화면 SCR-SVC-ASSEMBLY에서 승인 자산 MDL-INGREDIENT-CHICKEN를 lossless-identity로 소비하는 consumer-context 최종 검수 기록.",
+  "approvedAssets": [
+    {
+      "id": "MDL-INGREDIENT-CHICKEN",
+      "profile": "bundle-model",
+      "sourceRevision": 1,
+      "sha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../ingredient-chicken/r1/review/review-mdl-ingredient-chicken-r1.png",
+      "sha256": "3f9f95580d5bfb87b7e246cd8fa3632b6cbd1df6204886b58687bdba0f768e42",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

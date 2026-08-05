@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-CUSTOMERS-BG-INTERIOR-BASE-R1",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "passed",
+  "consumerContext": "D1 접객 화면(SCR-SVC-CUSTOMERS)의 compositing order 0 고정 실내 배경 layer로서, 승인된 불투명 full-frame 배경을 1:1로 소비한다. 좌석·카운터·인물·주문 UI 자산은 별도 layer이며 이 배경 위에 합성된다.",
+  "approvedAssets": [
+    {
+      "id": "BG-INTERIOR-BASE",
+      "profile": "standalone-raster",
+      "sourceRevision": 1,
+      "sha256": "5f176702b5fa2222fe08e7c5349b1c436a68319cdadfff02dd44d9f342a7baee",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../assets/bg-interior-base-fhd-r1.png",
+      "sha256": "5f176702b5fa2222fe08e7c5349b1c436a68319cdadfff02dd44d9f342a7baee",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed",
+    "note": "불투명 full-frame 배경은 소비 화면과 동일 해상도로 1:1 소비되므로 별도 720p 재조립 산출물이 없다."
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "2026-08-03 사용자 r2 승인 → promotion (PM 기록)"
+  }
+}

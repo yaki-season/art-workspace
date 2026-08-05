@@ -1,0 +1,46 @@
+{
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "bundle-model",
+  "pack": "core",
+  "kind": "model",
+  "colorSpace": "not-applicable",
+  "alpha": "not-applicable",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "bounds": {
+    "min": {
+      "x": -0.21935181690493205,
+      "y": -0.8199999928474426,
+      "z": -0.0823199988901615
+    },
+    "max": {
+      "x": 0.21935181690493205,
+      "y": 0.8199999928474426,
+      "z": 0.10919999999999999
+    }
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:MDL-NEGIMA-GRILL-RAW:R1",
+  "provenance": "PROV:MDL-NEGIMA-GRILL-RAW:R1",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "ART-003 v5.9.0",
+    "GPL-004 v1.39.0",
+    "Developer 1 D1_GRILL_FOOD_FOOTPRINT raw R3 consumption contract"
+  ],
+  "reviewedAt": "2026-07-30",
+  "url": "/assets/core/cooking/mdl-negima-grill-raw-r1-b1.json",
+  "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+  "bytes": 1177,
+  "format": "json"
+}

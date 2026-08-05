@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-ASSEMBLY-MDL-INGREDIENT-CHICKEN-R1-FINAL",
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "status": "approved-by-user",
+  "assets": [
+    "MDL-INGREDIENT-CHICKEN"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "0802beea9800c8e7cd6b386b2805887341b39d2bceb1c32a8080e698b0e299bf"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../ingredient-chicken/r1/metadata/optimization-report.json",
+      "sha256": "a92de1ccaffb96e677f5aa623dfe68ccc2074ad51a525aaa65b2b0bf0e005d4f"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). MDL-INGREDIENT-CHICKEN는 approved-by-user provenance를 가진다."
+  }
+}

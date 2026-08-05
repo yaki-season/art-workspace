@@ -2,7 +2,14 @@
   "schemaVersion": 1,
   "id": "BG-SEATING-6",
   "sourceRevision": 2,
-  "status": "pending-user-review",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: r2 승인",
+    "scope": "BG-SEATING-6 R2 Gate-1 anchor evidence only",
+    "excludes": ["consumer-screen final approval", "Gate-2", "Gate-3", "runtime registration"]
+  },
   "coordinateSpace": "source-local-pixels",
   "sourceSize": {"width": 1672, "height": 941},
   "seatAnchors": [

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "bundle-model",
+  "id": "D1-TSUKIOKA-RECEIVED-EATING",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "aa83fbf93efb2b0d83e2428e2703fbef1ea285e359e3aa9d8d27086372f387c4"
+    },
+    "profileApproval": {
+      "file": "bundle-model-report.json",
+      "sha256": "eb1b2ab6de5aaa768c474cdff7735fcca78a51f07176a77a22c286fd3d22fd22"
+    },
+    "recomposition": {
+      "file": "../../../../d1-customer-order/recomposition/furniture-free-first-customer/r1/metadata/recomposition-report.json",
+      "sha256": "99ded0993f126c18b241e860680d55dbf9a362fc5bf2e960e0af03a865488c8e"
+    },
+    "optimization": {
+      "file": "optimization-finalizer-report.json",
+      "sha256": "8876b7f88c31b647f3c2a4ed171e4f327ca109f8d5bf3e61780344dce9374f38"
+    },
+    "finalApproval": {
+      "file": "../../../../d1-customer-order/recomposition/furniture-free-first-customer/r1/metadata/final-approval.json",
+      "sha256": "e4370889b6552ae70e284ea23846722666efd5fc859140ce5f89d0b641dfd9ba"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "e91e82b5924afe693519add3a5cdf4c7238b651d05560e6cdd307af179056989"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/d1-tsukioka-received-eating-eat-negima-r2.png",
+      "url": "/assets/core/customer/d1-tsukioka-received-eating-negima-r2-b1.png",
+      "sha256": "5a1e526672aad1eba9e50842ee4bdf0310f8564a9b6aa7c605aecd8fcac0525c",
+      "bytes": 306454,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "role": "drink-frame",
+      "sourceFile": "../assets/d1-tsukioka-received-eating-drink-draft-beer-r2.png",
+      "url": "/assets/core/customer/d1-tsukioka-received-eating-beer-r2-b1.png",
+      "sha256": "973d568259f25c1711e4924d3b063b59ba82962c1dfcaddc418d3735aeef6ee3",
+      "bytes": 304646,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "role": "frame-manifest",
+      "sourceFile": "frame-manifest.json",
+      "url": "/assets/core/customer/d1-tsukioka-received-eating-r2-b1.json",
+      "sha256": "4b9291b99962d54fe9f9623b4c16aacc1d7631ba12504aa1922de70fc4d122b7",
+      "bytes": 1341,
+      "format": "json"
+    }
+  ],
+  "generatedAt": "2026-08-03T06:57:18.594Z"
+}

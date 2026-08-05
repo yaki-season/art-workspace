@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {"file": "../assets/d1-tsukioka-partial-beer-waiting-r2.png", "sha256": "590aba25dcf8ad897ebe13e85eb9db470f87a195bb9bb793cfc78d82163d9206"},
+  "artifacts": [
+    {"role": "primary", "file": "../assets/d1-tsukioka-partial-beer-waiting-r2.png", "url": "/assets/core/customer/d1-tsukioka-partial-beer-waiting-r2-b1.png", "sha256": "590aba25dcf8ad897ebe13e85eb9db470f87a195bb9bb793cfc78d82163d9206", "bytes": 295089, "format": "png", "dimensions": {"width": 1920, "height": 1080}}
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {"result": "passed", "method": "lossless passthrough; approved primary and runtime artifact SHA-256 are identical", "userApprovalRequired": false},
+  "performanceBudget": {"result": "passed", "checks": ["single 295089-byte PNG artifact", "no dimension growth", "no byte growth", "one straight-alpha FHD layer"]}
+}

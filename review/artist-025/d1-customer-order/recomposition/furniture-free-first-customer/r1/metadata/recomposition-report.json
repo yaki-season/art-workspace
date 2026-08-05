@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "D1-FIRST-CUSTOMER-FURNITURE-FREE-FOUR-STATES-R1",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "ARTIST-010-BACKGROUND-COMPLETE",
+      "profile": "complete-layer",
+      "sourceRevision": 3,
+      "sha256": "7ab2351585160d994bc549db3735e0843a1350913add9a17cff650d05706db49",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "BG-SEATING-6",
+      "profile": "standalone-raster",
+      "sourceRevision": 2,
+      "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "D1-TSUKIOKA-WAITING",
+      "profile": "complete-layer",
+      "sourceRevision": 3,
+      "sha256": "9a77f3308ade6c2d8d5ed6c13f26a72fddbe775b94afddab962b86561a0c2ff3",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "D1-TSUKIOKA-PARTIAL-BEER-WAITING",
+      "profile": "complete-layer",
+      "sourceRevision": 2,
+      "sha256": "590aba25dcf8ad897ebe13e85eb9db470f87a195bb9bb793cfc78d82163d9206",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "D1-TSUKIOKA-RECEIVED-EATING",
+      "profile": "bundle-model",
+      "sourceRevision": 2,
+      "sha256": "4b9291b99962d54fe9f9623b4c16aacc1d7631ba12504aa1922de70fc4d122b7",
+      "approvalStatus": "approved-by-user"
+    },
+    {
+      "id": "BG-SERVICE-TABLE-ARTIST009",
+      "profile": "complete-layer",
+      "sourceRevision": 1,
+      "sha256": "64ed1bb62a5d25100d2a64c040872f172476ea34833170f811c9bfe3aad2ed7c",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../../bg-seating-6/r2/review/review-bg-seating-6-all-tsukioka-states-fhd-r2.png",
+      "sha256": "20ed7c9668af4bac32ef22837546eae3c7c68d8fe96e26d04760d423163be101",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../../../../../bg-seating-6/r2/review/review-bg-seating-6-all-tsukioka-states-720-r2.png",
+      "sha256": "da85199dba4079708f856bcb0067e7beab5bc7b031478fd795954262ed0a41a6",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: 최종 승인"
+  }
+}

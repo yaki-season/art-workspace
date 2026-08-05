@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "bundle-model",
+  "id": "MDL-NEGIMA-GRILL-RAW",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "45a39a9d07481e775469f4c6ab7906a8210d91d254794234c4e16a6fcb99750f"
+    },
+    "profileApproval": {
+      "file": "bundle-model-report.json",
+      "sha256": "396e99d9d39f4759754629cddbe0119a4ef329762e1437b47854dc165406e796"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/raw-station-consumption/r3/metadata/recomposition-report.json",
+      "sha256": "fb8ce7815ccf06d17fc0387b14e8c9f0894c48062460f1d6c4be600154b55bdd"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "cb8f0980c40f868af9ac3281de39de6ea2e1d8576a413c42b3de4cb1376f31da"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/raw-station-consumption/r3/metadata/final-approval.json",
+      "sha256": "9d2df9267dd70bc35e1292efd256cdcddf973fd3c2dae1d837c6be916680e4a8"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "3ebfdab17161f38dabfef975b808f6642dd43ab15bea1a4f9b762ae39b73fe62"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/mdl-negima-grill-raw-r1.composition.json",
+      "url": "/assets/core/cooking/mdl-negima-grill-raw-r1-b1.json",
+      "sha256": "ffffd4c5e5d63cb81fb7a6e413d7604abc6d7f39797d477a240f7d16f6534869",
+      "bytes": 1177,
+      "format": "json"
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:41.261Z"
+}

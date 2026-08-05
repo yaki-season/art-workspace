@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-GRILL-ST-GRILL-TIER-1-R2",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "passed",
+  "consumerContext": "D1 소비 화면 SCR-SVC-GRILL에서 승인 자산 ST-GRILL-TIER-1를 lossless-identity로 소비하는 consumer-context 최종 검수 기록.",
+  "approvedAssets": [
+    {
+      "id": "ST-GRILL-TIER-1",
+      "profile": "standalone-raster",
+      "sourceRevision": 2,
+      "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../station/r2/assets/st-grill-tier-1-fhd-r2.png",
+      "sha256": "da023e90bfecc62e45264433018e28a29a2648715bb5e2634351d5307a9bdc89",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

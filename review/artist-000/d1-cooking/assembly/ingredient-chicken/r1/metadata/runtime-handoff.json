@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "bundle-model",
+  "id": "MDL-INGREDIENT-CHICKEN",
+  "sourceRevision": 1,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-ASSEMBLY",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "08f754b99b0b6feded12e000f8ec36e5da3adde951d6fa3eb62761620d092694"
+    },
+    "profileApproval": {
+      "file": "bundle-model-report.json",
+      "sha256": "bfa47bbe970e9c4693b258efc43438f1c2c5244d2793da393b57e3caab0a0b9b"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/ingredient-chicken-consumption/r1/metadata/recomposition-report.json",
+      "sha256": "0802beea9800c8e7cd6b386b2805887341b39d2bceb1c32a8080e698b0e299bf"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "a92de1ccaffb96e677f5aa623dfe68ccc2074ad51a525aaa65b2b0bf0e005d4f"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/ingredient-chicken-consumption/r1/metadata/final-approval.json",
+      "sha256": "dd81baea772ee8462d5cff1027804f37e8ccbfb752cae5e46e08ccc600548e36"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "b65cd47d9bdda8c8baaf4024a10cc64651a74f624ef58e15a6c60a29ad6aa423"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/mdl-ingredient-chicken-r1.glb",
+      "url": "/assets/core/cooking/mdl-ingredient-chicken-r1-b1.glb",
+      "sha256": "740d48acc998a9bea5b16c46d4be66d143efb57a8cb42726c757d0e22e9da7dc",
+      "bytes": 5168,
+      "format": "glb"
+    },
+    {
+      "role": "pixel-albedo",
+      "sourceFile": "../assets/tex-ingredient-chicken-albedo-r1.png",
+      "url": "/assets/core/cooking/mdl-ingredient-chicken-pixel-albedo-r1-b1.png",
+      "sha256": "4baa5ca99f5f190053930461251f0497219731048a7d3caddf5ae2e03cfefb47",
+      "bytes": 43760,
+      "format": "png",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T06:06:07.517Z"
+}

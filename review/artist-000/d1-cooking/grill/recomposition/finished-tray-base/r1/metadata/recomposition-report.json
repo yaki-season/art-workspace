@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-GRILL-ST-GRILL-FINISHED-TRAY-R6",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "passed",
+  "consumerContext": "D1 소비 화면 SCR-SVC-GRILL에서 승인 자산 ST-GRILL-FINISHED-TRAY를 lossless-identity로 소비하는 consumer-context 최종 검수 기록.",
+  "approvedAssets": [
+    {
+      "id": "ST-GRILL-FINISHED-TRAY",
+      "profile": "standalone-raster",
+      "sourceRevision": 6,
+      "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../../../../finished-tray/r6/assets/st-grill-finished-tray-fhd-r6.png",
+      "sha256": "51abf390cbf31d40b50a7d99f08a5d37a2da70df6cf94d405788538bad7d9184",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록)"
+  }
+}

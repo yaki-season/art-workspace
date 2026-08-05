@@ -6,8 +6,18 @@
   "sourceRevision": 2,
   "screenUnit": "SCR-SVC-CUSTOMERS",
   "component": "customers.seat[n]",
-  "profile": "complete-layer",
-  "status": "pending-user-review",
+  "profile": "standalone-raster",
+  "status": "approved-by-user",
+  "approvalStatus": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-03",
+    "basis": "사용자 응답: r2 승인",
+    "scope": "BG-SEATING-6 R2 Gate-1 only",
+    "approvedPrimarySha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908",
+    "reviewedAllStatesSheetSha256": ["20ed7c9668af4bac32ef22837546eae3c7c68d8fe96e26d04760d423163be101", "da85199dba4079708f856bcb0067e7beab5bc7b031478fd795954262ed0a41a6"],
+    "excludes": ["consumer-screen final approval", "Gate-2", "Gate-3", "finalizer", "promotion", "runtime registration", "app binding"]
+  },
   "source": {
     "file": "../source/bg-seating-6-r2-chroma.png",
     "width": 1672,
@@ -67,6 +77,6 @@
     "UI, text, symbols, numbers, watermark or guides",
     "Gate-2, finalizer, runtime handoff, promotion, app binding or docs edits"
   ],
-  "nextGate": "user Gate-1 visual review",
+  "nextGate": "Gate-2 first-customer four-state recomposition evidence",
   "runtimeRegistrationAllowed": false
 }

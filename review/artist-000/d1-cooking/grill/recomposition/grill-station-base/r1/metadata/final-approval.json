@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-GRILL-ST-GRILL-TIER-1-R2-FINAL",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "assets": [
+    "ST-GRILL-TIER-1"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "135d240ec21d855b307d9fada08bca653361089c76aa77ec3e2e0f7d3bb4d64a"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../station/r2/metadata/optimization-report.json",
+      "sha256": "208c8b87c3499d6a16a1f43002f52d3ff68c0211fe499ab6f63aa8d5637e2075"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-02",
+    "basis": "2026-08-02 사용자 결정: v7 승인 인정 → promotion (PM 기록). ST-GRILL-TIER-1는 approved-by-user provenance를 가진다."
+  }
+}

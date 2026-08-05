@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "standalone-raster",
+  "id": "BG-SEATING-6",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "d4faf1e720f0a7d32376bc0355d4329dc25dd16bd3880704a79de83d06b159e7"
+    },
+    "profileApproval": {
+      "file": "standalone-raster-report.json",
+      "sha256": "5bacdc6d1364e80dbc7e53e3053deb6712cd023ba315ddd9bd2331e7568de1c9"
+    },
+    "recomposition": {
+      "file": "../../../d1-customer-order/recomposition/furniture-free-first-customer/r1/metadata/recomposition-report.json",
+      "sha256": "99ded0993f126c18b241e860680d55dbf9a362fc5bf2e960e0af03a865488c8e"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "ba515430e71023fba81f0edcd41a8fe81a8c5e253cd7d42fc2a503df703a53d7"
+    },
+    "finalApproval": {
+      "file": "../../../d1-customer-order/recomposition/furniture-free-first-customer/r1/metadata/final-approval.json",
+      "sha256": "e4370889b6552ae70e284ea23846722666efd5fc859140ce5f89d0b641dfd9ba"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "ff3052da68e8cee692930702f90eff803cbcee2bd010afc85870124bcceef256"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/bg-seating-6-r2.png",
+      "url": "/assets/core/customer/bg-seating-6-r2-b1.png",
+      "sha256": "10b1dd2692f61053ecce5a60645408ad0b15736b157ae6d31223efa21d80f908",
+      "bytes": 150337,
+      "format": "png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    }
+  ],
+  "generatedAt": "2026-08-03T07:24:59.753Z"
+}
