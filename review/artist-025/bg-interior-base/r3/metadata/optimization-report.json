@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-INTERIOR-BASE",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "profile": "standalone-raster",
+  "sourceRevision": 3,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/bg-interior-base-fhd-r3.png",
+    "sha256": "873c39354f87ccccb1ab3f00560642a43320aae62d8f6fb0591eb7e4a110283f"
+  },
+  "artifacts": [{
+    "role": "primary",
+    "file": "../assets/bg-interior-base-fhd-r3.png",
+    "url": "/assets/core/customer/bg-interior-base-r3-b1.png",
+    "sha256": "873c39354f87ccccb1ab3f00560642a43320aae62d8f6fb0591eb7e4a110283f",
+    "bytes": 3455874,
+    "format": "png",
+    "dimensions": { "width": 1920, "height": 1080 }
+  }],
+  "lossPolicy": "lossless-required",
+  "visualRegression": { "result": "passed", "method": "lossless identity" },
+  "performanceBudget": { "result": "passed", "checks": ["single PNG runtime payload"] }
+}

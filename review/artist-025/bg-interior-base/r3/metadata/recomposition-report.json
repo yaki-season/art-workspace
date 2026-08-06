@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-CUSTOMERS-BG-INTERIOR-BASE-R3",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "passed",
+  "consumerContext": "손님 화면의 원경 실내 배경. 좌석, 손님, 카운터와 UI는 별도 상위 레이어로 합성",
+  "approvedAssets": [{
+    "id": "BG-INTERIOR-BASE",
+    "profile": "standalone-raster",
+    "sourceRevision": 3,
+    "sha256": "873c39354f87ccccb1ab3f00560642a43320aae62d8f6fb0591eb7e4a110283f",
+    "approvalStatus": "approved-by-user"
+  }],
+  "outputs": {
+    "fhd": {
+      "file": "../assets/bg-interior-base-fhd-r3.png",
+      "sha256": "873c39354f87ccccb1ab3f00560642a43320aae62d8f6fb0591eb7e4a110283f",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": { "status": "approved-by-user", "date": "2026-08-07" }
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-CUSTOMERS-BG-INTERIOR-BASE-R3-FINAL",
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "assets": ["BG-INTERIOR-BASE"],
+  "userDecision": {
+    "date": "2026-08-07",
+    "basis": "원경 실내 화풍을 유지하면서 뒤쪽 거리 배경이 더 잘 보이는 R3를 최종 승인"
+  }
+}

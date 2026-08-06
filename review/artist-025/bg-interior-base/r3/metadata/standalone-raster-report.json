@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "profile": "standalone-raster",
+  "id": "BG-INTERIOR-BASE",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticOwner": "Artist 3 / D1-SERVICE-ENVIRONMENT",
+  "assetMeaning": "손님 화면 최하단 compositing order 0의 불투명 전체 화면 실내 배경",
+  "output": {
+    "file": "../assets/bg-interior-base-fhd-r3.png",
+    "sha256": "873c39354f87ccccb1ab3f00560642a43320aae62d8f6fb0591eb7e4a110283f",
+    "bytes": 3455874,
+    "width": 1920,
+    "height": 1080,
+    "alpha": "none"
+  },
+  "lossPolicy": "lossless-required",
+  "approval": { "status": "approved-by-user", "date": "2026-08-07" },
+  "runtimeRegistrationAllowed": true
+}

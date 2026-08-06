@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "profile": "standalone-raster",
+  "id": "BG-INTERIOR-BASE",
+  "sourceRevision": 3,
+  "screenUnit": "SCR-SVC-CUSTOMERS",
+  "semanticPurpose": "D1 손님 화면의 원경 실내와 열린 문 너머 밤거리를 제공하는 불투명 전체 화면 배경",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-07",
+    "basis": "사용자가 원경 구도와 더 잘 보이는 거리 배경의 R3를 승인"
+  },
+  "sourceReferences": [{
+    "file": "../source/bg-interior-base-r3-generated.png",
+    "sha256": "05b0c28abffb9da9a2a15a626567d2ab3218895b0f6889851e43ad9f492c1f1f",
+    "role": "imagegen 편집 원본"
+  }],
+  "generation": {
+    "tool": "codex-native imagegen",
+    "mode": "precise-object-edit",
+    "promptSummary": "R2의 수공예 야간 화풍과 원경 실내를 유지하면서 중앙 문을 더 열어 젖은 밤거리와 건물, 등불의 가독성을 높임",
+    "postProcess": ["nearest-neighbor normalization from 1672x941 to 1920x1080", "no crop or colour edit"]
+  },
+  "output": {
+    "file": "../assets/bg-interior-base-fhd-r3.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "873c39354f87ccccb1ab3f00560642a43320aae62d8f6fb0591eb7e4a110283f",
+    "bytes": 3455874
+  },
+  "runtimeRegistrationAllowed": true
+}
