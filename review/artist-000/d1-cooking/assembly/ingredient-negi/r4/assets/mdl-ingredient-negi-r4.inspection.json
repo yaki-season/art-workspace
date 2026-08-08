@@ -1,0 +1,15 @@
+{
+  "id": "MDL-INGREDIENT-NEGI",
+  "sourceRevision": 4,
+  "coordinateSystem": "meters, Y-up, +Z front",
+  "origin": "skewerSocket",
+  "skewerAxis": "local +Y",
+  "bodyLongAxis": "local +Y; parallel to skewer axis",
+  "assemblyPose": "parent Z=-90deg makes the negi body horizontal on screen",
+  "requiredNodes": [
+    "skewerSocket"
+  ],
+  "triangles": 42,
+  "triangleBudget": 800,
+  "status": "review-candidate"
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-INGREDIENT-CHICKEN-R1-USER-REAFFIRMATION",
+  "assetId": "MDL-INGREDIENT-CHICKEN",
+  "sourceRevision": 1,
+  "status": "approved-by-user",
+  "date": "2026-08-08",
+  "decision": "사용자가 R1 검토 이미지를 확인하고 승인",
+  "runtimeRegistration": "already registered; composed display waits for exact-load bundle completion"
+}

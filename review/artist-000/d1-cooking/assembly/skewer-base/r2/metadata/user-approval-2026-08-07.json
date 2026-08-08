@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "MDL-SKEWER-BASE-R2-USER-REAFFIRMATION",
+  "assetId": "MDL-SKEWER-BASE",
+  "sourceRevision": 2,
+  "status": "approved-by-user",
+  "date": "2026-08-07",
+  "decision": "사용자가 R2 검토 이미지를 확인하고 승인",
+  "runtimeRegistration": "manifest-approved; composed display waits for chicken and negi bundle completion"
+}
