@@ -1,0 +1,16 @@
+{
+  "assetId": "CH-TSUKIOKA-STORY",
+  "sourceRevision": 1,
+  "status": "approved-by-user",
+  "approvedAt": "2026-08-09",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "sourceMasterId": "CM-TSUKIOKA-STORY-PORTRAIT-R1",
+  "identityReference": "review/artist-025/d1-tsukioka/waiting/r3/assets/d1-tsukioka-waiting-r3.png",
+  "styleReference": "review/artist-023/s0-prologue/story/ch-aki-story/r4/source/ch-aki-story-fatigue-chroma-r4.png",
+  "source": "source/ch-tsukioka-story-calm-chroma-r1.png",
+  "asset": "assets/ch-tsukioka-story-calm-r1.png",
+  "runtime": "app/public/assets/core/s0/story/ch-tsukioka-story-r1-b1.png",
+  "runtimeSha256": "52c4ed42248fc5b6e60b383fbb563fac552f2437e9d678e53928e991e2aa0909",
+  "dimensions": { "width": 1024, "height": 1536 },
+  "alpha": "straight"
+}

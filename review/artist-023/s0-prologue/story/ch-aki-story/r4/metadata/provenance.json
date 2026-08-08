@@ -1,0 +1,19 @@
+{
+  "assetId": "CH-AKI-STORY",
+  "sourceRevision": 4,
+  "status": "approved-by-user",
+  "approvedAt": "2026-08-09",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "sourceMasterId": "CM-AKI-STORY-PORTRAIT-R1",
+  "identityReferences": [
+    "docs/inbox/2.art-concept/18_main_cast_character_lineup.png",
+    "docs/inbox/2.art-concept/19_key_character_acting_sheet.png"
+  ],
+  "moodReference": "user-supplied dark-haired male photo, mood only; identity not copied",
+  "source": "source/ch-aki-story-fatigue-chroma-r4.png",
+  "asset": "assets/ch-aki-story-fatigue-r4.png",
+  "runtime": "app/public/assets/core/s0/story/ch-aki-story-r4-b1.png",
+  "runtimeSha256": "53ad896a1aec82e8641d43ad847a7555892f60477b5493cb1dc85b6748eb32a0",
+  "dimensions": { "width": 1086, "height": 1448 },
+  "alpha": "straight"
+}
