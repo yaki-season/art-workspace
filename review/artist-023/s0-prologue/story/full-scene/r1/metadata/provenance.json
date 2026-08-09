@@ -1,0 +1,12 @@
+{
+  "assetId": "IL-S0-AKI-REOPENED-SHOP",
+  "sourceRevision": 1,
+  "status": "approved-by-user",
+  "approvedAt": "2026-08-09",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "source": "source/s0-aki-reopened-shop-full-scene-r1.png",
+  "runtime": "app/public/assets/core/s0/story/s0-aki-reopened-shop-full-scene-r1-b1.png",
+  "runtimeSha256": "251e5bcce8d3940762febc4762480f710d21a814ed7fea2096be73f2829fcdfa",
+  "dimensions": { "width": 1672, "height": 941 },
+  "alpha": "none"
+}
