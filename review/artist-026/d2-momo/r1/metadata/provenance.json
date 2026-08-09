@@ -1,0 +1,27 @@
+{
+  "assetSetId": "D2-MOMO-RUNTIME-SET-R1",
+  "status": "approved-by-user",
+  "createdAt": "2026-08-10",
+  "semanticOwner": "Artist 1 / D2-D3-MOMO-FOOD",
+  "generation": {
+    "method": "OpenAI image generation with local approved-art references",
+    "source": "source/d2-momo-five-stage-chroma-r1.png",
+    "sourceSha256": "33db6225295a6d7b3b6a2917c77c4c4eb0f675b1c6452dff69be4f68c08e5bc5"
+  },
+  "referenceAssetPaths": [
+    "app/public/assets/core/cooking/spr-negima-grill-raw-r1-b1.png",
+    "app/public/assets/core/cooking/spr-negima-grill-proper-r1-b1.png",
+    "review/codex/fd-momo-order/r1/fd-momo-order-r1.png"
+  ],
+  "postprocess": "tmp/d2-review/process-momo-five-stage.mjs",
+  "userApproval": {
+    "status": "approved-by-user",
+    "date": "2026-08-10",
+    "basis": "사용자 응답: 승인. 커밋 푸쉬"
+  },
+  "runtimeDimensions": {
+    "grillAndAssembly": [109, 494],
+    "orderIcon": [256, 256],
+    "servedPlate": [2048, 1024]
+  }
+}

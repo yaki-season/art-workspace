@@ -1,0 +1,16 @@
+{
+  "assetSetId": "D2-MOMO-RUNTIME-SET-R1",
+  "status": "approved-by-user",
+  "checks": {
+    "fiveChickenPieces": "pass",
+    "consistentSilhouetteAcrossCookStages": "pass",
+    "transparentRuntimeSprites": "pass",
+    "assemblyProgressZeroThroughFive": "pass",
+    "d1PixelToneCompatibility": "pass",
+    "runtimeIntegration": "pass",
+    "userFinalApproval": "pass"
+  },
+  "review": "review/review-d2-momo-five-stage-r1.png",
+  "approvedAt": "2026-08-10",
+  "runtimeAssetId": "D2-MOMO-RUNTIME-SET"
+}

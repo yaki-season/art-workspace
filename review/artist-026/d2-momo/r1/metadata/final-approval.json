@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "D2-MOMO-RUNTIME-SET-R1-FINAL",
+  "screenUnit": "SCR-SVC-ASSEMBLY|SCR-SVC-GRILL|SCR-SVC-CUSTOMERS",
+  "status": "approved-by-user",
+  "assets": [
+    "D2-MOMO-RUNTIME-SET"
+  ],
+  "userDecision": {
+    "date": "2026-08-10",
+    "basis": "사용자 응답: 승인. 커밋 푸쉬"
+  },
+  "review": {
+    "file": "../review/review-d2-momo-five-stage-r1.png",
+    "checks": [
+      "모모 닭고기 5조각",
+      "조립 진행 0~5단계",
+      "생·익는 중·적정·과다·탄 상태",
+      "조립대·그릴·손님 제공 FHD/720 소비 화면"
+    ]
+  },
+  "runtime": {
+    "assetId": "D2-MOMO-RUNTIME-SET",
+    "sourceRevision": 1,
+    "runtimeBuild": 1,
+    "root": "app/public/assets/campaign/d2"
+  }
+}
