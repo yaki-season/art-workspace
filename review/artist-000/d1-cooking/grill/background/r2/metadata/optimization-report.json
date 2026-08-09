@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "BG-WORKSPACE-GRILL",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/bg-workspace-grill-fhd-r2.png",
+    "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/bg-workspace-grill-fhd-r2.png",
+      "url": "/assets/core/cooking/bg-workspace-grill-r2-b1.png",
+      "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675",
+      "bytes": 3467099,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "승인 provenance output과 runtime primary가 SHA-256·byte 동일한 lossless identity다.",
+    "userApprovalRequired": true,
+    "userApproval": {
+      "status": "approved-by-user",
+      "date": "2026-08-08",
+      "basis": "사용자 응답: 승인 — 왼쪽 생꼬치 단일 카드, 오른쪽 품질별 읽기 전용 목록, 그릴 화면 하단 공용 선반 숨김 및 왼쪽 tray 제거 베이스 승인"
+    }
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "단일 primary PNG 3467099 bytes",
+      "런타임은 기존 background와 station 두 레이어 대신 불투명 base 한 레이어를 소비한다."
+    ]
+  }
+}

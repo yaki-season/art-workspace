@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-SVC-GRILL-INVENTORY-BASE-R2-FINAL",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "approved-by-user",
+  "assets": [
+    "BG-WORKSPACE-GRILL"
+  ],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "709d2e03047d214925859686c42c321d0dc38d587c85cabe9e80d54b361697d7"
+  },
+  "optimizations": [
+    {
+      "file": "../../../../background/r2/metadata/optimization-report.json",
+      "sha256": "ea4db1af63cf55a3db454edbfc7b41a1b256b6930a385efcdcab4ab75d22f8d1"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-08",
+    "basis": "사용자 응답: 승인 — 왼쪽 생꼬치 단일 카드, 오른쪽 품질별 읽기 전용 목록, 그릴 화면 하단 공용 선반 숨김 및 왼쪽 tray 제거 베이스 승인"
+  }
+}

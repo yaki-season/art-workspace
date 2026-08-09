@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "creationUnitCount": 1,
+  "id": "BG-WORKSPACE-GRILL",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-GRILL-STATION-EMPTY-BASE-R1",
+  "semanticOwner": "artist-1.d1-assembly-grill-food-shader",
+  "assetMeaning": "좌우 DOM inventory를 위한 빈 작업면과 중앙 연속 석쇠를 제공하는 D1 그릴 full-frame base layer다.",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "date": "2026-08-08",
+    "basis": "사용자 응답: 승인 — 왼쪽 생꼬치 단일 카드, 오른쪽 품질별 읽기 전용 목록, 그릴 화면 하단 공용 선반 숨김 및 왼쪽 tray 제거 베이스 승인"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../assets/bg-workspace-grill-fhd-r2.png",
+    "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675"
+  },
+  "spatialInference": {
+    "file": "../../../master/r3/metadata/spatial-inference.json",
+    "sha256": "5d7c989212b799ed0407fce8df91dda63f74a2b74653b8cec811022106c68be6"
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/bg-workspace-grill-fhd-r2.png",
+      "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675"
+    },
+    "reviewBoard": {
+      "file": "review-bg-workspace-grill-fhd-r2.png",
+      "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675"
+    }
+  },
+  "rejectedIntermediate": {
+    "retained": false
+  }
+}

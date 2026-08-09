@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "complete-layer",
+  "id": "BG-WORKSPACE-GRILL",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-SVC-GRILL",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "79929cc532f8fda1df03f1744cb9793d7645491cc20dce5a637416623026ec1a"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "d64f8444ed13c4b869387408a3858128a33bb86d8d871857cf4803c059a19f27"
+    },
+    "recomposition": {
+      "file": "../../../recomposition/workspace-grill-base/r2/metadata/recomposition-report.json",
+      "sha256": "709d2e03047d214925859686c42c321d0dc38d587c85cabe9e80d54b361697d7"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "ea4db1af63cf55a3db454edbfc7b41a1b256b6930a385efcdcab4ab75d22f8d1"
+    },
+    "finalApproval": {
+      "file": "../../../recomposition/workspace-grill-base/r2/metadata/final-approval.json",
+      "sha256": "004d89c3715009312fe8f2ac15c9146bfa582b6387abda4ec913063cc608b04f"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "2a3168ceed85526a2e79bab175700115e4a563e45609b57f35991abc7069c058"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/bg-workspace-grill-fhd-r2.png",
+      "url": "/assets/core/cooking/bg-workspace-grill-r2-b1.png",
+      "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675",
+      "bytes": 3467099,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-08T12:32:50.314Z"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "screenReviewId": "SCR-SVC-GRILL-INVENTORY-BASE-R2",
+  "screenUnit": "SCR-SVC-GRILL",
+  "status": "passed",
+  "approvedAssets": [
+    {
+      "id": "BG-WORKSPACE-GRILL",
+      "profile": "complete-layer",
+      "sourceRevision": 2,
+      "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675",
+      "approvalStatus": "approved-by-user"
+    }
+  ],
+  "outputs": {
+    "fhd": {
+      "file": "../review/scr-svc-grill-inventory-fhd-r2.png",
+      "sha256": "b7fa22c8b3c1d7e8f3deaf690a95c5c7fa36cdb5440cb20051c8cea610ddce13",
+      "width": 1920,
+      "height": 1080
+    },
+    "hd": {
+      "file": "../review/scr-svc-grill-inventory-720-r2.png",
+      "sha256": "e9144afd1b8cea8d416ee43e6e64dd413ddd7ce3fa982330b88f088f076d40ea",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "checks": {
+    "approvedAssetsOnly": "passed",
+    "anchorOcclusion": "passed",
+    "styleRegression": "passed",
+    "cropSafety": "passed"
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-08",
+    "basis": "사용자 응답: 승인 — 왼쪽 생꼬치 단일 카드, 오른쪽 품질별 읽기 전용 목록, 그릴 화면 하단 공용 선반 숨김 및 왼쪽 tray 제거 베이스 승인"
+  }
+}

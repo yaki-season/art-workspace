@@ -1,0 +1,36 @@
+{
+  "id": "BG-WORKSPACE-GRILL",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-SVC-GRILL",
+  "profile": "complete-layer",
+  "pack": "core",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "none",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [],
+  "mirrorSafe": false,
+  "source": "ARTSRC:BG-WORKSPACE-GRILL:R2",
+  "provenance": "PROV:BG-WORKSPACE-GRILL:R2",
+  "license": "YAKI SEASON internal approved artwork",
+  "specRefs": [
+    "GPL-004 v1.41.0",
+    "UI-003 v3.3.0"
+  ],
+  "reviewedAt": "2026-08-08",
+  "url": "/assets/core/cooking/bg-workspace-grill-r2-b1.png",
+  "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675",
+  "bytes": 3467099,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

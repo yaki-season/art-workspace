@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "BG-WORKSPACE-GRILL",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-SVC-GRILL",
+  "semanticPurpose": "D1 그릴 화면에서 승인된 중앙 연속 석쇠와 남색 작업면을 한 장의 불투명 고정 base로 제공하며 좌우 inventory는 DOM UI에 맡긴다.",
+  "status": "approved-by-user",
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-08",
+    "basis": "사용자 응답: 승인 — 왼쪽 생꼬치 단일 카드, 오른쪽 품질별 읽기 전용 목록, 그릴 화면 하단 공용 선반 숨김 및 왼쪽 tray 제거 베이스 승인"
+  },
+  "sourceReferences": [
+    {
+      "file": "../../../master-derived-base/r1/assets/cm-grill-station-empty-base-fhd-r1.png",
+      "sha256": "ed989dcbbddcb2ff1014f38a6c93512989b553149fb16c4654edb522d2b41d1a",
+      "role": "사용자가 선택한 중앙 그릴·카메라·조명 정본"
+    },
+    {
+      "file": "../../r1/assets/bg-workspace-grill-fhd-r1.png",
+      "sha256": "5511d93a94e265d9320ce1badbbe64a29dbed9300470292baad41c420c60d449",
+      "role": "제거된 왼쪽 tray 영역을 복원한 승인 남색 작업면"
+    }
+  ],
+  "generation": {
+    "tool": "deterministic browser-canvas composition after built-in imagegen draft rejection",
+    "mode": "pixel-preserving region replacement",
+    "promptSummary": "중앙 그릴과 오른쪽 작업면은 R1 base 픽셀을 보존하고 x<425의 왼쪽 tray 영역만 승인 BG-WORKSPACE-GRILL R1로 교체한다.",
+    "rawChromaSource": "../source/bg-workspace-grill-r2-deterministic.png",
+    "rawChromaSourceSha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675",
+    "rawChromaSourceBytes": 3467099,
+    "postProcess": [
+      "1920×1080 canvas에 BG-WORKSPACE-GRILL R1을 1:1 배치",
+      "x=425..1919 영역만 CM-GRILL-STATION-EMPTY-BASE R1에서 1:1 복사",
+      "리샘플·색 보정·형상 재생성·손실 압축 없음"
+    ]
+  },
+  "output": {
+    "file": "../assets/bg-workspace-grill-fhd-r2.png",
+    "sha256": "22fded7de11c84b98942195dc4268b4d7abf6ece6fa85629e2aca44285139675",
+    "bytes": 3467099,
+    "width": 1920,
+    "height": 1080
+  },
+  "runtimeRegistrationAllowed": false
+}
