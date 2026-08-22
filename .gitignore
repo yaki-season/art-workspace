@@ -2,3 +2,13 @@
 *.rendering
 review/**/rejected/
 review/**/pending/
+
+# 로컬 LoRA 실행 환경과 학습 산출물
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+pipeline/lora/.cache/
+pipeline/lora/output/
+pipeline/lora/previews/
+pipeline/lora/manifests/dataset.local.jsonl

@@ -1,0 +1,23 @@
+{
+  "base_model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "dataset_manifest": "manifests/dataset.local.jsonl",
+  "output_dir": "output/yakiseason-style-v1",
+  "resolution": 512,
+  "resize_mode": "contain",
+  "padding_rgb": [24, 17, 13],
+  "train_batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "max_train_steps": 1200,
+  "learning_rate": 0.0001,
+  "rank": 16,
+  "seed": 20260823,
+  "mixed_precision": "fp16",
+  "gradient_checkpointing": true,
+  "validation_steps": 100,
+  "checkpoint_steps": 200,
+  "validation_prompts": [
+    "yakiseason_style, an adult office worker sitting at a small Japanese izakaya counter, neutral expression, warm amber night lighting, restrained pixel art",
+    "yakiseason_style, yakitori momo with tare glaze on a ceramic plate, warm izakaya light, restrained pixel art",
+    "yakiseason_style, a quiet Japanese alley izakaya exterior at night, restrained pixel art"
+  ]
+}
