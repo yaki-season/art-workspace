@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "IL-D2-PREOPEN-PIXEL",
+  "screenUnit": "SCR-STORY-BEAT",
+  "canvas": { "width": 1920, "height": 1080 },
+  "mode": "opaque-full-frame",
+  "fit": "uniform-cover-center-crop",
+  "sourceDimensions": { "width": 1672, "height": 941 },
+  "crop": "nearest-neighbor uniform scale to 1920x1081 followed by centered one-pixel vertical crop",
+  "anchors": [],
+  "result": "passed"
+}

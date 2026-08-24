@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "IL-D2-PREOPEN-PIXEL",
+  "screenUnit": "SCR-STORY-BEAT",
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "passed",
+  "input": {
+    "file": "../assets/d2-preopen-full-scene-r2.png",
+    "sha256": "24050e71ff7d2878d511a609c050e7c54a082291c28c2bb0d17a0d47e04f6b81"
+  },
+  "artifacts": [
+    {
+      "role": "primary",
+      "file": "../assets/d2-preopen-full-scene-r2.png",
+      "url": "/assets/core/s0/story/d2-preopen-full-scene-r2-b1.png",
+      "sha256": "24050e71ff7d2878d511a609c050e7c54a082291c28c2bb0d17a0d47e04f6b81",
+      "bytes": 3613274,
+      "format": "png",
+      "dimensions": { "width": 1920, "height": 1080 }
+    }
+  ],
+  "lossPolicy": "lossless-required",
+  "visualRegression": {
+    "result": "passed",
+    "method": "승인 R2 원본을 비율 유지 nearest-neighbor 방식으로 FHD 정규화하고 FHD 및 720p 소비 화면을 비교",
+    "userApprovalRequired": false
+  },
+  "performanceBudget": {
+    "result": "passed",
+    "checks": [
+      "단일 불투명 PNG",
+      "1920x1080 최종 캔버스",
+      "UI와 별도 레이어 유지",
+      "기존 장면 이미지와 동일한 로딩 경로 및 렌더링 방식"
+    ]
+  }
+}

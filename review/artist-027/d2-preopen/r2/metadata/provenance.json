@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "profile": "complete-layer",
+  "id": "IL-D2-PREOPEN-PIXEL",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-STORY-BEAT",
+  "semanticPurpose": "D2 영업 전 아키와 츠키오카가 차분하게 마주 보는 전체 화면 컷씬",
+  "status": "approved-by-user",
+  "sourceReferences": [
+    {
+      "file": "../source/d2-preopen-full-scene-r2-original.png",
+      "sha256": "74af3e35db518bb664c2bfaec07359178b3b9962c74f5b84b2440fc775d2da86",
+      "role": "사용자가 최종 확정한 1672x941 생성 원본"
+    }
+  ],
+  "generation": {
+    "tool": "OpenAI image generation followed by deterministic browser-canvas runtime normalization",
+    "mode": "user-approved full-scene R2",
+    "promptSummary": "아키와 츠키오카가 서로 바라보되 차분하고 평행적인 구도를 유지하는 D2 사전 컷씬",
+    "rawChromaSource": "../source/d2-preopen-full-scene-r2-original.png",
+    "rawChromaSourceSha256": "74af3e35db518bb664c2bfaec07359178b3b9962c74f5b84b2440fc775d2da86",
+    "rawChromaSourceBytes": 2297531,
+    "postProcess": [
+      "원본은 수정하지 않고 별도 보존",
+      "게임 출력은 비율 유지 nearest-neighbor로 1920x1081 확대 후 중앙에서 세로 1픽셀 크롭",
+      "색상, 인물, 소품과 장면 내용은 변경하지 않음"
+    ]
+  },
+  "output": {
+    "file": "../assets/d2-preopen-full-scene-r2.png",
+    "sha256": "24050e71ff7d2878d511a609c050e7c54a082291c28c2bb0d17a0d47e04f6b81",
+    "bytes": 3613274,
+    "width": 1920,
+    "height": 1080
+  },
+  "approval": {
+    "status": "approved-by-user",
+    "date": "2026-08-24",
+    "basis": "사용자가 최종 R2 이미지를 확정한 뒤 게임에 R2로 적용하고 화면에서 검수하도록 명시했다."
+  },
+  "runtimeRegistrationAllowed": false
+}

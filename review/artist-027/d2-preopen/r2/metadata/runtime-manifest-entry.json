@@ -1,0 +1,39 @@
+{
+  "id": "IL-D2-PREOPEN-PIXEL",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "status": "approved",
+  "screenUnit": "SCR-STORY-BEAT",
+  "profile": "complete-layer",
+  "pack": "campaign",
+  "kind": "image",
+  "colorSpace": "sRGB",
+  "alpha": "none",
+  "lossPolicy": "lossless-required",
+  "pivot": {
+    "x": 0,
+    "y": 0
+  },
+  "anchors": [],
+  "clips": [
+    "d2-preopen"
+  ],
+  "mirrorSafe": false,
+  "source": "ARTSRC:IL-D2-PREOPEN-PIXEL:R2",
+  "provenance": "PROV:IL-D2-PREOPEN-PIXEL:R2",
+  "license": "YAKI SEASON internal user-approved artwork",
+  "specRefs": [
+    "SCN-D2-PREOPEN",
+    "YAKI SEASON 아트 규칙 협의 초안 2026-08-24",
+    "User confirmed final R2 and requested runtime application 2026-08-24"
+  ],
+  "reviewedAt": "2026-08-24",
+  "url": "/assets/core/s0/story/d2-preopen-full-scene-r2-b1.png",
+  "sha256": "24050e71ff7d2878d511a609c050e7c54a082291c28c2bb0d17a0d47e04f6b81",
+  "bytes": 3613274,
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "format": "png"
+}

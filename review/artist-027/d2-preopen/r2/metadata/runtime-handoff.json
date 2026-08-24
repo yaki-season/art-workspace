@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "pipelineContract": "YS-ASSET-PIPELINE-v8",
+  "profile": "complete-layer",
+  "id": "IL-D2-PREOPEN-PIXEL",
+  "sourceRevision": 2,
+  "runtimeBuild": 1,
+  "screenUnit": "SCR-STORY-BEAT",
+  "allPriorGatesPassed": true,
+  "runtimeRegistrationAllowed": true,
+  "evidence": {
+    "provenance": {
+      "file": "provenance.json",
+      "sha256": "c817beb33d16558ecdd7ff3efc06e0102b8944e645bea212bb1556b1bb6c06c7"
+    },
+    "profileApproval": {
+      "file": "completion-report.json",
+      "sha256": "6cd26417136edfaed9736282eb8d86b72cf5e80fd75f63ae0d57dcad38462854"
+    },
+    "recomposition": {
+      "file": "recomposition-report.json",
+      "sha256": "c5a5c0ba1be7f594eecce770331697026a9159e566f1b4bbcbe22e606e09acf6"
+    },
+    "optimization": {
+      "file": "optimization-report.json",
+      "sha256": "ab57061194d74efb8690b173b888619dbb51ed431d7eba5bcd259166395fea9f"
+    },
+    "finalApproval": {
+      "file": "final-approval.json",
+      "sha256": "f4333d79d8886aa0f1854ccc89aec919fa48963a7c0e39807d22b9353d534cae"
+    }
+  },
+  "manifestEntry": {
+    "file": "runtime-manifest-entry.json",
+    "sha256": "75a0e365828978cd48aec3fe315f1ec4149f8fb3eee0036bc9c48f4a4e7557d6"
+  },
+  "bundle": [
+    {
+      "role": "primary",
+      "sourceFile": "../assets/d2-preopen-full-scene-r2.png",
+      "url": "/assets/core/s0/story/d2-preopen-full-scene-r2-b1.png",
+      "sha256": "24050e71ff7d2878d511a609c050e7c54a082291c28c2bb0d17a0d47e04f6b81",
+      "bytes": 3613274,
+      "format": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "generatedAt": "2026-08-24T10:29:09.574Z"
+}

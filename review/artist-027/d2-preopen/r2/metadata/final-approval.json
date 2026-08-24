@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "SCR-STORY-BEAT-D2-PREOPEN-R2-FINAL",
+  "screenUnit": "SCR-STORY-BEAT",
+  "status": "approved-by-user",
+  "assets": ["IL-D2-PREOPEN-PIXEL"],
+  "recomposition": {
+    "file": "recomposition-report.json",
+    "sha256": "c5a5c0ba1be7f594eecce770331697026a9159e566f1b4bbcbe22e606e09acf6"
+  },
+  "optimizations": [
+    {
+      "file": "optimization-report.json",
+      "sha256": "ab57061194d74efb8690b173b888619dbb51ed431d7eba5bcd259166395fea9f"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-08-24",
+    "basis": "사용자가 최종 R2 이미지를 확정했고 이어서 R2로 앱에 적용하고 화면 검수 후 커밋·푸시하도록 승인했다. FHD와 720p 소비 화면에서 장면 비율, 인물과 소품 가독성, UI 비가림을 확인했다."
+  }
+}

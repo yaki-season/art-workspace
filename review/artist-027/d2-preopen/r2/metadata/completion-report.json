@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 6,
+  "profile": "complete-layer",
+  "sourceRevision": 2,
+  "screenUnit": "SCR-STORY-BEAT",
+  "creationUnitCount": 1,
+  "id": "IL-D2-PREOPEN-PIXEL",
+  "pipelineContract": "art-workspace/pipeline/pipeline-contract.json",
+  "sourceMasterId": "CM-D2-PREOPEN-R2",
+  "semanticOwner": "artist-2.s0-prologue-story",
+  "assetMeaning": "SCN-D2-PREOPEN에서 대사 UI 뒤에 표시되는 불투명 전체 장면 일러스트",
+  "approvalStatus": "approved-by-user",
+  "runtimeRegistrationAllowed": false,
+  "userApproval": {
+    "status": "approved-by-user",
+    "basis": "사용자가 R2를 최종 확정하고 실제 게임 적용 및 화면 검수를 요청했다.",
+    "date": "2026-08-24"
+  },
+  "approvedCutout": {
+    "status": "approved-by-user",
+    "file": "../assets/d2-preopen-full-scene-r2.png",
+    "sha256": "24050e71ff7d2878d511a609c050e7c54a082291c28c2bb0d17a0d47e04f6b81"
+  },
+  "spatialInference": {
+    "file": "spatial-inference.json",
+    "sha256": "ef0d4146f552246c85715a503b2e2baf0751638df226ef22a149a2bc735cd4d0"
+  },
+  "measurements": {
+    "width": 1920,
+    "height": 1080,
+    "transparencyMode": "opaque-full-frame",
+    "transparentPixels": 0,
+    "opaquePixels": 2073600,
+    "partialAlphaPixels": 0
+  },
+  "outputs": {
+    "completed": {
+      "file": "assets/d2-preopen-full-scene-r2.png",
+      "sha256": "24050e71ff7d2878d511a609c050e7c54a082291c28c2bb0d17a0d47e04f6b81"
+    },
+    "reviewBoard": {
+      "file": "review/d2-preopen-r2-consumer-fhd.png",
+      "sha256": "040d16d8eb8256d2466843b067ab0d0d3ab7e6a74a87410c3929761d473d531f"
+    }
+  },
+  "rejectedIntermediate": {
+    "retained": false
+  },
+  "nextAction": "finalizer handoff 생성 후 app runtime asset gate로 R2 B1 승격"
+}
